@@ -1418,11 +1418,11 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.67F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.67F));
-            this.tableLayoutPanel2.Controls.Add(this.btn_Save, 0, 0);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.39723F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.9746F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.74365F));
             this.tableLayoutPanel2.Controls.Add(this.btn_Close, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_Save, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 534);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -1433,27 +1433,31 @@
             // 
             // btn_Save
             // 
+            this.btn_Save.BackgroundImage = global::Upsert.Properties.Resources.저장1;
             this.btn_Save.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Save.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btn_Save.Location = new System.Drawing.Point(3, 3);
+            this.btn_Save.Location = new System.Drawing.Point(577, 3);
             this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(138, 101);
+            this.btn_Save.Size = new System.Drawing.Size(140, 101);
             this.btn_Save.TabIndex = 29;
-            this.btn_Save.Text = "저장";
             this.btn_Save.UseSelectable = true;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+            this.btn_Save.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseDown);
+            this.btn_Save.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseUp);
             // 
             // btn_Close
             // 
+            this.btn_Close.BackgroundImage = global::Upsert.Properties.Resources.닫기;
             this.btn_Close.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Close.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btn_Close.Location = new System.Drawing.Point(724, 3);
+            this.btn_Close.Location = new System.Drawing.Point(723, 3);
             this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(139, 101);
+            this.btn_Close.Size = new System.Drawing.Size(140, 101);
             this.btn_Close.TabIndex = 30;
-            this.btn_Close.Text = "닫기";
             this.btn_Close.UseSelectable = true;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+            this.btn_Close.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Close_MouseDown);
+            this.btn_Close.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Close_MouseUp);
             // 
             // InputPopup_ProductMaster
             // 

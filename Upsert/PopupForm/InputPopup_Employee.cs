@@ -78,5 +78,25 @@ namespace Upsert
             FormSendEvent(list);
             this.Close();
         }
+
+        private void btn_Save_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Save.BackgroundImage = Upsert.Properties.Resources.저장1;
+        }
+
+        private void btn_Save_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Save.BackgroundImage = Upsert.Properties.Resources.저장클릭1;
+        }
+
+        private void btn_Close_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Close.BackgroundImage = Upsert.Properties.Resources.닫기;
+        }
+
+        private void btn_Close_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Close.BackgroundImage = Upsert.Properties.Resources.닫기클릭;
+        }
     }
 }

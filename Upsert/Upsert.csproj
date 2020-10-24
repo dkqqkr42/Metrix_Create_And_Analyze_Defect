@@ -278,6 +278,10 @@
     <None Include="Resources\조회.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\저장클릭1.jpg" />
+    <None Include="Resources\저장1.jpg" />
+    <None Include="Resources\닫기.jpg" />
+    <None Include="Resources\닫기클릭.jpg" />
     <Content Include="Resources\삭제클릭.jpg" />
     <None Include="Resources\조회클릭.jpg" />
     <None Include="Resources\저장클릭.jpg" />

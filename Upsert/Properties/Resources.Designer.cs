@@ -73,6 +73,26 @@ namespace Upsert.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap 닫기 {
+            get {
+                object obj = ResourceManager.GetObject("닫기", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 닫기클릭 {
+            get {
+                object obj = ResourceManager.GetObject("닫기클릭", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap 삭제 {
             get {
                 object obj = ResourceManager.GetObject("삭제", resourceCulture);
@@ -103,9 +123,29 @@ namespace Upsert.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap 저장1 {
+            get {
+                object obj = ResourceManager.GetObject("저장1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap 저장클릭 {
             get {
                 object obj = ResourceManager.GetObject("저장클릭", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 저장클릭1 {
+            get {
+                object obj = ResourceManager.GetObject("저장클릭1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

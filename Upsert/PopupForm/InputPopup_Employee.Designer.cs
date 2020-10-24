@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InputPopup_Employee));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txt_UPDATE_USER1 = new MetroFramework.Controls.MetroTextBox();
@@ -89,8 +90,8 @@
             this.txt_INSERT_DATE1 = new MetroFramework.Controls.MetroTextBox();
             this.txt_INSERT_USER1 = new MetroFramework.Controls.MetroTextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Save = new MetroFramework.Controls.MetroButton();
             this.btn_Close = new MetroFramework.Controls.MetroButton();
+            this.btn_Save = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -1412,11 +1413,11 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.67F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.67F));
-            this.tableLayoutPanel2.Controls.Add(this.btn_Save, 0, 0);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.28175F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.85912F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.74365F));
             this.tableLayoutPanel2.Controls.Add(this.btn_Close, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_Save, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 534);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -1425,29 +1426,35 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(866, 107);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // btn_Save
-            // 
-            this.btn_Save.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Save.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btn_Save.Location = new System.Drawing.Point(3, 3);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(138, 101);
-            this.btn_Save.TabIndex = 29;
-            this.btn_Save.Text = "저장";
-            this.btn_Save.UseSelectable = true;
-            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
-            // 
             // btn_Close
             // 
+            this.btn_Close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Close.BackgroundImage")));
+            this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Close.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Close.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btn_Close.Location = new System.Drawing.Point(724, 3);
+            this.btn_Close.Location = new System.Drawing.Point(723, 3);
             this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(139, 101);
+            this.btn_Close.Size = new System.Drawing.Size(140, 101);
             this.btn_Close.TabIndex = 30;
-            this.btn_Close.Text = "닫기";
             this.btn_Close.UseSelectable = true;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+            this.btn_Close.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Close_MouseDown);
+            this.btn_Close.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Close_MouseUp);
+            // 
+            // btn_Save
+            // 
+            this.btn_Save.BackgroundImage = global::Upsert.Properties.Resources.저장1;
+            this.btn_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Save.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Save.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btn_Save.Location = new System.Drawing.Point(577, 3);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(140, 101);
+            this.btn_Save.TabIndex = 29;
+            this.btn_Save.UseSelectable = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+            this.btn_Save.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseDown);
+            this.btn_Save.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseUp);
             // 
             // InputPopup_Employee
             // 
