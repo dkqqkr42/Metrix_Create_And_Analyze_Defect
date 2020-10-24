@@ -36,6 +36,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_DataUpsert = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_DataLookUp = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txt_SeachVal = new MetroFramework.Controls.MetroTextBox();
             this.ckb_DelFlag = new MetroFramework.Controls.MetroCheckBox();
@@ -69,7 +70,6 @@
             this.lbl_UPDATE_DATE = new MetroFramework.Controls.MetroLabel();
             this.txt_UPDATE_USER = new MetroFramework.Controls.MetroTextBox();
             this.txt_UPDATE_DATE = new MetroFramework.Controls.MetroTextBox();
-            this.lbl_DataLookUp = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -134,6 +134,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(148, 64);
             this.panel1.TabIndex = 1;
+            // 
+            // lbl_DataLookUp
+            // 
+            this.lbl_DataLookUp.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_DataLookUp.AutoSize = true;
+            this.lbl_DataLookUp.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_DataLookUp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DataLookUp.ForeColor = System.Drawing.Color.White;
+            this.lbl_DataLookUp.Location = new System.Drawing.Point(27, 19);
+            this.lbl_DataLookUp.Name = "lbl_DataLookUp";
+            this.lbl_DataLookUp.Size = new System.Drawing.Size(93, 25);
+            this.lbl_DataLookUp.TabIndex = 2;
+            this.lbl_DataLookUp.Text = "조회 조건";
             // 
             // tableLayoutPanel3
             // 
@@ -739,19 +752,6 @@
             this.txt_UPDATE_DATE.UseSelectable = true;
             this.txt_UPDATE_DATE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_UPDATE_DATE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // lbl_DataLookUp
-            // 
-            this.lbl_DataLookUp.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_DataLookUp.AutoSize = true;
-            this.lbl_DataLookUp.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_DataLookUp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DataLookUp.ForeColor = System.Drawing.Color.White;
-            this.lbl_DataLookUp.Location = new System.Drawing.Point(27, 19);
-            this.lbl_DataLookUp.Name = "lbl_DataLookUp";
-            this.lbl_DataLookUp.Size = new System.Drawing.Size(93, 25);
-            this.lbl_DataLookUp.TabIndex = 2;
-            this.lbl_DataLookUp.Text = "조회 조건";
             // 
             // COMMONCODE
             // 

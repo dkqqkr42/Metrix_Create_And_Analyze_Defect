@@ -20,6 +20,13 @@ namespace Upsert
         {
             InitializeComponent();
         }
+        public InputPopup_WorkCenter(string plantcode, string wccode, string teamcode)
+        {
+            InitializeComponent();
+            txt_PLANT_CODE.Text = plantcode;
+            txt_WC_CODE.Text = wccode;
+            txt_TEAM_CODE.Text = teamcode;
+        }
         public InputPopup_WorkCenter(List<string> list)
         {
             InitializeComponent();
