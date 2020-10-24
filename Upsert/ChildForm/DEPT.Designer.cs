@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_DataUpsert = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_DataLookUp = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txt_SeachVal = new MetroFramework.Controls.MetroTextBox();
             this.ckb_DelFlag = new MetroFramework.Controls.MetroCheckBox();
@@ -69,7 +70,6 @@
             this.txt_DEPT_NAME = new MetroFramework.Controls.MetroTextBox();
             this.lbl_DEPT_CD = new MetroFramework.Controls.MetroLabel();
             this.txt_DEPT_CD = new MetroFramework.Controls.MetroTextBox();
-            this.lbl_DataLookUp = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -134,6 +134,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(148, 64);
             this.panel1.TabIndex = 1;
+            // 
+            // lbl_DataLookUp
+            // 
+            this.lbl_DataLookUp.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_DataLookUp.AutoSize = true;
+            this.lbl_DataLookUp.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_DataLookUp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DataLookUp.ForeColor = System.Drawing.Color.White;
+            this.lbl_DataLookUp.Location = new System.Drawing.Point(27, 19);
+            this.lbl_DataLookUp.Name = "lbl_DataLookUp";
+            this.lbl_DataLookUp.Size = new System.Drawing.Size(93, 25);
+            this.lbl_DataLookUp.TabIndex = 2;
+            this.lbl_DataLookUp.Text = "조회 조건";
             // 
             // tableLayoutPanel3
             // 
@@ -202,21 +215,21 @@
             this.grd_Result.AllowUserToAddRows = false;
             this.grd_Result.AllowUserToDeleteRows = false;
             this.grd_Result.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.grd_Result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.grd_Result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.grd_Result.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grd_Result.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grd_Result.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grd_Result.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grd_Result.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grd_Result.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grd_Result.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.grd_Result.ColumnHeadersHeight = 50;
             this.grd_Result.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column6,
@@ -229,14 +242,14 @@
             this.Column8,
             this.Column9,
             this.Column10});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grd_Result.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grd_Result.DefaultCellStyle = dataGridViewCellStyle11;
             this.grd_Result.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grd_Result.EnableHeadersVisualStyles = false;
             this.grd_Result.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -247,14 +260,14 @@
             this.grd_Result.Name = "grd_Result";
             this.grd_Result.ReadOnly = true;
             this.grd_Result.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grd_Result.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grd_Result.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.grd_Result.RowHeadersVisible = false;
             this.grd_Result.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grd_Result.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -387,7 +400,7 @@
             this.txt_ROLL_FLAG.CustomButton.UseSelectable = true;
             this.txt_ROLL_FLAG.CustomButton.Visible = false;
             this.txt_ROLL_FLAG.Lines = new string[0];
-            this.txt_ROLL_FLAG.Location = new System.Drawing.Point(1654, 45);
+            this.txt_ROLL_FLAG.Location = new System.Drawing.Point(1639, 45);
             this.txt_ROLL_FLAG.MaxLength = 32767;
             this.txt_ROLL_FLAG.Name = "txt_ROLL_FLAG";
             this.txt_ROLL_FLAG.PasswordChar = '\0';
@@ -396,7 +409,7 @@
             this.txt_ROLL_FLAG.SelectionLength = 0;
             this.txt_ROLL_FLAG.SelectionStart = 0;
             this.txt_ROLL_FLAG.ShortcutsEnabled = true;
-            this.txt_ROLL_FLAG.Size = new System.Drawing.Size(150, 23);
+            this.txt_ROLL_FLAG.Size = new System.Drawing.Size(180, 23);
             this.txt_ROLL_FLAG.TabIndex = 10;
             this.txt_ROLL_FLAG.UseSelectable = true;
             this.txt_ROLL_FLAG.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -428,7 +441,7 @@
             this.txt_UPDATE_DATE.CustomButton.UseSelectable = true;
             this.txt_UPDATE_DATE.CustomButton.Visible = false;
             this.txt_UPDATE_DATE.Lines = new string[0];
-            this.txt_UPDATE_DATE.Location = new System.Drawing.Point(1448, 45);
+            this.txt_UPDATE_DATE.Location = new System.Drawing.Point(1433, 45);
             this.txt_UPDATE_DATE.MaxLength = 32767;
             this.txt_UPDATE_DATE.Name = "txt_UPDATE_DATE";
             this.txt_UPDATE_DATE.PasswordChar = '\0';
@@ -437,7 +450,7 @@
             this.txt_UPDATE_DATE.SelectionLength = 0;
             this.txt_UPDATE_DATE.SelectionStart = 0;
             this.txt_UPDATE_DATE.ShortcutsEnabled = true;
-            this.txt_UPDATE_DATE.Size = new System.Drawing.Size(150, 23);
+            this.txt_UPDATE_DATE.Size = new System.Drawing.Size(180, 23);
             this.txt_UPDATE_DATE.TabIndex = 10;
             this.txt_UPDATE_DATE.UseSelectable = true;
             this.txt_UPDATE_DATE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -469,7 +482,7 @@
             this.txt_UPDATE_USER.CustomButton.UseSelectable = true;
             this.txt_UPDATE_USER.CustomButton.Visible = false;
             this.txt_UPDATE_USER.Lines = new string[0];
-            this.txt_UPDATE_USER.Location = new System.Drawing.Point(1245, 45);
+            this.txt_UPDATE_USER.Location = new System.Drawing.Point(1230, 45);
             this.txt_UPDATE_USER.MaxLength = 32767;
             this.txt_UPDATE_USER.Name = "txt_UPDATE_USER";
             this.txt_UPDATE_USER.PasswordChar = '\0';
@@ -478,7 +491,7 @@
             this.txt_UPDATE_USER.SelectionLength = 0;
             this.txt_UPDATE_USER.SelectionStart = 0;
             this.txt_UPDATE_USER.ShortcutsEnabled = true;
-            this.txt_UPDATE_USER.Size = new System.Drawing.Size(150, 23);
+            this.txt_UPDATE_USER.Size = new System.Drawing.Size(180, 23);
             this.txt_UPDATE_USER.TabIndex = 10;
             this.txt_UPDATE_USER.UseSelectable = true;
             this.txt_UPDATE_USER.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -510,7 +523,7 @@
             this.txt_INSERT_DATE.CustomButton.UseSelectable = true;
             this.txt_INSERT_DATE.CustomButton.Visible = false;
             this.txt_INSERT_DATE.Lines = new string[0];
-            this.txt_INSERT_DATE.Location = new System.Drawing.Point(1042, 45);
+            this.txt_INSERT_DATE.Location = new System.Drawing.Point(1027, 45);
             this.txt_INSERT_DATE.MaxLength = 32767;
             this.txt_INSERT_DATE.Name = "txt_INSERT_DATE";
             this.txt_INSERT_DATE.PasswordChar = '\0';
@@ -519,7 +532,7 @@
             this.txt_INSERT_DATE.SelectionLength = 0;
             this.txt_INSERT_DATE.SelectionStart = 0;
             this.txt_INSERT_DATE.ShortcutsEnabled = true;
-            this.txt_INSERT_DATE.Size = new System.Drawing.Size(150, 23);
+            this.txt_INSERT_DATE.Size = new System.Drawing.Size(180, 23);
             this.txt_INSERT_DATE.TabIndex = 10;
             this.txt_INSERT_DATE.UseSelectable = true;
             this.txt_INSERT_DATE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -551,7 +564,7 @@
             this.txt_INSERT_USER.CustomButton.UseSelectable = true;
             this.txt_INSERT_USER.CustomButton.Visible = false;
             this.txt_INSERT_USER.Lines = new string[0];
-            this.txt_INSERT_USER.Location = new System.Drawing.Point(839, 45);
+            this.txt_INSERT_USER.Location = new System.Drawing.Point(824, 45);
             this.txt_INSERT_USER.MaxLength = 32767;
             this.txt_INSERT_USER.Name = "txt_INSERT_USER";
             this.txt_INSERT_USER.PasswordChar = '\0';
@@ -560,7 +573,7 @@
             this.txt_INSERT_USER.SelectionLength = 0;
             this.txt_INSERT_USER.SelectionStart = 0;
             this.txt_INSERT_USER.ShortcutsEnabled = true;
-            this.txt_INSERT_USER.Size = new System.Drawing.Size(150, 23);
+            this.txt_INSERT_USER.Size = new System.Drawing.Size(180, 23);
             this.txt_INSERT_USER.TabIndex = 10;
             this.txt_INSERT_USER.UseSelectable = true;
             this.txt_INSERT_USER.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -593,7 +606,7 @@
             // 
             // 
             this.txt_DEL_FLAG.CustomButton.Image = null;
-            this.txt_DEL_FLAG.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_DEL_FLAG.CustomButton.Location = new System.Drawing.Point(28, 1);
             this.txt_DEL_FLAG.CustomButton.Name = "";
             this.txt_DEL_FLAG.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_DEL_FLAG.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -602,7 +615,7 @@
             this.txt_DEL_FLAG.CustomButton.UseSelectable = true;
             this.txt_DEL_FLAG.CustomButton.Visible = false;
             this.txt_DEL_FLAG.Lines = new string[0];
-            this.txt_DEL_FLAG.Location = new System.Drawing.Point(636, 45);
+            this.txt_DEL_FLAG.Location = new System.Drawing.Point(686, 45);
             this.txt_DEL_FLAG.MaxLength = 32767;
             this.txt_DEL_FLAG.Name = "txt_DEL_FLAG";
             this.txt_DEL_FLAG.PasswordChar = '\0';
@@ -611,7 +624,7 @@
             this.txt_DEL_FLAG.SelectionLength = 0;
             this.txt_DEL_FLAG.SelectionStart = 0;
             this.txt_DEL_FLAG.ShortcutsEnabled = true;
-            this.txt_DEL_FLAG.Size = new System.Drawing.Size(150, 23);
+            this.txt_DEL_FLAG.Size = new System.Drawing.Size(50, 23);
             this.txt_DEL_FLAG.TabIndex = 8;
             this.txt_DEL_FLAG.UseSelectable = true;
             this.txt_DEL_FLAG.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -643,7 +656,7 @@
             this.txt_TEAM_CODE.CustomButton.UseSelectable = true;
             this.txt_TEAM_CODE.CustomButton.Visible = false;
             this.txt_TEAM_CODE.Lines = new string[0];
-            this.txt_TEAM_CODE.Location = new System.Drawing.Point(433, 45);
+            this.txt_TEAM_CODE.Location = new System.Drawing.Point(418, 45);
             this.txt_TEAM_CODE.MaxLength = 32767;
             this.txt_TEAM_CODE.Name = "txt_TEAM_CODE";
             this.txt_TEAM_CODE.PasswordChar = '\0';
@@ -652,7 +665,7 @@
             this.txt_TEAM_CODE.SelectionLength = 0;
             this.txt_TEAM_CODE.SelectionStart = 0;
             this.txt_TEAM_CODE.ShortcutsEnabled = true;
-            this.txt_TEAM_CODE.Size = new System.Drawing.Size(150, 23);
+            this.txt_TEAM_CODE.Size = new System.Drawing.Size(180, 23);
             this.txt_TEAM_CODE.TabIndex = 7;
             this.txt_TEAM_CODE.UseSelectable = true;
             this.txt_TEAM_CODE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -684,7 +697,7 @@
             this.txt_DEPT_NAME.CustomButton.UseSelectable = true;
             this.txt_DEPT_NAME.CustomButton.Visible = false;
             this.txt_DEPT_NAME.Lines = new string[0];
-            this.txt_DEPT_NAME.Location = new System.Drawing.Point(230, 45);
+            this.txt_DEPT_NAME.Location = new System.Drawing.Point(215, 45);
             this.txt_DEPT_NAME.MaxLength = 32767;
             this.txt_DEPT_NAME.Name = "txt_DEPT_NAME";
             this.txt_DEPT_NAME.PasswordChar = '\0';
@@ -693,7 +706,7 @@
             this.txt_DEPT_NAME.SelectionLength = 0;
             this.txt_DEPT_NAME.SelectionStart = 0;
             this.txt_DEPT_NAME.ShortcutsEnabled = true;
-            this.txt_DEPT_NAME.Size = new System.Drawing.Size(150, 23);
+            this.txt_DEPT_NAME.Size = new System.Drawing.Size(180, 23);
             this.txt_DEPT_NAME.TabIndex = 5;
             this.txt_DEPT_NAME.UseSelectable = true;
             this.txt_DEPT_NAME.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -725,7 +738,7 @@
             this.txt_DEPT_CD.CustomButton.UseSelectable = true;
             this.txt_DEPT_CD.CustomButton.Visible = false;
             this.txt_DEPT_CD.Lines = new string[0];
-            this.txt_DEPT_CD.Location = new System.Drawing.Point(27, 45);
+            this.txt_DEPT_CD.Location = new System.Drawing.Point(12, 45);
             this.txt_DEPT_CD.MaxLength = 32767;
             this.txt_DEPT_CD.Name = "txt_DEPT_CD";
             this.txt_DEPT_CD.PasswordChar = '\0';
@@ -734,24 +747,11 @@
             this.txt_DEPT_CD.SelectionLength = 0;
             this.txt_DEPT_CD.SelectionStart = 0;
             this.txt_DEPT_CD.ShortcutsEnabled = true;
-            this.txt_DEPT_CD.Size = new System.Drawing.Size(150, 23);
+            this.txt_DEPT_CD.Size = new System.Drawing.Size(180, 23);
             this.txt_DEPT_CD.TabIndex = 5;
             this.txt_DEPT_CD.UseSelectable = true;
             this.txt_DEPT_CD.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_DEPT_CD.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // lbl_DataLookUp
-            // 
-            this.lbl_DataLookUp.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_DataLookUp.AutoSize = true;
-            this.lbl_DataLookUp.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_DataLookUp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DataLookUp.ForeColor = System.Drawing.Color.White;
-            this.lbl_DataLookUp.Location = new System.Drawing.Point(27, 19);
-            this.lbl_DataLookUp.Name = "lbl_DataLookUp";
-            this.lbl_DataLookUp.Size = new System.Drawing.Size(93, 25);
-            this.lbl_DataLookUp.TabIndex = 2;
-            this.lbl_DataLookUp.Text = "조회 조건";
             // 
             // DEPT
             // 

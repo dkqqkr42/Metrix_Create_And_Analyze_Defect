@@ -36,6 +36,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_DataUpsert = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_DataLookUp = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txt_SeachVal = new MetroFramework.Controls.MetroTextBox();
             this.ckb_DelFlag = new MetroFramework.Controls.MetroCheckBox();
@@ -63,7 +64,6 @@
             this.txt_TEAM_NAME = new MetroFramework.Controls.MetroTextBox();
             this.lbl_TEAM_CODE = new MetroFramework.Controls.MetroLabel();
             this.txt_TEAM_CODE = new MetroFramework.Controls.MetroTextBox();
-            this.lbl_DataLookUp = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -128,6 +128,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(148, 64);
             this.panel1.TabIndex = 1;
+            // 
+            // lbl_DataLookUp
+            // 
+            this.lbl_DataLookUp.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_DataLookUp.AutoSize = true;
+            this.lbl_DataLookUp.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_DataLookUp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DataLookUp.ForeColor = System.Drawing.Color.White;
+            this.lbl_DataLookUp.Location = new System.Drawing.Point(27, 19);
+            this.lbl_DataLookUp.Name = "lbl_DataLookUp";
+            this.lbl_DataLookUp.Size = new System.Drawing.Size(93, 25);
+            this.lbl_DataLookUp.TabIndex = 2;
+            this.lbl_DataLookUp.Text = "조회 조건";
             // 
             // tableLayoutPanel3
             // 
@@ -199,6 +212,7 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.grd_Result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grd_Result.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grd_Result.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grd_Result.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grd_Result.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grd_Result.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -353,7 +367,7 @@
             // 
             // 
             this.txt_UPDATE_USER.CustomButton.Image = null;
-            this.txt_UPDATE_USER.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_UPDATE_USER.CustomButton.Location = new System.Drawing.Point(218, 1);
             this.txt_UPDATE_USER.CustomButton.Name = "";
             this.txt_UPDATE_USER.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_UPDATE_USER.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -362,7 +376,7 @@
             this.txt_UPDATE_USER.CustomButton.UseSelectable = true;
             this.txt_UPDATE_USER.CustomButton.Visible = false;
             this.txt_UPDATE_USER.Lines = new string[0];
-            this.txt_UPDATE_USER.Location = new System.Drawing.Point(1625, 45);
+            this.txt_UPDATE_USER.Location = new System.Drawing.Point(1580, 45);
             this.txt_UPDATE_USER.MaxLength = 32767;
             this.txt_UPDATE_USER.Name = "txt_UPDATE_USER";
             this.txt_UPDATE_USER.PasswordChar = '\0';
@@ -371,7 +385,7 @@
             this.txt_UPDATE_USER.SelectionLength = 0;
             this.txt_UPDATE_USER.SelectionStart = 0;
             this.txt_UPDATE_USER.ShortcutsEnabled = true;
-            this.txt_UPDATE_USER.Size = new System.Drawing.Size(150, 23);
+            this.txt_UPDATE_USER.Size = new System.Drawing.Size(240, 23);
             this.txt_UPDATE_USER.TabIndex = 10;
             this.txt_UPDATE_USER.UseSelectable = true;
             this.txt_UPDATE_USER.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -394,7 +408,7 @@
             // 
             // 
             this.txt_UPDATE_DATE.CustomButton.Image = null;
-            this.txt_UPDATE_DATE.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_UPDATE_DATE.CustomButton.Location = new System.Drawing.Point(218, 1);
             this.txt_UPDATE_DATE.CustomButton.Name = "";
             this.txt_UPDATE_DATE.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_UPDATE_DATE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -403,7 +417,7 @@
             this.txt_UPDATE_DATE.CustomButton.UseSelectable = true;
             this.txt_UPDATE_DATE.CustomButton.Visible = false;
             this.txt_UPDATE_DATE.Lines = new string[0];
-            this.txt_UPDATE_DATE.Location = new System.Drawing.Point(1361, 45);
+            this.txt_UPDATE_DATE.Location = new System.Drawing.Point(1316, 45);
             this.txt_UPDATE_DATE.MaxLength = 32767;
             this.txt_UPDATE_DATE.Name = "txt_UPDATE_DATE";
             this.txt_UPDATE_DATE.PasswordChar = '\0';
@@ -412,7 +426,7 @@
             this.txt_UPDATE_DATE.SelectionLength = 0;
             this.txt_UPDATE_DATE.SelectionStart = 0;
             this.txt_UPDATE_DATE.ShortcutsEnabled = true;
-            this.txt_UPDATE_DATE.Size = new System.Drawing.Size(150, 23);
+            this.txt_UPDATE_DATE.Size = new System.Drawing.Size(240, 23);
             this.txt_UPDATE_DATE.TabIndex = 10;
             this.txt_UPDATE_DATE.UseSelectable = true;
             this.txt_UPDATE_DATE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -435,7 +449,7 @@
             // 
             // 
             this.txt_INSERT_USER.CustomButton.Image = null;
-            this.txt_INSERT_USER.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_INSERT_USER.CustomButton.Location = new System.Drawing.Point(218, 1);
             this.txt_INSERT_USER.CustomButton.Name = "";
             this.txt_INSERT_USER.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_INSERT_USER.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -444,7 +458,7 @@
             this.txt_INSERT_USER.CustomButton.UseSelectable = true;
             this.txt_INSERT_USER.CustomButton.Visible = false;
             this.txt_INSERT_USER.Lines = new string[0];
-            this.txt_INSERT_USER.Location = new System.Drawing.Point(1100, 45);
+            this.txt_INSERT_USER.Location = new System.Drawing.Point(1055, 45);
             this.txt_INSERT_USER.MaxLength = 32767;
             this.txt_INSERT_USER.Name = "txt_INSERT_USER";
             this.txt_INSERT_USER.PasswordChar = '\0';
@@ -453,7 +467,7 @@
             this.txt_INSERT_USER.SelectionLength = 0;
             this.txt_INSERT_USER.SelectionStart = 0;
             this.txt_INSERT_USER.ShortcutsEnabled = true;
-            this.txt_INSERT_USER.Size = new System.Drawing.Size(150, 23);
+            this.txt_INSERT_USER.Size = new System.Drawing.Size(240, 23);
             this.txt_INSERT_USER.TabIndex = 10;
             this.txt_INSERT_USER.UseSelectable = true;
             this.txt_INSERT_USER.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -486,7 +500,7 @@
             // 
             // 
             this.txt_INSERT_DATE.CustomButton.Image = null;
-            this.txt_INSERT_DATE.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_INSERT_DATE.CustomButton.Location = new System.Drawing.Point(218, 1);
             this.txt_INSERT_DATE.CustomButton.Name = "";
             this.txt_INSERT_DATE.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_INSERT_DATE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -495,7 +509,7 @@
             this.txt_INSERT_DATE.CustomButton.UseSelectable = true;
             this.txt_INSERT_DATE.CustomButton.Visible = false;
             this.txt_INSERT_DATE.Lines = new string[0];
-            this.txt_INSERT_DATE.Location = new System.Drawing.Point(839, 45);
+            this.txt_INSERT_DATE.Location = new System.Drawing.Point(794, 45);
             this.txt_INSERT_DATE.MaxLength = 32767;
             this.txt_INSERT_DATE.Name = "txt_INSERT_DATE";
             this.txt_INSERT_DATE.PasswordChar = '\0';
@@ -504,7 +518,7 @@
             this.txt_INSERT_DATE.SelectionLength = 0;
             this.txt_INSERT_DATE.SelectionStart = 0;
             this.txt_INSERT_DATE.ShortcutsEnabled = true;
-            this.txt_INSERT_DATE.Size = new System.Drawing.Size(150, 23);
+            this.txt_INSERT_DATE.Size = new System.Drawing.Size(240, 23);
             this.txt_INSERT_DATE.TabIndex = 8;
             this.txt_INSERT_DATE.UseSelectable = true;
             this.txt_INSERT_DATE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -527,7 +541,7 @@
             // 
             // 
             this.txt_DEL_FLAG.CustomButton.Image = null;
-            this.txt_DEL_FLAG.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_DEL_FLAG.CustomButton.Location = new System.Drawing.Point(218, 1);
             this.txt_DEL_FLAG.CustomButton.Name = "";
             this.txt_DEL_FLAG.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_DEL_FLAG.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -536,7 +550,7 @@
             this.txt_DEL_FLAG.CustomButton.UseSelectable = true;
             this.txt_DEL_FLAG.CustomButton.Visible = false;
             this.txt_DEL_FLAG.Lines = new string[0];
-            this.txt_DEL_FLAG.Location = new System.Drawing.Point(578, 45);
+            this.txt_DEL_FLAG.Location = new System.Drawing.Point(533, 45);
             this.txt_DEL_FLAG.MaxLength = 32767;
             this.txt_DEL_FLAG.Name = "txt_DEL_FLAG";
             this.txt_DEL_FLAG.PasswordChar = '\0';
@@ -545,7 +559,7 @@
             this.txt_DEL_FLAG.SelectionLength = 0;
             this.txt_DEL_FLAG.SelectionStart = 0;
             this.txt_DEL_FLAG.ShortcutsEnabled = true;
-            this.txt_DEL_FLAG.Size = new System.Drawing.Size(150, 23);
+            this.txt_DEL_FLAG.Size = new System.Drawing.Size(240, 23);
             this.txt_DEL_FLAG.TabIndex = 7;
             this.txt_DEL_FLAG.UseSelectable = true;
             this.txt_DEL_FLAG.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -568,7 +582,7 @@
             // 
             // 
             this.txt_TEAM_NAME.CustomButton.Image = null;
-            this.txt_TEAM_NAME.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_TEAM_NAME.CustomButton.Location = new System.Drawing.Point(218, 1);
             this.txt_TEAM_NAME.CustomButton.Name = "";
             this.txt_TEAM_NAME.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_TEAM_NAME.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -577,7 +591,7 @@
             this.txt_TEAM_NAME.CustomButton.UseSelectable = true;
             this.txt_TEAM_NAME.CustomButton.Visible = false;
             this.txt_TEAM_NAME.Lines = new string[0];
-            this.txt_TEAM_NAME.Location = new System.Drawing.Point(317, 45);
+            this.txt_TEAM_NAME.Location = new System.Drawing.Point(272, 45);
             this.txt_TEAM_NAME.MaxLength = 32767;
             this.txt_TEAM_NAME.Name = "txt_TEAM_NAME";
             this.txt_TEAM_NAME.PasswordChar = '\0';
@@ -586,7 +600,7 @@
             this.txt_TEAM_NAME.SelectionLength = 0;
             this.txt_TEAM_NAME.SelectionStart = 0;
             this.txt_TEAM_NAME.ShortcutsEnabled = true;
-            this.txt_TEAM_NAME.Size = new System.Drawing.Size(150, 23);
+            this.txt_TEAM_NAME.Size = new System.Drawing.Size(240, 23);
             this.txt_TEAM_NAME.TabIndex = 5;
             this.txt_TEAM_NAME.UseSelectable = true;
             this.txt_TEAM_NAME.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -609,7 +623,7 @@
             // 
             // 
             this.txt_TEAM_CODE.CustomButton.Image = null;
-            this.txt_TEAM_CODE.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_TEAM_CODE.CustomButton.Location = new System.Drawing.Point(218, 1);
             this.txt_TEAM_CODE.CustomButton.Name = "";
             this.txt_TEAM_CODE.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_TEAM_CODE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -618,7 +632,7 @@
             this.txt_TEAM_CODE.CustomButton.UseSelectable = true;
             this.txt_TEAM_CODE.CustomButton.Visible = false;
             this.txt_TEAM_CODE.Lines = new string[0];
-            this.txt_TEAM_CODE.Location = new System.Drawing.Point(56, 45);
+            this.txt_TEAM_CODE.Location = new System.Drawing.Point(11, 45);
             this.txt_TEAM_CODE.MaxLength = 32767;
             this.txt_TEAM_CODE.Name = "txt_TEAM_CODE";
             this.txt_TEAM_CODE.PasswordChar = '\0';
@@ -627,24 +641,11 @@
             this.txt_TEAM_CODE.SelectionLength = 0;
             this.txt_TEAM_CODE.SelectionStart = 0;
             this.txt_TEAM_CODE.ShortcutsEnabled = true;
-            this.txt_TEAM_CODE.Size = new System.Drawing.Size(150, 23);
+            this.txt_TEAM_CODE.Size = new System.Drawing.Size(240, 23);
             this.txt_TEAM_CODE.TabIndex = 5;
             this.txt_TEAM_CODE.UseSelectable = true;
             this.txt_TEAM_CODE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_TEAM_CODE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // lbl_DataLookUp
-            // 
-            this.lbl_DataLookUp.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_DataLookUp.AutoSize = true;
-            this.lbl_DataLookUp.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_DataLookUp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DataLookUp.ForeColor = System.Drawing.Color.White;
-            this.lbl_DataLookUp.Location = new System.Drawing.Point(27, 19);
-            this.lbl_DataLookUp.Name = "lbl_DataLookUp";
-            this.lbl_DataLookUp.Size = new System.Drawing.Size(93, 25);
-            this.lbl_DataLookUp.TabIndex = 2;
-            this.lbl_DataLookUp.Text = "조회 조건";
             // 
             // Team
             // 
