@@ -41,16 +41,6 @@
             this.ckb_DelFlag = new MetroFramework.Controls.MetroCheckBox();
             this.txt_SeachVal = new MetroFramework.Controls.MetroTextBox();
             this.grd_Result = new MetroFramework.Controls.MetroGrid();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.txt_DEL_FLAG = new MetroFramework.Controls.MetroTextBox();
             this.txt_FACTOR_NAME = new MetroFramework.Controls.MetroTextBox();
@@ -70,6 +60,16 @@
             this.txt_INSERT_USER = new MetroFramework.Controls.MetroTextBox();
             this.txt_UPDATE_DATE = new MetroFramework.Controls.MetroTextBox();
             this.txt_UPDATE_USER = new MetroFramework.Controls.MetroTextBox();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -217,7 +217,6 @@
             this.grd_Result.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.grd_Result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.grd_Result.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grd_Result.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grd_Result.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grd_Result.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -279,69 +278,6 @@
             this.grd_Result.TabIndex = 5;
             this.grd_Result.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_Data_CellDoubleClick);
             this.grd_Result.KeyUp += new System.Windows.Forms.KeyEventHandler(this.grd_Data_KeyUp);
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column6.Frozen = true;
-            this.Column6.HeaderText = "No";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 40;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "공장코드";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "라인";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "작업코드";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "작업명";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "삭제여부";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "추가일";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "추가자";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "수정일";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "수정자";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
             // 
             // tableLayoutPanel4
             // 
@@ -753,6 +689,85 @@
             this.txt_UPDATE_USER.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_UPDATE_USER.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column6.Frozen = true;
+            this.Column6.HeaderText = "No";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 40;
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 286.6243F;
+            this.Column1.HeaderText = "공장코드";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 170;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 76.67197F;
+            this.Column2.HeaderText = "라인";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 170;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 76.67197F;
+            this.Column3.HeaderText = "작업코드";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 170;
+            // 
+            // Column4
+            // 
+            this.Column4.FillWeight = 76.67197F;
+            this.Column4.HeaderText = "작업명";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 370;
+            // 
+            // Column5
+            // 
+            this.Column5.FillWeight = 76.67197F;
+            this.Column5.HeaderText = "삭제여부";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 113;
+            // 
+            // Column7
+            // 
+            this.Column7.FillWeight = 76.67197F;
+            this.Column7.HeaderText = "추가일";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 300;
+            // 
+            // Column8
+            // 
+            this.Column8.FillWeight = 76.67197F;
+            this.Column8.HeaderText = "추가자";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.FillWeight = 76.67197F;
+            this.Column9.HeaderText = "수정일";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 300;
+            // 
+            // Column10
+            // 
+            this.Column10.FillWeight = 76.67197F;
+            this.Column10.HeaderText = "수정자";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
             // DownTime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -797,6 +812,15 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private MetroFramework.Controls.MetroCheckBox ckb_DelFlag;
+        private MetroFramework.Controls.MetroLabel lbl_INSERT_DATE;
+        private MetroFramework.Controls.MetroLabel lbl_INSERT_USER;
+        private MetroFramework.Controls.MetroLabel lbl_UPDATE_DATE;
+        private MetroFramework.Controls.MetroLabel lbl_UPDATE_USER;
+        private MetroFramework.Controls.MetroTextBox txt_INSERT_DATE;
+        private MetroFramework.Controls.MetroTextBox txt_INSERT_USER;
+        private MetroFramework.Controls.MetroTextBox txt_UPDATE_DATE;
+        private MetroFramework.Controls.MetroTextBox txt_UPDATE_USER;
+        private System.Windows.Forms.Label lbl_DataLookUp;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -807,14 +831,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private MetroFramework.Controls.MetroLabel lbl_INSERT_DATE;
-        private MetroFramework.Controls.MetroLabel lbl_INSERT_USER;
-        private MetroFramework.Controls.MetroLabel lbl_UPDATE_DATE;
-        private MetroFramework.Controls.MetroLabel lbl_UPDATE_USER;
-        private MetroFramework.Controls.MetroTextBox txt_INSERT_DATE;
-        private MetroFramework.Controls.MetroTextBox txt_INSERT_USER;
-        private MetroFramework.Controls.MetroTextBox txt_UPDATE_DATE;
-        private MetroFramework.Controls.MetroTextBox txt_UPDATE_USER;
-        private System.Windows.Forms.Label lbl_DataLookUp;
     }
 }
