@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Upsert", "Upsert\Upsert.csproj", "{C6B5005D-C084-44EC-91B8-4CA2358E1D32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalProject_Profile", "..\..\..\Desktop\FinalProject_Profile\FinalProject_Profile\FinalProject_Profile\FinalProject_Profile.csproj", "{912278B2-7DBF-4F30-9B9A-DBF5042BEDC6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalProject_Profile", "FinalProject_Profile\FinalProject_Profile.csproj", "{912278B2-7DBF-4F30-9B9A-DBF5042BEDC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
