@@ -606,7 +606,7 @@
             // 
             // 
             this.txt_DEL_FLAG.CustomButton.Image = null;
-            this.txt_DEL_FLAG.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_DEL_FLAG.CustomButton.Location = new System.Drawing.Point(28, 1);
             this.txt_DEL_FLAG.CustomButton.Name = "";
             this.txt_DEL_FLAG.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txt_DEL_FLAG.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -615,7 +615,11 @@
             this.txt_DEL_FLAG.CustomButton.UseSelectable = true;
             this.txt_DEL_FLAG.CustomButton.Visible = false;
             this.txt_DEL_FLAG.Lines = new string[0];
+<<<<<<< HEAD
             this.txt_DEL_FLAG.Location = new System.Drawing.Point(621, 45);
+=======
+            this.txt_DEL_FLAG.Location = new System.Drawing.Point(686, 45);
+>>>>>>> e4a34b8a4b72bffad9cfd654a040b6c780ebbec4
             this.txt_DEL_FLAG.MaxLength = 32767;
             this.txt_DEL_FLAG.Name = "txt_DEL_FLAG";
             this.txt_DEL_FLAG.PasswordChar = '\0';
@@ -624,7 +628,11 @@
             this.txt_DEL_FLAG.SelectionLength = 0;
             this.txt_DEL_FLAG.SelectionStart = 0;
             this.txt_DEL_FLAG.ShortcutsEnabled = true;
+<<<<<<< HEAD
             this.txt_DEL_FLAG.Size = new System.Drawing.Size(180, 23);
+=======
+            this.txt_DEL_FLAG.Size = new System.Drawing.Size(50, 23);
+>>>>>>> e4a34b8a4b72bffad9cfd654a040b6c780ebbec4
             this.txt_DEL_FLAG.TabIndex = 8;
             this.txt_DEL_FLAG.UseSelectable = true;
             this.txt_DEL_FLAG.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
