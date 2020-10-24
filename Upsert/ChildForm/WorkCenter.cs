@@ -218,12 +218,12 @@ namespace Upsert
             
         }
 
-        private void metroTile1_Click(object sender, EventArgs e)
+        /*private void metroTile1_Click(object sender, EventArgs e)
         {
             popup = new InputPopup_WorkCenter();
             popup.FormSendEvent += new InputPopup_WorkCenter.FormSendDataHandler(DieaseUpdateEventMethod);
             popup.ShowDialog();
-        }
+        }*/
 
         public bool DeleteItem()
         {
@@ -260,6 +260,16 @@ namespace Upsert
             finally
             {
                 connection.Close();
+            }
+        }
+
+        private void txt_TEAM_CODE_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                popup = new InputPopup_WorkCenter(txt_PLANT_CODE.Text, txt_WC_CODE.Text, txt_TEAM_CODE.Text);
+                popup.FormSendEvent += new InputPopup_WorkCenter.FormSendDataHandler(DieaseUpdateEventMethod);
+                popup.ShowDialog();
             }
         }
     }
