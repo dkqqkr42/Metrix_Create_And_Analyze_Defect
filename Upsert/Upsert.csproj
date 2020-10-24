@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C6B5005D-C084-44EC-91B8-4CA2358E1D32}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Upsert</RootNamespace>
+    <AssemblyName>Upsert</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.19.9.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChildForm\COMMONCODE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\COMMONCODE.Designer.cs">
+      <DependentUpon>COMMONCODE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\Defect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\Defect.Designer.cs">
+      <DependentUpon>Defect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\DEPT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\DEPT.Designer.cs">
+      <DependentUpon>DEPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\DownTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\DownTime.Designer.cs">
+      <DependentUpon>DownTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\DownTimeDTL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\DownTimeDTL.Designer.cs">
+      <DependentUpon>DownTimeDTL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\Inspector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\Inspector.Designer.cs">
+      <DependentUpon>Inspector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\Team.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\Team.Designer.cs">
+      <DependentUpon>Team.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\Worker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\Worker.Designer.cs">
+      <DependentUpon>Worker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\DefectDTL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\DefectDTL.designer.cs">
+      <DependentUpon>DefectDTL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\Plant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\Plant.designer.cs">
+      <DependentUpon>Plant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupForm\InputPopup_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupForm\InputPopup_Employee.Designer.cs">
+      <DependentUpon>InputPopup_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupForm\InputPopup_ProductMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupForm\InputPopup_ProductMaster.Designer.cs">
+      <DependentUpon>InputPopup_ProductMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupForm\InputPopup_WorkCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupForm\InputPopup_WorkCenter.Designer.cs">
+      <DependentUpon>InputPopup_WorkCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\ProgramManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\ProgramManage.Designer.cs">
+      <DependentUpon>ProgramManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\IChildForm.cs" />
+    <Compile Include="Parent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parent.Designer.cs">
+      <DependentUpon>Parent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupForm\InputPopup_Worker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupForm\InputPopup_Worker.Designer.cs">
+      <DependentUpon>InputPopup_Worker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ChildForm\ProductMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\ProductMaster.Designer.cs">
+      <DependentUpon>ProductMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\WorkCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\WorkCenter.Designer.cs">
+      <DependentUpon>WorkCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\Slocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\Slocation.designer.cs">
+      <DependentUpon>Slocation.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChildForm\COMMONCODE.resx">
+      <DependentUpon>COMMONCODE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\Defect.resx">
+      <DependentUpon>Defect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\DEPT.resx">
+      <DependentUpon>DEPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\DownTime.resx">
+      <DependentUpon>DownTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\DownTimeDTL.resx">
+      <DependentUpon>DownTimeDTL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\Inspector.resx">
+      <DependentUpon>Inspector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\Team.resx">
+      <DependentUpon>Team.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\Worker.resx">
+      <DependentUpon>Worker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\DefectDTL.resx">
+      <DependentUpon>DefectDTL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\Plant.resx">
+      <DependentUpon>Plant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupForm\InputPopup_Employee.resx">
+      <DependentUpon>InputPopup_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupForm\InputPopup_ProductMaster.resx">
+      <DependentUpon>InputPopup_ProductMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupForm\InputPopup_WorkCenter.resx">
+      <DependentUpon>InputPopup_WorkCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\ProgramManage.resx">
+      <DependentUpon>ProgramManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parent.resx">
+      <DependentUpon>Parent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupForm\InputPopup_Worker.resx">
+      <DependentUpon>InputPopup_Worker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ChildForm\ProductMaster.resx">
+      <DependentUpon>ProductMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\WorkCenter.resx">
+      <DependentUpon>WorkCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\Slocation.resx">
+      <DependentUpon>Slocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\삭제.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\저장.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\조회.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\삭제클릭.jpg" />
+    <None Include="Resources\조회클릭.jpg" />
+    <None Include="Resources\저장클릭.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
