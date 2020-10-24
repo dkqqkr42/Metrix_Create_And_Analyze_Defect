@@ -36,28 +36,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_DataUpsert = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_DataLookUp = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txt_SeachVal = new MetroFramework.Controls.MetroTextBox();
             this.ckb_DelFlag = new MetroFramework.Controls.MetroCheckBox();
             this.grd_Result = new MetroFramework.Controls.MetroGrid();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.txt_DEL_FLAG = new MetroFramework.Controls.MetroTextBox();
-            this.txt_QC_CODE = new MetroFramework.Controls.MetroTextBox();
-            this.txt_TEAM_CODE = new MetroFramework.Controls.MetroTextBox();
-            this.lbl_DEL_FLAG = new MetroFramework.Controls.MetroLabel();
-            this.lbl_QC_CODE = new MetroFramework.Controls.MetroLabel();
-            this.lbl_TEAM_CODE = new MetroFramework.Controls.MetroLabel();
-            this.lbl_PLANT_CODE = new MetroFramework.Controls.MetroLabel();
-            this.txt_PLANT_CODE = new MetroFramework.Controls.MetroTextBox();
-            this.lbl_INSERT_DATE = new MetroFramework.Controls.MetroLabel();
-            this.lbl_INSERT_USER = new MetroFramework.Controls.MetroLabel();
-            this.lbl_UPDATE_DATE = new MetroFramework.Controls.MetroLabel();
-            this.lbl_UPDATE_USER = new MetroFramework.Controls.MetroLabel();
-            this.txt_INSERT_DATE = new MetroFramework.Controls.MetroTextBox();
-            this.txt_INSERT_USER = new MetroFramework.Controls.MetroTextBox();
-            this.txt_UPDATE_DATE = new MetroFramework.Controls.MetroTextBox();
-            this.txt_UPDATE_USER = new MetroFramework.Controls.MetroTextBox();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,8 +50,26 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.txt_UPDATE_USER = new MetroFramework.Controls.MetroTextBox();
+            this.lbl_UPDATE_USER = new MetroFramework.Controls.MetroLabel();
+            this.txt_UPDATE_DATE = new MetroFramework.Controls.MetroTextBox();
+            this.lbl_UPDATE_DATE = new MetroFramework.Controls.MetroLabel();
+            this.txt_INSERT_USER = new MetroFramework.Controls.MetroTextBox();
+            this.lbl_INSERT_USER = new MetroFramework.Controls.MetroLabel();
+            this.txt_INSERT_DATE = new MetroFramework.Controls.MetroTextBox();
+            this.lbl_INSERT_DATE = new MetroFramework.Controls.MetroLabel();
+            this.txt_DEL_FLAG = new MetroFramework.Controls.MetroTextBox();
+            this.lbl_DEL_FLAG = new MetroFramework.Controls.MetroLabel();
+            this.lbl_QC_CODE = new MetroFramework.Controls.MetroLabel();
+            this.txt_QC_CODE = new MetroFramework.Controls.MetroTextBox();
+            this.lbl_TEAM_CODE = new MetroFramework.Controls.MetroLabel();
+            this.txt_TEAM_CODE = new MetroFramework.Controls.MetroTextBox();
+            this.lbl_PLANT_CODE = new MetroFramework.Controls.MetroLabel();
+            this.txt_PLANT_CODE = new MetroFramework.Controls.MetroTextBox();
             this.lbl_SA_SABUN = new MetroFramework.Controls.MetroLabel();
             this.txt_SA_SABUN = new MetroFramework.Controls.MetroTextBox();
+            this.lbl_DataLookUp = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -134,19 +134,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(148, 64);
             this.panel1.TabIndex = 1;
-            // 
-            // lbl_DataLookUp
-            // 
-            this.lbl_DataLookUp.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_DataLookUp.AutoSize = true;
-            this.lbl_DataLookUp.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_DataLookUp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DataLookUp.ForeColor = System.Drawing.Color.White;
-            this.lbl_DataLookUp.Location = new System.Drawing.Point(16, 19);
-            this.lbl_DataLookUp.Name = "lbl_DataLookUp";
-            this.lbl_DataLookUp.Size = new System.Drawing.Size(112, 25);
-            this.lbl_DataLookUp.TabIndex = 1;
-            this.lbl_DataLookUp.Text = "데이터 조회";
             // 
             // tableLayoutPanel3
             // 
@@ -279,376 +266,6 @@
             this.grd_Result.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_Data_CellDoubleClick);
             this.grd_Result.KeyUp += new System.Windows.Forms.KeyEventHandler(this.grd_Data_KeyUp);
             // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel4.ColumnCount = 9;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.1116F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11161F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11161F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.1105F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11116F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11116F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11116F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11116F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11005F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Controls.Add(this.txt_UPDATE_USER, 8, 1);
-            this.tableLayoutPanel4.Controls.Add(this.lbl_UPDATE_USER, 8, 0);
-            this.tableLayoutPanel4.Controls.Add(this.txt_UPDATE_DATE, 7, 1);
-            this.tableLayoutPanel4.Controls.Add(this.lbl_UPDATE_DATE, 7, 0);
-            this.tableLayoutPanel4.Controls.Add(this.txt_INSERT_USER, 6, 1);
-            this.tableLayoutPanel4.Controls.Add(this.lbl_INSERT_USER, 6, 0);
-            this.tableLayoutPanel4.Controls.Add(this.txt_INSERT_DATE, 5, 1);
-            this.tableLayoutPanel4.Controls.Add(this.lbl_INSERT_DATE, 5, 0);
-            this.tableLayoutPanel4.Controls.Add(this.txt_DEL_FLAG, 4, 1);
-            this.tableLayoutPanel4.Controls.Add(this.lbl_DEL_FLAG, 4, 0);
-            this.tableLayoutPanel4.Controls.Add(this.lbl_QC_CODE, 3, 0);
-            this.tableLayoutPanel4.Controls.Add(this.txt_QC_CODE, 3, 1);
-            this.tableLayoutPanel4.Controls.Add(this.lbl_TEAM_CODE, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.txt_TEAM_CODE, 2, 1);
-            this.tableLayoutPanel4.Controls.Add(this.lbl_PLANT_CODE, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.txt_PLANT_CODE, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.lbl_SA_SABUN, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.txt_SA_SABUN, 0, 1);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(1, 232);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1834, 88);
-            this.tableLayoutPanel4.TabIndex = 4;
-            // 
-            // txt_DEL_FLAG
-            // 
-            this.txt_DEL_FLAG.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_DEL_FLAG.CustomButton.Image = null;
-            this.txt_DEL_FLAG.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.txt_DEL_FLAG.CustomButton.Name = "";
-            this.txt_DEL_FLAG.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_DEL_FLAG.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_DEL_FLAG.CustomButton.TabIndex = 1;
-            this.txt_DEL_FLAG.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_DEL_FLAG.CustomButton.UseSelectable = true;
-            this.txt_DEL_FLAG.CustomButton.Visible = false;
-            this.txt_DEL_FLAG.Lines = new string[0];
-            this.txt_DEL_FLAG.Location = new System.Drawing.Point(839, 45);
-            this.txt_DEL_FLAG.MaxLength = 32767;
-            this.txt_DEL_FLAG.Name = "txt_DEL_FLAG";
-            this.txt_DEL_FLAG.PasswordChar = '\0';
-            this.txt_DEL_FLAG.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_DEL_FLAG.SelectedText = "";
-            this.txt_DEL_FLAG.SelectionLength = 0;
-            this.txt_DEL_FLAG.SelectionStart = 0;
-            this.txt_DEL_FLAG.ShortcutsEnabled = true;
-            this.txt_DEL_FLAG.Size = new System.Drawing.Size(150, 23);
-            this.txt_DEL_FLAG.TabIndex = 10;
-            this.txt_DEL_FLAG.UseSelectable = true;
-            this.txt_DEL_FLAG.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_DEL_FLAG.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txt_QC_CODE
-            // 
-            this.txt_QC_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_QC_CODE.CustomButton.Image = null;
-            this.txt_QC_CODE.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.txt_QC_CODE.CustomButton.Name = "";
-            this.txt_QC_CODE.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_QC_CODE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_QC_CODE.CustomButton.TabIndex = 1;
-            this.txt_QC_CODE.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_QC_CODE.CustomButton.UseSelectable = true;
-            this.txt_QC_CODE.CustomButton.Visible = false;
-            this.txt_QC_CODE.Lines = new string[0];
-            this.txt_QC_CODE.Location = new System.Drawing.Point(636, 45);
-            this.txt_QC_CODE.MaxLength = 32767;
-            this.txt_QC_CODE.Name = "txt_QC_CODE";
-            this.txt_QC_CODE.PasswordChar = '\0';
-            this.txt_QC_CODE.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_QC_CODE.SelectedText = "";
-            this.txt_QC_CODE.SelectionLength = 0;
-            this.txt_QC_CODE.SelectionStart = 0;
-            this.txt_QC_CODE.ShortcutsEnabled = true;
-            this.txt_QC_CODE.Size = new System.Drawing.Size(150, 23);
-            this.txt_QC_CODE.TabIndex = 8;
-            this.txt_QC_CODE.UseSelectable = true;
-            this.txt_QC_CODE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_QC_CODE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txt_TEAM_CODE
-            // 
-            this.txt_TEAM_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_TEAM_CODE.CustomButton.Image = null;
-            this.txt_TEAM_CODE.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.txt_TEAM_CODE.CustomButton.Name = "";
-            this.txt_TEAM_CODE.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_TEAM_CODE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_TEAM_CODE.CustomButton.TabIndex = 1;
-            this.txt_TEAM_CODE.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_TEAM_CODE.CustomButton.UseSelectable = true;
-            this.txt_TEAM_CODE.CustomButton.Visible = false;
-            this.txt_TEAM_CODE.Lines = new string[0];
-            this.txt_TEAM_CODE.Location = new System.Drawing.Point(433, 45);
-            this.txt_TEAM_CODE.MaxLength = 32767;
-            this.txt_TEAM_CODE.Name = "txt_TEAM_CODE";
-            this.txt_TEAM_CODE.PasswordChar = '\0';
-            this.txt_TEAM_CODE.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_TEAM_CODE.SelectedText = "";
-            this.txt_TEAM_CODE.SelectionLength = 0;
-            this.txt_TEAM_CODE.SelectionStart = 0;
-            this.txt_TEAM_CODE.ShortcutsEnabled = true;
-            this.txt_TEAM_CODE.Size = new System.Drawing.Size(150, 23);
-            this.txt_TEAM_CODE.TabIndex = 7;
-            this.txt_TEAM_CODE.UseSelectable = true;
-            this.txt_TEAM_CODE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_TEAM_CODE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // lbl_DEL_FLAG
-            // 
-            this.lbl_DEL_FLAG.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_DEL_FLAG.AutoSize = true;
-            this.lbl_DEL_FLAG.Location = new System.Drawing.Point(881, 4);
-            this.lbl_DEL_FLAG.Name = "lbl_DEL_FLAG";
-            this.lbl_DEL_FLAG.Size = new System.Drawing.Size(65, 19);
-            this.lbl_DEL_FLAG.TabIndex = 4;
-            this.lbl_DEL_FLAG.Text = "삭제여부";
-            // 
-            // lbl_QC_CODE
-            // 
-            this.lbl_QC_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_QC_CODE.AutoSize = true;
-            this.lbl_QC_CODE.Location = new System.Drawing.Point(671, 4);
-            this.lbl_QC_CODE.Name = "lbl_QC_CODE";
-            this.lbl_QC_CODE.Size = new System.Drawing.Size(79, 19);
-            this.lbl_QC_CODE.TabIndex = 2;
-            this.lbl_QC_CODE.Text = "검사원코드";
-            // 
-            // lbl_TEAM_CODE
-            // 
-            this.lbl_TEAM_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_TEAM_CODE.AutoSize = true;
-            this.lbl_TEAM_CODE.Location = new System.Drawing.Point(482, 4);
-            this.lbl_TEAM_CODE.Name = "lbl_TEAM_CODE";
-            this.lbl_TEAM_CODE.Size = new System.Drawing.Size(51, 19);
-            this.lbl_TEAM_CODE.TabIndex = 1;
-            this.lbl_TEAM_CODE.Text = "팀코드";
-            // 
-            // lbl_PLANT_CODE
-            // 
-            this.lbl_PLANT_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_PLANT_CODE.AutoSize = true;
-            this.lbl_PLANT_CODE.Location = new System.Drawing.Point(235, 4);
-            this.lbl_PLANT_CODE.Name = "lbl_PLANT_CODE";
-            this.lbl_PLANT_CODE.Size = new System.Drawing.Size(140, 19);
-            this.lbl_PLANT_CODE.TabIndex = 0;
-            this.lbl_PLANT_CODE.Text = "공장코드(PrimaryKey)";
-            // 
-            // txt_PLANT_CODE
-            // 
-            this.txt_PLANT_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_PLANT_CODE.CustomButton.Image = null;
-            this.txt_PLANT_CODE.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.txt_PLANT_CODE.CustomButton.Name = "";
-            this.txt_PLANT_CODE.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_PLANT_CODE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_PLANT_CODE.CustomButton.TabIndex = 1;
-            this.txt_PLANT_CODE.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_PLANT_CODE.CustomButton.UseSelectable = true;
-            this.txt_PLANT_CODE.CustomButton.Visible = false;
-            this.txt_PLANT_CODE.Lines = new string[0];
-            this.txt_PLANT_CODE.Location = new System.Drawing.Point(230, 45);
-            this.txt_PLANT_CODE.MaxLength = 32767;
-            this.txt_PLANT_CODE.Name = "txt_PLANT_CODE";
-            this.txt_PLANT_CODE.PasswordChar = '\0';
-            this.txt_PLANT_CODE.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_PLANT_CODE.SelectedText = "";
-            this.txt_PLANT_CODE.SelectionLength = 0;
-            this.txt_PLANT_CODE.SelectionStart = 0;
-            this.txt_PLANT_CODE.ShortcutsEnabled = true;
-            this.txt_PLANT_CODE.Size = new System.Drawing.Size(150, 23);
-            this.txt_PLANT_CODE.TabIndex = 5;
-            this.txt_PLANT_CODE.UseSelectable = true;
-            this.txt_PLANT_CODE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_PLANT_CODE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // lbl_INSERT_DATE
-            // 
-            this.lbl_INSERT_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_INSERT_DATE.AutoSize = true;
-            this.lbl_INSERT_DATE.Location = new System.Drawing.Point(1091, 4);
-            this.lbl_INSERT_DATE.Name = "lbl_INSERT_DATE";
-            this.lbl_INSERT_DATE.Size = new System.Drawing.Size(51, 19);
-            this.lbl_INSERT_DATE.TabIndex = 4;
-            this.lbl_INSERT_DATE.Text = "추가일";
-            // 
-            // lbl_INSERT_USER
-            // 
-            this.lbl_INSERT_USER.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_INSERT_USER.AutoSize = true;
-            this.lbl_INSERT_USER.Location = new System.Drawing.Point(1294, 4);
-            this.lbl_INSERT_USER.Name = "lbl_INSERT_USER";
-            this.lbl_INSERT_USER.Size = new System.Drawing.Size(51, 19);
-            this.lbl_INSERT_USER.TabIndex = 4;
-            this.lbl_INSERT_USER.Text = "추가자";
-            // 
-            // lbl_UPDATE_DATE
-            // 
-            this.lbl_UPDATE_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_UPDATE_DATE.AutoSize = true;
-            this.lbl_UPDATE_DATE.Location = new System.Drawing.Point(1497, 4);
-            this.lbl_UPDATE_DATE.Name = "lbl_UPDATE_DATE";
-            this.lbl_UPDATE_DATE.Size = new System.Drawing.Size(51, 19);
-            this.lbl_UPDATE_DATE.TabIndex = 4;
-            this.lbl_UPDATE_DATE.Text = "수정일";
-            // 
-            // lbl_UPDATE_USER
-            // 
-            this.lbl_UPDATE_USER.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_UPDATE_USER.AutoSize = true;
-            this.lbl_UPDATE_USER.Location = new System.Drawing.Point(1703, 4);
-            this.lbl_UPDATE_USER.Name = "lbl_UPDATE_USER";
-            this.lbl_UPDATE_USER.Size = new System.Drawing.Size(51, 19);
-            this.lbl_UPDATE_USER.TabIndex = 4;
-            this.lbl_UPDATE_USER.Text = "수정자";
-            // 
-            // txt_INSERT_DATE
-            // 
-            this.txt_INSERT_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_INSERT_DATE.CustomButton.Image = null;
-            this.txt_INSERT_DATE.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.txt_INSERT_DATE.CustomButton.Name = "";
-            this.txt_INSERT_DATE.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_INSERT_DATE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_INSERT_DATE.CustomButton.TabIndex = 1;
-            this.txt_INSERT_DATE.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_INSERT_DATE.CustomButton.UseSelectable = true;
-            this.txt_INSERT_DATE.CustomButton.Visible = false;
-            this.txt_INSERT_DATE.Lines = new string[0];
-            this.txt_INSERT_DATE.Location = new System.Drawing.Point(1042, 45);
-            this.txt_INSERT_DATE.MaxLength = 32767;
-            this.txt_INSERT_DATE.Name = "txt_INSERT_DATE";
-            this.txt_INSERT_DATE.PasswordChar = '\0';
-            this.txt_INSERT_DATE.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_INSERT_DATE.SelectedText = "";
-            this.txt_INSERT_DATE.SelectionLength = 0;
-            this.txt_INSERT_DATE.SelectionStart = 0;
-            this.txt_INSERT_DATE.ShortcutsEnabled = true;
-            this.txt_INSERT_DATE.Size = new System.Drawing.Size(150, 23);
-            this.txt_INSERT_DATE.TabIndex = 10;
-            this.txt_INSERT_DATE.UseSelectable = true;
-            this.txt_INSERT_DATE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_INSERT_DATE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txt_INSERT_USER
-            // 
-            this.txt_INSERT_USER.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_INSERT_USER.CustomButton.Image = null;
-            this.txt_INSERT_USER.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.txt_INSERT_USER.CustomButton.Name = "";
-            this.txt_INSERT_USER.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_INSERT_USER.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_INSERT_USER.CustomButton.TabIndex = 1;
-            this.txt_INSERT_USER.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_INSERT_USER.CustomButton.UseSelectable = true;
-            this.txt_INSERT_USER.CustomButton.Visible = false;
-            this.txt_INSERT_USER.Lines = new string[0];
-            this.txt_INSERT_USER.Location = new System.Drawing.Point(1245, 45);
-            this.txt_INSERT_USER.MaxLength = 32767;
-            this.txt_INSERT_USER.Name = "txt_INSERT_USER";
-            this.txt_INSERT_USER.PasswordChar = '\0';
-            this.txt_INSERT_USER.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_INSERT_USER.SelectedText = "";
-            this.txt_INSERT_USER.SelectionLength = 0;
-            this.txt_INSERT_USER.SelectionStart = 0;
-            this.txt_INSERT_USER.ShortcutsEnabled = true;
-            this.txt_INSERT_USER.Size = new System.Drawing.Size(150, 23);
-            this.txt_INSERT_USER.TabIndex = 10;
-            this.txt_INSERT_USER.UseSelectable = true;
-            this.txt_INSERT_USER.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_INSERT_USER.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txt_UPDATE_DATE
-            // 
-            this.txt_UPDATE_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_UPDATE_DATE.CustomButton.Image = null;
-            this.txt_UPDATE_DATE.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.txt_UPDATE_DATE.CustomButton.Name = "";
-            this.txt_UPDATE_DATE.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_UPDATE_DATE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_UPDATE_DATE.CustomButton.TabIndex = 1;
-            this.txt_UPDATE_DATE.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_UPDATE_DATE.CustomButton.UseSelectable = true;
-            this.txt_UPDATE_DATE.CustomButton.Visible = false;
-            this.txt_UPDATE_DATE.Lines = new string[0];
-            this.txt_UPDATE_DATE.Location = new System.Drawing.Point(1448, 45);
-            this.txt_UPDATE_DATE.MaxLength = 32767;
-            this.txt_UPDATE_DATE.Name = "txt_UPDATE_DATE";
-            this.txt_UPDATE_DATE.PasswordChar = '\0';
-            this.txt_UPDATE_DATE.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_UPDATE_DATE.SelectedText = "";
-            this.txt_UPDATE_DATE.SelectionLength = 0;
-            this.txt_UPDATE_DATE.SelectionStart = 0;
-            this.txt_UPDATE_DATE.ShortcutsEnabled = true;
-            this.txt_UPDATE_DATE.Size = new System.Drawing.Size(150, 23);
-            this.txt_UPDATE_DATE.TabIndex = 10;
-            this.txt_UPDATE_DATE.UseSelectable = true;
-            this.txt_UPDATE_DATE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_UPDATE_DATE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txt_UPDATE_USER
-            // 
-            this.txt_UPDATE_USER.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_UPDATE_USER.CustomButton.Image = null;
-            this.txt_UPDATE_USER.CustomButton.Location = new System.Drawing.Point(128, 1);
-            this.txt_UPDATE_USER.CustomButton.Name = "";
-            this.txt_UPDATE_USER.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_UPDATE_USER.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_UPDATE_USER.CustomButton.TabIndex = 1;
-            this.txt_UPDATE_USER.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_UPDATE_USER.CustomButton.UseSelectable = true;
-            this.txt_UPDATE_USER.CustomButton.Visible = false;
-            this.txt_UPDATE_USER.Lines = new string[0];
-            this.txt_UPDATE_USER.Location = new System.Drawing.Point(1654, 45);
-            this.txt_UPDATE_USER.MaxLength = 32767;
-            this.txt_UPDATE_USER.Name = "txt_UPDATE_USER";
-            this.txt_UPDATE_USER.PasswordChar = '\0';
-            this.txt_UPDATE_USER.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_UPDATE_USER.SelectedText = "";
-            this.txt_UPDATE_USER.SelectionLength = 0;
-            this.txt_UPDATE_USER.SelectionStart = 0;
-            this.txt_UPDATE_USER.ShortcutsEnabled = true;
-            this.txt_UPDATE_USER.Size = new System.Drawing.Size(150, 23);
-            this.txt_UPDATE_USER.TabIndex = 10;
-            this.txt_UPDATE_USER.UseSelectable = true;
-            this.txt_UPDATE_USER.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_UPDATE_USER.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // Column6
             // 
             this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -712,6 +329,376 @@
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel4.ColumnCount = 9;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.1116F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11161F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11161F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.1105F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11116F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11116F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11116F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11116F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11005F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Controls.Add(this.txt_UPDATE_USER, 8, 1);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_UPDATE_USER, 8, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txt_UPDATE_DATE, 7, 1);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_UPDATE_DATE, 7, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txt_INSERT_USER, 6, 1);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_INSERT_USER, 6, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txt_INSERT_DATE, 5, 1);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_INSERT_DATE, 5, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txt_DEL_FLAG, 4, 1);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_DEL_FLAG, 4, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_QC_CODE, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txt_QC_CODE, 3, 1);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_TEAM_CODE, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txt_TEAM_CODE, 2, 1);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_PLANT_CODE, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txt_PLANT_CODE, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_SA_SABUN, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txt_SA_SABUN, 0, 1);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(1, 232);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1834, 88);
+            this.tableLayoutPanel4.TabIndex = 4;
+            // 
+            // txt_UPDATE_USER
+            // 
+            this.txt_UPDATE_USER.Anchor = System.Windows.Forms.AnchorStyles.None;
+            // 
+            // 
+            // 
+            this.txt_UPDATE_USER.CustomButton.Image = null;
+            this.txt_UPDATE_USER.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_UPDATE_USER.CustomButton.Name = "";
+            this.txt_UPDATE_USER.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_UPDATE_USER.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_UPDATE_USER.CustomButton.TabIndex = 1;
+            this.txt_UPDATE_USER.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_UPDATE_USER.CustomButton.UseSelectable = true;
+            this.txt_UPDATE_USER.CustomButton.Visible = false;
+            this.txt_UPDATE_USER.Lines = new string[0];
+            this.txt_UPDATE_USER.Location = new System.Drawing.Point(1654, 45);
+            this.txt_UPDATE_USER.MaxLength = 32767;
+            this.txt_UPDATE_USER.Name = "txt_UPDATE_USER";
+            this.txt_UPDATE_USER.PasswordChar = '\0';
+            this.txt_UPDATE_USER.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_UPDATE_USER.SelectedText = "";
+            this.txt_UPDATE_USER.SelectionLength = 0;
+            this.txt_UPDATE_USER.SelectionStart = 0;
+            this.txt_UPDATE_USER.ShortcutsEnabled = true;
+            this.txt_UPDATE_USER.Size = new System.Drawing.Size(150, 23);
+            this.txt_UPDATE_USER.TabIndex = 10;
+            this.txt_UPDATE_USER.UseSelectable = true;
+            this.txt_UPDATE_USER.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_UPDATE_USER.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lbl_UPDATE_USER
+            // 
+            this.lbl_UPDATE_USER.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_UPDATE_USER.AutoSize = true;
+            this.lbl_UPDATE_USER.Location = new System.Drawing.Point(1703, 4);
+            this.lbl_UPDATE_USER.Name = "lbl_UPDATE_USER";
+            this.lbl_UPDATE_USER.Size = new System.Drawing.Size(51, 19);
+            this.lbl_UPDATE_USER.TabIndex = 4;
+            this.lbl_UPDATE_USER.Text = "수정자";
+            // 
+            // txt_UPDATE_DATE
+            // 
+            this.txt_UPDATE_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            // 
+            // 
+            // 
+            this.txt_UPDATE_DATE.CustomButton.Image = null;
+            this.txt_UPDATE_DATE.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_UPDATE_DATE.CustomButton.Name = "";
+            this.txt_UPDATE_DATE.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_UPDATE_DATE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_UPDATE_DATE.CustomButton.TabIndex = 1;
+            this.txt_UPDATE_DATE.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_UPDATE_DATE.CustomButton.UseSelectable = true;
+            this.txt_UPDATE_DATE.CustomButton.Visible = false;
+            this.txt_UPDATE_DATE.Lines = new string[0];
+            this.txt_UPDATE_DATE.Location = new System.Drawing.Point(1448, 45);
+            this.txt_UPDATE_DATE.MaxLength = 32767;
+            this.txt_UPDATE_DATE.Name = "txt_UPDATE_DATE";
+            this.txt_UPDATE_DATE.PasswordChar = '\0';
+            this.txt_UPDATE_DATE.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_UPDATE_DATE.SelectedText = "";
+            this.txt_UPDATE_DATE.SelectionLength = 0;
+            this.txt_UPDATE_DATE.SelectionStart = 0;
+            this.txt_UPDATE_DATE.ShortcutsEnabled = true;
+            this.txt_UPDATE_DATE.Size = new System.Drawing.Size(150, 23);
+            this.txt_UPDATE_DATE.TabIndex = 10;
+            this.txt_UPDATE_DATE.UseSelectable = true;
+            this.txt_UPDATE_DATE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_UPDATE_DATE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lbl_UPDATE_DATE
+            // 
+            this.lbl_UPDATE_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_UPDATE_DATE.AutoSize = true;
+            this.lbl_UPDATE_DATE.Location = new System.Drawing.Point(1497, 4);
+            this.lbl_UPDATE_DATE.Name = "lbl_UPDATE_DATE";
+            this.lbl_UPDATE_DATE.Size = new System.Drawing.Size(51, 19);
+            this.lbl_UPDATE_DATE.TabIndex = 4;
+            this.lbl_UPDATE_DATE.Text = "수정일";
+            // 
+            // txt_INSERT_USER
+            // 
+            this.txt_INSERT_USER.Anchor = System.Windows.Forms.AnchorStyles.None;
+            // 
+            // 
+            // 
+            this.txt_INSERT_USER.CustomButton.Image = null;
+            this.txt_INSERT_USER.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_INSERT_USER.CustomButton.Name = "";
+            this.txt_INSERT_USER.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_INSERT_USER.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_INSERT_USER.CustomButton.TabIndex = 1;
+            this.txt_INSERT_USER.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_INSERT_USER.CustomButton.UseSelectable = true;
+            this.txt_INSERT_USER.CustomButton.Visible = false;
+            this.txt_INSERT_USER.Lines = new string[0];
+            this.txt_INSERT_USER.Location = new System.Drawing.Point(1245, 45);
+            this.txt_INSERT_USER.MaxLength = 32767;
+            this.txt_INSERT_USER.Name = "txt_INSERT_USER";
+            this.txt_INSERT_USER.PasswordChar = '\0';
+            this.txt_INSERT_USER.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_INSERT_USER.SelectedText = "";
+            this.txt_INSERT_USER.SelectionLength = 0;
+            this.txt_INSERT_USER.SelectionStart = 0;
+            this.txt_INSERT_USER.ShortcutsEnabled = true;
+            this.txt_INSERT_USER.Size = new System.Drawing.Size(150, 23);
+            this.txt_INSERT_USER.TabIndex = 10;
+            this.txt_INSERT_USER.UseSelectable = true;
+            this.txt_INSERT_USER.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_INSERT_USER.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lbl_INSERT_USER
+            // 
+            this.lbl_INSERT_USER.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_INSERT_USER.AutoSize = true;
+            this.lbl_INSERT_USER.Location = new System.Drawing.Point(1294, 4);
+            this.lbl_INSERT_USER.Name = "lbl_INSERT_USER";
+            this.lbl_INSERT_USER.Size = new System.Drawing.Size(51, 19);
+            this.lbl_INSERT_USER.TabIndex = 4;
+            this.lbl_INSERT_USER.Text = "추가자";
+            // 
+            // txt_INSERT_DATE
+            // 
+            this.txt_INSERT_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            // 
+            // 
+            // 
+            this.txt_INSERT_DATE.CustomButton.Image = null;
+            this.txt_INSERT_DATE.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_INSERT_DATE.CustomButton.Name = "";
+            this.txt_INSERT_DATE.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_INSERT_DATE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_INSERT_DATE.CustomButton.TabIndex = 1;
+            this.txt_INSERT_DATE.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_INSERT_DATE.CustomButton.UseSelectable = true;
+            this.txt_INSERT_DATE.CustomButton.Visible = false;
+            this.txt_INSERT_DATE.Lines = new string[0];
+            this.txt_INSERT_DATE.Location = new System.Drawing.Point(1042, 45);
+            this.txt_INSERT_DATE.MaxLength = 32767;
+            this.txt_INSERT_DATE.Name = "txt_INSERT_DATE";
+            this.txt_INSERT_DATE.PasswordChar = '\0';
+            this.txt_INSERT_DATE.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_INSERT_DATE.SelectedText = "";
+            this.txt_INSERT_DATE.SelectionLength = 0;
+            this.txt_INSERT_DATE.SelectionStart = 0;
+            this.txt_INSERT_DATE.ShortcutsEnabled = true;
+            this.txt_INSERT_DATE.Size = new System.Drawing.Size(150, 23);
+            this.txt_INSERT_DATE.TabIndex = 10;
+            this.txt_INSERT_DATE.UseSelectable = true;
+            this.txt_INSERT_DATE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_INSERT_DATE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lbl_INSERT_DATE
+            // 
+            this.lbl_INSERT_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_INSERT_DATE.AutoSize = true;
+            this.lbl_INSERT_DATE.Location = new System.Drawing.Point(1091, 4);
+            this.lbl_INSERT_DATE.Name = "lbl_INSERT_DATE";
+            this.lbl_INSERT_DATE.Size = new System.Drawing.Size(51, 19);
+            this.lbl_INSERT_DATE.TabIndex = 4;
+            this.lbl_INSERT_DATE.Text = "추가일";
+            // 
+            // txt_DEL_FLAG
+            // 
+            this.txt_DEL_FLAG.Anchor = System.Windows.Forms.AnchorStyles.None;
+            // 
+            // 
+            // 
+            this.txt_DEL_FLAG.CustomButton.Image = null;
+            this.txt_DEL_FLAG.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_DEL_FLAG.CustomButton.Name = "";
+            this.txt_DEL_FLAG.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_DEL_FLAG.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_DEL_FLAG.CustomButton.TabIndex = 1;
+            this.txt_DEL_FLAG.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_DEL_FLAG.CustomButton.UseSelectable = true;
+            this.txt_DEL_FLAG.CustomButton.Visible = false;
+            this.txt_DEL_FLAG.Lines = new string[0];
+            this.txt_DEL_FLAG.Location = new System.Drawing.Point(839, 45);
+            this.txt_DEL_FLAG.MaxLength = 32767;
+            this.txt_DEL_FLAG.Name = "txt_DEL_FLAG";
+            this.txt_DEL_FLAG.PasswordChar = '\0';
+            this.txt_DEL_FLAG.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_DEL_FLAG.SelectedText = "";
+            this.txt_DEL_FLAG.SelectionLength = 0;
+            this.txt_DEL_FLAG.SelectionStart = 0;
+            this.txt_DEL_FLAG.ShortcutsEnabled = true;
+            this.txt_DEL_FLAG.Size = new System.Drawing.Size(150, 23);
+            this.txt_DEL_FLAG.TabIndex = 10;
+            this.txt_DEL_FLAG.UseSelectable = true;
+            this.txt_DEL_FLAG.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_DEL_FLAG.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lbl_DEL_FLAG
+            // 
+            this.lbl_DEL_FLAG.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_DEL_FLAG.AutoSize = true;
+            this.lbl_DEL_FLAG.Location = new System.Drawing.Point(881, 4);
+            this.lbl_DEL_FLAG.Name = "lbl_DEL_FLAG";
+            this.lbl_DEL_FLAG.Size = new System.Drawing.Size(65, 19);
+            this.lbl_DEL_FLAG.TabIndex = 4;
+            this.lbl_DEL_FLAG.Text = "삭제여부";
+            // 
+            // lbl_QC_CODE
+            // 
+            this.lbl_QC_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_QC_CODE.AutoSize = true;
+            this.lbl_QC_CODE.Location = new System.Drawing.Point(671, 4);
+            this.lbl_QC_CODE.Name = "lbl_QC_CODE";
+            this.lbl_QC_CODE.Size = new System.Drawing.Size(79, 19);
+            this.lbl_QC_CODE.TabIndex = 2;
+            this.lbl_QC_CODE.Text = "검사원코드";
+            // 
+            // txt_QC_CODE
+            // 
+            this.txt_QC_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            // 
+            // 
+            // 
+            this.txt_QC_CODE.CustomButton.Image = null;
+            this.txt_QC_CODE.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_QC_CODE.CustomButton.Name = "";
+            this.txt_QC_CODE.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_QC_CODE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_QC_CODE.CustomButton.TabIndex = 1;
+            this.txt_QC_CODE.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_QC_CODE.CustomButton.UseSelectable = true;
+            this.txt_QC_CODE.CustomButton.Visible = false;
+            this.txt_QC_CODE.Lines = new string[0];
+            this.txt_QC_CODE.Location = new System.Drawing.Point(636, 45);
+            this.txt_QC_CODE.MaxLength = 32767;
+            this.txt_QC_CODE.Name = "txt_QC_CODE";
+            this.txt_QC_CODE.PasswordChar = '\0';
+            this.txt_QC_CODE.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_QC_CODE.SelectedText = "";
+            this.txt_QC_CODE.SelectionLength = 0;
+            this.txt_QC_CODE.SelectionStart = 0;
+            this.txt_QC_CODE.ShortcutsEnabled = true;
+            this.txt_QC_CODE.Size = new System.Drawing.Size(150, 23);
+            this.txt_QC_CODE.TabIndex = 8;
+            this.txt_QC_CODE.UseSelectable = true;
+            this.txt_QC_CODE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_QC_CODE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lbl_TEAM_CODE
+            // 
+            this.lbl_TEAM_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_TEAM_CODE.AutoSize = true;
+            this.lbl_TEAM_CODE.Location = new System.Drawing.Point(482, 4);
+            this.lbl_TEAM_CODE.Name = "lbl_TEAM_CODE";
+            this.lbl_TEAM_CODE.Size = new System.Drawing.Size(51, 19);
+            this.lbl_TEAM_CODE.TabIndex = 1;
+            this.lbl_TEAM_CODE.Text = "팀코드";
+            // 
+            // txt_TEAM_CODE
+            // 
+            this.txt_TEAM_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            // 
+            // 
+            // 
+            this.txt_TEAM_CODE.CustomButton.Image = null;
+            this.txt_TEAM_CODE.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_TEAM_CODE.CustomButton.Name = "";
+            this.txt_TEAM_CODE.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_TEAM_CODE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_TEAM_CODE.CustomButton.TabIndex = 1;
+            this.txt_TEAM_CODE.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_TEAM_CODE.CustomButton.UseSelectable = true;
+            this.txt_TEAM_CODE.CustomButton.Visible = false;
+            this.txt_TEAM_CODE.Lines = new string[0];
+            this.txt_TEAM_CODE.Location = new System.Drawing.Point(433, 45);
+            this.txt_TEAM_CODE.MaxLength = 32767;
+            this.txt_TEAM_CODE.Name = "txt_TEAM_CODE";
+            this.txt_TEAM_CODE.PasswordChar = '\0';
+            this.txt_TEAM_CODE.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_TEAM_CODE.SelectedText = "";
+            this.txt_TEAM_CODE.SelectionLength = 0;
+            this.txt_TEAM_CODE.SelectionStart = 0;
+            this.txt_TEAM_CODE.ShortcutsEnabled = true;
+            this.txt_TEAM_CODE.Size = new System.Drawing.Size(150, 23);
+            this.txt_TEAM_CODE.TabIndex = 7;
+            this.txt_TEAM_CODE.UseSelectable = true;
+            this.txt_TEAM_CODE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_TEAM_CODE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lbl_PLANT_CODE
+            // 
+            this.lbl_PLANT_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_PLANT_CODE.AutoSize = true;
+            this.lbl_PLANT_CODE.Location = new System.Drawing.Point(235, 4);
+            this.lbl_PLANT_CODE.Name = "lbl_PLANT_CODE";
+            this.lbl_PLANT_CODE.Size = new System.Drawing.Size(140, 19);
+            this.lbl_PLANT_CODE.TabIndex = 0;
+            this.lbl_PLANT_CODE.Text = "공장코드(PrimaryKey)";
+            // 
+            // txt_PLANT_CODE
+            // 
+            this.txt_PLANT_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            // 
+            // 
+            // 
+            this.txt_PLANT_CODE.CustomButton.Image = null;
+            this.txt_PLANT_CODE.CustomButton.Location = new System.Drawing.Point(128, 1);
+            this.txt_PLANT_CODE.CustomButton.Name = "";
+            this.txt_PLANT_CODE.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_PLANT_CODE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_PLANT_CODE.CustomButton.TabIndex = 1;
+            this.txt_PLANT_CODE.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_PLANT_CODE.CustomButton.UseSelectable = true;
+            this.txt_PLANT_CODE.CustomButton.Visible = false;
+            this.txt_PLANT_CODE.Lines = new string[0];
+            this.txt_PLANT_CODE.Location = new System.Drawing.Point(230, 45);
+            this.txt_PLANT_CODE.MaxLength = 32767;
+            this.txt_PLANT_CODE.Name = "txt_PLANT_CODE";
+            this.txt_PLANT_CODE.PasswordChar = '\0';
+            this.txt_PLANT_CODE.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_PLANT_CODE.SelectedText = "";
+            this.txt_PLANT_CODE.SelectionLength = 0;
+            this.txt_PLANT_CODE.SelectionStart = 0;
+            this.txt_PLANT_CODE.ShortcutsEnabled = true;
+            this.txt_PLANT_CODE.Size = new System.Drawing.Size(150, 23);
+            this.txt_PLANT_CODE.TabIndex = 5;
+            this.txt_PLANT_CODE.UseSelectable = true;
+            this.txt_PLANT_CODE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_PLANT_CODE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // lbl_SA_SABUN
             // 
             this.lbl_SA_SABUN.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -753,6 +740,19 @@
             this.txt_SA_SABUN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_SA_SABUN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // lbl_DataLookUp
+            // 
+            this.lbl_DataLookUp.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_DataLookUp.AutoSize = true;
+            this.lbl_DataLookUp.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_DataLookUp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DataLookUp.ForeColor = System.Drawing.Color.White;
+            this.lbl_DataLookUp.Location = new System.Drawing.Point(27, 19);
+            this.lbl_DataLookUp.Name = "lbl_DataLookUp";
+            this.lbl_DataLookUp.Size = new System.Drawing.Size(93, 25);
+            this.lbl_DataLookUp.TabIndex = 2;
+            this.lbl_DataLookUp.Text = "조회 조건";
+            // 
             // Inspector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -791,7 +791,6 @@
         private MetroFramework.Controls.MetroLabel lbl_PLANT_CODE;
         private MetroFramework.Controls.MetroTextBox txt_PLANT_CODE;
         private MetroFramework.Controls.MetroGrid grd_Result;
-        private System.Windows.Forms.Label lbl_DataLookUp;
         private System.Windows.Forms.Label lbl_DataUpsert;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -816,5 +815,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private MetroFramework.Controls.MetroLabel lbl_SA_SABUN;
         private MetroFramework.Controls.MetroTextBox txt_SA_SABUN;
+        private System.Windows.Forms.Label lbl_DataLookUp;
     }
 }
