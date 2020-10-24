@@ -42,10 +42,10 @@ namespace Upsert
                 form.MdiParent = this;
                 form.StartPosition = FormStartPosition.CenterParent;
                 //form.WindowState = FormWindowState.Minimized;
-                form.Dock = DockStyle.Fill;
+                //form.Dock = DockStyle.Fill;
                 form.Show();
-                //form.WindowState = FormWindowState.Maximized;
-                form.WindowState = FormWindowState.Normal;
+                form.WindowState = FormWindowState.Maximized;
+                //form.WindowState = FormWindowState.Normal;
             }
             else
             {
@@ -55,10 +55,10 @@ namespace Upsert
                     form.MdiParent = this;
                     form.StartPosition = FormStartPosition.CenterParent;
                     //form.WindowState = FormWindowState.Minimized;
-                    form.Dock = DockStyle.Fill;
+                    //form.Dock = DockStyle.Fill;
                     form.Show();
-                    //form.WindowState = FormWindowState.Maximized;
-                    form.WindowState = FormWindowState.Normal;
+                    form.WindowState = FormWindowState.Maximized;
+                    //form.WindowState = FormWindowState.Normal;
                 }
                 else
                 {
@@ -184,7 +184,7 @@ namespace Upsert
 
         private void programManageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
+            /*if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
                 if (this.ActiveMdiChild != programManage)  // 열려있는 자식폼이 Form2 이 아니면
                 {
@@ -197,12 +197,14 @@ namespace Upsert
             {
                 programManage = ShowOrActiveForm(programManage, typeof(ProgramManage)) as ProgramManage;
                 btn_Save.Enabled = true;
-            }
+            }*/
+            programManage = ShowOrActiveForm(programManage, typeof(ProgramManage)) as ProgramManage;
+            btn_Save.Enabled = true;
         }
 
         private void productMasterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
+            /*if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
                 if (this.ActiveMdiChild != productMaster)  // 열려있는 자식폼이 Form2 가 아니면
                 {
@@ -215,13 +217,15 @@ namespace Upsert
             {
                 productMaster = ShowOrActiveForm(productMaster, typeof(ProductMaster)) as ProductMaster;
                 btn_Save.Enabled = false;
-            }
+            }*/
+            productMaster = ShowOrActiveForm(productMaster, typeof(ProductMaster)) as ProductMaster;
+            btn_Save.Enabled = false;
 
         }
 
         private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
+            /*if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
                 if (this.ActiveMdiChild != employee)  // 열려있는 자식폼이 Form2 가 아니면
                 {
@@ -234,7 +238,9 @@ namespace Upsert
             {
                 employee = ShowOrActiveForm(employee, typeof(Employee)) as Employee;
                 btn_Save.Enabled = false;
-            }
+            }*/
+            employee = ShowOrActiveForm(employee, typeof(Employee)) as Employee;
+            btn_Save.Enabled = false;
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
@@ -259,7 +265,7 @@ namespace Upsert
 
         private void workerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
+            /*if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
                 if (this.ActiveMdiChild != worker)  // 열려있는 자식폼이 Form2 가 아니면
                 {
@@ -272,12 +278,14 @@ namespace Upsert
             {
                 worker = ShowOrActiveForm(worker, typeof(Worker)) as Worker;
                 btn_Save.Enabled = false;
-            }
+            }*/
+            worker = ShowOrActiveForm(worker, typeof(Worker)) as Worker;
+            btn_Save.Enabled = false;
         }
 
         private void downTimeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
+            /*if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
                 if (this.ActiveMdiChild != downTime)  // 열려있는 자식폼이 Form2 가 아니면
                 {
@@ -290,12 +298,14 @@ namespace Upsert
             {
                 downTime = ShowOrActiveForm(downTime, typeof(DownTime)) as DownTime;
                 btn_Save.Enabled = true;
-            }
+            }*/
+            downTime = ShowOrActiveForm(downTime, typeof(DownTime)) as DownTime;
+            btn_Save.Enabled = true;
         }
 
         private void workCenterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
+            /*if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
                 if (this.ActiveMdiChild != workCenter)  // 열려있는 자식폼이 Form2 가 아니면
                 {
@@ -308,12 +318,14 @@ namespace Upsert
             {
                 workCenter = ShowOrActiveForm(workCenter, typeof(WorkCenter)) as WorkCenter;
                 btn_Save.Enabled = false;
-            }
+            }*/
+            workCenter = ShowOrActiveForm(workCenter, typeof(WorkCenter)) as WorkCenter;
+            btn_Save.Enabled = false;
         }
 
         private void defectToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
+            /*if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
                 if (this.ActiveMdiChild != defect)  // 열려있는 자식폼이 Form2 가 아니면
                 {
@@ -326,12 +338,14 @@ namespace Upsert
             {
                 defect = ShowOrActiveForm(defect, typeof(Defect)) as Defect;
                 btn_Save.Enabled = true;
-            }
+            }*/
+            defect = ShowOrActiveForm(defect, typeof(Defect)) as Defect;
+            btn_Save.Enabled = true;
         }
 
         private void inspectorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
+            /*if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
                 if (this.ActiveMdiChild != inspector)  // 열려있는 자식폼이 Form2 가 아니면
                 {
@@ -344,12 +358,14 @@ namespace Upsert
             {
                 inspector = ShowOrActiveForm(inspector, typeof(Inspector)) as Inspector;
                 btn_Save.Enabled = true;
-            }
+            }*/
+            inspector = ShowOrActiveForm(inspector, typeof(Inspector)) as Inspector;
+            btn_Save.Enabled = true;
         }
 
         private void dEPTToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
+            /*if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
                 if (this.ActiveMdiChild != dept)  // 열려있는 자식폼이 Form2 가 아니면
                 {
@@ -362,12 +378,14 @@ namespace Upsert
             {
                 dept = ShowOrActiveForm(dept, typeof(DEPT)) as DEPT;
                 btn_Save.Enabled = true;
-            }
+            }*/
+            dept = ShowOrActiveForm(dept, typeof(DEPT)) as DEPT;
+            btn_Save.Enabled = true;
         }
 
         private void teamToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
+            /*if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
                 if (this.ActiveMdiChild != team)  // 열려있는 자식폼이 Form2 가 아니면
                 {
@@ -380,12 +398,14 @@ namespace Upsert
             {
                 team = ShowOrActiveForm(team, typeof(Team)) as Team;
                 btn_Save.Enabled = true;
-            }
+            }*/
+            team = ShowOrActiveForm(team, typeof(Team)) as Team;
+            btn_Save.Enabled = true;
         }
 
         private void commonCodeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
+            /*if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
                 if (this.ActiveMdiChild != team)  // 열려있는 자식폼이 Form2 가 아니면
                 {
@@ -398,12 +418,14 @@ namespace Upsert
             {
                 commonCode = ShowOrActiveForm(commonCode, typeof(COMMONCODE)) as COMMONCODE;
                 btn_Save.Enabled = true;
-            }
+            }*/
+            commonCode = ShowOrActiveForm(commonCode, typeof(COMMONCODE)) as COMMONCODE;
+            btn_Save.Enabled = true;
         }
 
         private void dowinTimeDTLToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
+            /*if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
                 if (this.ActiveMdiChild != downTimeDTL)  // 열려있는 자식폼이 Form2 가 아니면
                 {
@@ -416,12 +438,14 @@ namespace Upsert
             {
                 downTimeDTL = ShowOrActiveForm(downTimeDTL, typeof(DownTimeDTL)) as DownTimeDTL;
                 btn_Save.Enabled = true;
-            }
+            }*/
+            downTimeDTL = ShowOrActiveForm(downTimeDTL, typeof(DownTimeDTL)) as DownTimeDTL;
+            btn_Save.Enabled = true;
         }
 
         private void defectDTLToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
+            /*if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
                 if (this.ActiveMdiChild != defectDTL)  // 열려있는 자식폼이 Form2 가 아니면
                 {
@@ -434,12 +458,14 @@ namespace Upsert
             {
                 defectDTL = ShowOrActiveForm(defectDTL, typeof(DefectDTL)) as DefectDTL;
                 btn_Save.Enabled = true;
-            }
+            }*/
+            defectDTL = ShowOrActiveForm(defectDTL, typeof(DefectDTL)) as DefectDTL;
+            btn_Save.Enabled = true;
         }
 
         private void slocationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
+            /*if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
                 if (this.ActiveMdiChild != slocation)  // 열려있는 자식폼이 Form2 가 아니면
                 {
@@ -452,12 +478,14 @@ namespace Upsert
             {
                 slocation = ShowOrActiveForm(slocation, typeof(Slocation)) as Slocation;
                 btn_Save.Enabled = true;
-            }
+            }*/
+            slocation = ShowOrActiveForm(slocation, typeof(Slocation)) as Slocation;
+            btn_Save.Enabled = true;
         }
 
         private void plantToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
+            /*if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
                 if (this.ActiveMdiChild != plant)  // 열려있는 자식폼이 Form2 가 아니면
                 {
@@ -470,7 +498,9 @@ namespace Upsert
             {
                 plant = ShowOrActiveForm(plant, typeof(Plant)) as Plant;
                 btn_Save.Enabled = true;
-            }
+            }*/
+            plant = ShowOrActiveForm(plant, typeof(Plant)) as Plant;
+            btn_Save.Enabled = true;
         }
         private void btn_Delete_MouseUp(object sender, MouseEventArgs e)
         {

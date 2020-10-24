@@ -89,8 +89,8 @@
             this.txt_INSERT_DATE = new MetroFramework.Controls.MetroTextBox();
             this.txt_INSERT_USER = new MetroFramework.Controls.MetroTextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Save = new MetroFramework.Controls.MetroButton();
             this.btn_Close = new MetroFramework.Controls.MetroButton();
+            this.btn_Save = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -991,7 +991,7 @@
             this.metroLabel16.Name = "metroLabel16";
             this.metroLabel16.Size = new System.Drawing.Size(84, 25);
             this.metroLabel16.TabIndex = 30;
-            this.metroLabel16.Text = "자제유형";
+            this.metroLabel16.Text = "자재유형";
             // 
             // metroLabel17
             // 
@@ -1135,11 +1135,11 @@
             this.metroLabel22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel22.AutoSize = true;
             this.metroLabel22.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel22.Location = new System.Drawing.Point(318, 315);
+            this.metroLabel22.Location = new System.Drawing.Point(327, 315);
             this.metroLabel22.Name = "metroLabel22";
-            this.metroLabel22.Size = new System.Drawing.Size(84, 25);
+            this.metroLabel22.Size = new System.Drawing.Size(66, 25);
             this.metroLabel22.TabIndex = 41;
-            this.metroLabel22.Text = "삭제여부";
+            this.metroLabel22.Text = "확인값";
             // 
             // metroLabel23
             // 
@@ -1431,20 +1431,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(866, 107);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // btn_Save
-            // 
-            this.btn_Save.BackgroundImage = global::Upsert.Properties.Resources.저장1;
-            this.btn_Save.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Save.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btn_Save.Location = new System.Drawing.Point(577, 3);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(140, 101);
-            this.btn_Save.TabIndex = 29;
-            this.btn_Save.UseSelectable = true;
-            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
-            this.btn_Save.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseDown);
-            this.btn_Save.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseUp);
-            // 
             // btn_Close
             // 
             this.btn_Close.BackgroundImage = global::Upsert.Properties.Resources.닫기;
@@ -1458,6 +1444,20 @@
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             this.btn_Close.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Close_MouseDown);
             this.btn_Close.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Close_MouseUp);
+            // 
+            // btn_Save
+            // 
+            this.btn_Save.BackgroundImage = global::Upsert.Properties.Resources.저장1;
+            this.btn_Save.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Save.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btn_Save.Location = new System.Drawing.Point(577, 3);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(140, 101);
+            this.btn_Save.TabIndex = 29;
+            this.btn_Save.UseSelectable = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+            this.btn_Save.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseDown);
+            this.btn_Save.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseUp);
             // 
             // InputPopup_ProductMaster
             // 

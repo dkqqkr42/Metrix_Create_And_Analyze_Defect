@@ -65,12 +65,12 @@
             this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.txt_TEAM_CODE = new System.Windows.Forms.TextBox();
+            this.txt_WC_CODE = new System.Windows.Forms.TextBox();
             this.lbl_TEAM_CDOE = new MetroFramework.Controls.MetroLabel();
             this.lbl_WC_CODE = new MetroFramework.Controls.MetroLabel();
             this.lbl_PLANT_CODE = new MetroFramework.Controls.MetroLabel();
             this.txt_PLANT_CODE = new System.Windows.Forms.TextBox();
-            this.txt_WC_CODE = new System.Windows.Forms.TextBox();
-            this.txt_TEAM_CODE = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -101,7 +101,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1836, 892);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1836, 692);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel2
@@ -109,9 +109,9 @@
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.lbl_DataUpsert);
-            this.panel2.Location = new System.Drawing.Point(4, 164);
+            this.panel2.Location = new System.Drawing.Point(4, 128);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(148, 64);
+            this.panel2.Size = new System.Drawing.Size(148, 48);
             this.panel2.TabIndex = 2;
             // 
             // lbl_DataUpsert
@@ -121,7 +121,7 @@
             this.lbl_DataUpsert.BackColor = System.Drawing.Color.Transparent;
             this.lbl_DataUpsert.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_DataUpsert.ForeColor = System.Drawing.Color.White;
-            this.lbl_DataUpsert.Location = new System.Drawing.Point(28, 19);
+            this.lbl_DataUpsert.Location = new System.Drawing.Point(28, 11);
             this.lbl_DataUpsert.Name = "lbl_DataUpsert";
             this.lbl_DataUpsert.Size = new System.Drawing.Size(88, 25);
             this.lbl_DataUpsert.TabIndex = 1;
@@ -134,7 +134,7 @@
             this.panel1.Controls.Add(this.lbl_DataLookUp);
             this.panel1.Location = new System.Drawing.Point(4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(148, 64);
+            this.panel1.Size = new System.Drawing.Size(148, 48);
             this.panel1.TabIndex = 1;
             // 
             // lbl_DataLookUp
@@ -144,7 +144,7 @@
             this.lbl_DataLookUp.BackColor = System.Drawing.Color.Transparent;
             this.lbl_DataLookUp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_DataLookUp.ForeColor = System.Drawing.Color.White;
-            this.lbl_DataLookUp.Location = new System.Drawing.Point(26, 21);
+            this.lbl_DataLookUp.Location = new System.Drawing.Point(26, 13);
             this.lbl_DataLookUp.Name = "lbl_DataLookUp";
             this.lbl_DataLookUp.Size = new System.Drawing.Size(93, 25);
             this.lbl_DataLookUp.TabIndex = 1;
@@ -160,12 +160,12 @@
             this.tableLayoutPanel3.Controls.Add(this.txt_SeachVal, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.ckb_DelFlag, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(1, 72);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(1, 56);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1834, 88);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1834, 68);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // txt_SeachVal
@@ -184,7 +184,7 @@
             this.txt_SeachVal.CustomButton.UseSelectable = true;
             this.txt_SeachVal.CustomButton.Visible = false;
             this.txt_SeachVal.Lines = new string[0];
-            this.txt_SeachVal.Location = new System.Drawing.Point(724, 32);
+            this.txt_SeachVal.Location = new System.Drawing.Point(724, 22);
             this.txt_SeachVal.MaxLength = 32767;
             this.txt_SeachVal.Name = "txt_SeachVal";
             this.txt_SeachVal.PasswordChar = '\0';
@@ -204,7 +204,7 @@
             this.ckb_DelFlag.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ckb_DelFlag.AutoSize = true;
             this.ckb_DelFlag.FontSize = MetroFramework.MetroCheckBoxSize.Medium;
-            this.ckb_DelFlag.Location = new System.Drawing.Point(1225, 34);
+            this.ckb_DelFlag.Location = new System.Drawing.Point(1225, 24);
             this.ckb_DelFlag.Name = "ckb_DelFlag";
             this.ckb_DelFlag.Size = new System.Drawing.Size(53, 19);
             this.ckb_DelFlag.Style = MetroFramework.MetroColorStyle.Green;
@@ -269,7 +269,7 @@
             this.grd_Result.EnableHeadersVisualStyles = false;
             this.grd_Result.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grd_Result.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grd_Result.Location = new System.Drawing.Point(1, 339);
+            this.grd_Result.Location = new System.Drawing.Point(1, 263);
             this.grd_Result.Margin = new System.Windows.Forms.Padding(0);
             this.grd_Result.MultiSelect = false;
             this.grd_Result.Name = "grd_Result";
@@ -288,7 +288,7 @@
             this.grd_Result.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.grd_Result.RowTemplate.Height = 30;
             this.grd_Result.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grd_Result.Size = new System.Drawing.Size(1834, 552);
+            this.grd_Result.Size = new System.Drawing.Size(1834, 428);
             this.grd_Result.Style = MetroFramework.MetroColorStyle.Green;
             this.grd_Result.TabIndex = 5;
             this.grd_Result.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_Data_CellDoubleClick);
@@ -471,20 +471,37 @@
             this.tableLayoutPanel2.Controls.Add(this.lbl_PLANT_CODE, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txt_PLANT_CODE, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(1, 232);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(1, 180);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1834, 88);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1834, 68);
             this.tableLayoutPanel2.TabIndex = 6;
+            // 
+            // txt_TEAM_CODE
+            // 
+            this.txt_TEAM_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_TEAM_CODE.Location = new System.Drawing.Point(942, 33);
+            this.txt_TEAM_CODE.Name = "txt_TEAM_CODE";
+            this.txt_TEAM_CODE.Size = new System.Drawing.Size(866, 21);
+            this.txt_TEAM_CODE.TabIndex = 6;
+            this.txt_TEAM_CODE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_TEAM_CODE_KeyPress);
+            // 
+            // txt_WC_CODE
+            // 
+            this.txt_WC_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_WC_CODE.Location = new System.Drawing.Point(488, 33);
+            this.txt_WC_CODE.Name = "txt_WC_CODE";
+            this.txt_WC_CODE.Size = new System.Drawing.Size(399, 21);
+            this.txt_WC_CODE.TabIndex = 5;
             // 
             // lbl_TEAM_CDOE
             // 
             this.lbl_TEAM_CDOE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_TEAM_CDOE.AutoSize = true;
-            this.lbl_TEAM_CDOE.Location = new System.Drawing.Point(1349, 4);
+            this.lbl_TEAM_CDOE.Location = new System.Drawing.Point(1349, 1);
             this.lbl_TEAM_CDOE.Name = "lbl_TEAM_CDOE";
             this.lbl_TEAM_CDOE.Size = new System.Drawing.Size(51, 19);
             this.lbl_TEAM_CDOE.TabIndex = 3;
@@ -494,7 +511,7 @@
             // 
             this.lbl_WC_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_WC_CODE.AutoSize = true;
-            this.lbl_WC_CODE.Location = new System.Drawing.Point(669, 4);
+            this.lbl_WC_CODE.Location = new System.Drawing.Point(669, 1);
             this.lbl_WC_CODE.Name = "lbl_WC_CODE";
             this.lbl_WC_CODE.Size = new System.Drawing.Size(37, 19);
             this.lbl_WC_CODE.TabIndex = 2;
@@ -504,7 +521,7 @@
             // 
             this.lbl_PLANT_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_PLANT_CODE.AutoSize = true;
-            this.lbl_PLANT_CODE.Location = new System.Drawing.Point(197, 4);
+            this.lbl_PLANT_CODE.Location = new System.Drawing.Point(197, 1);
             this.lbl_PLANT_CODE.Name = "lbl_PLANT_CODE";
             this.lbl_PLANT_CODE.Size = new System.Drawing.Size(65, 19);
             this.lbl_PLANT_CODE.TabIndex = 1;
@@ -513,33 +530,16 @@
             // txt_PLANT_CODE
             // 
             this.txt_PLANT_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_PLANT_CODE.Location = new System.Drawing.Point(30, 46);
+            this.txt_PLANT_CODE.Location = new System.Drawing.Point(30, 33);
             this.txt_PLANT_CODE.Name = "txt_PLANT_CODE";
             this.txt_PLANT_CODE.Size = new System.Drawing.Size(399, 21);
             this.txt_PLANT_CODE.TabIndex = 4;
-            // 
-            // txt_WC_CODE
-            // 
-            this.txt_WC_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_WC_CODE.Location = new System.Drawing.Point(488, 46);
-            this.txt_WC_CODE.Name = "txt_WC_CODE";
-            this.txt_WC_CODE.Size = new System.Drawing.Size(399, 21);
-            this.txt_WC_CODE.TabIndex = 5;
-            // 
-            // txt_TEAM_CODE
-            // 
-            this.txt_TEAM_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_TEAM_CODE.Location = new System.Drawing.Point(942, 46);
-            this.txt_TEAM_CODE.Name = "txt_TEAM_CODE";
-            this.txt_TEAM_CODE.Size = new System.Drawing.Size(866, 21);
-            this.txt_TEAM_CODE.TabIndex = 6;
-            this.txt_TEAM_CODE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_TEAM_CODE_KeyPress);
             // 
             // WorkCenter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1876, 972);
+            this.ClientSize = new System.Drawing.Size(1876, 772);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "WorkCenter";
             this.Text = "WorkCenter";
