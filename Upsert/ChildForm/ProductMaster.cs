@@ -35,11 +35,6 @@ namespace Upsert
             SelectItem();
         }
 
-        private void Child_Load(object sender, EventArgs e)
-        {
-
-        }
-
         /// <summary>
         /// 데이터 조회 결과를 adapter로 받아 DataSet을 반환 받은 경우 사용되는 메서드
         /// </summary>
@@ -226,13 +221,6 @@ namespace Upsert
             
         }
 
-        private void metroTile1_Click(object sender, EventArgs e)
-        {
-            popup = new InputPopup_ProductMaster();
-            popup.FormSendEvent += new InputPopup_ProductMaster.FormSendDataHandler(DieaseUpdateEventMethod);
-            popup.ShowDialog();
-        }
-
         public bool DeleteItem()
         {
 
@@ -270,6 +258,17 @@ namespace Upsert
             finally
             {
                 connection.Close();
+            }
+        }
+
+        private void txt_TEAM_CODE_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                //todo productmaster
+                popup = new InputPopup_ProductMaster(txt_PROD_CODE.Text, txt_PLANT_CODE.Text, txt_MRP_MGR.Text);
+                popup.FormSendEvent += new InputPopup_ProductMaster.FormSendDataHandler(DieaseUpdateEventMethod);
+                popup.ShowDialog();
             }
         }
     }

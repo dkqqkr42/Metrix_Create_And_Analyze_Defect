@@ -33,9 +33,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.txt_MRP_MGR = new System.Windows.Forms.TextBox();
+            this.txt_PLANT_CODE = new System.Windows.Forms.TextBox();
+            this.lbl_MRP_MGR = new MetroFramework.Controls.MetroLabel();
+            this.lbl_PLANT_CODE = new MetroFramework.Controls.MetroLabel();
+            this.lbl_PROD_CODE = new MetroFramework.Controls.MetroLabel();
+            this.txt_PROD_CODE = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_DataUpsert = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_DataLookUp = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txt_SeachVal = new MetroFramework.Controls.MetroTextBox();
             this.ckb_DelFlag = new MetroFramework.Controls.MetroCheckBox();
@@ -70,9 +78,8 @@
             this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.lbl_DataLookUp = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -84,11 +91,11 @@
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.grd_Result, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.metroTile1, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 60);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -100,8 +107,87 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1836, 892);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Controls.Add(this.txt_MRP_MGR, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txt_PLANT_CODE, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_MRP_MGR, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_PLANT_CODE, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_PROD_CODE, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txt_PROD_CODE, 0, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(1, 232);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1834, 88);
+            this.tableLayoutPanel2.TabIndex = 7;
+            // 
+            // txt_MRP_MGR
+            // 
+            this.txt_MRP_MGR.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_MRP_MGR.Location = new System.Drawing.Point(1389, 46);
+            this.txt_MRP_MGR.Name = "txt_MRP_MGR";
+            this.txt_MRP_MGR.Size = new System.Drawing.Size(430, 21);
+            this.txt_MRP_MGR.TabIndex = 6;
+            this.txt_MRP_MGR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_TEAM_CODE_KeyPress);
+            // 
+            // txt_PLANT_CODE
+            // 
+            this.txt_PLANT_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_PLANT_CODE.Location = new System.Drawing.Point(935, 46);
+            this.txt_PLANT_CODE.Name = "txt_PLANT_CODE";
+            this.txt_PLANT_CODE.Size = new System.Drawing.Size(420, 21);
+            this.txt_PLANT_CODE.TabIndex = 5;
+            // 
+            // lbl_MRP_MGR
+            // 
+            this.lbl_MRP_MGR.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_MRP_MGR.AutoSize = true;
+            this.lbl_MRP_MGR.Location = new System.Drawing.Point(1564, 4);
+            this.lbl_MRP_MGR.Name = "lbl_MRP_MGR";
+            this.lbl_MRP_MGR.Size = new System.Drawing.Size(79, 19);
+            this.lbl_MRP_MGR.TabIndex = 3;
+            this.lbl_MRP_MGR.Text = "MRP관리자";
+            // 
+            // lbl_PLANT_CODE
+            // 
+            this.lbl_PLANT_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_PLANT_CODE.AutoSize = true;
+            this.lbl_PLANT_CODE.Location = new System.Drawing.Point(1113, 4);
+            this.lbl_PLANT_CODE.Name = "lbl_PLANT_CODE";
+            this.lbl_PLANT_CODE.Size = new System.Drawing.Size(65, 19);
+            this.lbl_PLANT_CODE.TabIndex = 2;
+            this.lbl_PLANT_CODE.Text = "공장코드";
+            // 
+            // lbl_PROD_CODE
+            // 
+            this.lbl_PROD_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_PROD_CODE.AutoSize = true;
+            this.lbl_PROD_CODE.Location = new System.Drawing.Point(426, 4);
+            this.lbl_PROD_CODE.Name = "lbl_PROD_CODE";
+            this.lbl_PROD_CODE.Size = new System.Drawing.Size(65, 19);
+            this.lbl_PROD_CODE.TabIndex = 1;
+            this.lbl_PROD_CODE.Text = "제품코드";
+            // 
+            // txt_PROD_CODE
+            // 
+            this.txt_PROD_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_PROD_CODE.Location = new System.Drawing.Point(15, 46);
+            this.txt_PROD_CODE.Name = "txt_PROD_CODE";
+            this.txt_PROD_CODE.Size = new System.Drawing.Size(887, 21);
+            this.txt_PROD_CODE.TabIndex = 4;
             // 
             // panel2
             // 
@@ -135,6 +221,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(148, 64);
             this.panel1.TabIndex = 1;
+            // 
+            // lbl_DataLookUp
+            // 
+            this.lbl_DataLookUp.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_DataLookUp.AutoSize = true;
+            this.lbl_DataLookUp.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_DataLookUp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DataLookUp.ForeColor = System.Drawing.Color.White;
+            this.lbl_DataLookUp.Location = new System.Drawing.Point(27, 19);
+            this.lbl_DataLookUp.Name = "lbl_DataLookUp";
+            this.lbl_DataLookUp.Size = new System.Drawing.Size(93, 25);
+            this.lbl_DataLookUp.TabIndex = 2;
+            this.lbl_DataLookUp.Text = "조회 조건";
             // 
             // tableLayoutPanel3
             // 
@@ -205,6 +304,7 @@
             this.grd_Result.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.grd_Result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grd_Result.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.grd_Result.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grd_Result.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grd_Result.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -293,6 +393,7 @@
             this.Column30.Name = "Column30";
             this.Column30.ReadOnly = true;
             this.Column30.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column30.Width = 33;
             // 
             // Column1
             // 
@@ -300,6 +401,7 @@
             this.Column1.HeaderText = "제품 코드";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 75;
             // 
             // Column2
             // 
@@ -307,13 +409,15 @@
             this.Column2.HeaderText = "공장 코드";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Width = 75;
             // 
             // Column3
             // 
             this.Column3.FillWeight = 158.7456F;
-            this.Column3.HeaderText = "MRP_MGR";
+            this.Column3.HeaderText = "MRP관리자";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 85;
             // 
             // Column4
             // 
@@ -321,6 +425,7 @@
             this.Column4.HeaderText = "제품명";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 71;
             // 
             // Column5
             // 
@@ -328,6 +433,7 @@
             this.Column5.HeaderText = "제품 형태";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            this.Column5.Width = 75;
             // 
             // Column6
             // 
@@ -335,6 +441,7 @@
             this.Column6.HeaderText = "제품 단위";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            this.Column6.Width = 75;
             // 
             // Column7
             // 
@@ -342,6 +449,7 @@
             this.Column7.HeaderText = "제품 크기";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
+            this.Column7.Width = 75;
             // 
             // Column8
             // 
@@ -349,6 +457,7 @@
             this.Column8.HeaderText = "제품 두께";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
+            this.Column8.Width = 75;
             // 
             // Column9
             // 
@@ -356,6 +465,7 @@
             this.Column9.HeaderText = "제품 넓이";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
+            this.Column9.Width = 75;
             // 
             // Column10
             // 
@@ -363,6 +473,7 @@
             this.Column10.HeaderText = "제품 길이";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
+            this.Column10.Width = 75;
             // 
             // Column11
             // 
@@ -370,6 +481,7 @@
             this.Column11.HeaderText = "제품 계층구조";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
+            this.Column11.Width = 88;
             // 
             // Column12
             // 
@@ -377,6 +489,7 @@
             this.Column12.HeaderText = "중량 단위";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
+            this.Column12.Width = 75;
             // 
             // Column13
             // 
@@ -384,6 +497,7 @@
             this.Column13.HeaderText = "기준 수량";
             this.Column13.Name = "Column13";
             this.Column13.ReadOnly = true;
+            this.Column13.Width = 75;
             // 
             // Column14
             // 
@@ -391,6 +505,7 @@
             this.Column14.HeaderText = "총 중량";
             this.Column14.Name = "Column14";
             this.Column14.ReadOnly = true;
+            this.Column14.Width = 75;
             // 
             // Column15
             // 
@@ -398,6 +513,7 @@
             this.Column15.HeaderText = "PI_MEMO";
             this.Column15.Name = "Column15";
             this.Column15.ReadOnly = true;
+            this.Column15.Width = 95;
             // 
             // Column16
             // 
@@ -405,6 +521,7 @@
             this.Column16.HeaderText = "자재 유형";
             this.Column16.Name = "Column16";
             this.Column16.ReadOnly = true;
+            this.Column16.Width = 75;
             // 
             // Column17
             // 
@@ -412,6 +529,7 @@
             this.Column17.HeaderText = "자재 그룹";
             this.Column17.Name = "Column17";
             this.Column17.ReadOnly = true;
+            this.Column17.Width = 75;
             // 
             // Column18
             // 
@@ -419,6 +537,7 @@
             this.Column18.HeaderText = "Batch구분";
             this.Column18.Name = "Column18";
             this.Column18.ReadOnly = true;
+            this.Column18.Width = 77;
             // 
             // Column19
             // 
@@ -426,6 +545,7 @@
             this.Column19.HeaderText = "저장소";
             this.Column19.Name = "Column19";
             this.Column19.ReadOnly = true;
+            this.Column19.Width = 71;
             // 
             // Column20
             // 
@@ -433,6 +553,7 @@
             this.Column20.HeaderText = "삭제유무";
             this.Column20.Name = "Column20";
             this.Column20.ReadOnly = true;
+            this.Column20.Width = 71;
             // 
             // Column21
             // 
@@ -440,6 +561,7 @@
             this.Column21.HeaderText = "Check_Flag";
             this.Column21.Name = "Column21";
             this.Column21.ReadOnly = true;
+            this.Column21.Width = 105;
             // 
             // Column22
             // 
@@ -447,6 +569,7 @@
             this.Column22.HeaderText = "물류 코드";
             this.Column22.Name = "Column22";
             this.Column22.ReadOnly = true;
+            this.Column22.Width = 75;
             // 
             // Column23
             // 
@@ -454,6 +577,7 @@
             this.Column23.HeaderText = "추가일";
             this.Column23.Name = "Column23";
             this.Column23.ReadOnly = true;
+            this.Column23.Width = 71;
             // 
             // Column24
             // 
@@ -461,6 +585,7 @@
             this.Column24.HeaderText = "추가자";
             this.Column24.Name = "Column24";
             this.Column24.ReadOnly = true;
+            this.Column24.Width = 71;
             // 
             // Column25
             // 
@@ -468,6 +593,7 @@
             this.Column25.HeaderText = "수정일";
             this.Column25.Name = "Column25";
             this.Column25.ReadOnly = true;
+            this.Column25.Width = 71;
             // 
             // Column26
             // 
@@ -475,6 +601,7 @@
             this.Column26.HeaderText = "수정자";
             this.Column26.Name = "Column26";
             this.Column26.ReadOnly = true;
+            this.Column26.Width = 71;
             // 
             // Column27
             // 
@@ -482,6 +609,7 @@
             this.Column27.HeaderText = "IPS_YN";
             this.Column27.Name = "Column27";
             this.Column27.ReadOnly = true;
+            this.Column27.Width = 77;
             // 
             // Column28
             // 
@@ -489,6 +617,7 @@
             this.Column28.HeaderText = "PLY_QTY";
             this.Column28.Name = "Column28";
             this.Column28.ReadOnly = true;
+            this.Column28.Width = 86;
             // 
             // Column29
             // 
@@ -496,32 +625,7 @@
             this.Column29.HeaderText = "PROC_MSG";
             this.Column29.Name = "Column29";
             this.Column29.ReadOnly = true;
-            // 
-            // metroTile1
-            // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTile1.Location = new System.Drawing.Point(794, 235);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(248, 82);
-            this.metroTile1.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroTile1.TabIndex = 6;
-            this.metroTile1.Text = "입력하기";
-            this.metroTile1.UseSelectable = true;
-            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
-            // 
-            // lbl_DataLookUp
-            // 
-            this.lbl_DataLookUp.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_DataLookUp.AutoSize = true;
-            this.lbl_DataLookUp.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_DataLookUp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DataLookUp.ForeColor = System.Drawing.Color.White;
-            this.lbl_DataLookUp.Location = new System.Drawing.Point(27, 19);
-            this.lbl_DataLookUp.Name = "lbl_DataLookUp";
-            this.lbl_DataLookUp.Size = new System.Drawing.Size(93, 25);
-            this.lbl_DataLookUp.TabIndex = 2;
-            this.lbl_DataLookUp.Text = "조회 조건";
+            this.Column29.Width = 106;
             // 
             // ProductMaster
             // 
@@ -531,8 +635,9 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ProductMaster";
             this.Text = "ProductMaster";
-            this.Load += new System.EventHandler(this.Child_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -552,9 +657,16 @@
         private System.Windows.Forms.Label lbl_DataUpsert;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private MetroFramework.Controls.MetroTile metroTile1;
         private MetroFramework.Controls.MetroTextBox txt_SeachVal;
         private MetroFramework.Controls.MetroCheckBox ckb_DelFlag;
+        private System.Windows.Forms.Label lbl_DataLookUp;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TextBox txt_MRP_MGR;
+        private System.Windows.Forms.TextBox txt_PLANT_CODE;
+        private MetroFramework.Controls.MetroLabel lbl_MRP_MGR;
+        private MetroFramework.Controls.MetroLabel lbl_PLANT_CODE;
+        private MetroFramework.Controls.MetroLabel lbl_PROD_CODE;
+        private System.Windows.Forms.TextBox txt_PROD_CODE;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column30;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -585,6 +697,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column27;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column28;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column29;
-        private System.Windows.Forms.Label lbl_DataLookUp;
     }
 }

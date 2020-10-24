@@ -20,6 +20,14 @@ namespace Upsert
         {
             InitializeComponent();
         }
+        public InputPopup_ProductMaster(string prodcode, string plantcode, string mrpmgr)
+        {
+            InitializeComponent();
+            txt_PROD_CODE.Text = prodcode;
+            txt_PLANT_CODE.Text = plantcode;
+            txt_MRP_MGR.Text = mrpmgr;
+        }
+
         public InputPopup_ProductMaster(List<string> list)
         {
             InitializeComponent();
