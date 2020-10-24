@@ -991,7 +991,7 @@
             this.metroLabel16.Name = "metroLabel16";
             this.metroLabel16.Size = new System.Drawing.Size(84, 25);
             this.metroLabel16.TabIndex = 30;
-            this.metroLabel16.Text = "자제유형";
+            this.metroLabel16.Text = "자재유형";
             // 
             // metroLabel17
             // 
@@ -1002,7 +1002,7 @@
             this.metroLabel17.Name = "metroLabel17";
             this.metroLabel17.Size = new System.Drawing.Size(84, 25);
             this.metroLabel17.TabIndex = 31;
-            this.metroLabel17.Text = "자제그룹";
+            this.metroLabel17.Text = "자재그룹";
             // 
             // txt_PROD_UNIT
             // 
