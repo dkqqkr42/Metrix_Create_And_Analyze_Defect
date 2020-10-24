@@ -89,8 +89,8 @@
             this.txt_INSERT_DATE = new MetroFramework.Controls.MetroTextBox();
             this.txt_INSERT_USER = new MetroFramework.Controls.MetroTextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Save = new MetroFramework.Controls.MetroButton();
             this.btn_Close = new MetroFramework.Controls.MetroButton();
+            this.btn_Save = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -1431,23 +1431,10 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(866, 107);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // btn_Save
-            // 
-            this.btn_Save.BackgroundImage = global::Upsert.Properties.Resources.저장1;
-            this.btn_Save.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Save.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btn_Save.Location = new System.Drawing.Point(577, 3);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(140, 101);
-            this.btn_Save.TabIndex = 29;
-            this.btn_Save.UseSelectable = true;
-            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
-            this.btn_Save.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseDown);
-            this.btn_Save.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseUp);
-            // 
             // btn_Close
             // 
             this.btn_Close.BackgroundImage = global::Upsert.Properties.Resources.닫기;
+            this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Close.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Close.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btn_Close.Location = new System.Drawing.Point(723, 3);
@@ -1458,6 +1445,21 @@
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             this.btn_Close.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Close_MouseDown);
             this.btn_Close.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Close_MouseUp);
+            // 
+            // btn_Save
+            // 
+            this.btn_Save.BackgroundImage = global::Upsert.Properties.Resources.저장1;
+            this.btn_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Save.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Save.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btn_Save.Location = new System.Drawing.Point(577, 3);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(140, 101);
+            this.btn_Save.TabIndex = 29;
+            this.btn_Save.UseSelectable = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+            this.btn_Save.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseDown);
+            this.btn_Save.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseUp);
             // 
             // InputPopup_ProductMaster
             // 
