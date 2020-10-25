@@ -18,11 +18,12 @@ namespace FinalProject_Profile
 
             //this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 
-            for (int i = 0; i < 10; i++)
+        /*    for (int i = 0; i < 10; i++)
             {
                 metroGrid1.Rows.Add("1", "1234", "2020/09/20", "2020/09/20", "내수", "11", "M", "1000", "생산가능");
-            }
+            }*/
             
+
         }
 
         private void Form1_Load(object sender, EventArgs e)

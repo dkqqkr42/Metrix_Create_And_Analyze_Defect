@@ -36,10 +36,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_DataUpsert = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_DataLookUp = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txt_SeachVal = new MetroFramework.Controls.MetroTextBox();
             this.ckb_DelFlag = new MetroFramework.Controls.MetroCheckBox();
             this.grd_Result = new MetroFramework.Controls.MetroGrid();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,8 +61,6 @@
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.lbl_DataLookUp = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -124,6 +124,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(148, 64);
             this.panel1.TabIndex = 1;
+            // 
+            // lbl_DataLookUp
+            // 
+            this.lbl_DataLookUp.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_DataLookUp.AutoSize = true;
+            this.lbl_DataLookUp.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_DataLookUp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DataLookUp.ForeColor = System.Drawing.Color.White;
+            this.lbl_DataLookUp.Location = new System.Drawing.Point(27, 19);
+            this.lbl_DataLookUp.Name = "lbl_DataLookUp";
+            this.lbl_DataLookUp.Size = new System.Drawing.Size(93, 25);
+            this.lbl_DataLookUp.TabIndex = 2;
+            this.lbl_DataLookUp.Text = "조회 조건";
             // 
             // tableLayoutPanel3
             // 
@@ -194,6 +207,7 @@
             this.grd_Result.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.grd_Result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grd_Result.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grd_Result.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grd_Result.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grd_Result.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -264,6 +278,19 @@
             this.grd_Result.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_Data_CellDoubleClick);
             this.grd_Result.KeyUp += new System.Windows.Forms.KeyEventHandler(this.grd_Data_KeyUp);
             // 
+            // metroTile1
+            // 
+            this.metroTile1.ActiveControl = null;
+            this.metroTile1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroTile1.Location = new System.Drawing.Point(794, 235);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(248, 82);
+            this.metroTile1.Style = MetroFramework.MetroColorStyle.Green;
+            this.metroTile1.TabIndex = 6;
+            this.metroTile1.Text = "입력하기";
+            this.metroTile1.UseSelectable = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
+            // 
             // Column30
             // 
             this.Column30.FillWeight = 87.00504F;
@@ -271,24 +298,28 @@
             this.Column30.Name = "Column30";
             this.Column30.ReadOnly = true;
             this.Column30.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column30.Width = 40;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "공장코드";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 50;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "라인";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Width = 90;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "작업조";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 90;
             // 
             // Column4
             // 
@@ -301,24 +332,28 @@
             this.Column5.HeaderText = "사번정보";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            this.Column5.Width = 120;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "투입인원[남]";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            this.Column6.Width = 120;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "투입인원[여]";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
+            this.Column7.Width = 120;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "투입인원[외주]";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
+            this.Column8.Width = 140;
             // 
             // Column9
             // 
@@ -328,7 +363,7 @@
             // 
             // Column10
             // 
-            this.Column10.HeaderText = "끝난시간";
+            this.Column10.HeaderText = "종료시간";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
             // 
@@ -355,6 +390,7 @@
             this.Column14.HeaderText = "삭제여부";
             this.Column14.Name = "Column14";
             this.Column14.ReadOnly = true;
+            this.Column14.Width = 50;
             // 
             // Column15
             // 
@@ -379,32 +415,6 @@
             this.Column18.HeaderText = "수정자";
             this.Column18.Name = "Column18";
             this.Column18.ReadOnly = true;
-            // 
-            // metroTile1
-            // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroTile1.Location = new System.Drawing.Point(794, 235);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(248, 82);
-            this.metroTile1.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroTile1.TabIndex = 6;
-            this.metroTile1.Text = "입력하기";
-            this.metroTile1.UseSelectable = true;
-            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
-            // 
-            // lbl_DataLookUp
-            // 
-            this.lbl_DataLookUp.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_DataLookUp.AutoSize = true;
-            this.lbl_DataLookUp.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_DataLookUp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DataLookUp.ForeColor = System.Drawing.Color.White;
-            this.lbl_DataLookUp.Location = new System.Drawing.Point(27, 19);
-            this.lbl_DataLookUp.Name = "lbl_DataLookUp";
-            this.lbl_DataLookUp.Size = new System.Drawing.Size(93, 25);
-            this.lbl_DataLookUp.TabIndex = 2;
-            this.lbl_DataLookUp.Text = "조회 조건";
             // 
             // Worker
             // 
@@ -438,6 +448,7 @@
         private MetroFramework.Controls.MetroTile metroTile1;
         private MetroFramework.Controls.MetroTextBox txt_SeachVal;
         private MetroFramework.Controls.MetroCheckBox ckb_DelFlag;
+        private System.Windows.Forms.Label lbl_DataLookUp;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column30;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -457,6 +468,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
-        private System.Windows.Forms.Label lbl_DataLookUp;
     }
 }

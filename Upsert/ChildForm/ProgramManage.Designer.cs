@@ -41,12 +41,6 @@
             this.txt_SeachVal = new MetroFramework.Controls.MetroTextBox();
             this.ckb_DelFlag = new MetroFramework.Controls.MetroCheckBox();
             this.grd_Result = new MetroFramework.Controls.MetroGrid();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.txt_Class = new MetroFramework.Controls.MetroTextBox();
             this.txt_Version = new MetroFramework.Controls.MetroTextBox();
@@ -58,6 +52,12 @@
             this.lbl_Name = new MetroFramework.Controls.MetroLabel();
             this.lbl_ID = new MetroFramework.Controls.MetroLabel();
             this.txt_ID = new MetroFramework.Controls.MetroTextBox();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -206,7 +206,6 @@
             this.grd_Result.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.grd_Result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.grd_Result.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grd_Result.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grd_Result.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grd_Result.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -264,45 +263,6 @@
             this.grd_Result.TabIndex = 5;
             this.grd_Result.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_Data_CellDoubleClick);
             this.grd_Result.KeyUp += new System.Windows.Forms.KeyEventHandler(this.grd_Data_KeyUp);
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column6.Frozen = true;
-            this.Column6.HeaderText = "No";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 40;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "이름";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "경로";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "버전";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "클래스";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             // 
             // tableLayoutPanel4
             // 
@@ -538,6 +498,55 @@
             this.txt_ID.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_ID.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column6.Frozen = true;
+            this.Column6.HeaderText = "No";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 40;
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 57.40865F;
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 400;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 436.3058F;
+            this.Column2.HeaderText = "이름";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 500;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 2.095206F;
+            this.Column3.HeaderText = "경로";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 500;
+            // 
+            // Column4
+            // 
+            this.Column4.FillWeight = 2.095206F;
+            this.Column4.HeaderText = "버전";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 250;
+            // 
+            // Column5
+            // 
+            this.Column5.FillWeight = 2.095206F;
+            this.Column5.HeaderText = "클래스";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 150;
+            // 
             // ProgramManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -582,12 +591,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private MetroFramework.Controls.MetroCheckBox ckb_DelFlag;
+        private System.Windows.Forms.Label lbl_DataLookUp;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Label lbl_DataLookUp;
     }
 }
