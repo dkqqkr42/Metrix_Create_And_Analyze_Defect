@@ -43,8 +43,8 @@ namespace Upsert
                 form.StartPosition = FormStartPosition.CenterParent;
                 //form.WindowState = FormWindowState.Minimized;
                 //form.Dock = DockStyle.Fill;
+                //form.WindowState = FormWindowState.Maximized;
                 form.Show();
-                form.WindowState = FormWindowState.Maximized;
                 //form.WindowState = FormWindowState.Normal;
             }
             else
@@ -56,8 +56,8 @@ namespace Upsert
                     form.StartPosition = FormStartPosition.CenterParent;
                     //form.WindowState = FormWindowState.Minimized;
                     //form.Dock = DockStyle.Fill;
+                    //form.WindowState = FormWindowState.Maximized;
                     form.Show();
-                    form.WindowState = FormWindowState.Maximized;
                     //form.WindowState = FormWindowState.Normal;
                 }
                 else

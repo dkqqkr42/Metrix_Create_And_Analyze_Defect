@@ -68,7 +68,7 @@ namespace Upsert
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "select trim(PLANT_CODE), trim(WC_CODE), trim(SHIFT_CODE), SHIFT_NAME, trim(SA_SABUN), REQ_MP_MAN, REQ_MP_WOMAN, REQ_MP_OUT, START_TIME, END_TIME, WORKING_TIME, BIGO, trim(USE_FLAG), trim(DEL_FLAG), INSERT_DATE, INSERT_USER, UPDATE_DATE, UPDATE_USER from tbl_worker where trim(PLANT_CODE) like '%' || :SeachVal || '%' AND DEL_FLAG = 'A'"
+                    CommandText = "select trim(PLANT_CODE), trim(WC_CODE), trim(SHIFT_CODE), SHIFT_NAME, trim(SA_SABUN), REQ_MP_MAN, REQ_MP_WOMAN, REQ_MP_OUT, START_TIME, END_TIME, WORKING_TIME, BIGO, trim(USE_FLAG), trim(DEL_FLAG), INSERT_DATE, INSERT_USER, UPDATE_DATE, UPDATE_USER from tbl_worker where trim(WC_CODE) like '%' || :SeachVal || '%' AND DEL_FLAG = 'A'"
                 };
 
                 if (txt_SeachVal.Text.Equals("") && ckb_DelFlag.Checked)
@@ -78,7 +78,7 @@ namespace Upsert
                     cmd.CommandText = "select trim(PLANT_CODE), trim(WC_CODE), trim(SHIFT_CODE), SHIFT_NAME, trim(SA_SABUN), REQ_MP_MAN, REQ_MP_WOMAN, REQ_MP_OUT, START_TIME, END_TIME, WORKING_TIME, BIGO, trim(USE_FLAG), trim(DEL_FLAG), INSERT_DATE, INSERT_USER, UPDATE_DATE, UPDATE_USER from tbl_worker where DEL_FLAG = 'A'";
 
                 else if (!txt_SeachVal.Text.Equals("") && ckb_DelFlag.Checked)
-                    cmd.CommandText = "select trim(PLANT_CODE), trim(WC_CODE), trim(SHIFT_CODE), SHIFT_NAME, trim(SA_SABUN), REQ_MP_MAN, REQ_MP_WOMAN, REQ_MP_OUT, START_TIME, END_TIME, WORKING_TIME, BIGO, trim(USE_FLAG), trim(DEL_FLAG), INSERT_DATE, INSERT_USER, UPDATE_DATE, UPDATE_USER from tbl_worker where trim(PLANT_CODE) like '%' || :SeachVal || '%'";
+                    cmd.CommandText = "select trim(PLANT_CODE), trim(WC_CODE), trim(SHIFT_CODE), SHIFT_NAME, trim(SA_SABUN), REQ_MP_MAN, REQ_MP_WOMAN, REQ_MP_OUT, START_TIME, END_TIME, WORKING_TIME, BIGO, trim(USE_FLAG), trim(DEL_FLAG), INSERT_DATE, INSERT_USER, UPDATE_DATE, UPDATE_USER from tbl_worker where trim(WC_CODE) like '%' || :SeachVal || '%'";
 
                 cmd.Parameters.Add("SeachVal", txt_SeachVal.Text);
 
@@ -239,7 +239,7 @@ namespace Upsert
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "update tbl_worker set DEL_FLAG = 'D', update_date = SYSDATE where trim(PLANT_CODE) = :DeleteVal"
+                    CommandText = "update tbl_worker set DEL_FLAG = 'D', update_date = SYSDATE where trim(WC_CODE) = :DeleteVal"
                 };
 
                 cmd.Parameters.Add("DeleteVal", s_DelPrimaryKey);
@@ -256,6 +256,16 @@ namespace Upsert
             finally
             {
                 connection.Close();
+            }
+        }
+
+        private void txt_SA_SABUN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                popup = new InputPopup_Worker(txt_PLANT_CODE.Text, txt_WC_CODE.Text, txt_SHIFT_CODE.Text, txt_SA_SABUN.Text);
+                popup.FormSendEvent += new InputPopup_Worker.FormSendDataHandler(DieaseUpdateEventMethod);
+                popup.ShowDialog();
             }
         }
     }
