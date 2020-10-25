@@ -271,5 +271,10 @@ namespace Upsert
                 popup.ShowDialog();
             }
         }
+
+        private void ProductMaster_Load(object sender, EventArgs e)
+        {
+            txt_SeachVal.CharacterCasing = CharacterCasing.Upper;
+        }
     }
 }

@@ -27,7 +27,7 @@ namespace Upsert
 
         private void Child_Load(object sender, EventArgs e)
         {
-
+            txt_SeachVal.CharacterCasing = CharacterCasing.Upper;
         }
 
         /// <summary>
