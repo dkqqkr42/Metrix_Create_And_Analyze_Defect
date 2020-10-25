@@ -42,6 +42,9 @@
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.19.9.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,11 +58,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Child2.cs">
+    <Compile Include="PopupForm\InputPopup_SAPOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Child2.Designer.cs">
-      <DependentUpon>Child2.cs</DependentUpon>
+    <Compile Include="PopupForm\InputPopup_SAPOrder.Designer.cs">
+      <DependentUpon>InputPopup_SAPOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SAPOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SAPOrder.Designer.cs">
+      <DependentUpon>SAPOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="WorkPlan.cs">
       <SubType>Form</SubType>
@@ -123,8 +132,11 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Child2.resx">
-      <DependentUpon>Child2.cs</DependentUpon>
+    <EmbeddedResource Include="PopupForm\InputPopup_SAPOrder.resx">
+      <DependentUpon>InputPopup_SAPOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SAPOrder.resx">
+      <DependentUpon>SAPOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkPlan.resx">
       <DependentUpon>WorkPlan.cs</DependentUpon>
@@ -182,6 +194,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\저장클릭.jpg" />
+    <None Include="Resources\저장.jpg" />
+    <None Include="Resources\닫기클릭.jpg" />
+    <None Include="Resources\닫기.jpg" />
     <None Include="Resources\나가기.png" />
   </ItemGroup>
   <ItemGroup>

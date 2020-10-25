@@ -18,7 +18,7 @@ namespace FinalProject_Profile
     {
         
         private WorkPlan mChildForm1 = null;
-        private Child2 mChildForm2 = null;
+        private SAPOrder mChildForm2 = null;
         private Child3 mChildForm3 = null;
         private Child4 mChildForm4 = null;
         private Child5 mChildForm5 = null;
@@ -99,11 +99,11 @@ namespace FinalProject_Profile
                 {
                     ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
                 }
-                mChildForm2 = ShowOrActiveForm(mChildForm2, typeof(Child2)) as Child2;
+                mChildForm2 = ShowOrActiveForm(mChildForm2, typeof(SAPOrder)) as SAPOrder;
             }
             else
             {
-                mChildForm2 = ShowOrActiveForm(mChildForm2, typeof(Child2)) as Child2;
+                mChildForm2 = ShowOrActiveForm(mChildForm2, typeof(SAPOrder)) as SAPOrder;
             }
         }
 
