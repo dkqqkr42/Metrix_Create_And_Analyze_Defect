@@ -803,22 +803,22 @@
             this.metroLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.Location = new System.Drawing.Point(309, 3);
+            this.metroLabel3.Location = new System.Drawing.Point(327, 3);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(102, 25);
+            this.metroLabel3.Size = new System.Drawing.Size(66, 25);
             this.metroLabel3.TabIndex = 2;
-            this.metroLabel3.Text = "사원아이디";
+            this.metroLabel3.Text = "아이디";
             // 
             // metroLabel2
             // 
             this.metroLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(156, 3);
+            this.metroLabel2.Location = new System.Drawing.Point(174, 3);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(120, 25);
+            this.metroLabel2.Size = new System.Drawing.Size(84, 25);
             this.metroLabel2.TabIndex = 1;
-            this.metroLabel2.Text = "사원비밀번호";
+            this.metroLabel2.Text = "비밀번호";
             // 
             // metroLabel1
             // 
@@ -901,22 +901,22 @@
             this.metroLabel8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel8.AutoSize = true;
             this.metroLabel8.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel8.Location = new System.Drawing.Point(177, 107);
+            this.metroLabel8.Location = new System.Drawing.Point(174, 107);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(79, 25);
+            this.metroLabel8.Size = new System.Drawing.Size(84, 25);
             this.metroLabel8.TabIndex = 7;
-            this.metroLabel8.Text = "SA_JOBX";
+            this.metroLabel8.Text = "직급코드";
             // 
             // metroLabel9
             // 
             this.metroLabel9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel9.AutoSize = true;
             this.metroLabel9.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel9.Location = new System.Drawing.Point(293, 107);
+            this.metroLabel9.Location = new System.Drawing.Point(327, 107);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(134, 25);
+            this.metroLabel9.Size = new System.Drawing.Size(66, 25);
             this.metroLabel9.TabIndex = 8;
-            this.metroLabel9.Text = "SA_JOBX_NAME";
+            this.metroLabel9.Text = "직급명";
             // 
             // metroLabel10
             // 
@@ -956,33 +956,33 @@
             this.metroLabel13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel13.AutoSize = true;
             this.metroLabel13.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel13.Location = new System.Drawing.Point(4, 211);
+            this.metroLabel13.Location = new System.Drawing.Point(12, 211);
             this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(137, 25);
+            this.metroLabel13.Size = new System.Drawing.Size(120, 25);
             this.metroLabel13.TabIndex = 12;
-            this.metroLabel13.Text = "사원주민등록번호";
+            this.metroLabel13.Text = "주민등록번호";
             // 
             // metroLabel14
             // 
             this.metroLabel14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel14.AutoSize = true;
             this.metroLabel14.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel14.Location = new System.Drawing.Point(165, 211);
+            this.metroLabel14.Location = new System.Drawing.Point(183, 211);
             this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(102, 25);
+            this.metroLabel14.Size = new System.Drawing.Size(66, 25);
             this.metroLabel14.TabIndex = 13;
-            this.metroLabel14.Text = "사원출생일";
+            this.metroLabel14.Text = "출생일";
             // 
             // metroLabel15
             // 
             this.metroLabel15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel15.AutoSize = true;
             this.metroLabel15.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel15.Location = new System.Drawing.Point(317, 211);
+            this.metroLabel15.Location = new System.Drawing.Point(309, 211);
             this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(87, 25);
+            this.metroLabel15.Size = new System.Drawing.Size(102, 25);
             this.metroLabel15.TabIndex = 14;
-            this.metroLabel15.Text = "SA_HAND";
+            this.metroLabel15.Text = "핸드폰번호";
             // 
             // metroLabel16
             // 

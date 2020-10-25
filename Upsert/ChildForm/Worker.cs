@@ -258,5 +258,15 @@ namespace Upsert
                 connection.Close();
             }
         }
+
+        private void txt_SA_SABUN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                popup = new InputPopup_Worker(txt_PLANT_CODE.Text, txt_WC_CODE.Text, txt_SHIFT_CODE.Text, txt_SA_SABUN.Text);
+                popup.FormSendEvent += new InputPopup_Worker.FormSendDataHandler(DieaseUpdateEventMethod);
+                popup.ShowDialog();
+            }
+        }
     }
 }

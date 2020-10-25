@@ -38,7 +38,8 @@ namespace Upsert
 
         private void Child_Load(object sender, EventArgs e)
         {
-
+            txt_SeachVal.ImeMode = ImeMode.Disable;
+            txt_SeachVal.CharacterCasing = CharacterCasing.Upper;
         }
 
         /// <summary>
