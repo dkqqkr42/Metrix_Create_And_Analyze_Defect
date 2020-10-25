@@ -1,4 +1,7 @@
-﻿namespace Upsert
+﻿using MetroFramework.Forms;
+using System.Windows.Forms;
+
+namespace Upsert
 {
     partial class Parent
     {
@@ -16,6 +19,13 @@
             if (disposing && (components != null))
             {
                 components.Dispose();
+            }
+            if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
+            {
+                foreach (Form OpenForm in this.MdiChildren)
+                {
+                    OpenForm.WindowState = FormWindowState.Normal;
+                }
             }
             base.Dispose(disposing);
         }
