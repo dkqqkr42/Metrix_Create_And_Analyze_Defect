@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_DataUpsert = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_DataLookUp = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.txt_SeachVal = new MetroFramework.Controls.MetroTextBox();
             this.ckb_DelFlag = new MetroFramework.Controls.MetroCheckBox();
+            this.txt_SeachVal = new MetroFramework.Controls.MetroTextBox();
+            this.txt_SeachName = new MetroFramework.Controls.MetroLabel();
             this.grd_Result = new MetroFramework.Controls.MetroGrid();
             this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -153,12 +154,12 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Controls.Add(this.txt_SeachVal, 1, 0);
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69F));
             this.tableLayoutPanel3.Controls.Add(this.ckb_DelFlag, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txt_SeachVal, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txt_SeachName, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(1, 56);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
@@ -166,7 +167,20 @@
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1834, 68);
-            this.tableLayoutPanel3.TabIndex = 2;
+            this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // ckb_DelFlag
+            // 
+            this.ckb_DelFlag.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ckb_DelFlag.AutoSize = true;
+            this.ckb_DelFlag.FontSize = MetroFramework.MetroCheckBoxSize.Medium;
+            this.ckb_DelFlag.Location = new System.Drawing.Point(571, 24);
+            this.ckb_DelFlag.Name = "ckb_DelFlag";
+            this.ckb_DelFlag.Size = new System.Drawing.Size(53, 19);
+            this.ckb_DelFlag.Style = MetroFramework.MetroColorStyle.Green;
+            this.ckb_DelFlag.TabIndex = 2;
+            this.ckb_DelFlag.Text = "전체";
+            this.ckb_DelFlag.UseSelectable = true;
             // 
             // txt_SeachVal
             // 
@@ -184,7 +198,7 @@
             this.txt_SeachVal.CustomButton.UseSelectable = true;
             this.txt_SeachVal.CustomButton.Visible = false;
             this.txt_SeachVal.Lines = new string[0];
-            this.txt_SeachVal.Location = new System.Drawing.Point(724, 22);
+            this.txt_SeachVal.Location = new System.Drawing.Point(147, 22);
             this.txt_SeachVal.MaxLength = 32767;
             this.txt_SeachVal.Name = "txt_SeachVal";
             this.txt_SeachVal.PasswordChar = '\0';
@@ -199,39 +213,35 @@
             this.txt_SeachVal.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_SeachVal.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // ckb_DelFlag
+            // txt_SeachName
             // 
-            this.ckb_DelFlag.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ckb_DelFlag.AutoSize = true;
-            this.ckb_DelFlag.FontSize = MetroFramework.MetroCheckBoxSize.Medium;
-            this.ckb_DelFlag.Location = new System.Drawing.Point(1225, 24);
-            this.ckb_DelFlag.Name = "ckb_DelFlag";
-            this.ckb_DelFlag.Size = new System.Drawing.Size(53, 19);
-            this.ckb_DelFlag.Style = MetroFramework.MetroColorStyle.Green;
-            this.ckb_DelFlag.TabIndex = 2;
-            this.ckb_DelFlag.Text = "전체";
-            this.ckb_DelFlag.UseSelectable = true;
+            this.txt_SeachName.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_SeachName.AutoSize = true;
+            this.txt_SeachName.Location = new System.Drawing.Point(70, 24);
+            this.txt_SeachName.Name = "txt_SeachName";
+            this.txt_SeachName.Size = new System.Drawing.Size(37, 19);
+            this.txt_SeachName.TabIndex = 2;
+            this.txt_SeachName.Text = "라인";
             // 
             // grd_Result
             // 
-            this.grd_Result.AllowUserToAddRows = false;
             this.grd_Result.AllowUserToDeleteRows = false;
             this.grd_Result.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.grd_Result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.grd_Result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.grd_Result.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.grd_Result.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grd_Result.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grd_Result.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grd_Result.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grd_Result.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grd_Result.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.grd_Result.ColumnHeadersHeight = 50;
             this.grd_Result.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column30,
@@ -257,14 +267,14 @@
             this.Column20,
             this.Column21,
             this.Column22});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grd_Result.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grd_Result.DefaultCellStyle = dataGridViewCellStyle7;
             this.grd_Result.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grd_Result.EnableHeadersVisualStyles = false;
             this.grd_Result.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -275,21 +285,20 @@
             this.grd_Result.Name = "grd_Result";
             this.grd_Result.ReadOnly = true;
             this.grd_Result.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grd_Result.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grd_Result.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.grd_Result.RowHeadersVisible = false;
             this.grd_Result.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grd_Result.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.grd_Result.RowTemplate.Height = 30;
             this.grd_Result.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grd_Result.Size = new System.Drawing.Size(1834, 428);
-            this.grd_Result.Style = MetroFramework.MetroColorStyle.Green;
             this.grd_Result.TabIndex = 5;
             this.grd_Result.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_Data_CellDoubleClick);
             this.grd_Result.KeyUp += new System.Windows.Forms.KeyEventHandler(this.grd_Data_KeyUp);
@@ -326,9 +335,10 @@
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "MRP_MGR";
+            this.Column4.HeaderText = "MRP관리자";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 85;
             // 
             // Column5
             // 
@@ -451,10 +461,10 @@
             // 
             // Column22
             // 
-            this.Column22.HeaderText = "ORDER_SEQ";
+            this.Column22.HeaderText = "작업순서";
             this.Column22.Name = "Column22";
             this.Column22.ReadOnly = true;
-            this.Column22.Width = 113;
+            this.Column22.Width = 71;
             // 
             // tableLayoutPanel2
             // 
@@ -478,7 +488,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1834, 68);
-            this.tableLayoutPanel2.TabIndex = 6;
+            this.tableLayoutPanel2.TabIndex = 2;
             // 
             // txt_TEAM_CODE
             // 
@@ -486,7 +496,7 @@
             this.txt_TEAM_CODE.Location = new System.Drawing.Point(942, 33);
             this.txt_TEAM_CODE.Name = "txt_TEAM_CODE";
             this.txt_TEAM_CODE.Size = new System.Drawing.Size(866, 21);
-            this.txt_TEAM_CODE.TabIndex = 6;
+            this.txt_TEAM_CODE.TabIndex = 2;
             this.txt_TEAM_CODE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_TEAM_CODE_KeyPress);
             // 
             // txt_WC_CODE
@@ -495,7 +505,7 @@
             this.txt_WC_CODE.Location = new System.Drawing.Point(488, 33);
             this.txt_WC_CODE.Name = "txt_WC_CODE";
             this.txt_WC_CODE.Size = new System.Drawing.Size(399, 21);
-            this.txt_WC_CODE.TabIndex = 5;
+            this.txt_WC_CODE.TabIndex = 1;
             // 
             // lbl_TEAM_CDOE
             // 
@@ -533,7 +543,7 @@
             this.txt_PLANT_CODE.Location = new System.Drawing.Point(30, 33);
             this.txt_PLANT_CODE.Name = "txt_PLANT_CODE";
             this.txt_PLANT_CODE.Size = new System.Drawing.Size(399, 21);
-            this.txt_PLANT_CODE.TabIndex = 4;
+            this.txt_PLANT_CODE.TabIndex = 0;
             // 
             // WorkCenter
             // 
@@ -542,7 +552,7 @@
             this.ClientSize = new System.Drawing.Size(1876, 772);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "WorkCenter";
-            this.Text = "WorkCenter";
+            this.Text = "작업센터";
             this.Load += new System.EventHandler(this.Child_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -569,6 +579,14 @@
         private System.Windows.Forms.Panel panel2;
         private MetroFramework.Controls.MetroTextBox txt_SeachVal;
         private MetroFramework.Controls.MetroCheckBox ckb_DelFlag;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private MetroFramework.Controls.MetroLabel lbl_TEAM_CDOE;
+        private MetroFramework.Controls.MetroLabel lbl_WC_CODE;
+        private MetroFramework.Controls.MetroLabel lbl_PLANT_CODE;
+        private System.Windows.Forms.TextBox txt_PLANT_CODE;
+        private System.Windows.Forms.TextBox txt_TEAM_CODE;
+        private System.Windows.Forms.TextBox txt_WC_CODE;
+        private MetroFramework.Controls.MetroLabel txt_SeachName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column30;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -592,12 +610,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private MetroFramework.Controls.MetroLabel lbl_TEAM_CDOE;
-        private MetroFramework.Controls.MetroLabel lbl_WC_CODE;
-        private MetroFramework.Controls.MetroLabel lbl_PLANT_CODE;
-        private System.Windows.Forms.TextBox txt_PLANT_CODE;
-        private System.Windows.Forms.TextBox txt_TEAM_CODE;
-        private System.Windows.Forms.TextBox txt_WC_CODE;
     }
 }

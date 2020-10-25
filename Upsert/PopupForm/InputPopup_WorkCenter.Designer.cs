@@ -90,8 +90,8 @@
             this.metroLabel23 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel30 = new MetroFramework.Controls.MetroLabel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Save = new MetroFramework.Controls.MetroButton();
             this.btn_Close = new MetroFramework.Controls.MetroButton();
+            this.btn_Save = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -793,11 +793,11 @@
             this.metroLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel4.Location = new System.Drawing.Point(459, 3);
+            this.metroLabel4.Location = new System.Drawing.Point(453, 3);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(91, 25);
+            this.metroLabel4.Size = new System.Drawing.Size(103, 25);
             this.metroLabel4.TabIndex = 3;
-            this.metroLabel4.Text = "MRP_MGR";
+            this.metroLabel4.Text = "MGR관리자";
             // 
             // metroLabel3
             // 
@@ -1416,11 +1416,11 @@
             this.metroLabel30.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel30.AutoSize = true;
             this.metroLabel30.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel30.Location = new System.Drawing.Point(451, 315);
+            this.metroLabel30.Location = new System.Drawing.Point(462, 315);
             this.metroLabel30.Name = "metroLabel30";
-            this.metroLabel30.Size = new System.Drawing.Size(106, 25);
+            this.metroLabel30.Size = new System.Drawing.Size(84, 25);
             this.metroLabel30.TabIndex = 59;
-            this.metroLabel30.Text = "ORDER_SEQ";
+            this.metroLabel30.Text = "작업순서";
             // 
             // tableLayoutPanel2
             // 
@@ -1438,21 +1438,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(866, 107);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // btn_Save
-            // 
-            this.btn_Save.BackgroundImage = global::Upsert.Properties.Resources.저장1;
-            this.btn_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Save.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Save.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btn_Save.Location = new System.Drawing.Point(577, 3);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(140, 101);
-            this.btn_Save.TabIndex = 29;
-            this.btn_Save.UseSelectable = true;
-            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
-            this.btn_Save.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseDown);
-            this.btn_Save.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseUp);
-            // 
             // btn_Close
             // 
             this.btn_Close.BackgroundImage = global::Upsert.Properties.Resources.닫기;
@@ -1467,6 +1452,21 @@
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             this.btn_Close.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Close_MouseDown);
             this.btn_Close.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Close_MouseUp);
+            // 
+            // btn_Save
+            // 
+            this.btn_Save.BackgroundImage = global::Upsert.Properties.Resources.저장1;
+            this.btn_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Save.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Save.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btn_Save.Location = new System.Drawing.Point(577, 3);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(140, 101);
+            this.btn_Save.TabIndex = 29;
+            this.btn_Save.UseSelectable = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+            this.btn_Save.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseDown);
+            this.btn_Save.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseUp);
             // 
             // InputPopup_WorkCenter
             // 
