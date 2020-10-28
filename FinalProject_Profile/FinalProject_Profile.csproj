@@ -70,23 +70,29 @@
     <Compile Include="SAPOrder.Designer.cs">
       <DependentUpon>SAPOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Scroll_test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scroll_test.Designer.cs">
+      <DependentUpon>Scroll_test.cs</DependentUpon>
+    </Compile>
     <Compile Include="WorkPlan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WorkPlan.Designer.cs">
       <DependentUpon>WorkPlan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Child3.cs">
+    <Compile Include="Reservation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Child3.Designer.cs">
-      <DependentUpon>Child3.cs</DependentUpon>
+    <Compile Include="Reservation.Designer.cs">
+      <DependentUpon>Reservation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Child4.cs">
+    <Compile Include="Working.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Child4.Designer.cs">
-      <DependentUpon>Child4.cs</DependentUpon>
+    <Compile Include="Working.Designer.cs">
+      <DependentUpon>Working.cs</DependentUpon>
     </Compile>
     <Compile Include="Child5.cs">
       <SubType>Form</SubType>
@@ -138,14 +144,17 @@
     <EmbeddedResource Include="SAPOrder.resx">
       <DependentUpon>SAPOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Scroll_test.resx">
+      <DependentUpon>Scroll_test.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WorkPlan.resx">
       <DependentUpon>WorkPlan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Child3.resx">
-      <DependentUpon>Child3.cs</DependentUpon>
+    <EmbeddedResource Include="Reservation.resx">
+      <DependentUpon>Reservation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Child4.resx">
-      <DependentUpon>Child4.cs</DependentUpon>
+    <EmbeddedResource Include="Working.resx">
+      <DependentUpon>Working.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Child5.resx">
       <DependentUpon>Child5.cs</DependentUpon>

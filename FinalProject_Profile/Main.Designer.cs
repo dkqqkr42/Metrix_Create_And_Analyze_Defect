@@ -55,7 +55,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(18, 60);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1884, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1233, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -124,54 +124,54 @@
             this.공부동ToolStripMenuItem});
             this.metroContextMenu2.Name = "metroContextMenu2";
             this.metroContextMenu2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.metroContextMenu2.Size = new System.Drawing.Size(111, 158);
+            this.metroContextMenu2.Size = new System.Drawing.Size(147, 158);
             // 
             // form1ToolStripMenuItem
             // 
             this.form1ToolStripMenuItem.Name = "form1ToolStripMenuItem";
-            this.form1ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
-            this.form1ToolStripMenuItem.Text = "Form1";
+            this.form1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.form1ToolStripMenuItem.Text = "작업계획";
             this.form1ToolStripMenuItem.Click += new System.EventHandler(this.form1ToolStripMenuItem_Click);
             // 
             // form2ToolStripMenuItem
             // 
             this.form2ToolStripMenuItem.Name = "form2ToolStripMenuItem";
-            this.form2ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
-            this.form2ToolStripMenuItem.Text = "Form2";
+            this.form2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.form2ToolStripMenuItem.Text = "생산계획접수";
             this.form2ToolStripMenuItem.Click += new System.EventHandler(this.form2ToolStripMenuItem_Click);
             // 
             // form3ToolStripMenuItem
             // 
             this.form3ToolStripMenuItem.Name = "form3ToolStripMenuItem";
-            this.form3ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
-            this.form3ToolStripMenuItem.Text = "Form3";
+            this.form3ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.form3ToolStripMenuItem.Text = "작업예약";
             this.form3ToolStripMenuItem.Click += new System.EventHandler(this.form3ToolStripMenuItem_Click);
             // 
             // form4ToolStripMenuItem
             // 
             this.form4ToolStripMenuItem.Name = "form4ToolStripMenuItem";
-            this.form4ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
-            this.form4ToolStripMenuItem.Text = "Form4";
+            this.form4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.form4ToolStripMenuItem.Text = "작업진행";
             this.form4ToolStripMenuItem.Click += new System.EventHandler(this.form4ToolStripMenuItem_Click);
             // 
             // form5ToolStripMenuItem
             // 
             this.form5ToolStripMenuItem.Name = "form5ToolStripMenuItem";
-            this.form5ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
-            this.form5ToolStripMenuItem.Text = "Form5";
+            this.form5ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.form5ToolStripMenuItem.Text = "검사성적서";
             this.form5ToolStripMenuItem.Click += new System.EventHandler(this.form5ToolStripMenuItem_Click);
             // 
             // form7ToolStripMenuItem
             // 
             this.form7ToolStripMenuItem.Name = "form7ToolStripMenuItem";
-            this.form7ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
-            this.form7ToolStripMenuItem.Text = "Form7";
+            this.form7ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.form7ToolStripMenuItem.Text = "불량";
             this.form7ToolStripMenuItem.Click += new System.EventHandler(this.form7ToolStripMenuItem_Click);
             // 
             // 공부동ToolStripMenuItem
             // 
             this.공부동ToolStripMenuItem.Name = "공부동ToolStripMenuItem";
-            this.공부동ToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.공부동ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.공부동ToolStripMenuItem.Text = "공부동";
             this.공부동ToolStripMenuItem.Click += new System.EventHandler(this.공부동ToolStripMenuItem_Click);
             // 
@@ -179,7 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1269, 800);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.menuStrip1);
