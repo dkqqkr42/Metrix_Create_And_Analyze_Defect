@@ -45,7 +45,7 @@ namespace FinalProject_Profile
             metroGrid2.Rows.Remove(selectedRow);                                    // metroGrid.Rows (행을 포함하는 컬렉션) 에서 selectedRow (= 위에서 지정한 변수) 를 제거
             metroGrid2.Rows.Insert(rowIndex - 1, selectedRow);                      // 제거했던 내용을 삽입해주는데, 기존 rowIndex의 -1 만큼 (한 줄 위) 의 위치에다가!!
             metroGrid2.ClearSelection();                                            // 기존 셀 선택을 초기화 해줍니다.
-            metroGrid2.Rows[rowIndex - 1].Cells[colIndex].Selected = true;          // 
+            metroGrid2.Rows[rowIndex - 1].Cells[colIndex].Selected = true;          // ???
         }
 
         private void metroTile9_Click(object sender, EventArgs e)                   // 클릭 이벤트 (1칸 DOWN Button)
@@ -67,7 +67,7 @@ namespace FinalProject_Profile
             metroGrid2.Rows[rowIndex + 1].Cells[colIndex].Selected = true;
         }
 
-        private void metroTile6_Click(object sender, EventArgs e)
+        private void metroTile6_Click(object sender, EventArgs e)                       // 클릭 이벤트 (맨 위로)
         {
             int totalRows = metroGrid2.Rows.Count;
             int rowIndex = metroGrid2.SelectedCells[0].OwningRow.Index;
@@ -81,7 +81,7 @@ namespace FinalProject_Profile
             metroGrid2.Rows[0].Cells[colIndex].Selected = true;
         }
 
-        private void metroTile8_Click(object sender, EventArgs e)
+        private void metroTile8_Click(object sender, EventArgs e)                       // 클릭 이벤트 (맨 밑으로)
         {
             // metroGrid.Rows.Count (= Metro Grid의 모든 행을 포함하는 것을 카운팅 해 줌)
             int totalRows = metroGrid2.Rows.Count;
@@ -95,9 +95,9 @@ namespace FinalProject_Profile
             int colIndex = metroGrid2.SelectedCells[0].OwningColumn.Index;
             DataGridViewRow selectedRow = metroGrid2.Rows[rowIndex];
             metroGrid2.Rows.Remove(selectedRow);
-            metroGrid2.Rows.Insert(rowIndex, selectedRow);
+            metroGrid2.Rows.Insert(metroGrid2.Rows.Count - 1, selectedRow);
             metroGrid2.ClearSelection();
-            metroGrid2.Rows[rowIndex].Cells[colIndex].Selected = true;
+            metroGrid2.Rows[metroGrid2.Rows.Count-1].Cells[colIndex].Selected = true;   // metroGrid2.Rows[] 항목에다 metroGrid2.Rows.Count -1 값을 넣어주면 행 마지막으로 감.
         }
     }
 }
