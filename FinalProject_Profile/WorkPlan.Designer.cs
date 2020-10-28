@@ -224,7 +224,7 @@
             this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
             this.tableLayoutPanel2.Controls.Add(this.dateTimePicker2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_plan, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -242,16 +242,16 @@
             this.dateTimePicker2.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.dateTimePicker2.Location = new System.Drawing.Point(4, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(924, 39);
+            this.dateTimePicker2.Size = new System.Drawing.Size(923, 39);
             this.dateTimePicker2.TabIndex = 18;
             // 
             // btn_plan
             // 
             this.btn_plan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_plan.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btn_plan.Location = new System.Drawing.Point(935, 4);
+            this.btn_plan.Location = new System.Drawing.Point(934, 4);
             this.btn_plan.Name = "btn_plan";
-            this.btn_plan.Size = new System.Drawing.Size(95, 75);
+            this.btn_plan.Size = new System.Drawing.Size(96, 75);
             this.btn_plan.TabIndex = 15;
             this.btn_plan.Text = "작업예약";
             this.btn_plan.UseSelectable = true;

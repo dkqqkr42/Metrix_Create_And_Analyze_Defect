@@ -791,11 +791,11 @@
             this.metroLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel4.Location = new System.Drawing.Point(451, 3);
+            this.metroLabel4.Location = new System.Drawing.Point(444, 3);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(106, 25);
+            this.metroLabel4.Size = new System.Drawing.Size(120, 25);
             this.metroLabel4.TabIndex = 3;
-            this.metroLabel4.Text = "ORDER_SEQ";
+            this.metroLabel4.Text = "작업계획번호";
             // 
             // metroLabel3
             // 

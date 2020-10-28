@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SAPOrder));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.grd_Result = new MetroFramework.Controls.MetroGrid();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -45,9 +44,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.button1 = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,6 +74,8 @@
             this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd_Result)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
@@ -204,20 +203,20 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.605014F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.472266F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.387691F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
+            this.tableLayoutPanel3.Controls.Add(this.metroComboBox2, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.metroLabel1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.metroLabel2, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button1, 10, 0);
             this.tableLayoutPanel3.Controls.Add(this.metroComboBox3, 9, 0);
-            this.tableLayoutPanel3.Controls.Add(this.dateTimePicker2, 7, 0);
             this.tableLayoutPanel3.Controls.Add(this.metroLabel5, 8, 0);
-            this.tableLayoutPanel3.Controls.Add(this.metroLabel4, 6, 0);
-            this.tableLayoutPanel3.Controls.Add(this.metroLabel3, 4, 0);
-            this.tableLayoutPanel3.Controls.Add(this.dateTimePicker1, 5, 0);
-            this.tableLayoutPanel3.Controls.Add(this.metroComboBox1, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.metroButton1, 12, 0);
-            this.tableLayoutPanel3.Controls.Add(this.metroComboBox2, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.metroButton2, 11, 0);
+            this.tableLayoutPanel3.Controls.Add(this.metroLabel2, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.metroButton3, 10, 0);
+            this.tableLayoutPanel3.Controls.Add(this.dateTimePicker2, 5, 0);
+            this.tableLayoutPanel3.Controls.Add(this.metroLabel3, 4, 0);
+            this.tableLayoutPanel3.Controls.Add(this.metroComboBox1, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.metroLabel4, 6, 0);
+            this.tableLayoutPanel3.Controls.Add(this.dateTimePicker1, 7, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 3);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -242,7 +241,7 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel2.Location = new System.Drawing.Point(422, 0);
+            this.metroLabel2.Location = new System.Drawing.Point(337, 0);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(46, 25);
             this.metroLabel2.TabIndex = 3;
@@ -251,10 +250,9 @@
             // 
             // metroComboBox3
             // 
-            this.metroComboBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroComboBox3.FormattingEnabled = true;
             this.metroComboBox3.ItemHeight = 23;
-            this.metroComboBox3.Location = new System.Drawing.Point(1264, 2);
+            this.metroComboBox3.Location = new System.Drawing.Point(1260, 2);
             this.metroComboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroComboBox3.Name = "metroComboBox3";
             this.metroComboBox3.Size = new System.Drawing.Size(124, 29);
@@ -263,10 +261,9 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker2.Font = new System.Drawing.Font("굴림", 11F);
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(966, 2);
+            this.dateTimePicker2.Location = new System.Drawing.Point(768, 2);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(141, 24);
@@ -276,7 +273,7 @@
             // 
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel5.Location = new System.Drawing.Point(1113, 0);
+            this.metroLabel5.Location = new System.Drawing.Point(1110, 0);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(84, 25);
             this.metroLabel5.TabIndex = 3;
@@ -286,7 +283,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(934, 0);
+            this.metroLabel4.Location = new System.Drawing.Point(932, 0);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(18, 19);
             this.metroLabel4.TabIndex = 7;
@@ -296,7 +293,7 @@
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.Location = new System.Drawing.Point(616, 0);
+            this.metroLabel3.Location = new System.Drawing.Point(615, 0);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(102, 25);
             this.metroLabel3.TabIndex = 3;
@@ -305,71 +302,44 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker1.Font = new System.Drawing.Font("굴림", 11F);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(769, 2);
+            this.dateTimePicker1.Location = new System.Drawing.Point(964, 2);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(159, 24);
+            this.dateTimePicker1.Size = new System.Drawing.Size(140, 24);
             this.dateTimePicker1.TabIndex = 5;
             // 
             // metroComboBox1
             // 
-            this.metroComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroComboBox1.FormattingEnabled = true;
             this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(114, 2);
+            this.metroComboBox1.Location = new System.Drawing.Point(421, 2);
             this.metroComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(218, 29);
+            this.metroComboBox1.Size = new System.Drawing.Size(188, 29);
             this.metroComboBox1.TabIndex = 4;
             this.metroComboBox1.UseSelectable = true;
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(1718, 3);
+            this.metroButton1.Location = new System.Drawing.Point(1712, 3);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(87, 50);
             this.metroButton1.TabIndex = 9;
-            this.metroButton1.Text = "저장";
+            this.metroButton1.Text = "확정";
             this.metroButton1.UseSelectable = true;
-            // 
-            // metroComboBox2
-            // 
-            this.metroComboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.ItemHeight = 23;
-            this.metroComboBox2.Location = new System.Drawing.Point(338, 2);
-            this.metroComboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.Size = new System.Drawing.Size(78, 29);
-            this.metroComboBox2.TabIndex = 4;
-            this.metroComboBox2.UseSelectable = true;
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(1557, 3);
+            this.metroButton2.BackgroundImage = global::FinalProject_Profile.Properties.Resources.입력;
+            this.metroButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.metroButton2.Location = new System.Drawing.Point(1552, 3);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(87, 50);
             this.metroButton2.TabIndex = 10;
-            this.metroButton2.Text = "입력";
             this.metroButton2.UseSelectable = true;
             this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1394, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(35, 31);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // Column1
             // 
@@ -516,6 +486,27 @@
             this.Column29.HeaderText = "추가일";
             this.Column29.Name = "Column29";
             // 
+            // metroComboBox2
+            // 
+            this.metroComboBox2.FormattingEnabled = true;
+            this.metroComboBox2.ItemHeight = 23;
+            this.metroComboBox2.Location = new System.Drawing.Point(114, 2);
+            this.metroComboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroComboBox2.Name = "metroComboBox2";
+            this.metroComboBox2.Size = new System.Drawing.Size(78, 29);
+            this.metroComboBox2.TabIndex = 11;
+            this.metroComboBox2.UseSelectable = true;
+            // 
+            // metroButton3
+            // 
+            this.metroButton3.BackgroundImage = global::FinalProject_Profile.Properties.Resources.조회;
+            this.metroButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.metroButton3.Location = new System.Drawing.Point(1390, 3);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(87, 50);
+            this.metroButton3.TabIndex = 12;
+            this.metroButton3.UseSelectable = true;
+            // 
             // SAPOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -544,8 +535,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private System.Windows.Forms.Button button1;
-        private MetroFramework.Controls.MetroComboBox metroComboBox2;
         private MetroFramework.Controls.MetroComboBox metroComboBox3;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private MetroFramework.Controls.MetroLabel metroLabel5;
@@ -584,6 +573,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column27;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column28;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column29;
+        private MetroFramework.Controls.MetroComboBox metroComboBox2;
+        private MetroFramework.Controls.MetroButton metroButton3;
     }
 }
 

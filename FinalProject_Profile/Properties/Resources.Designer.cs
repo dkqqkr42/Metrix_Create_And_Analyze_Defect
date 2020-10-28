@@ -93,6 +93,26 @@ namespace FinalProject_Profile.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap 입력 {
+            get {
+                object obj = ResourceManager.GetObject("입력", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 입력클릭 {
+            get {
+                object obj = ResourceManager.GetObject("입력클릭", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap 저장 {
             get {
                 object obj = ResourceManager.GetObject("저장", resourceCulture);
@@ -106,6 +126,26 @@ namespace FinalProject_Profile.Properties {
         internal static System.Drawing.Bitmap 저장클릭 {
             get {
                 object obj = ResourceManager.GetObject("저장클릭", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 조회 {
+            get {
+                object obj = ResourceManager.GetObject("조회", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 조회클릭 {
+            get {
+                object obj = ResourceManager.GetObject("조회클릭", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
