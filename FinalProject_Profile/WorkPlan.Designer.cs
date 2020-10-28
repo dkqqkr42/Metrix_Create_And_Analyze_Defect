@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.ffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -112,7 +112,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94.11765F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1190, 630);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1836, 692);
             this.tableLayoutPanel4.TabIndex = 5;
             // 
             // tableLayoutPanel5
@@ -134,16 +134,16 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(136, 624);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(214, 686);
             this.tableLayoutPanel5.TabIndex = 5;
             // 
             // metroTile5
             // 
             this.metroTile5.ActiveControl = null;
             this.metroTile5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile5.Location = new System.Drawing.Point(4, 500);
+            this.metroTile5.Location = new System.Drawing.Point(4, 552);
             this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(128, 120);
+            this.metroTile5.Size = new System.Drawing.Size(206, 130);
             this.metroTile5.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroTile5.TabIndex = 4;
             this.metroTile5.Text = "작업설정";
@@ -154,9 +154,9 @@
             // 
             this.metroTile4.ActiveControl = null;
             this.metroTile4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile4.Location = new System.Drawing.Point(4, 376);
+            this.metroTile4.Location = new System.Drawing.Point(4, 415);
             this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(128, 117);
+            this.metroTile4.Size = new System.Drawing.Size(206, 130);
             this.metroTile4.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroTile4.TabIndex = 3;
             this.metroTile4.Text = "검사성적서";
@@ -167,9 +167,9 @@
             // 
             this.metroTile3.ActiveControl = null;
             this.metroTile3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile3.Location = new System.Drawing.Point(4, 252);
+            this.metroTile3.Location = new System.Drawing.Point(4, 278);
             this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(128, 117);
+            this.metroTile3.Size = new System.Drawing.Size(206, 130);
             this.metroTile3.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroTile3.TabIndex = 2;
             this.metroTile3.Text = "작업진행";
@@ -180,9 +180,9 @@
             // 
             this.metroTile2.ActiveControl = null;
             this.metroTile2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile2.Location = new System.Drawing.Point(4, 128);
+            this.metroTile2.Location = new System.Drawing.Point(4, 141);
             this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(128, 117);
+            this.metroTile2.Size = new System.Drawing.Size(206, 130);
             this.metroTile2.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroTile2.TabIndex = 1;
             this.metroTile2.Text = "작업예약";
@@ -195,7 +195,7 @@
             this.metroTile1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTile1.Location = new System.Drawing.Point(4, 4);
             this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(128, 117);
+            this.metroTile1.Size = new System.Drawing.Size(206, 130);
             this.metroTile1.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroTile1.TabIndex = 0;
             this.metroTile1.Text = "작업계획";
@@ -206,52 +206,52 @@
             // 
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.90403F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(145, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(223, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 532F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1042, 624);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1610, 686);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
             this.tableLayoutPanel2.Controls.Add(this.dateTimePicker2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_plan, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(1, 1);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1034, 83);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1608, 54);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dateTimePicker2.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(4, 4);
+            this.dateTimePicker2.Location = new System.Drawing.Point(7, 7);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(921, 39);
+            this.dateTimePicker2.Size = new System.Drawing.Size(1490, 39);
             this.dateTimePicker2.TabIndex = 18;
             // 
             // btn_plan
             // 
             this.btn_plan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_plan.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btn_plan.Location = new System.Drawing.Point(932, 4);
+            this.btn_plan.Location = new System.Drawing.Point(1505, 0);
+            this.btn_plan.Margin = new System.Windows.Forms.Padding(0);
             this.btn_plan.Name = "btn_plan";
-            this.btn_plan.Size = new System.Drawing.Size(98, 75);
+            this.btn_plan.Size = new System.Drawing.Size(103, 54);
             this.btn_plan.TabIndex = 15;
             this.btn_plan.Text = "작업예약";
             this.btn_plan.UseSelectable = true;
@@ -266,25 +266,26 @@
             this.tableLayoutPanel3.Controls.Add(this.dataGridView1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel6, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 94);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(1, 56);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1034, 526);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1608, 629);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -298,12 +299,13 @@
             this.Column9,
             this.Column10});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(1, 1);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(950, 518);
+            this.dataGridView1.Size = new System.Drawing.Size(1488, 627);
             this.dataGridView1.TabIndex = 21;
             // 
             // dataGridViewTextBoxColumn1
@@ -394,23 +396,24 @@
             this.tableLayoutPanel6.Controls.Add(this.metroTile7, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.metroTile8, 0, 2);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(961, 4);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(1493, 4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 4;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.74131F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.48649F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.01498F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.54682F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(69, 518);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(111, 621);
             this.tableLayoutPanel6.TabIndex = 22;
             // 
             // metroTile9
             // 
             this.metroTile9.ActiveControl = null;
             this.metroTile9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.metroTile9.Location = new System.Drawing.Point(3, 455);
+            this.metroTile9.Location = new System.Drawing.Point(0, 561);
+            this.metroTile9.Margin = new System.Windows.Forms.Padding(0);
             this.metroTile9.Name = "metroTile9";
-            this.metroTile9.Size = new System.Drawing.Size(63, 60);
+            this.metroTile9.Size = new System.Drawing.Size(111, 60);
             this.metroTile9.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroTile9.TabIndex = 28;
             this.metroTile9.Text = "▼";
@@ -421,9 +424,10 @@
             // 
             this.metroTile6.ActiveControl = null;
             this.metroTile6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroTile6.Location = new System.Drawing.Point(3, 3);
+            this.metroTile6.Location = new System.Drawing.Point(0, 0);
+            this.metroTile6.Margin = new System.Windows.Forms.Padding(0);
             this.metroTile6.Name = "metroTile6";
-            this.metroTile6.Size = new System.Drawing.Size(63, 60);
+            this.metroTile6.Size = new System.Drawing.Size(111, 60);
             this.metroTile6.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroTile6.TabIndex = 25;
             this.metroTile6.Text = "▲";
@@ -434,9 +438,10 @@
             // 
             this.metroTile7.ActiveControl = null;
             this.metroTile7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroTile7.Location = new System.Drawing.Point(3, 69);
+            this.metroTile7.Location = new System.Drawing.Point(0, 79);
+            this.metroTile7.Margin = new System.Windows.Forms.Padding(0);
             this.metroTile7.Name = "metroTile7";
-            this.metroTile7.Size = new System.Drawing.Size(63, 61);
+            this.metroTile7.Size = new System.Drawing.Size(111, 61);
             this.metroTile7.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroTile7.TabIndex = 26;
             this.metroTile7.Text = "▲";
@@ -447,9 +452,10 @@
             // 
             this.metroTile8.ActiveControl = null;
             this.metroTile8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.metroTile8.Location = new System.Drawing.Point(3, 388);
+            this.metroTile8.Location = new System.Drawing.Point(0, 481);
+            this.metroTile8.Margin = new System.Windows.Forms.Padding(0);
             this.metroTile8.Name = "metroTile8";
-            this.metroTile8.Size = new System.Drawing.Size(63, 61);
+            this.metroTile8.Size = new System.Drawing.Size(111, 61);
             this.metroTile8.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroTile8.TabIndex = 27;
             this.metroTile8.Text = "▼";
@@ -460,7 +466,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1230, 710);
+            this.ClientSize = new System.Drawing.Size(1876, 772);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Name = "WorkPlan";
