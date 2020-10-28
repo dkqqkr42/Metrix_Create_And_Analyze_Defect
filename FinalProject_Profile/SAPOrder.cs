@@ -26,10 +26,20 @@ namespace FinalProject_Profile
            
         }
 
-        private void metroButton2_Click(object sender, EventArgs e)
+        private void metroButton2_Click(object sender, EventArgs e)  // 입력버튼 누를 경우 실행
         {
             InputPopup_SAPOrder inputPopup_SAPOrder = new InputPopup_SAPOrder();
             inputPopup_SAPOrder.Show();
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)  // 확정버튼 누를 경우 실행
+        {
+
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)  // 조회버튼 누를 경우 실행
+        {
+
         }
     }
 }

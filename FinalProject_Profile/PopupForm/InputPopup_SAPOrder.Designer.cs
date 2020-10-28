@@ -866,11 +866,11 @@
             this.metroLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel5.Location = new System.Drawing.Point(606, 3);
+            this.metroLabel5.Location = new System.Drawing.Point(615, 3);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(84, 25);
+            this.metroLabel5.Size = new System.Drawing.Size(66, 25);
             this.metroLabel5.TabIndex = 4;
-            this.metroLabel5.Text = "주문날짜";
+            this.metroLabel5.Text = "주문일";
             // 
             // metroLabel6
             // 
