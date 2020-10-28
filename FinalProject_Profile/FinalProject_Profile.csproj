@@ -42,6 +42,9 @@
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.19.9.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -60,6 +63,12 @@
     </Compile>
     <Compile Include="Child2.Designer.cs">
       <DependentUpon>Child2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scroll_test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scroll_test.Designer.cs">
+      <DependentUpon>Scroll_test.cs</DependentUpon>
     </Compile>
     <Compile Include="WorkPlan.cs">
       <SubType>Form</SubType>
@@ -125,6 +134,9 @@
     </Compile>
     <EmbeddedResource Include="Child2.resx">
       <DependentUpon>Child2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scroll_test.resx">
+      <DependentUpon>Scroll_test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkPlan.resx">
       <DependentUpon>WorkPlan.cs</DependentUpon>
