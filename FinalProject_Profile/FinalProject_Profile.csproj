@@ -82,11 +82,11 @@
     <Compile Include="Child3.Designer.cs">
       <DependentUpon>Child3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Child4.cs">
+    <Compile Include="Working.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Child4.Designer.cs">
-      <DependentUpon>Child4.cs</DependentUpon>
+    <Compile Include="Working.Designer.cs">
+      <DependentUpon>Working.cs</DependentUpon>
     </Compile>
     <Compile Include="Child5.cs">
       <SubType>Form</SubType>
@@ -144,8 +144,8 @@
     <EmbeddedResource Include="Child3.resx">
       <DependentUpon>Child3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Child4.resx">
-      <DependentUpon>Child4.cs</DependentUpon>
+    <EmbeddedResource Include="Working.resx">
+      <DependentUpon>Working.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Child5.resx">
       <DependentUpon>Child5.cs</DependentUpon>
