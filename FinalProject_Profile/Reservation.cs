@@ -11,9 +11,9 @@ using MetroFramework.Forms;
 
 namespace FinalProject_Profile
 {
-    public partial class Child3 : MetroForm
+    public partial class Reservation : MetroForm
     {
-        public Child3()
+        public Reservation()
         {
             InitializeComponent();
             for (int i = 0; i < 30; i++)

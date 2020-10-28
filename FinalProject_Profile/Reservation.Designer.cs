@@ -1,6 +1,6 @@
 ﻿namespace FinalProject_Profile
 {
-    partial class Child3
+    partial class Reservation
     {
         /// <summary>
         /// Required designer variable.
