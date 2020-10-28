@@ -58,11 +58,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Child2.cs">
+    <Compile Include="PopupForm\InputPopup_SAPOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Child2.Designer.cs">
-      <DependentUpon>Child2.cs</DependentUpon>
+    <Compile Include="PopupForm\InputPopup_SAPOrder.Designer.cs">
+      <DependentUpon>InputPopup_SAPOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SAPOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SAPOrder.Designer.cs">
+      <DependentUpon>SAPOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Scroll_test.cs">
       <SubType>Form</SubType>
@@ -132,8 +138,11 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Child2.resx">
-      <DependentUpon>Child2.cs</DependentUpon>
+    <EmbeddedResource Include="PopupForm\InputPopup_SAPOrder.resx">
+      <DependentUpon>InputPopup_SAPOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SAPOrder.resx">
+      <DependentUpon>SAPOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Scroll_test.resx">
       <DependentUpon>Scroll_test.cs</DependentUpon>
@@ -194,6 +203,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\저장클릭.jpg" />
+    <None Include="Resources\저장.jpg" />
+    <None Include="Resources\닫기클릭.jpg" />
+    <None Include="Resources\닫기.jpg" />
     <None Include="Resources\나가기.png" />
   </ItemGroup>
   <ItemGroup>

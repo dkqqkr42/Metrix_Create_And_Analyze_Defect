@@ -26,6 +26,7 @@ namespace Upsert
             txt_PROD_CODE.Text = prodcode;
             txt_PLANT_CODE.Text = plantcode;
             txt_MRP_MGR.Text = mrpmgr;
+            this.ActiveControl = txt_PROD_NAME;
         }
 
         public InputPopup_ProductMaster(List<string> list)

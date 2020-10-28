@@ -20,6 +20,13 @@ namespace Upsert
         {
             InitializeComponent();
         }
+        public InputPopup_Employee(string sasabun, string deptnew)
+        {
+            InitializeComponent();
+            txt_SA_SABUN.Text = sasabun;
+            txt_SA_DEPT_NEW.Text = deptnew;
+            this.ActiveControl = txt_SA_PASSWORD;
+        }
         public InputPopup_Employee(List<string> list)
         {
             InitializeComponent();

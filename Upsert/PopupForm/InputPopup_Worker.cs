@@ -20,6 +20,15 @@ namespace Upsert
         {
             InitializeComponent();
         }
+        public InputPopup_Worker(string plantcode, string wccode, string shiftcode, string sasabun)
+        {
+            InitializeComponent();
+            txt_PLANT_CODE.Text = plantcode;
+            txt_WC_CODE.Text = wccode;
+            txt_SHIFT_CODE.Text = shiftcode;
+            txt_SA_SABUN.Text = sasabun;
+            this.ActiveControl = txt_SHIFT_NAME;
+        }
         public InputPopup_Worker(List<string> list)
         {
             InitializeComponent();

@@ -47,6 +47,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txt_SeachVal = new MetroFramework.Controls.MetroTextBox();
             this.ckb_DelFlag = new MetroFramework.Controls.MetroCheckBox();
+            this.txt_SeachName = new MetroFramework.Controls.MetroLabel();
             this.grd_Result = new MetroFramework.Controls.MetroGrid();
             this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -108,7 +109,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1836, 892);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1836, 692);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -125,37 +126,37 @@
             this.tableLayoutPanel2.Controls.Add(this.lbl_PROD_CODE, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txt_PROD_CODE, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(1, 232);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(1, 180);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1834, 88);
-            this.tableLayoutPanel2.TabIndex = 7;
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1834, 68);
+            this.tableLayoutPanel2.TabIndex = 2;
             // 
             // txt_MRP_MGR
             // 
             this.txt_MRP_MGR.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_MRP_MGR.Location = new System.Drawing.Point(1389, 46);
+            this.txt_MRP_MGR.Location = new System.Drawing.Point(1389, 33);
             this.txt_MRP_MGR.Name = "txt_MRP_MGR";
             this.txt_MRP_MGR.Size = new System.Drawing.Size(430, 21);
-            this.txt_MRP_MGR.TabIndex = 6;
+            this.txt_MRP_MGR.TabIndex = 2;
             this.txt_MRP_MGR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_TEAM_CODE_KeyPress);
             // 
             // txt_PLANT_CODE
             // 
             this.txt_PLANT_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_PLANT_CODE.Location = new System.Drawing.Point(935, 46);
+            this.txt_PLANT_CODE.Location = new System.Drawing.Point(935, 33);
             this.txt_PLANT_CODE.Name = "txt_PLANT_CODE";
             this.txt_PLANT_CODE.Size = new System.Drawing.Size(420, 21);
-            this.txt_PLANT_CODE.TabIndex = 5;
+            this.txt_PLANT_CODE.TabIndex = 1;
             // 
             // lbl_MRP_MGR
             // 
             this.lbl_MRP_MGR.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_MRP_MGR.AutoSize = true;
-            this.lbl_MRP_MGR.Location = new System.Drawing.Point(1564, 4);
+            this.lbl_MRP_MGR.Location = new System.Drawing.Point(1564, 1);
             this.lbl_MRP_MGR.Name = "lbl_MRP_MGR";
             this.lbl_MRP_MGR.Size = new System.Drawing.Size(79, 19);
             this.lbl_MRP_MGR.TabIndex = 3;
@@ -165,7 +166,7 @@
             // 
             this.lbl_PLANT_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_PLANT_CODE.AutoSize = true;
-            this.lbl_PLANT_CODE.Location = new System.Drawing.Point(1113, 4);
+            this.lbl_PLANT_CODE.Location = new System.Drawing.Point(1113, 1);
             this.lbl_PLANT_CODE.Name = "lbl_PLANT_CODE";
             this.lbl_PLANT_CODE.Size = new System.Drawing.Size(65, 19);
             this.lbl_PLANT_CODE.TabIndex = 2;
@@ -175,7 +176,7 @@
             // 
             this.lbl_PROD_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_PROD_CODE.AutoSize = true;
-            this.lbl_PROD_CODE.Location = new System.Drawing.Point(426, 4);
+            this.lbl_PROD_CODE.Location = new System.Drawing.Point(426, 1);
             this.lbl_PROD_CODE.Name = "lbl_PROD_CODE";
             this.lbl_PROD_CODE.Size = new System.Drawing.Size(65, 19);
             this.lbl_PROD_CODE.TabIndex = 1;
@@ -184,19 +185,19 @@
             // txt_PROD_CODE
             // 
             this.txt_PROD_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_PROD_CODE.Location = new System.Drawing.Point(15, 46);
+            this.txt_PROD_CODE.Location = new System.Drawing.Point(15, 33);
             this.txt_PROD_CODE.Name = "txt_PROD_CODE";
             this.txt_PROD_CODE.Size = new System.Drawing.Size(887, 21);
-            this.txt_PROD_CODE.TabIndex = 4;
+            this.txt_PROD_CODE.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.lbl_DataUpsert);
-            this.panel2.Location = new System.Drawing.Point(4, 164);
+            this.panel2.Location = new System.Drawing.Point(4, 128);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(148, 64);
+            this.panel2.Size = new System.Drawing.Size(148, 48);
             this.panel2.TabIndex = 2;
             // 
             // lbl_DataUpsert
@@ -206,7 +207,7 @@
             this.lbl_DataUpsert.BackColor = System.Drawing.Color.Transparent;
             this.lbl_DataUpsert.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_DataUpsert.ForeColor = System.Drawing.Color.White;
-            this.lbl_DataUpsert.Location = new System.Drawing.Point(28, 19);
+            this.lbl_DataUpsert.Location = new System.Drawing.Point(28, 11);
             this.lbl_DataUpsert.Name = "lbl_DataUpsert";
             this.lbl_DataUpsert.Size = new System.Drawing.Size(88, 25);
             this.lbl_DataUpsert.TabIndex = 1;
@@ -219,7 +220,7 @@
             this.panel1.Controls.Add(this.lbl_DataLookUp);
             this.panel1.Location = new System.Drawing.Point(4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(148, 64);
+            this.panel1.Size = new System.Drawing.Size(148, 48);
             this.panel1.TabIndex = 1;
             // 
             // lbl_DataLookUp
@@ -229,7 +230,7 @@
             this.lbl_DataLookUp.BackColor = System.Drawing.Color.Transparent;
             this.lbl_DataLookUp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_DataLookUp.ForeColor = System.Drawing.Color.White;
-            this.lbl_DataLookUp.Location = new System.Drawing.Point(27, 19);
+            this.lbl_DataLookUp.Location = new System.Drawing.Point(27, 11);
             this.lbl_DataLookUp.Name = "lbl_DataLookUp";
             this.lbl_DataLookUp.Size = new System.Drawing.Size(93, 25);
             this.lbl_DataLookUp.TabIndex = 2;
@@ -238,20 +239,20 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69F));
             this.tableLayoutPanel3.Controls.Add(this.txt_SeachVal, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.ckb_DelFlag, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txt_SeachName, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(1, 72);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(1, 56);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1834, 88);
-            this.tableLayoutPanel3.TabIndex = 2;
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1834, 68);
+            this.tableLayoutPanel3.TabIndex = 1;
             // 
             // txt_SeachVal
             // 
@@ -269,7 +270,7 @@
             this.txt_SeachVal.CustomButton.UseSelectable = true;
             this.txt_SeachVal.CustomButton.Visible = false;
             this.txt_SeachVal.Lines = new string[0];
-            this.txt_SeachVal.Location = new System.Drawing.Point(724, 32);
+            this.txt_SeachVal.Location = new System.Drawing.Point(147, 22);
             this.txt_SeachVal.MaxLength = 32767;
             this.txt_SeachVal.Name = "txt_SeachVal";
             this.txt_SeachVal.PasswordChar = '\0';
@@ -279,7 +280,7 @@
             this.txt_SeachVal.SelectionStart = 0;
             this.txt_SeachVal.ShortcutsEnabled = true;
             this.txt_SeachVal.Size = new System.Drawing.Size(384, 23);
-            this.txt_SeachVal.TabIndex = 1;
+            this.txt_SeachVal.TabIndex = 0;
             this.txt_SeachVal.UseSelectable = true;
             this.txt_SeachVal.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_SeachVal.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -289,13 +290,23 @@
             this.ckb_DelFlag.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ckb_DelFlag.AutoSize = true;
             this.ckb_DelFlag.FontSize = MetroFramework.MetroCheckBoxSize.Medium;
-            this.ckb_DelFlag.Location = new System.Drawing.Point(1225, 34);
+            this.ckb_DelFlag.Location = new System.Drawing.Point(571, 24);
             this.ckb_DelFlag.Name = "ckb_DelFlag";
             this.ckb_DelFlag.Size = new System.Drawing.Size(53, 19);
             this.ckb_DelFlag.Style = MetroFramework.MetroColorStyle.Green;
-            this.ckb_DelFlag.TabIndex = 2;
+            this.ckb_DelFlag.TabIndex = 1;
             this.ckb_DelFlag.Text = "전체";
             this.ckb_DelFlag.UseSelectable = true;
+            // 
+            // txt_SeachName
+            // 
+            this.txt_SeachName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_SeachName.AutoSize = true;
+            this.txt_SeachName.Location = new System.Drawing.Point(22, 24);
+            this.txt_SeachName.Name = "txt_SeachName";
+            this.txt_SeachName.Size = new System.Drawing.Size(65, 19);
+            this.txt_SeachName.TabIndex = 1;
+            this.txt_SeachName.Text = "제품코드";
             // 
             // grd_Result
             // 
@@ -310,11 +321,11 @@
             this.grd_Result.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grd_Result.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Navy;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Navy;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grd_Result.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grd_Result.ColumnHeadersHeight = 50;
@@ -353,7 +364,7 @@
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grd_Result.DefaultCellStyle = dataGridViewCellStyle3;
@@ -361,17 +372,17 @@
             this.grd_Result.EnableHeadersVisualStyles = false;
             this.grd_Result.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grd_Result.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grd_Result.Location = new System.Drawing.Point(1, 339);
+            this.grd_Result.Location = new System.Drawing.Point(1, 263);
             this.grd_Result.Margin = new System.Windows.Forms.Padding(0);
             this.grd_Result.MultiSelect = false;
             this.grd_Result.Name = "grd_Result";
             this.grd_Result.ReadOnly = true;
             this.grd_Result.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grd_Result.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
@@ -380,9 +391,8 @@
             this.grd_Result.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.grd_Result.RowTemplate.Height = 30;
             this.grd_Result.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grd_Result.Size = new System.Drawing.Size(1834, 552);
-            this.grd_Result.Style = MetroFramework.MetroColorStyle.Green;
-            this.grd_Result.TabIndex = 5;
+            this.grd_Result.Size = new System.Drawing.Size(1834, 428);
+            this.grd_Result.TabIndex = 3;
             this.grd_Result.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_Data_CellDoubleClick);
             this.grd_Result.KeyUp += new System.Windows.Forms.KeyEventHandler(this.grd_Data_KeyUp);
             // 
@@ -534,10 +544,10 @@
             // Column18
             // 
             this.Column18.FillWeight = 91.07734F;
-            this.Column18.HeaderText = "Batch구분";
+            this.Column18.HeaderText = "Batch";
             this.Column18.Name = "Column18";
             this.Column18.ReadOnly = true;
-            this.Column18.Width = 77;
+            this.Column18.Width = 69;
             // 
             // Column19
             // 
@@ -606,18 +616,18 @@
             // Column27
             // 
             this.Column27.FillWeight = 81.3302F;
-            this.Column27.HeaderText = "IPS_YN";
+            this.Column27.HeaderText = "수출구분";
             this.Column27.Name = "Column27";
             this.Column27.ReadOnly = true;
-            this.Column27.Width = 77;
+            this.Column27.Width = 71;
             // 
             // Column28
             // 
             this.Column28.FillWeight = 89.80224F;
-            this.Column28.HeaderText = "PLY_QTY";
+            this.Column28.HeaderText = "팔랫적재수량";
             this.Column28.Name = "Column28";
             this.Column28.ReadOnly = true;
-            this.Column28.Width = 86;
+            this.Column28.Width = 85;
             // 
             // Column29
             // 
@@ -631,10 +641,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1876, 972);
+            this.ClientSize = new System.Drawing.Size(1876, 772);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ProductMaster";
-            this.Text = "ProductMaster";
+            this.Text = "제품마스터";
+            this.Load += new System.EventHandler(this.ProductMaster_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -667,6 +678,7 @@
         private MetroFramework.Controls.MetroLabel lbl_PLANT_CODE;
         private MetroFramework.Controls.MetroLabel lbl_PROD_CODE;
         private System.Windows.Forms.TextBox txt_PROD_CODE;
+        private MetroFramework.Controls.MetroLabel txt_SeachName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column30;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

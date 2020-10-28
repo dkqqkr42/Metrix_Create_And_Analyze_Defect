@@ -33,13 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.txt_SeachName = new MetroFramework.Controls.MetroLabel();
+            this.txt_SeachVal = new MetroFramework.Controls.MetroTextBox();
+            this.ckb_DelFlag = new MetroFramework.Controls.MetroCheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_DataUpsert = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_DataLookUp = new System.Windows.Forms.Label();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.txt_SeachVal = new MetroFramework.Controls.MetroTextBox();
-            this.ckb_DelFlag = new MetroFramework.Controls.MetroCheckBox();
             this.grd_Result = new MetroFramework.Controls.MetroGrid();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,9 +72,9 @@
             this.lbl_SA_SABUN = new MetroFramework.Controls.MetroLabel();
             this.txt_SA_SABUN = new MetroFramework.Controls.MetroTextBox();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd_Result)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
@@ -83,9 +84,9 @@
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.grd_Result, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -99,72 +100,37 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1836, 892);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1836, 692);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.lbl_DataUpsert);
-            this.panel2.Location = new System.Drawing.Point(4, 164);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(148, 64);
-            this.panel2.TabIndex = 2;
-            // 
-            // lbl_DataUpsert
-            // 
-            this.lbl_DataUpsert.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_DataUpsert.AutoSize = true;
-            this.lbl_DataUpsert.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_DataUpsert.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DataUpsert.ForeColor = System.Drawing.Color.White;
-            this.lbl_DataUpsert.Location = new System.Drawing.Point(28, 19);
-            this.lbl_DataUpsert.Name = "lbl_DataUpsert";
-            this.lbl_DataUpsert.Size = new System.Drawing.Size(88, 25);
-            this.lbl_DataUpsert.TabIndex = 1;
-            this.lbl_DataUpsert.Text = "입력항목";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.lbl_DataLookUp);
-            this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(148, 64);
-            this.panel1.TabIndex = 1;
-            // 
-            // lbl_DataLookUp
-            // 
-            this.lbl_DataLookUp.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_DataLookUp.AutoSize = true;
-            this.lbl_DataLookUp.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_DataLookUp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DataLookUp.ForeColor = System.Drawing.Color.White;
-            this.lbl_DataLookUp.Location = new System.Drawing.Point(27, 19);
-            this.lbl_DataLookUp.Name = "lbl_DataLookUp";
-            this.lbl_DataLookUp.Size = new System.Drawing.Size(93, 25);
-            this.lbl_DataLookUp.TabIndex = 2;
-            this.lbl_DataLookUp.Text = "조회 조건";
             // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Controls.Add(this.txt_SeachName, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.txt_SeachVal, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.ckb_DelFlag, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(1, 72);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(1, 56);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1834, 88);
-            this.tableLayoutPanel3.TabIndex = 2;
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1834, 68);
+            this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // txt_SeachName
+            // 
+            this.txt_SeachName.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_SeachName.AutoSize = true;
+            this.txt_SeachName.Location = new System.Drawing.Point(42, 24);
+            this.txt_SeachName.Name = "txt_SeachName";
+            this.txt_SeachName.Size = new System.Drawing.Size(65, 19);
+            this.txt_SeachName.TabIndex = 3;
+            this.txt_SeachName.Text = "공장코드";
             // 
             // txt_SeachVal
             // 
@@ -182,7 +148,7 @@
             this.txt_SeachVal.CustomButton.UseSelectable = true;
             this.txt_SeachVal.CustomButton.Visible = false;
             this.txt_SeachVal.Lines = new string[0];
-            this.txt_SeachVal.Location = new System.Drawing.Point(724, 32);
+            this.txt_SeachVal.Location = new System.Drawing.Point(147, 22);
             this.txt_SeachVal.MaxLength = 32767;
             this.txt_SeachVal.Name = "txt_SeachVal";
             this.txt_SeachVal.PasswordChar = '\0';
@@ -192,7 +158,7 @@
             this.txt_SeachVal.SelectionStart = 0;
             this.txt_SeachVal.ShortcutsEnabled = true;
             this.txt_SeachVal.Size = new System.Drawing.Size(384, 23);
-            this.txt_SeachVal.TabIndex = 1;
+            this.txt_SeachVal.TabIndex = 0;
             this.txt_SeachVal.UseSelectable = true;
             this.txt_SeachVal.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_SeachVal.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -202,13 +168,59 @@
             this.ckb_DelFlag.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ckb_DelFlag.AutoSize = true;
             this.ckb_DelFlag.FontSize = MetroFramework.MetroCheckBoxSize.Medium;
-            this.ckb_DelFlag.Location = new System.Drawing.Point(1225, 34);
+            this.ckb_DelFlag.Location = new System.Drawing.Point(571, 24);
             this.ckb_DelFlag.Name = "ckb_DelFlag";
             this.ckb_DelFlag.Size = new System.Drawing.Size(53, 19);
             this.ckb_DelFlag.Style = MetroFramework.MetroColorStyle.Green;
-            this.ckb_DelFlag.TabIndex = 2;
+            this.ckb_DelFlag.TabIndex = 1;
             this.ckb_DelFlag.Text = "전체";
             this.ckb_DelFlag.UseSelectable = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.lbl_DataUpsert);
+            this.panel2.Location = new System.Drawing.Point(4, 128);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(148, 48);
+            this.panel2.TabIndex = 2;
+            // 
+            // lbl_DataUpsert
+            // 
+            this.lbl_DataUpsert.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_DataUpsert.AutoSize = true;
+            this.lbl_DataUpsert.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_DataUpsert.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DataUpsert.ForeColor = System.Drawing.Color.White;
+            this.lbl_DataUpsert.Location = new System.Drawing.Point(28, 11);
+            this.lbl_DataUpsert.Name = "lbl_DataUpsert";
+            this.lbl_DataUpsert.Size = new System.Drawing.Size(88, 25);
+            this.lbl_DataUpsert.TabIndex = 1;
+            this.lbl_DataUpsert.Text = "입력항목";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lbl_DataLookUp);
+            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(148, 48);
+            this.panel1.TabIndex = 1;
+            // 
+            // lbl_DataLookUp
+            // 
+            this.lbl_DataLookUp.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_DataLookUp.AutoSize = true;
+            this.lbl_DataLookUp.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_DataLookUp.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_DataLookUp.ForeColor = System.Drawing.Color.White;
+            this.lbl_DataLookUp.Location = new System.Drawing.Point(27, 11);
+            this.lbl_DataLookUp.Name = "lbl_DataLookUp";
+            this.lbl_DataLookUp.Size = new System.Drawing.Size(93, 25);
+            this.lbl_DataLookUp.TabIndex = 2;
+            this.lbl_DataLookUp.Text = "조회 조건";
             // 
             // grd_Result
             // 
@@ -224,11 +236,11 @@
             this.grd_Result.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grd_Result.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Navy;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Navy;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grd_Result.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grd_Result.ColumnHeadersHeight = 50;
@@ -247,7 +259,7 @@
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grd_Result.DefaultCellStyle = dataGridViewCellStyle3;
@@ -255,17 +267,17 @@
             this.grd_Result.EnableHeadersVisualStyles = false;
             this.grd_Result.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grd_Result.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grd_Result.Location = new System.Drawing.Point(1, 339);
+            this.grd_Result.Location = new System.Drawing.Point(1, 263);
             this.grd_Result.Margin = new System.Windows.Forms.Padding(0);
             this.grd_Result.MultiSelect = false;
             this.grd_Result.Name = "grd_Result";
             this.grd_Result.ReadOnly = true;
             this.grd_Result.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(208)))), ((int)(((byte)(104)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grd_Result.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
@@ -274,9 +286,8 @@
             this.grd_Result.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.grd_Result.RowTemplate.Height = 30;
             this.grd_Result.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grd_Result.Size = new System.Drawing.Size(1834, 552);
-            this.grd_Result.Style = MetroFramework.MetroColorStyle.Green;
-            this.grd_Result.TabIndex = 5;
+            this.grd_Result.Size = new System.Drawing.Size(1834, 428);
+            this.grd_Result.TabIndex = 3;
             this.grd_Result.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_Data_CellDoubleClick);
             this.grd_Result.KeyUp += new System.Windows.Forms.KeyEventHandler(this.grd_Data_KeyUp);
             // 
@@ -376,14 +387,14 @@
             this.tableLayoutPanel4.Controls.Add(this.lbl_SA_SABUN, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.txt_SA_SABUN, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(1, 232);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(1, 180);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1834, 88);
-            this.tableLayoutPanel4.TabIndex = 4;
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1834, 68);
+            this.tableLayoutPanel4.TabIndex = 2;
             // 
             // txt_UPDATE_USER
             // 
@@ -401,7 +412,7 @@
             this.txt_UPDATE_USER.CustomButton.UseSelectable = true;
             this.txt_UPDATE_USER.CustomButton.Visible = false;
             this.txt_UPDATE_USER.Lines = new string[0];
-            this.txt_UPDATE_USER.Location = new System.Drawing.Point(1639, 45);
+            this.txt_UPDATE_USER.Location = new System.Drawing.Point(1639, 32);
             this.txt_UPDATE_USER.MaxLength = 32767;
             this.txt_UPDATE_USER.Name = "txt_UPDATE_USER";
             this.txt_UPDATE_USER.PasswordChar = '\0';
@@ -411,7 +422,7 @@
             this.txt_UPDATE_USER.SelectionStart = 0;
             this.txt_UPDATE_USER.ShortcutsEnabled = true;
             this.txt_UPDATE_USER.Size = new System.Drawing.Size(180, 23);
-            this.txt_UPDATE_USER.TabIndex = 10;
+            this.txt_UPDATE_USER.TabIndex = 8;
             this.txt_UPDATE_USER.UseSelectable = true;
             this.txt_UPDATE_USER.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_UPDATE_USER.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -420,7 +431,7 @@
             // 
             this.lbl_UPDATE_USER.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_UPDATE_USER.AutoSize = true;
-            this.lbl_UPDATE_USER.Location = new System.Drawing.Point(1703, 4);
+            this.lbl_UPDATE_USER.Location = new System.Drawing.Point(1703, 1);
             this.lbl_UPDATE_USER.Name = "lbl_UPDATE_USER";
             this.lbl_UPDATE_USER.Size = new System.Drawing.Size(51, 19);
             this.lbl_UPDATE_USER.TabIndex = 4;
@@ -442,7 +453,7 @@
             this.txt_UPDATE_DATE.CustomButton.UseSelectable = true;
             this.txt_UPDATE_DATE.CustomButton.Visible = false;
             this.txt_UPDATE_DATE.Lines = new string[0];
-            this.txt_UPDATE_DATE.Location = new System.Drawing.Point(1433, 45);
+            this.txt_UPDATE_DATE.Location = new System.Drawing.Point(1433, 32);
             this.txt_UPDATE_DATE.MaxLength = 32767;
             this.txt_UPDATE_DATE.Name = "txt_UPDATE_DATE";
             this.txt_UPDATE_DATE.PasswordChar = '\0';
@@ -452,7 +463,7 @@
             this.txt_UPDATE_DATE.SelectionStart = 0;
             this.txt_UPDATE_DATE.ShortcutsEnabled = true;
             this.txt_UPDATE_DATE.Size = new System.Drawing.Size(180, 23);
-            this.txt_UPDATE_DATE.TabIndex = 10;
+            this.txt_UPDATE_DATE.TabIndex = 7;
             this.txt_UPDATE_DATE.UseSelectable = true;
             this.txt_UPDATE_DATE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_UPDATE_DATE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -461,7 +472,7 @@
             // 
             this.lbl_UPDATE_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_UPDATE_DATE.AutoSize = true;
-            this.lbl_UPDATE_DATE.Location = new System.Drawing.Point(1497, 4);
+            this.lbl_UPDATE_DATE.Location = new System.Drawing.Point(1497, 1);
             this.lbl_UPDATE_DATE.Name = "lbl_UPDATE_DATE";
             this.lbl_UPDATE_DATE.Size = new System.Drawing.Size(51, 19);
             this.lbl_UPDATE_DATE.TabIndex = 4;
@@ -483,7 +494,7 @@
             this.txt_INSERT_USER.CustomButton.UseSelectable = true;
             this.txt_INSERT_USER.CustomButton.Visible = false;
             this.txt_INSERT_USER.Lines = new string[0];
-            this.txt_INSERT_USER.Location = new System.Drawing.Point(1230, 45);
+            this.txt_INSERT_USER.Location = new System.Drawing.Point(1230, 32);
             this.txt_INSERT_USER.MaxLength = 32767;
             this.txt_INSERT_USER.Name = "txt_INSERT_USER";
             this.txt_INSERT_USER.PasswordChar = '\0';
@@ -493,7 +504,7 @@
             this.txt_INSERT_USER.SelectionStart = 0;
             this.txt_INSERT_USER.ShortcutsEnabled = true;
             this.txt_INSERT_USER.Size = new System.Drawing.Size(180, 23);
-            this.txt_INSERT_USER.TabIndex = 10;
+            this.txt_INSERT_USER.TabIndex = 6;
             this.txt_INSERT_USER.UseSelectable = true;
             this.txt_INSERT_USER.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_INSERT_USER.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -502,7 +513,7 @@
             // 
             this.lbl_INSERT_USER.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_INSERT_USER.AutoSize = true;
-            this.lbl_INSERT_USER.Location = new System.Drawing.Point(1294, 4);
+            this.lbl_INSERT_USER.Location = new System.Drawing.Point(1294, 1);
             this.lbl_INSERT_USER.Name = "lbl_INSERT_USER";
             this.lbl_INSERT_USER.Size = new System.Drawing.Size(51, 19);
             this.lbl_INSERT_USER.TabIndex = 4;
@@ -524,7 +535,7 @@
             this.txt_INSERT_DATE.CustomButton.UseSelectable = true;
             this.txt_INSERT_DATE.CustomButton.Visible = false;
             this.txt_INSERT_DATE.Lines = new string[0];
-            this.txt_INSERT_DATE.Location = new System.Drawing.Point(1027, 45);
+            this.txt_INSERT_DATE.Location = new System.Drawing.Point(1027, 32);
             this.txt_INSERT_DATE.MaxLength = 32767;
             this.txt_INSERT_DATE.Name = "txt_INSERT_DATE";
             this.txt_INSERT_DATE.PasswordChar = '\0';
@@ -534,7 +545,7 @@
             this.txt_INSERT_DATE.SelectionStart = 0;
             this.txt_INSERT_DATE.ShortcutsEnabled = true;
             this.txt_INSERT_DATE.Size = new System.Drawing.Size(180, 23);
-            this.txt_INSERT_DATE.TabIndex = 10;
+            this.txt_INSERT_DATE.TabIndex = 5;
             this.txt_INSERT_DATE.UseSelectable = true;
             this.txt_INSERT_DATE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_INSERT_DATE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -543,7 +554,7 @@
             // 
             this.lbl_INSERT_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_INSERT_DATE.AutoSize = true;
-            this.lbl_INSERT_DATE.Location = new System.Drawing.Point(1091, 4);
+            this.lbl_INSERT_DATE.Location = new System.Drawing.Point(1091, 1);
             this.lbl_INSERT_DATE.Name = "lbl_INSERT_DATE";
             this.lbl_INSERT_DATE.Size = new System.Drawing.Size(51, 19);
             this.lbl_INSERT_DATE.TabIndex = 4;
@@ -565,7 +576,7 @@
             this.txt_DEL_FLAG.CustomButton.UseSelectable = true;
             this.txt_DEL_FLAG.CustomButton.Visible = false;
             this.txt_DEL_FLAG.Lines = new string[0];
-            this.txt_DEL_FLAG.Location = new System.Drawing.Point(824, 45);
+            this.txt_DEL_FLAG.Location = new System.Drawing.Point(824, 32);
             this.txt_DEL_FLAG.MaxLength = 32767;
             this.txt_DEL_FLAG.Name = "txt_DEL_FLAG";
             this.txt_DEL_FLAG.PasswordChar = '\0';
@@ -575,7 +586,7 @@
             this.txt_DEL_FLAG.SelectionStart = 0;
             this.txt_DEL_FLAG.ShortcutsEnabled = true;
             this.txt_DEL_FLAG.Size = new System.Drawing.Size(180, 23);
-            this.txt_DEL_FLAG.TabIndex = 10;
+            this.txt_DEL_FLAG.TabIndex = 4;
             this.txt_DEL_FLAG.UseSelectable = true;
             this.txt_DEL_FLAG.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_DEL_FLAG.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -584,7 +595,7 @@
             // 
             this.lbl_DEL_FLAG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_DEL_FLAG.AutoSize = true;
-            this.lbl_DEL_FLAG.Location = new System.Drawing.Point(881, 4);
+            this.lbl_DEL_FLAG.Location = new System.Drawing.Point(881, 1);
             this.lbl_DEL_FLAG.Name = "lbl_DEL_FLAG";
             this.lbl_DEL_FLAG.Size = new System.Drawing.Size(65, 19);
             this.lbl_DEL_FLAG.TabIndex = 4;
@@ -594,7 +605,7 @@
             // 
             this.lbl_QC_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_QC_CODE.AutoSize = true;
-            this.lbl_QC_CODE.Location = new System.Drawing.Point(671, 4);
+            this.lbl_QC_CODE.Location = new System.Drawing.Point(671, 1);
             this.lbl_QC_CODE.Name = "lbl_QC_CODE";
             this.lbl_QC_CODE.Size = new System.Drawing.Size(79, 19);
             this.lbl_QC_CODE.TabIndex = 2;
@@ -616,7 +627,7 @@
             this.txt_QC_CODE.CustomButton.UseSelectable = true;
             this.txt_QC_CODE.CustomButton.Visible = false;
             this.txt_QC_CODE.Lines = new string[0];
-            this.txt_QC_CODE.Location = new System.Drawing.Point(621, 45);
+            this.txt_QC_CODE.Location = new System.Drawing.Point(621, 32);
             this.txt_QC_CODE.MaxLength = 32767;
             this.txt_QC_CODE.Name = "txt_QC_CODE";
             this.txt_QC_CODE.PasswordChar = '\0';
@@ -626,7 +637,7 @@
             this.txt_QC_CODE.SelectionStart = 0;
             this.txt_QC_CODE.ShortcutsEnabled = true;
             this.txt_QC_CODE.Size = new System.Drawing.Size(180, 23);
-            this.txt_QC_CODE.TabIndex = 8;
+            this.txt_QC_CODE.TabIndex = 3;
             this.txt_QC_CODE.UseSelectable = true;
             this.txt_QC_CODE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_QC_CODE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -635,7 +646,7 @@
             // 
             this.lbl_TEAM_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_TEAM_CODE.AutoSize = true;
-            this.lbl_TEAM_CODE.Location = new System.Drawing.Point(482, 4);
+            this.lbl_TEAM_CODE.Location = new System.Drawing.Point(482, 1);
             this.lbl_TEAM_CODE.Name = "lbl_TEAM_CODE";
             this.lbl_TEAM_CODE.Size = new System.Drawing.Size(51, 19);
             this.lbl_TEAM_CODE.TabIndex = 1;
@@ -657,7 +668,7 @@
             this.txt_TEAM_CODE.CustomButton.UseSelectable = true;
             this.txt_TEAM_CODE.CustomButton.Visible = false;
             this.txt_TEAM_CODE.Lines = new string[0];
-            this.txt_TEAM_CODE.Location = new System.Drawing.Point(418, 45);
+            this.txt_TEAM_CODE.Location = new System.Drawing.Point(418, 32);
             this.txt_TEAM_CODE.MaxLength = 32767;
             this.txt_TEAM_CODE.Name = "txt_TEAM_CODE";
             this.txt_TEAM_CODE.PasswordChar = '\0';
@@ -667,7 +678,7 @@
             this.txt_TEAM_CODE.SelectionStart = 0;
             this.txt_TEAM_CODE.ShortcutsEnabled = true;
             this.txt_TEAM_CODE.Size = new System.Drawing.Size(180, 23);
-            this.txt_TEAM_CODE.TabIndex = 7;
+            this.txt_TEAM_CODE.TabIndex = 2;
             this.txt_TEAM_CODE.UseSelectable = true;
             this.txt_TEAM_CODE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_TEAM_CODE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -676,7 +687,7 @@
             // 
             this.lbl_PLANT_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_PLANT_CODE.AutoSize = true;
-            this.lbl_PLANT_CODE.Location = new System.Drawing.Point(235, 4);
+            this.lbl_PLANT_CODE.Location = new System.Drawing.Point(235, 1);
             this.lbl_PLANT_CODE.Name = "lbl_PLANT_CODE";
             this.lbl_PLANT_CODE.Size = new System.Drawing.Size(140, 19);
             this.lbl_PLANT_CODE.TabIndex = 0;
@@ -698,7 +709,7 @@
             this.txt_PLANT_CODE.CustomButton.UseSelectable = true;
             this.txt_PLANT_CODE.CustomButton.Visible = false;
             this.txt_PLANT_CODE.Lines = new string[0];
-            this.txt_PLANT_CODE.Location = new System.Drawing.Point(215, 45);
+            this.txt_PLANT_CODE.Location = new System.Drawing.Point(215, 32);
             this.txt_PLANT_CODE.MaxLength = 32767;
             this.txt_PLANT_CODE.Name = "txt_PLANT_CODE";
             this.txt_PLANT_CODE.PasswordChar = '\0';
@@ -708,7 +719,7 @@
             this.txt_PLANT_CODE.SelectionStart = 0;
             this.txt_PLANT_CODE.ShortcutsEnabled = true;
             this.txt_PLANT_CODE.Size = new System.Drawing.Size(180, 23);
-            this.txt_PLANT_CODE.TabIndex = 5;
+            this.txt_PLANT_CODE.TabIndex = 1;
             this.txt_PLANT_CODE.UseSelectable = true;
             this.txt_PLANT_CODE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_PLANT_CODE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -717,7 +728,7 @@
             // 
             this.lbl_SA_SABUN.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_SA_SABUN.AutoSize = true;
-            this.lbl_SA_SABUN.Location = new System.Drawing.Point(83, 4);
+            this.lbl_SA_SABUN.Location = new System.Drawing.Point(83, 1);
             this.lbl_SA_SABUN.Name = "lbl_SA_SABUN";
             this.lbl_SA_SABUN.Size = new System.Drawing.Size(37, 19);
             this.lbl_SA_SABUN.TabIndex = 0;
@@ -739,7 +750,7 @@
             this.txt_SA_SABUN.CustomButton.UseSelectable = true;
             this.txt_SA_SABUN.CustomButton.Visible = false;
             this.txt_SA_SABUN.Lines = new string[0];
-            this.txt_SA_SABUN.Location = new System.Drawing.Point(12, 45);
+            this.txt_SA_SABUN.Location = new System.Drawing.Point(12, 32);
             this.txt_SA_SABUN.MaxLength = 32767;
             this.txt_SA_SABUN.Name = "txt_SA_SABUN";
             this.txt_SA_SABUN.PasswordChar = '\0';
@@ -749,7 +760,7 @@
             this.txt_SA_SABUN.SelectionStart = 0;
             this.txt_SA_SABUN.ShortcutsEnabled = true;
             this.txt_SA_SABUN.Size = new System.Drawing.Size(180, 23);
-            this.txt_SA_SABUN.TabIndex = 5;
+            this.txt_SA_SABUN.TabIndex = 0;
             this.txt_SA_SABUN.UseSelectable = true;
             this.txt_SA_SABUN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_SA_SABUN.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -758,18 +769,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1876, 972);
+            this.ClientSize = new System.Drawing.Size(1876, 772);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Inspector";
-            this.Text = "Inspector";
+            this.Text = "검사원";
             this.Load += new System.EventHandler(this.Child_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd_Result)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
@@ -780,8 +791,6 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private MetroFramework.Controls.MetroTextBox txt_SeachVal;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private MetroFramework.Controls.MetroTextBox txt_DEL_FLAG;
         private MetroFramework.Controls.MetroTextBox txt_QC_CODE;
@@ -795,7 +804,6 @@
         private System.Windows.Forms.Label lbl_DataUpsert;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private MetroFramework.Controls.MetroCheckBox ckb_DelFlag;
         private MetroFramework.Controls.MetroLabel lbl_INSERT_DATE;
         private MetroFramework.Controls.MetroLabel lbl_INSERT_USER;
         private MetroFramework.Controls.MetroLabel lbl_UPDATE_DATE;
@@ -817,5 +825,9 @@
         private MetroFramework.Controls.MetroLabel lbl_SA_SABUN;
         private MetroFramework.Controls.MetroTextBox txt_SA_SABUN;
         private System.Windows.Forms.Label lbl_DataLookUp;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private MetroFramework.Controls.MetroLabel txt_SeachName;
+        private MetroFramework.Controls.MetroTextBox txt_SeachVal;
+        private MetroFramework.Controls.MetroCheckBox ckb_DelFlag;
     }
 }

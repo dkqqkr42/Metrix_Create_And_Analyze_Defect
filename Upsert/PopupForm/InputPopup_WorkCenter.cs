@@ -26,6 +26,7 @@ namespace Upsert
             txt_PLANT_CODE.Text = plantcode;
             txt_WC_CODE.Text = wccode;
             txt_TEAM_CODE.Text = teamcode;
+            this.ActiveControl= txt_MRP_MGR;
         }
         public InputPopup_WorkCenter(List<string> list)
         {

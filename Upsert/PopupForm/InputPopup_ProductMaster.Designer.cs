@@ -802,11 +802,11 @@
             this.metroLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.Location = new System.Drawing.Point(315, 3);
+            this.metroLabel3.Location = new System.Drawing.Point(310, 3);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(91, 25);
+            this.metroLabel3.Size = new System.Drawing.Size(101, 25);
             this.metroLabel3.TabIndex = 2;
-            this.metroLabel3.Text = "MRP_MGR";
+            this.metroLabel3.Text = "MRP관리자";
             // 
             // metroLabel2
             // 
@@ -1102,11 +1102,11 @@
             this.metroLabel19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel19.AutoSize = true;
             this.metroLabel19.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel19.Location = new System.Drawing.Point(744, 211);
+            this.metroLabel19.Location = new System.Drawing.Point(762, 211);
             this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(98, 25);
+            this.metroLabel19.Size = new System.Drawing.Size(62, 25);
             this.metroLabel19.TabIndex = 33;
-            this.metroLabel19.Text = "BATCH구분";
+            this.metroLabel19.Text = "BATCH";
             // 
             // metroLabel20
             // 
@@ -1201,22 +1201,22 @@
             this.metroLabel27.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel27.AutoSize = true;
             this.metroLabel27.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel27.Location = new System.Drawing.Point(328, 419);
+            this.metroLabel27.Location = new System.Drawing.Point(318, 419);
             this.metroLabel27.Name = "metroLabel27";
-            this.metroLabel27.Size = new System.Drawing.Size(65, 25);
+            this.metroLabel27.Size = new System.Drawing.Size(84, 25);
             this.metroLabel27.TabIndex = 56;
-            this.metroLabel27.Text = "IPS_YN";
+            this.metroLabel27.Text = "수출구분";
             // 
             // metroLabel28
             // 
             this.metroLabel28.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel28.AutoSize = true;
             this.metroLabel28.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel28.Location = new System.Drawing.Point(466, 419);
+            this.metroLabel28.Location = new System.Drawing.Point(444, 419);
             this.metroLabel28.Name = "metroLabel28";
-            this.metroLabel28.Size = new System.Drawing.Size(76, 25);
+            this.metroLabel28.Size = new System.Drawing.Size(120, 25);
             this.metroLabel28.TabIndex = 57;
-            this.metroLabel28.Text = "PLT_QTY";
+            this.metroLabel28.Text = "팔랫적재수량";
             // 
             // metroLabel29
             // 

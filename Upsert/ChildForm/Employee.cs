@@ -38,7 +38,7 @@ namespace Upsert
 
         private void Child_Load(object sender, EventArgs e)
         {
-
+            txt_SeachVal.CharacterCasing = CharacterCasing.Upper;
         }
 
         /// <summary>
@@ -259,6 +259,16 @@ namespace Upsert
             finally
             {
                 connection.Close();
+            }
+        }
+
+        private void txt_WC_CODE_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                popup = new InputPopup_Employee(txt_SA_SABUN.Text, txt_DEPT_NEW.Text);
+                popup.FormSendEvent += new InputPopup_Employee.FormSendDataHandler(DieaseUpdateEventMethod);
+                popup.ShowDialog();
             }
         }
     }
