@@ -145,12 +145,6 @@ namespace Upsert
             popup = new InputPopup_ProductMaster(list);
             popup.FormSendEvent += new InputPopup_ProductMaster.FormSendDataHandler(DieaseUpdateEventMethod);
             popup.ShowDialog();
-
-            /*txt_ID.Text = grd_Result.Rows[rowIndex].Cells[0].Value.ToString();
-            txt_Name.Text = grd_Result.Rows[rowIndex].Cells[1].Value.ToString();
-            txt_Path.Text = grd_Result.Rows[rowIndex].Cells[2].Value.ToString();
-            txt_Version.Text = grd_Result.Rows[rowIndex].Cells[3].Value.ToString();
-            txt_Class.Text = grd_Result.Rows[rowIndex].Cells[4].Value.ToString();*/
         }
 
         /// <summary>

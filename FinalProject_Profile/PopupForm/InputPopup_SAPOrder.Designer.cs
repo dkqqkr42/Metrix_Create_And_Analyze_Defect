@@ -1457,6 +1457,7 @@
             this.btn_Save.Size = new System.Drawing.Size(140, 101);
             this.btn_Save.TabIndex = 29;
             this.btn_Save.UseSelectable = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             this.btn_Save.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseDown);
             this.btn_Save.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseUp);
             // 
