@@ -55,7 +55,7 @@ namespace FinalProject_Profile
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
                 DataTable dt = ds.Tables[0];
-                dataGridView1.DataSource = dt;
+                grd_Result.DataSource = dt;
 
 
             }
@@ -71,7 +71,7 @@ namespace FinalProject_Profile
 
         private void btn_plan_Click(object sender, EventArgs e)
         {
-            DataTable dt = (DataTable)dataGridView1.DataSource;
+            DataTable dt = (DataTable)grd_Result.DataSource;
 
             Reservation reservation = new Reservation(dt);
             reservation.ShowDialog();
@@ -109,7 +109,7 @@ namespace FinalProject_Profile
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
                 DataTable dt = ds.Tables[0];
-                dataGridView1.DataSource = dt;
+                grd_Result.DataSource = dt;
 
 
             }
