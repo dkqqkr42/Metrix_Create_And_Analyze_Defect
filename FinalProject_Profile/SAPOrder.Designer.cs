@@ -50,13 +50,13 @@
             this.cbo_TEAM = new MetroFramework.Controls.MetroComboBox();
             this.lbl_TEAM = new MetroFramework.Controls.MetroLabel();
             this.cbo_ORDER_TYPE = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_ORDER_TYPE = new MetroFramework.Controls.MetroLabel();
             this.lbl_WORKCENTER = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_DATE = new MetroFramework.Controls.MetroLabel();
             this.cbo_WORKCENTER = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.dtp_START = new System.Windows.Forms.DateTimePicker();
-            this.dtp_END = new System.Windows.Forms.DateTimePicker();
+            this.lbl_what = new MetroFramework.Controls.MetroLabel();
+            this.dtp_STARTDATE = new System.Windows.Forms.DateTimePicker();
+            this.dtp_ENDDATE = new System.Windows.Forms.DateTimePicker();
             this.btn_Decide = new MetroFramework.Controls.MetroButton();
             this.btn_Insert = new MetroFramework.Controls.MetroButton();
             this.btn_Select = new MetroFramework.Controls.MetroButton();
@@ -78,8 +78,8 @@
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.784173F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.21583F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.36691F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.63309F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
@@ -137,7 +137,7 @@
             this.grd_Result.EnableHeadersVisualStyles = false;
             this.grd_Result.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grd_Result.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grd_Result.Location = new System.Drawing.Point(1, 69);
+            this.grd_Result.Location = new System.Drawing.Point(1, 80);
             this.grd_Result.Margin = new System.Windows.Forms.Padding(0);
             this.grd_Result.MultiSelect = false;
             this.grd_Result.Name = "grd_Result";
@@ -157,7 +157,7 @@
             this.grd_Result.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.grd_Result.RowTemplate.Height = 27;
             this.grd_Result.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grd_Result.Size = new System.Drawing.Size(1838, 626);
+            this.grd_Result.Size = new System.Drawing.Size(1838, 615);
             this.grd_Result.TabIndex = 5;
             // 
             // Column1
@@ -240,61 +240,64 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel3.ColumnCount = 13;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.481545F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.04951F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.925974F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.3211F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.936068F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.584339F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.899599F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.548195F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.788697F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.605014F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.472266F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.387691F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.620498F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.438182F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.620498F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.640625F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.209175F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.830693F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.293828F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.14145F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.71764F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.05298F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.814611F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.072741F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.175992F));
             this.tableLayoutPanel3.Controls.Add(this.cbo_TEAM, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.lbl_TEAM, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.cbo_ORDER_TYPE, 9, 0);
-            this.tableLayoutPanel3.Controls.Add(this.metroLabel5, 8, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_ORDER_TYPE, 8, 0);
             this.tableLayoutPanel3.Controls.Add(this.btn_Decide, 12, 0);
             this.tableLayoutPanel3.Controls.Add(this.btn_Insert, 11, 0);
             this.tableLayoutPanel3.Controls.Add(this.lbl_WORKCENTER, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.btn_Select, 10, 0);
-            this.tableLayoutPanel3.Controls.Add(this.metroLabel3, 4, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_DATE, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.cbo_WORKCENTER, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.metroLabel4, 6, 0);
-            this.tableLayoutPanel3.Controls.Add(this.dtp_START, 5, 0);
-            this.tableLayoutPanel3.Controls.Add(this.dtp_END, 7, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_what, 6, 0);
+            this.tableLayoutPanel3.Controls.Add(this.dtp_STARTDATE, 5, 0);
+            this.tableLayoutPanel3.Controls.Add(this.dtp_ENDDATE, 7, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 3);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1832, 63);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1832, 74);
             this.tableLayoutPanel3.TabIndex = 10;
             // 
             // cbo_TEAM
             // 
+            this.cbo_TEAM.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbo_TEAM.FormattingEnabled = true;
             this.cbo_TEAM.ItemHeight = 23;
             this.cbo_TEAM.Items.AddRange(new object[] {
             "전체",
             "카매트생산팀"});
-            this.cbo_TEAM.Location = new System.Drawing.Point(112, 2);
+            this.cbo_TEAM.Location = new System.Drawing.Point(125, 22);
             this.cbo_TEAM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbo_TEAM.Name = "cbo_TEAM";
-            this.cbo_TEAM.Size = new System.Drawing.Size(78, 29);
+            this.cbo_TEAM.Size = new System.Drawing.Size(129, 29);
             this.cbo_TEAM.TabIndex = 11;
             this.cbo_TEAM.UseSelectable = true;
             // 
             // lbl_TEAM
             // 
+            this.lbl_TEAM.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_TEAM.AutoSize = true;
             this.lbl_TEAM.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_TEAM.Location = new System.Drawing.Point(3, 0);
+            this.lbl_TEAM.Location = new System.Drawing.Point(28, 24);
             this.lbl_TEAM.Name = "lbl_TEAM";
             this.lbl_TEAM.Size = new System.Drawing.Size(66, 25);
             this.lbl_TEAM.TabIndex = 3;
@@ -303,103 +306,112 @@
             // 
             // cbo_ORDER_TYPE
             // 
+            this.cbo_ORDER_TYPE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbo_ORDER_TYPE.FormattingEnabled = true;
             this.cbo_ORDER_TYPE.ItemHeight = 23;
             this.cbo_ORDER_TYPE.Items.AddRange(new object[] {
             "전체",
             "계획",
             "주문"});
-            this.cbo_ORDER_TYPE.Location = new System.Drawing.Point(1243, 2);
+            this.cbo_ORDER_TYPE.Location = new System.Drawing.Point(1269, 22);
             this.cbo_ORDER_TYPE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbo_ORDER_TYPE.Name = "cbo_ORDER_TYPE";
-            this.cbo_ORDER_TYPE.Size = new System.Drawing.Size(122, 29);
+            this.cbo_ORDER_TYPE.Size = new System.Drawing.Size(100, 29);
             this.cbo_ORDER_TYPE.TabIndex = 4;
             this.cbo_ORDER_TYPE.UseSelectable = true;
             // 
-            // metroLabel5
+            // lbl_ORDER_TYPE
             // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel5.Location = new System.Drawing.Point(1095, 0);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(84, 25);
-            this.metroLabel5.TabIndex = 3;
-            this.metroLabel5.Text = "주문구분";
-            this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_ORDER_TYPE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_ORDER_TYPE.AutoSize = true;
+            this.lbl_ORDER_TYPE.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbl_ORDER_TYPE.Location = new System.Drawing.Point(1096, 24);
+            this.lbl_ORDER_TYPE.Name = "lbl_ORDER_TYPE";
+            this.lbl_ORDER_TYPE.Size = new System.Drawing.Size(84, 25);
+            this.lbl_ORDER_TYPE.TabIndex = 3;
+            this.lbl_ORDER_TYPE.Text = "주문구분";
+            this.lbl_ORDER_TYPE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_WORKCENTER
             // 
+            this.lbl_WORKCENTER.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_WORKCENTER.AutoSize = true;
             this.lbl_WORKCENTER.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_WORKCENTER.Location = new System.Drawing.Point(332, 0);
+            this.lbl_WORKCENTER.Location = new System.Drawing.Point(295, 24);
             this.lbl_WORKCENTER.Name = "lbl_WORKCENTER";
             this.lbl_WORKCENTER.Size = new System.Drawing.Size(46, 25);
             this.lbl_WORKCENTER.TabIndex = 3;
             this.lbl_WORKCENTER.Text = "W/C";
             this.lbl_WORKCENTER.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // metroLabel3
+            // lbl_DATE
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel3.Location = new System.Drawing.Point(606, 0);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(102, 25);
-            this.metroLabel3.TabIndex = 3;
-            this.metroLabel3.Text = "생산시작일";
-            this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_DATE.AutoSize = true;
+            this.lbl_DATE.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lbl_DATE.Location = new System.Drawing.Point(533, 24);
+            this.lbl_DATE.Name = "lbl_DATE";
+            this.lbl_DATE.Size = new System.Drawing.Size(102, 25);
+            this.lbl_DATE.TabIndex = 3;
+            this.lbl_DATE.Text = "생산시작일";
+            this.lbl_DATE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cbo_WORKCENTER
             // 
+            this.cbo_WORKCENTER.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbo_WORKCENTER.FormattingEnabled = true;
             this.cbo_WORKCENTER.ItemHeight = 23;
             this.cbo_WORKCENTER.Items.AddRange(new object[] {
             "전체",
             "1호카매트",
             "2호카매트"});
-            this.cbo_WORKCENTER.Location = new System.Drawing.Point(415, 2);
+            this.cbo_WORKCENTER.Location = new System.Drawing.Point(382, 22);
             this.cbo_WORKCENTER.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbo_WORKCENTER.Name = "cbo_WORKCENTER";
-            this.cbo_WORKCENTER.Size = new System.Drawing.Size(185, 29);
+            this.cbo_WORKCENTER.Size = new System.Drawing.Size(133, 29);
             this.cbo_WORKCENTER.TabIndex = 4;
             this.cbo_WORKCENTER.UseSelectable = true;
             // 
-            // metroLabel4
+            // lbl_what
             // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(919, 0);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(18, 19);
-            this.metroLabel4.TabIndex = 7;
-            this.metroLabel4.Text = "~";
+            this.lbl_what.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_what.AutoSize = true;
+            this.lbl_what.Location = new System.Drawing.Point(842, 27);
+            this.lbl_what.Name = "lbl_what";
+            this.lbl_what.Size = new System.Drawing.Size(18, 19);
+            this.lbl_what.TabIndex = 7;
+            this.lbl_what.Text = "~";
             // 
-            // dtp_START
+            // dtp_STARTDATE
             // 
-            this.dtp_START.Font = new System.Drawing.Font("굴림", 11F);
-            this.dtp_START.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_START.Location = new System.Drawing.Point(757, 2);
-            this.dtp_START.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtp_START.Name = "dtp_START";
-            this.dtp_START.Size = new System.Drawing.Size(141, 24);
-            this.dtp_START.TabIndex = 6;
+            this.dtp_STARTDATE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtp_STARTDATE.Font = new System.Drawing.Font("굴림", 14F);
+            this.dtp_STARTDATE.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_STARTDATE.Location = new System.Drawing.Point(665, 22);
+            this.dtp_STARTDATE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtp_STARTDATE.Name = "dtp_STARTDATE";
+            this.dtp_STARTDATE.Size = new System.Drawing.Size(151, 29);
+            this.dtp_STARTDATE.TabIndex = 6;
             // 
-            // dtp_END
+            // dtp_ENDDATE
             // 
-            this.dtp_END.Font = new System.Drawing.Font("굴림", 11F);
-            this.dtp_END.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_END.Location = new System.Drawing.Point(951, 2);
-            this.dtp_END.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtp_END.Name = "dtp_END";
-            this.dtp_END.Size = new System.Drawing.Size(138, 24);
-            this.dtp_END.TabIndex = 13;
+            this.dtp_ENDDATE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtp_ENDDATE.Font = new System.Drawing.Font("굴림", 14F);
+            this.dtp_ENDDATE.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_ENDDATE.Location = new System.Drawing.Point(896, 22);
+            this.dtp_ENDDATE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtp_ENDDATE.Name = "dtp_ENDDATE";
+            this.dtp_ENDDATE.Size = new System.Drawing.Size(157, 29);
+            this.dtp_ENDDATE.TabIndex = 13;
             // 
             // btn_Decide
             // 
             this.btn_Decide.BackgroundImage = global::FinalProject_Profile.Properties.Resources.확정;
             this.btn_Decide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Decide.Location = new System.Drawing.Point(1689, 3);
+            this.btn_Decide.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Decide.Location = new System.Drawing.Point(1697, 4);
             this.btn_Decide.Name = "btn_Decide";
-            this.btn_Decide.Size = new System.Drawing.Size(87, 57);
+            this.btn_Decide.Size = new System.Drawing.Size(131, 66);
             this.btn_Decide.TabIndex = 9;
             this.btn_Decide.UseSelectable = true;
             this.btn_Decide.Click += new System.EventHandler(this.metroButton1_Click);
@@ -410,9 +422,10 @@
             // 
             this.btn_Insert.BackgroundImage = global::FinalProject_Profile.Properties.Resources.입력;
             this.btn_Insert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Insert.Location = new System.Drawing.Point(1531, 3);
+            this.btn_Insert.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Insert.Location = new System.Drawing.Point(1567, 4);
             this.btn_Insert.Name = "btn_Insert";
-            this.btn_Insert.Size = new System.Drawing.Size(87, 57);
+            this.btn_Insert.Size = new System.Drawing.Size(123, 66);
             this.btn_Insert.TabIndex = 10;
             this.btn_Insert.UseSelectable = true;
             this.btn_Insert.Click += new System.EventHandler(this.metroButton2_Click);
@@ -423,9 +436,10 @@
             // 
             this.btn_Select.BackgroundImage = global::FinalProject_Profile.Properties.Resources.조회;
             this.btn_Select.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Select.Location = new System.Drawing.Point(1371, 3);
+            this.btn_Select.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Select.Location = new System.Drawing.Point(1442, 4);
             this.btn_Select.Name = "btn_Select";
-            this.btn_Select.Size = new System.Drawing.Size(87, 57);
+            this.btn_Select.Size = new System.Drawing.Size(118, 66);
             this.btn_Select.TabIndex = 12;
             this.btn_Select.UseSelectable = true;
             this.btn_Select.Click += new System.EventHandler(this.metroButton3_Click);
@@ -461,10 +475,10 @@
         private MetroFramework.Controls.MetroLabel lbl_TEAM;
         private MetroFramework.Controls.MetroLabel lbl_WORKCENTER;
         private MetroFramework.Controls.MetroComboBox cbo_ORDER_TYPE;
-        private System.Windows.Forms.DateTimePicker dtp_START;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private System.Windows.Forms.DateTimePicker dtp_STARTDATE;
+        private MetroFramework.Controls.MetroLabel lbl_ORDER_TYPE;
+        private MetroFramework.Controls.MetroLabel lbl_what;
+        private MetroFramework.Controls.MetroLabel lbl_DATE;
         private MetroFramework.Controls.MetroComboBox cbo_WORKCENTER;
         private MetroFramework.Controls.MetroButton btn_Decide;
         private MetroFramework.Controls.MetroButton btn_Insert;
@@ -481,7 +495,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DateTimePicker dtp_END;
+        private System.Windows.Forms.DateTimePicker dtp_ENDDATE;
     }
 }
 
