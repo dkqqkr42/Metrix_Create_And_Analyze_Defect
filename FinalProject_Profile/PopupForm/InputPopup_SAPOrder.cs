@@ -70,7 +70,7 @@ namespace FinalProject_Profile.PopupForm
 
                 OracleCommand cmd = new OracleCommand
                 {
-                    CommandType = CommandType.StoredProcedure,
+                    CommandType = CommandType.Text,
                     Connection = connection,
                     CommandText = "insert into tbl_saporder values(:IN_PLANT_CODE, :IN_MRP_MGR, :IN_ORDER_NO, :IN_ORDER_SEQ, :IN_ORDER_DATE, :IN_PROD_CODE, :IN_PROD_UNIT, :IN_P_VERSION, :IN_WC_CODE, :IN_DUE_DATE_A, :IN_DUE_DATE_B, :IN_ORDER_QTY, :IN_ROLL_METER, :IN_ORDER_UNIT_PRICE, :IN_S_LOCATION, :IN_EXCHG_RATE, :IN_CURRENCY_UNIT, :IN_PROD_TYPE, :IN_CUST_CODE, :IN_CUST_NAME, :IN_DISTRB_CHL, :IN_ORDER_TYPE, :IN_CONFIRM_FLAG, :IN_REMARK, :IN_COMPLETE_FLAG, :IN_PLAN_QTY, :IN_INPUT_QTY, :IN_WORK_TIME, :IN_INSERT_DATE)",
                     BindByName =true
@@ -138,7 +138,7 @@ namespace FinalProject_Profile.PopupForm
                 cmd.Parameters.Add("IN_PLAN_QTY", txt_PLAN_QTY.Text);
                 cmd.Parameters.Add("IN_INPUT_QTY", txt_INPUT_QTY.Text);
                 cmd.Parameters.Add("IN_WORK_TIME", txt_WORK_TIME.Text);
-                cmd.Parameters.Add("IN_INSERT_DATE", DateTime.Now);
+                //cmd.Parameters.Add("IN_INSERT_DATE", DateTime.Now);
                 
 
 

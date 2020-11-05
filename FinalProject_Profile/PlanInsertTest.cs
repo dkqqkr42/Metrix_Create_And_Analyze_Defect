@@ -39,7 +39,7 @@ namespace FinalProject_Profile
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "SELECT TBL_SAPORDER.PLANT_CODE, TBL_SAPORDER.ORDER_NO, TBL_SAPORDER.ORDER_SEQ, TBL_SAPORDER.PROD_CODE, TBL_SAPORDER.PROD_UNIT, TBL_SAPORDER.WC_CODE, TBL_SAPORDER.ORDER_QTY, TBL_SAPORDER.MRP_MGR, TBL_SAPORDER.CUST_NAME, TBL_SAPORDER.DISTRB_CHL AS GUBUN, TBL_SAPORDER.REMARK FROM TBL_SAPORDER , TBL_WORKCENTER WHERE TBL_SAPORDER.PLANT_CODE = TBL_WORKCENTER.PLANT_CODE AND TBL_SAPORDER.WC_CODE = TBL_WORKCENTER.WC_CODE AND TBL_SAPORDER.PLANT_CODE = :ARG_PLANT AND ( TBL_SAPORDER.MRP_MGR  = :ARG_MRP1 OR TBL_SAPORDER.MRP_MGR  = :ARG_MRP2 ) AND TBL_SAPORDER.WC_CODE LIKE :ARG_WC AND TBL_SAPORDER.COMPLETE_FLAG = 'N' AND TBL_SAPORDER.ORDER_QTY - TBL_SAPORDER.PLAN_QTY > 0 AND TBL_SAPORDER.ORDER_DATE BETWEEN :ARG_O_DATE AND :ARG_E_DATE ORDER BY TBL_WORKCENTER.GONGBU_DIV, TBL_SAPORDER.WC_CODE, TBL_SAPORDER.PROD_CODE"
+                    CommandText = "SELECT trim(TBL_SAPORDER.PLANT_CODE), trim(TBL_SAPORDER.ORDER_NO), trim(TBL_SAPORDER.ORDER_SEQ), trim(TBL_SAPORDER.PROD_CODE), trim(TBL_SAPORDER.PROD_UNIT), trim(TBL_SAPORDER.WC_CODE), TBL_SAPORDER.ORDER_QTY, trim(TBL_SAPORDER.MRP_MGR), trim(TBL_SAPORDER.CUST_NAME), trim(TBL_SAPORDER.DISTRB_CHL) AS GUBUN, TBL_SAPORDER.REMARK FROM TBL_SAPORDER , TBL_WORKCENTER WHERE TBL_SAPORDER.PLANT_CODE = TBL_WORKCENTER.PLANT_CODE AND TBL_SAPORDER.WC_CODE = TBL_WORKCENTER.WC_CODE AND TBL_SAPORDER.PLANT_CODE = :ARG_PLANT AND ( TBL_SAPORDER.MRP_MGR  = :ARG_MRP1 OR TBL_SAPORDER.MRP_MGR  = :ARG_MRP2 ) AND TBL_SAPORDER.WC_CODE LIKE :ARG_WC AND TBL_SAPORDER.COMPLETE_FLAG = 'N' AND TBL_SAPORDER.ORDER_QTY - TBL_SAPORDER.PLAN_QTY > 0 AND TBL_SAPORDER.ORDER_DATE BETWEEN :ARG_O_DATE AND :ARG_E_DATE ORDER BY TBL_WORKCENTER.GONGBU_DIV, TBL_SAPORDER.WC_CODE, TBL_SAPORDER.PROD_CODE"
                 };
                 
 
@@ -145,6 +145,86 @@ namespace FinalProject_Profile
 
                 cmd.ExecuteNonQuery();
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OracleConnection connection = null;
+            try
+            {
+                connection = new OracleConnection
+                {
+                    ConnectionString = connectionString
+                };
+                connection.Open();
+
+                OracleCommand cmd = new OracleCommand
+                {
+                    CommandType = CommandType.Text,
+                    Connection = connection,
+                    CommandText = "Select * From TBL_PRODUCTPLAN"
+                };
+
+                OracleDataReader reader = cmd.ExecuteReader();
+
+                OracleDataAdapter adapter = new OracleDataAdapter(cmd);
+
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                dataGridView2.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OracleConnection connection = null;
+            string in_Order_NO = "0";
+            try
+            {
+                in_Order_NO = dataGridView1.Rows[0].Cells[1].Value.ToString();
+                connection = new OracleConnection
+                {
+                    ConnectionString = connectionString
+                };
+                connection.Open();
+
+                OracleCommand cmd = new OracleCommand
+                {
+                    CommandType = CommandType.Text,
+                    Connection = connection,
+                    CommandText = "Update tbl_productplan set PROC_STATUS = 'Y' where ORDER_NO = :IN_ORDER_NO"
+                };
+                if(in_Order_NO.Equals("0"))
+                {
+                    throw new ArgumentNullException("in_Order_No");
+                }
+                cmd.Parameters.Add("IN_ORDER_NO", in_Order_NO.ToString());
+
+                cmd.ExecuteNonQuery();
+
+                in_Order_NO = "0";
+
+
+                MessageBox.Show("확정되었습니다.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
