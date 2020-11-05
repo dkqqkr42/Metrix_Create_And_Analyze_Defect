@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using Oracle.ManagedDataAccess.Client;
 
 // MetroFramework 이용해서 폼 외형 변경
 
@@ -15,6 +16,7 @@ namespace FinalProject_Profile
 {
     public partial class Reservation : MetroForm                                    // Form → MetroForm 변경
     {
+        protected const string connectionString = "DATA SOURCE=220.69.249.228:1521/xe;PASSWORD=1234;PERSIST SECURITY INFO=True;USER ID=MAT_MGR";    // Oracle계정 MAT_MGR 연결
         public Reservation()
         {
             InitializeComponent();
