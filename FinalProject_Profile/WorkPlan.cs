@@ -25,13 +25,8 @@ namespace FinalProject_Profile
         }
 
         private void Form2_Load(object sender, EventArgs e)
-        {        
-            
-        }
-
-        private void btn_plan_Click(object sender, EventArgs e)
         {
-           /* OracleConnection connection = null;
+            OracleConnection connection = null;
             try
             {
                 connection = new OracleConnection
@@ -44,48 +39,124 @@ namespace FinalProject_Profile
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "select , trim(factor_code), factor_name, trim(del_flag), insert_user, insert_date, update_user, update_date, trim(rsp_flag) from tbl_downtimedtl where plant_code like '%' || :SeachVal || '%' and DEL_FLAG = 'A'"
+                    CommandText = "SELECT A.PROD_CODE as 제품내역, B.PROD_NAME as 제품명, A.PROD_UNIT as 제품단위, A.ORDER_M as 작업지시량, A.ADD_GOOD_QTY as 누적양품량, TO_CHAR(CASE WHEN A.ORDER_M = 0 THEN 0 ELSE A.ADD_GOOD_QTY / A.ORDER_M * 100 END, '990.0') as 누적양품비율, DECODE(A.GUBUN, 'A', '내수', 'B', '수출', 'C', '특판', ' ') 주문형식, DECODE(A.WORK_GUBUN, 'A', '정상작업', 'U', '재작업', 'R', '연구개발', 'T', '기술테스트', 'S', 'S/BOOK', 'C', 'C/MATCH', ' ') 작업구분, DECODE(A.NOTE_FLAG, 'Y', '★', ' ') NOTE_FLAG, DECODE(A.PROC_STATUS, 'Y', '가능', 'A', '예약', 'B', '진행', 'C', '생산', 'E', '종료', 'D', '취소', ' ') 생산상태, TO_CHAR(A.START_DATE, 'YYYY-MM-DD HH24:MI') 시작일자, TO_CHAR(A.END_DATE, 'YYYY-MM-DD HH24:MI') 종료일자, A.JOB_NO as 작업번호, A.ORDER_NO || '-' || A.ORDER_SEQ , A.NOTE0 as 비고, A.NOTE1 as 비고2, B.MRP_MGR as MRP관리자 FROM TBL_PRODUCTPLAN A, TBL_ProductMaster B WHERE A.PROD_CODE = B.PROD_CODE AND A.PLANT_CODE = :IN_PLANT_CODE AND A.WC_CODE = :IN_WC_CODE AND A.JOB_DATE = :IN_JOB_DATE AND A.PROC_STATUS <> 'N' AND A.DEL_FLAG = 'A' ORDER BY A.START_DATE, A.JOB_NO"
                 };
-                if (txt_SeachVal.Text.Equals("") && ckb_DelFlag.Checked)
-                    cmd.CommandText = "select plant_code, trim(factor_code), factor_name, trim(del_flag), insert_user, insert_date, update_user, update_date, trim(rsp_flag) from tbl_downtimedtl";
 
-                else if (txt_SeachVal.Text.Equals("") && !ckb_DelFlag.Checked)
-                    cmd.CommandText = "select plant_code, trim(factor_code), factor_name, trim(del_flag), insert_user, insert_date, update_user, update_date, trim(rsp_flag) from tbl_downtimedtl where DEL_FLAG = 'A'";
 
-                else if (!txt_SeachVal.Text.Equals("") && ckb_DelFlag.Checked)
-                    cmd.CommandText = "select plant_code, trim(factor_code), factor_name, trim(del_flag), insert_user, insert_date, update_user, update_date, trim(rsp_flag) from tbl_downtimedtl where plant_code like '%' || :SeachVal || '%'";
+                cmd.Parameters.Add("IN_PLANT_CODE", "2020");
+                cmd.Parameters.Add("IN_WC_CODE", "AT02");
+                cmd.Parameters.Add("IN_JOB_DATE", dateTimePicker2.Value.ToString("yyyyMMdd"));
 
-                cmd.Parameters.Add("SeachVal", txt_SeachVal.Text);
 
+                OracleDataReader reader = cmd.ExecuteReader();
 
                 OracleDataAdapter adapter = new OracleDataAdapter(cmd);
 
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                dataGridView1.DataSource = dt;
 
-                FillGrid(ds);
-
-
-                OracleDataReader reader = cmd.ExecuteReader();
-
-                grd_Result.Rows.Clear();
-                int i_cnt = 0;
-                while (reader.Read())
-                {
-                    grd_Result.Rows.Add(++i_cnt, reader[0], reader[1], reader[2], reader[3], reader[4], reader[5], reader[6], reader[7], reader[8]);
-                }
-                return i_cnt;
 
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                MessageBox.Show(e.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return 0;
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 connection.Close();
-            }*/
+            }
+        }
+
+        private void btn_plan_Click(object sender, EventArgs e)
+        {
+            int index = dataGridView1.CurrentCell.RowIndex;
+            OracleConnection connection = null;
+            try
+            {
+                connection = new OracleConnection
+                {
+                    ConnectionString = connectionString
+                };
+                connection.Open();
+
+                OracleCommand cmd = new OracleCommand
+                {
+                    CommandType = CommandType.Text,
+                    Connection = connection,
+                    CommandText = "update "
+                };
+
+
+               // cmd.Parameters.Add("IN_PLANT_CODE", "2020");
+              
+
+                OracleDataReader reader = cmd.ExecuteReader();
+
+                OracleDataAdapter adapter = new OracleDataAdapter(cmd);
+
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                dataGridView1.DataSource = dt;
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+    
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            OracleConnection connection = null;
+            try
+            {
+                connection = new OracleConnection
+                {
+                    ConnectionString = connectionString
+                };
+                connection.Open();
+
+                OracleCommand cmd = new OracleCommand
+                {
+                    CommandType = CommandType.Text,
+                    Connection = connection,
+                    CommandText = "SELECT A.PROD_CODE as 제품내역, B.PROD_NAME as 제품명, A.PROD_UNIT as 제품단위, A.ORDER_M as 작업지시량, A.ADD_GOOD_QTY as 누적양품량, TO_CHAR(CASE WHEN A.ORDER_M = 0 THEN 0 ELSE A.ADD_GOOD_QTY / A.ORDER_M * 100 END, '990.0') as 누적양품비율, DECODE(A.GUBUN, 'A', '내수', 'B', '수출', 'C', '특판', ' ') 주문형식, DECODE(A.WORK_GUBUN, 'A', '정상작업', 'U', '재작업', 'R', '연구개발', 'T', '기술테스트', 'S', 'S/BOOK', 'C', 'C/MATCH', ' ') 작업구분, DECODE(A.NOTE_FLAG, 'Y', '★', ' ') NOTE_FLAG, DECODE(A.PROC_STATUS, 'Y', '가능', 'A', '예약', 'B', '진행', 'C', '생산', 'E', '종료', 'D', '취소', ' ') 생산상태, TO_CHAR(A.START_DATE, 'YYYY-MM-DD HH24:MI') 시작일자, TO_CHAR(A.END_DATE, 'YYYY-MM-DD HH24:MI') 종료일자, A.JOB_NO as 작업번호, A.ORDER_NO || '-' || A.ORDER_SEQ , A.NOTE0 as 비고, A.NOTE1 as 비고2, B.MRP_MGR as MRP관리자 FROM TBL_PRODUCTPLAN A, TBL_ProductMaster B WHERE A.PROD_CODE = B.PROD_CODE AND A.PLANT_CODE = :IN_PLANT_CODE AND A.WC_CODE = :IN_WC_CODE AND A.JOB_DATE = :IN_JOB_DATE AND A.PROC_STATUS <> 'N' AND A.DEL_FLAG = 'A' ORDER BY A.START_DATE, A.JOB_NO"
+                };
+
+
+                cmd.Parameters.Add("IN_PLANT_CODE", "2020");
+                cmd.Parameters.Add("IN_WC_CODE", "AT02"); // WC_CODE는 AT01와 같이 다른 것도 있을 때 어떻게 입력 받는지?
+                cmd.Parameters.Add("IN_JOB_DATE", dateTimePicker2.Value.ToString("yyyyMMdd"));
+
+
+                OracleDataReader reader = cmd.ExecuteReader();
+
+                OracleDataAdapter adapter = new OracleDataAdapter(cmd);
+
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                dataGridView1.DataSource = dt;
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 }
