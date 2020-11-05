@@ -25,6 +25,8 @@ namespace FinalProject_Profile
                 // 임시 Data값 (☆ 추후에 주석처리나, 삭제 예정 ☆)
                 metroGrid2.Rows.Add($"{i+1}", "1234", "2020/09/20", "2020/09/20", "내수", "11", "M", "1000", "생산가능");
             }
+
+
         }
 
         private void Child3_Load(object sender, EventArgs e)                        // 실행되었을때, 어떤 항목을 추가해주려고 미리 만들어놓음
