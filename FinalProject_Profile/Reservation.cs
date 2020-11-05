@@ -17,17 +17,68 @@ namespace FinalProject_Profile
     public partial class Reservation : MetroForm                                    // Form → MetroForm 변경
     {
         protected const string connectionString = "DATA SOURCE=220.69.249.228:1521/xe;PASSWORD=1234;PERSIST SECURITY INFO=True;USER ID=MAT_MGR";    // Oracle계정 MAT_MGR 연결
+        List<string> GetWC_CODE = new List<string>();
+        List<string> GetJob_No = new List<string>();
+        List<string> GetReserve_Rank = new List<string>();
         public Reservation()
         {
             InitializeComponent();
-            for (int i = 0; i < 30; i++)
-            {
-                // 임시 Data값 (☆ 추후에 주석처리나, 삭제 예정 ☆)
-                //metroGrid2.Rows.Add($"{i+1}", "1234", "2020/09/20", "2020/09/20", "내수", "11", "M", "1000", "생산가능");
-            }
-
-
         }
+
+        public Reservation(DataTable dt)
+        {
+            InitializeComponent();
+            for(int i = 0; i < dt.Rows.Count; i++)
+            {
+                GetJob_No.Add(dt.Rows[i][12].ToString());
+            }
+            OracleConnection connection = null;
+            try
+            {
+                connection = new OracleConnection
+                {
+                    ConnectionString = connectionString
+                };
+                connection.Open();
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+
+                    OracleCommand cmd = new OracleCommand
+                    {
+                        CommandType = CommandType.Text,
+                        Connection = connection,
+                        CommandText = "select trim(wc_code), trim(order_seq) from tbl_productplan where job_no = :IN_JOB_NO"
+                    };
+
+
+                    cmd.Parameters.Add("IN_JOB_NO", GetJob_No[i]);
+
+
+                    OracleDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        GetWC_CODE.Add(reader.GetValue(0).ToString());
+                        GetReserve_Rank.Add(reader.GetValue(1).ToString());
+
+                    }
+                }
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    metroGrid2.Rows.Add(GetWC_CODE[i], GetJob_No[i], i+1);
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
 
         private void Child3_Load(object sender, EventArgs e)                        // 실행되었을때, 어떤 항목을 추가해주려고 미리 만들어놓음
         {
@@ -106,9 +157,9 @@ namespace FinalProject_Profile
             int colIndex = metroGrid2.SelectedCells[0].OwningColumn.Index;              // colIndex는 metroGrid의 0번째 선택된 셀을 포함하는 열(컬럼)의 인덱스
             DataGridViewRow selectedRow = metroGrid2.Rows[rowIndex];                    // selectedRow라는 지역 변수 = 
             metroGrid2.Rows.Remove(selectedRow);                                        // 기존 줄에 있는 선택된 selectedRow 제거
-            metroGrid2.Rows.Insert(metroGrid2.Rows.Count - 1, selectedRow);             // 기존 줄에 있는 선택된 selectedRowf 를 카운트값 -1 만큼의 위치에 삽입
+            metroGrid2.Rows.Insert(metroGrid2.Rows.Count, selectedRow);             // 기존 줄에 있는 선택된 selectedRowf 를 카운트값 만큼의 위치에 삽입
             metroGrid2.ClearSelection();                                                // 선택된 셀의 선택을 취소한다(?)
-            metroGrid2.Rows[metroGrid2.Rows.Count-1].Cells[colIndex].Selected = true;   // metroGrid2.Rows[] 항목에다 metroGrid2.Rows.Count -1 값을 넣어주면 행 마지막으로 감.
+            metroGrid2.Rows[metroGrid2.Rows.Count-1].Cells[colIndex].Selected = true;   // metroGrid2.Rows[] 항목에다 metroGrid2.Rows.Count 값을 넣어주면 행 마지막으로 감.
         }
     }
 }

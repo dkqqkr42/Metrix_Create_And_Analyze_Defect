@@ -71,46 +71,10 @@ namespace FinalProject_Profile
 
         private void btn_plan_Click(object sender, EventArgs e)
         {
-            int index = dataGridView1.CurrentCell.RowIndex;
-            OracleConnection connection = null;
-            try
-            {
-                connection = new OracleConnection
-                {
-                    ConnectionString = connectionString
-                };
-                connection.Open();
+            DataTable dt = (DataTable)dataGridView1.DataSource;
 
-                OracleCommand cmd = new OracleCommand
-                {
-                    CommandType = CommandType.Text,
-                    Connection = connection,
-                    CommandText = "update "
-                };
-
-
-               // cmd.Parameters.Add("IN_PLANT_CODE", "2020");
-              
-
-                OracleDataReader reader = cmd.ExecuteReader();
-
-                OracleDataAdapter adapter = new OracleDataAdapter(cmd);
-
-                DataSet ds = new DataSet();
-                adapter.Fill(ds);
-                DataTable dt = ds.Tables[0];
-                dataGridView1.DataSource = dt;
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                connection.Close();
-            }
+            Reservation reservation = new Reservation(dt);
+            reservation.ShowDialog();
         }
     
 
