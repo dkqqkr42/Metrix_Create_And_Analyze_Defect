@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PlanInsertTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanInsertTest.Designer.cs">
+      <DependentUpon>PlanInsertTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="PopupForm\InputPopup_SAPOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PlanInsertTest.resx">
+      <DependentUpon>PlanInsertTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PopupForm\InputPopup_SAPOrder.resx">
       <DependentUpon>InputPopup_SAPOrder.cs</DependentUpon>
     </EmbeddedResource>

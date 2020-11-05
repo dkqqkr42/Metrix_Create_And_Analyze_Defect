@@ -104,7 +104,7 @@ namespace FinalProject_Profile.PopupForm
                 cmd.Parameters.Add("IN_PLAN_QTY", txt_PLAN_QTY.Text);
                 cmd.Parameters.Add("IN_INPUT_QTY", txt_INPUT_QTY.Text);
                 cmd.Parameters.Add("IN_WORK_TIME", txt_WORK_TIME.Text);
-                cmd.Parameters.Add("IN_INSERT_DATE", DateTime.Now);
+                //cmd.Parameters.Add("IN_INSERT_DATE", DateTime.Now);
                 
                 cmd.ExecuteNonQuery();
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using Oracle.ManagedDataAccess.Client;
 
 // MetroFramework 이용해서 폼 외형 변경
 
@@ -15,14 +16,17 @@ namespace FinalProject_Profile
 {
     public partial class Reservation : MetroForm                                    // Form → MetroForm 변경
     {
+        protected const string connectionString = "DATA SOURCE=220.69.249.228:1521/xe;PASSWORD=1234;PERSIST SECURITY INFO=True;USER ID=MAT_MGR";    // Oracle계정 MAT_MGR 연결
         public Reservation()
         {
             InitializeComponent();
             for (int i = 0; i < 30; i++)
             {
                 // 임시 Data값 (☆ 추후에 주석처리나, 삭제 예정 ☆)
-                metroGrid2.Rows.Add($"{i+1}", "1234", "2020/09/20", "2020/09/20", "내수", "11", "M", "1000", "생산가능");
+                //metroGrid2.Rows.Add($"{i+1}", "1234", "2020/09/20", "2020/09/20", "내수", "11", "M", "1000", "생산가능");
             }
+
+
         }
 
         private void Child3_Load(object sender, EventArgs e)                        // 실행되었을때, 어떤 항목을 추가해주려고 미리 만들어놓음

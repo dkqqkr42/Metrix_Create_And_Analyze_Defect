@@ -115,8 +115,8 @@
             // 
             this.metroContextMenu2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.metroContextMenu2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.form1ToolStripMenuItem,
             this.form2ToolStripMenuItem,
+            this.form1ToolStripMenuItem,
             this.form3ToolStripMenuItem,
             this.form4ToolStripMenuItem,
             this.form5ToolStripMenuItem,
