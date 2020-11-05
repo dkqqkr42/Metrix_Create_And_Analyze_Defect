@@ -76,40 +76,6 @@ namespace FinalProject_Profile.PopupForm
                     BindByName =true
                 };
 
-                // cmd.CommandText = "insert into tbl_saporder values(:IN_PLANT_CODE, :IN_MRP_MGR, :IN_ORDER_NO, :IN_ORDER_SEQ, :IN_ORDER_DATE, :IN_PROD_CODE, :IN_PROD_UNIT, :IN_P_VERSION, :IN_WC_CODE, :IN_DUE_DATE_A, :IN_DUE_DATE_B)";
-
-                /*
-                cmd.Parameters.Add(new OracleParameter("IN_PLANT_CODE", txt_PLANT_CODE.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_MRP_MGR", txt_MRP_MGR.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_ORDER_NO", txt_ORDER_NO.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_ORDER_SEQ", txt_ORDER_SEQ.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_ORDER_DATE", txt_ORDER_DATE.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_PROD_CODE", txt_PROD_CODE.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_PROD_UNIT", txt_PROD_UNIT.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_P_VERSION", txt_P_VERSION.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_WC_CODE", txt_WC_CODE.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_DUE_DATE_A", txt_DUE_DATE_A.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_DUE_DATE_B", txt_DUE_DATE_B.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_ORDER_QTY", txt_ORDER_QTY.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_ROLL_METER", txt_ROLL_METER.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_ORDER_UNIT_PRICE", txt_ORDER_UNIT_PRICE.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_S_LOCATION", txt_S_LOCATION.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_EXCHG_RATE", txt_EXCHG_RATE.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_CURRENCY_UNIT", txt_CURRENCY_UNIT.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_PROD_TYPE", txt_PROD_TYPE.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_CUST_CODE", txt_CUST_CODE.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_CUST_NAME", txt_CUST_NAME.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_DISTRB_CHL", txt_DISTRB_CHL.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_ORDER_TYPE", txt_ORDER_TYPE.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_CONFIRM_FLAG", txt_CONFIRM_FLAG.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_REMARK", txt_REMARK.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_COMPLETE_FLAG", txt_COMPLETE_FLAG.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_PLAN_QTY", txt_PLAN_QTY.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_INPUT_QTY", txt_INPUT_QTY.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_WORK_TIME", txt_WORK_TIME.Text));
-                cmd.Parameters.Add(new OracleParameter("IN_INSERT_DATE", DateTime.Now));
-                */
-                
                 cmd.Parameters.Add("IN_PLANT_CODE", txt_PLANT_CODE.Text);
                 cmd.Parameters.Add("IN_MRP_MGR", txt_MRP_MGR.Text);
                 cmd.Parameters.Add("IN_ORDER_NO", txt_ORDER_NO.Text);
@@ -140,15 +106,9 @@ namespace FinalProject_Profile.PopupForm
                 cmd.Parameters.Add("IN_WORK_TIME", txt_WORK_TIME.Text);
                 //cmd.Parameters.Add("IN_INSERT_DATE", DateTime.Now);
                 
-
-
                 cmd.ExecuteNonQuery();
 
-                OracleDataReader dr = cmd.ExecuteReader();
-
-                // get the data
-                dr.Read();
-
+                this.Close();
             }
             catch (Exception ex)
             {
