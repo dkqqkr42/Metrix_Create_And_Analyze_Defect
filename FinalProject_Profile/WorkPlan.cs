@@ -44,7 +44,7 @@ namespace FinalProject_Profile
 
 
                 cmd.Parameters.Add("IN_PLANT_CODE", "2020");
-                cmd.Parameters.Add("IN_WC_CODE", "AT02");
+                cmd.Parameters.Add("IN_WC_CODE", "AT01");
                 cmd.Parameters.Add("IN_JOB_DATE", dateTimePicker2.Value.ToString("yyyyMMdd"));
 
 

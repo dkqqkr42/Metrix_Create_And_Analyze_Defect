@@ -226,9 +226,9 @@ namespace FinalProject_Profile
 
                     OracleCommand cmd = new OracleCommand
                     {
-                        CommandType = CommandType.Text,
+                        CommandType = CommandType.StoredProcedure,
                         Connection = connection,
-                        CommandText = "Insert into tbl_prodreserve values(:IN_WC_CODE, :IN_JOB_NO, :IN_RESERVE_RANK)"
+                        CommandText = "PRODRESERVE_UPSERT"
                     };
 
                     cmd.Parameters.Add("IN_WC_CODE", GetWC_CODE[i]);

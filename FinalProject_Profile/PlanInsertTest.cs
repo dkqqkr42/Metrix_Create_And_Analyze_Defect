@@ -46,10 +46,10 @@ namespace FinalProject_Profile
                 cmd.Parameters.Add("ARG_PLANT", "2020");
                 cmd.Parameters.Add("ARG_MRP1", "F63");
                 cmd.Parameters.Add("ARG_MRP2", "F63");
-                cmd.Parameters.Add("ARG_WC", "AT02");
+                cmd.Parameters.Add("ARG_WC", "AT01");
                 //todo 날짜
-                cmd.Parameters.Add("ARG_O_DATE", "20201105");
-                cmd.Parameters.Add("ARG_E_DATE", "20201105");
+                cmd.Parameters.Add("ARG_O_DATE", "20201106");
+                cmd.Parameters.Add("ARG_E_DATE", "20201106");
 
 
                 OracleDataReader reader = cmd.ExecuteReader();
@@ -118,9 +118,9 @@ namespace FinalProject_Profile
                 {
                     OracleCommand cmd = new OracleCommand
                     {
-                        CommandType = CommandType.Text,
+                        CommandType = CommandType.StoredProcedure,
                         Connection = connection,
-                        CommandText = "INSERT INTO TBL_PRODUCTPLAN ( JOB_NO, PROD_CODE, SA_SABUN, PLANT_CODE, MRP_MGR, ORDER_NO, ORDER_SEQ, ORDER_M, WC_CODE, PROD_UNIT, ADD_GOOD_QTY, START_DATE, END_DATE, JOB_DATE, NOTE_FLAG, NOTE0, WORK_GUBUN, GUBUN, DEL_FLAG, PROC_STATUS, ROLL_METER, SAP_IPGO_QTY, INSERT_DATE, CUST_NAME) VALUES ( :LS_JOB_NO, :LS_PROD_CODE, :LS_SA_SABUN, :LS_PLANT_CODE, :LS_MRP_MGR, :LS_ORDER_NO, :LS_ORDER_SEQ, :LDC_JOB_QTY_MODI, :LS_WC_CODE, :LS_PROD_UNIT, 0, :LDT_START_DATE, :LDT_END_DATE, :LS_JOB_DATE, :LS_NOTE_FLAG, :LS_NOTE0, :LS_WORK_GUBUN, :LS_GUBUN, 'A', 'N', 0, 0, :LDT_INSERT_DATE, :LS_CUSTNAME)"
+                        CommandText = "PRODUCTPLAN_UPSERT"
                     };
                     
                     cmd.Parameters.Add("LS_JOB_NO", dt.Rows[i]["WC_CODE"].ToString() + DateTime.Now.ToString("yyyyMMdd") + (i+1).ToString("000"));
@@ -141,7 +141,7 @@ namespace FinalProject_Profile
                     cmd.Parameters.Add("LS_WORK_GUBUN", "A");
                     cmd.Parameters.Add("LS_GUBUN", dt.Rows[i]["GUBUN"].ToString());
                     cmd.Parameters.Add("LDT_INSERT_DATE", DateTime.Now);
-                    cmd.Parameters.Add("LS_ORDER_NO", dt.Rows[i]["CUST_NAME"].ToString());
+                    cmd.Parameters.Add("LS_CUSTNAME", dt.Rows[i]["CUST_NAME"].ToString());
 
                     cmd.ExecuteNonQuery();
                 }
