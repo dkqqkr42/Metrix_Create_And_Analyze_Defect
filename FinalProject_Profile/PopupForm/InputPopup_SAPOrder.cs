@@ -74,7 +74,7 @@ namespace FinalProject_Profile.PopupForm
                 cmd.Parameters.Add("IN_ORDER_TYPE", cbo_ORDER_TYPE.Text);
                 cmd.Parameters.Add("IN_CONFIRM_FLAG", txt_CONFIRM_FLAG.Text.Equals("")? "N" : txt_CONFIRM_FLAG.Text);
                 cmd.Parameters.Add("IN_REMARK", txt_REMARK.Text);
-                cmd.Parameters.Add("IN_COMPLETE_FLAG", txt_INSERT_DATE.Text);
+                cmd.Parameters.Add("IN_COMPLETE_FLAG", cbo_COMPLETE_FLAG.Text);
                 cmd.Parameters.Add("IN_PLAN_QTY", txt_PLAN_QTY.Text);
                 cmd.Parameters.Add("IN_INPUT_QTY", txt_INPUT_QTY.Text);
                 cmd.Parameters.Add("IN_WORK_TIME", txt_WORK_TIME.Text);

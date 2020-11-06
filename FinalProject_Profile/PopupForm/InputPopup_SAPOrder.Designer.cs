@@ -223,7 +223,7 @@
             this.txt_PLAN_QTY.SelectionStart = 0;
             this.txt_PLAN_QTY.ShortcutsEnabled = true;
             this.txt_PLAN_QTY.Size = new System.Drawing.Size(137, 23);
-            this.txt_PLAN_QTY.TabIndex = 25;
+            this.txt_PLAN_QTY.TabIndex = 26;
             this.txt_PLAN_QTY.UseSelectable = true;
             this.txt_PLAN_QTY.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_PLAN_QTY.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -254,7 +254,7 @@
             this.txt_INSERT_DATE.SelectionStart = 0;
             this.txt_INSERT_DATE.ShortcutsEnabled = true;
             this.txt_INSERT_DATE.Size = new System.Drawing.Size(137, 23);
-            this.txt_INSERT_DATE.TabIndex = 24;
+            this.txt_INSERT_DATE.TabIndex = 29;
             this.txt_INSERT_DATE.UseSelectable = true;
             this.txt_INSERT_DATE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_INSERT_DATE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -285,7 +285,7 @@
             this.txt_INPUT_QTY.SelectionStart = 0;
             this.txt_INPUT_QTY.ShortcutsEnabled = true;
             this.txt_INPUT_QTY.Size = new System.Drawing.Size(137, 23);
-            this.txt_INPUT_QTY.TabIndex = 26;
+            this.txt_INPUT_QTY.TabIndex = 27;
             this.txt_INPUT_QTY.UseSelectable = true;
             this.txt_INPUT_QTY.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_INPUT_QTY.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -316,7 +316,7 @@
             this.txt_WORK_TIME.SelectionStart = 0;
             this.txt_WORK_TIME.ShortcutsEnabled = true;
             this.txt_WORK_TIME.Size = new System.Drawing.Size(137, 23);
-            this.txt_WORK_TIME.TabIndex = 27;
+            this.txt_WORK_TIME.TabIndex = 28;
             this.txt_WORK_TIME.UseSelectable = true;
             this.txt_WORK_TIME.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_WORK_TIME.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -347,7 +347,7 @@
             this.txt_EXCHG_RATE.SelectionStart = 0;
             this.txt_EXCHG_RATE.ShortcutsEnabled = true;
             this.txt_EXCHG_RATE.Size = new System.Drawing.Size(137, 23);
-            this.txt_EXCHG_RATE.TabIndex = 15;
+            this.txt_EXCHG_RATE.TabIndex = 16;
             this.txt_EXCHG_RATE.UseSelectable = true;
             this.txt_EXCHG_RATE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_EXCHG_RATE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -378,7 +378,7 @@
             this.txt_ORDER_UNIT_PRICE.SelectionStart = 0;
             this.txt_ORDER_UNIT_PRICE.ShortcutsEnabled = true;
             this.txt_ORDER_UNIT_PRICE.Size = new System.Drawing.Size(137, 23);
-            this.txt_ORDER_UNIT_PRICE.TabIndex = 13;
+            this.txt_ORDER_UNIT_PRICE.TabIndex = 14;
             this.txt_ORDER_UNIT_PRICE.UseSelectable = true;
             this.txt_ORDER_UNIT_PRICE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_ORDER_UNIT_PRICE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -409,7 +409,7 @@
             this.txt_ROLL_METER.SelectionStart = 0;
             this.txt_ROLL_METER.ShortcutsEnabled = true;
             this.txt_ROLL_METER.Size = new System.Drawing.Size(137, 23);
-            this.txt_ROLL_METER.TabIndex = 12;
+            this.txt_ROLL_METER.TabIndex = 13;
             this.txt_ROLL_METER.UseSelectable = true;
             this.txt_ROLL_METER.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_ROLL_METER.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -440,7 +440,7 @@
             this.txt_P_VERSION.SelectionStart = 0;
             this.txt_P_VERSION.ShortcutsEnabled = true;
             this.txt_P_VERSION.Size = new System.Drawing.Size(137, 23);
-            this.txt_P_VERSION.TabIndex = 7;
+            this.txt_P_VERSION.TabIndex = 8;
             this.txt_P_VERSION.UseSelectable = true;
             this.txt_P_VERSION.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_P_VERSION.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -471,7 +471,7 @@
             this.txt_ORDER_SEQ.SelectionStart = 0;
             this.txt_ORDER_SEQ.ShortcutsEnabled = true;
             this.txt_ORDER_SEQ.Size = new System.Drawing.Size(137, 23);
-            this.txt_ORDER_SEQ.TabIndex = 3;
+            this.txt_ORDER_SEQ.TabIndex = 4;
             this.txt_ORDER_SEQ.UseSelectable = true;
             this.txt_ORDER_SEQ.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_ORDER_SEQ.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -502,7 +502,7 @@
             this.txt_ORDER_NO.SelectionStart = 0;
             this.txt_ORDER_NO.ShortcutsEnabled = true;
             this.txt_ORDER_NO.Size = new System.Drawing.Size(137, 23);
-            this.txt_ORDER_NO.TabIndex = 2;
+            this.txt_ORDER_NO.TabIndex = 3;
             this.txt_ORDER_NO.UseSelectable = true;
             this.txt_ORDER_NO.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_ORDER_NO.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -577,7 +577,7 @@
             this.txt_S_LOCATION.SelectionStart = 0;
             this.txt_S_LOCATION.ShortcutsEnabled = true;
             this.txt_S_LOCATION.Size = new System.Drawing.Size(137, 23);
-            this.txt_S_LOCATION.TabIndex = 14;
+            this.txt_S_LOCATION.TabIndex = 15;
             this.txt_S_LOCATION.UseSelectable = true;
             this.txt_S_LOCATION.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_S_LOCATION.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -751,7 +751,7 @@
             this.txt_ORDER_QTY.SelectionStart = 0;
             this.txt_ORDER_QTY.ShortcutsEnabled = true;
             this.txt_ORDER_QTY.Size = new System.Drawing.Size(138, 23);
-            this.txt_ORDER_QTY.TabIndex = 11;
+            this.txt_ORDER_QTY.TabIndex = 12;
             this.txt_ORDER_QTY.UseSelectable = true;
             this.txt_ORDER_QTY.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_ORDER_QTY.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -782,7 +782,7 @@
             this.txt_PROD_TYPE.SelectionStart = 0;
             this.txt_PROD_TYPE.ShortcutsEnabled = true;
             this.txt_PROD_TYPE.Size = new System.Drawing.Size(138, 23);
-            this.txt_PROD_TYPE.TabIndex = 17;
+            this.txt_PROD_TYPE.TabIndex = 18;
             this.txt_PROD_TYPE.UseSelectable = true;
             this.txt_PROD_TYPE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_PROD_TYPE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -945,7 +945,7 @@
             this.txt_CUST_CODE.SelectionStart = 0;
             this.txt_CUST_CODE.ShortcutsEnabled = true;
             this.txt_CUST_CODE.Size = new System.Drawing.Size(137, 23);
-            this.txt_CUST_CODE.TabIndex = 18;
+            this.txt_CUST_CODE.TabIndex = 19;
             this.txt_CUST_CODE.UseSelectable = true;
             this.txt_CUST_CODE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_CUST_CODE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -976,7 +976,7 @@
             this.txt_CUST_NAME.SelectionStart = 0;
             this.txt_CUST_NAME.ShortcutsEnabled = true;
             this.txt_CUST_NAME.Size = new System.Drawing.Size(137, 23);
-            this.txt_CUST_NAME.TabIndex = 19;
+            this.txt_CUST_NAME.TabIndex = 20;
             this.txt_CUST_NAME.UseSelectable = true;
             this.txt_CUST_NAME.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_CUST_NAME.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1007,7 +1007,7 @@
             this.txt_CONFIRM_FLAG.SelectionStart = 0;
             this.txt_CONFIRM_FLAG.ShortcutsEnabled = true;
             this.txt_CONFIRM_FLAG.Size = new System.Drawing.Size(137, 23);
-            this.txt_CONFIRM_FLAG.TabIndex = 22;
+            this.txt_CONFIRM_FLAG.TabIndex = 23;
             this.txt_CONFIRM_FLAG.UseSelectable = true;
             this.txt_CONFIRM_FLAG.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_CONFIRM_FLAG.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1038,7 +1038,7 @@
             this.txt_REMARK.SelectionStart = 0;
             this.txt_REMARK.ShortcutsEnabled = true;
             this.txt_REMARK.Size = new System.Drawing.Size(138, 23);
-            this.txt_REMARK.TabIndex = 23;
+            this.txt_REMARK.TabIndex = 24;
             this.txt_REMARK.UseSelectable = true;
             this.txt_REMARK.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_REMARK.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1068,7 +1068,7 @@
             this.btn_Close.Location = new System.Drawing.Point(723, 3);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(140, 101);
-            this.btn_Close.TabIndex = 30;
+            this.btn_Close.TabIndex = 31;
             this.btn_Close.UseSelectable = true;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             this.btn_Close.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Close_MouseDown);
@@ -1083,7 +1083,7 @@
             this.btn_Save.Location = new System.Drawing.Point(577, 3);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(140, 101);
-            this.btn_Save.TabIndex = 29;
+            this.btn_Save.TabIndex = 30;
             this.btn_Save.UseSelectable = true;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             this.btn_Save.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseDown);
@@ -1100,7 +1100,7 @@
             this.cbo_PLANT_CODE.Location = new System.Drawing.Point(4, 57);
             this.cbo_PLANT_CODE.Name = "cbo_PLANT_CODE";
             this.cbo_PLANT_CODE.Size = new System.Drawing.Size(137, 23);
-            this.cbo_PLANT_CODE.TabIndex = 59;
+            this.cbo_PLANT_CODE.TabIndex = 1;
             // 
             // cbo_MRP_MGR
             // 
@@ -1113,7 +1113,7 @@
             this.cbo_MRP_MGR.Location = new System.Drawing.Point(148, 56);
             this.cbo_MRP_MGR.Name = "cbo_MRP_MGR";
             this.cbo_MRP_MGR.Size = new System.Drawing.Size(137, 23);
-            this.cbo_MRP_MGR.TabIndex = 60;
+            this.cbo_MRP_MGR.TabIndex = 2;
             // 
             // dtp_ORDER_DATE
             // 
@@ -1124,7 +1124,7 @@
             this.dtp_ORDER_DATE.Location = new System.Drawing.Point(580, 56);
             this.dtp_ORDER_DATE.Name = "dtp_ORDER_DATE";
             this.dtp_ORDER_DATE.Size = new System.Drawing.Size(137, 23);
-            this.dtp_ORDER_DATE.TabIndex = 61;
+            this.dtp_ORDER_DATE.TabIndex = 5;
             // 
             // cbo_PROD_CODE
             // 
@@ -1142,7 +1142,7 @@
             this.cbo_PROD_CODE.Location = new System.Drawing.Point(724, 56);
             this.cbo_PROD_CODE.Name = "cbo_PROD_CODE";
             this.cbo_PROD_CODE.Size = new System.Drawing.Size(137, 23);
-            this.cbo_PROD_CODE.TabIndex = 62;
+            this.cbo_PROD_CODE.TabIndex = 6;
             // 
             // cbo_PROD_UNIT
             // 
@@ -1155,7 +1155,7 @@
             this.cbo_PROD_UNIT.Location = new System.Drawing.Point(4, 160);
             this.cbo_PROD_UNIT.Name = "cbo_PROD_UNIT";
             this.cbo_PROD_UNIT.Size = new System.Drawing.Size(137, 23);
-            this.cbo_PROD_UNIT.TabIndex = 63;
+            this.cbo_PROD_UNIT.TabIndex = 7;
             // 
             // cbo_WC_CODE
             // 
@@ -1169,7 +1169,7 @@
             this.cbo_WC_CODE.Location = new System.Drawing.Point(292, 160);
             this.cbo_WC_CODE.Name = "cbo_WC_CODE";
             this.cbo_WC_CODE.Size = new System.Drawing.Size(137, 23);
-            this.cbo_WC_CODE.TabIndex = 64;
+            this.cbo_WC_CODE.TabIndex = 9;
             // 
             // dtp_DUE_DATE_A
             // 
@@ -1180,7 +1180,7 @@
             this.dtp_DUE_DATE_A.Location = new System.Drawing.Point(436, 160);
             this.dtp_DUE_DATE_A.Name = "dtp_DUE_DATE_A";
             this.dtp_DUE_DATE_A.Size = new System.Drawing.Size(137, 23);
-            this.dtp_DUE_DATE_A.TabIndex = 65;
+            this.dtp_DUE_DATE_A.TabIndex = 10;
             // 
             // dtp_DUE_DATE_B
             // 
@@ -1191,7 +1191,7 @@
             this.dtp_DUE_DATE_B.Location = new System.Drawing.Point(580, 160);
             this.dtp_DUE_DATE_B.Name = "dtp_DUE_DATE_B";
             this.dtp_DUE_DATE_B.Size = new System.Drawing.Size(137, 23);
-            this.dtp_DUE_DATE_B.TabIndex = 66;
+            this.dtp_DUE_DATE_B.TabIndex = 11;
             // 
             // cbo_CURRENCY_UNIT
             // 
@@ -1203,7 +1203,7 @@
             this.cbo_CURRENCY_UNIT.Location = new System.Drawing.Point(580, 264);
             this.cbo_CURRENCY_UNIT.Name = "cbo_CURRENCY_UNIT";
             this.cbo_CURRENCY_UNIT.Size = new System.Drawing.Size(137, 23);
-            this.cbo_CURRENCY_UNIT.TabIndex = 67;
+            this.cbo_CURRENCY_UNIT.TabIndex = 17;
             // 
             // cbo_DISTRB_CHL
             // 
@@ -1220,7 +1220,7 @@
             this.cbo_DISTRB_CHL.Location = new System.Drawing.Point(292, 368);
             this.cbo_DISTRB_CHL.Name = "cbo_DISTRB_CHL";
             this.cbo_DISTRB_CHL.Size = new System.Drawing.Size(137, 23);
-            this.cbo_DISTRB_CHL.TabIndex = 68;
+            this.cbo_DISTRB_CHL.TabIndex = 21;
             // 
             // cbo_ORDER_TYPE
             // 
@@ -1234,7 +1234,7 @@
             this.cbo_ORDER_TYPE.Location = new System.Drawing.Point(436, 368);
             this.cbo_ORDER_TYPE.Name = "cbo_ORDER_TYPE";
             this.cbo_ORDER_TYPE.Size = new System.Drawing.Size(137, 23);
-            this.cbo_ORDER_TYPE.TabIndex = 69;
+            this.cbo_ORDER_TYPE.TabIndex = 22;
             // 
             // cbo_COMPLETE_FLAG
             // 
@@ -1249,7 +1249,7 @@
             this.cbo_COMPLETE_FLAG.Location = new System.Drawing.Point(4, 473);
             this.cbo_COMPLETE_FLAG.Name = "cbo_COMPLETE_FLAG";
             this.cbo_COMPLETE_FLAG.Size = new System.Drawing.Size(137, 23);
-            this.cbo_COMPLETE_FLAG.TabIndex = 70;
+            this.cbo_COMPLETE_FLAG.TabIndex = 25;
             // 
             // InputPopup_SAPOrder
             // 
