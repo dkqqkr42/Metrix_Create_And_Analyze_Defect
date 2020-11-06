@@ -133,5 +133,15 @@ namespace FinalProject_Profile
         {
             btn_Insert.BackgroundImage = FinalProject_Profile.Properties.Resources.입력클릭;
         }
+
+        private void btn_Decide_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Decide.BackgroundImage = FinalProject_Profile.Properties.Resources.확정;
+        }
+
+        private void btn_Decide_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Decide.BackgroundImage = FinalProject_Profile.Properties.Resources.확정클릭;
+        }
     }
 }
