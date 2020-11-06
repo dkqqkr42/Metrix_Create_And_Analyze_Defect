@@ -19,6 +19,7 @@ namespace FinalProject_Profile.PopupForm
         public InputPopup_SAPOrder()
         {
             InitializeComponent();
+            cbo_PLANT_CODE.SelectedIndex = 0;
         }
 
         /*
@@ -76,7 +77,7 @@ namespace FinalProject_Profile.PopupForm
                     BindByName =true
                 };
 
-                cmd.Parameters.Add("IN_PLANT_CODE", txt_PLANT_CODE.Text);
+                cmd.Parameters.Add("IN_PLANT_CODE", cbo_PLANT_CODE.Text);
                 cmd.Parameters.Add("IN_MRP_MGR", txt_MRP_MGR.Text);
                 cmd.Parameters.Add("IN_ORDER_NO", txt_ORDER_NO.Text);
                 cmd.Parameters.Add("IN_ORDER_SEQ", txt_ORDER_SEQ.Text);
@@ -104,7 +105,7 @@ namespace FinalProject_Profile.PopupForm
                 cmd.Parameters.Add("IN_PLAN_QTY", txt_PLAN_QTY.Text);
                 cmd.Parameters.Add("IN_INPUT_QTY", txt_INPUT_QTY.Text);
                 cmd.Parameters.Add("IN_WORK_TIME", txt_WORK_TIME.Text);
-                //cmd.Parameters.Add("IN_INSERT_DATE", DateTime.Now);
+                cmd.Parameters.Add("IN_INSERT_DATE", DateTime.Now);
                 
                 cmd.ExecuteNonQuery();
 
