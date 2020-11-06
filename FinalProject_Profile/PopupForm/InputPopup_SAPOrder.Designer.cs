@@ -31,23 +31,15 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txt_PLAN_QTY = new MetroFramework.Controls.MetroTextBox();
-            this.txt_COMPLETE_FLAG = new MetroFramework.Controls.MetroTextBox();
-            this.txt_INPUT_QTY = new MetroFramework.Controls.MetroTextBox();
             this.txt_INSERT_DATE = new MetroFramework.Controls.MetroTextBox();
+            this.txt_INPUT_QTY = new MetroFramework.Controls.MetroTextBox();
             this.txt_WORK_TIME = new MetroFramework.Controls.MetroTextBox();
-            this.txt_CURRENCY_UNIT = new MetroFramework.Controls.MetroTextBox();
             this.txt_EXCHG_RATE = new MetroFramework.Controls.MetroTextBox();
             this.txt_ORDER_UNIT_PRICE = new MetroFramework.Controls.MetroTextBox();
             this.txt_ROLL_METER = new MetroFramework.Controls.MetroTextBox();
-            this.txt_DUE_DATE_B = new MetroFramework.Controls.MetroTextBox();
-            this.txt_DUE_DATE_A = new MetroFramework.Controls.MetroTextBox();
-            this.txt_WC_CODE = new MetroFramework.Controls.MetroTextBox();
             this.txt_P_VERSION = new MetroFramework.Controls.MetroTextBox();
-            this.txt_PROD_UNIT = new MetroFramework.Controls.MetroTextBox();
-            this.txt_ORDER_DATE = new MetroFramework.Controls.MetroTextBox();
             this.txt_ORDER_SEQ = new MetroFramework.Controls.MetroTextBox();
             this.txt_ORDER_NO = new MetroFramework.Controls.MetroTextBox();
-            this.txt_MRP_MGR = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
@@ -66,7 +58,6 @@
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
-            this.txt_PROD_CODE = new MetroFramework.Controls.MetroTextBox();
             this.txt_ORDER_QTY = new MetroFramework.Controls.MetroTextBox();
             this.txt_PROD_TYPE = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
@@ -83,14 +74,23 @@
             this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
             this.txt_CUST_CODE = new MetroFramework.Controls.MetroTextBox();
             this.txt_CUST_NAME = new MetroFramework.Controls.MetroTextBox();
-            this.txt_DISTRB_CHL = new MetroFramework.Controls.MetroTextBox();
-            this.txt_ORDER_TYPE = new MetroFramework.Controls.MetroTextBox();
             this.txt_CONFIRM_FLAG = new MetroFramework.Controls.MetroTextBox();
             this.txt_REMARK = new MetroFramework.Controls.MetroTextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Close = new MetroFramework.Controls.MetroButton();
             this.btn_Save = new MetroFramework.Controls.MetroButton();
             this.cbo_PLANT_CODE = new System.Windows.Forms.ComboBox();
+            this.cbo_MRP_MGR = new System.Windows.Forms.ComboBox();
+            this.dtp_ORDER_DATE = new System.Windows.Forms.DateTimePicker();
+            this.cbo_PROD_CODE = new System.Windows.Forms.ComboBox();
+            this.cbo_PROD_UNIT = new System.Windows.Forms.ComboBox();
+            this.cbo_WC_CODE = new System.Windows.Forms.ComboBox();
+            this.dtp_DUE_DATE_A = new System.Windows.Forms.DateTimePicker();
+            this.dtp_DUE_DATE_B = new System.Windows.Forms.DateTimePicker();
+            this.cbo_CURRENCY_UNIT = new System.Windows.Forms.ComboBox();
+            this.cbo_DISTRB_CHL = new System.Windows.Forms.ComboBox();
+            this.cbo_ORDER_TYPE = new System.Windows.Forms.ComboBox();
+            this.cbo_COMPLETE_FLAG = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -122,24 +122,21 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.Controls.Add(this.txt_PLAN_QTY, 0, 9);
-            this.tableLayoutPanel3.Controls.Add(this.txt_COMPLETE_FLAG, 0, 9);
-            this.tableLayoutPanel3.Controls.Add(this.txt_INPUT_QTY, 0, 9);
-            this.tableLayoutPanel3.Controls.Add(this.txt_INSERT_DATE, 0, 9);
-            this.tableLayoutPanel3.Controls.Add(this.txt_WORK_TIME, 0, 9);
-            this.tableLayoutPanel3.Controls.Add(this.txt_CURRENCY_UNIT, 4, 5);
+            this.tableLayoutPanel3.Controls.Add(this.cbo_ORDER_TYPE, 3, 7);
+            this.tableLayoutPanel3.Controls.Add(this.cbo_DISTRB_CHL, 2, 7);
+            this.tableLayoutPanel3.Controls.Add(this.cbo_CURRENCY_UNIT, 4, 5);
+            this.tableLayoutPanel3.Controls.Add(this.dtp_DUE_DATE_B, 4, 3);
+            this.tableLayoutPanel3.Controls.Add(this.dtp_DUE_DATE_A, 3, 3);
+            this.tableLayoutPanel3.Controls.Add(this.cbo_WC_CODE, 2, 3);
+            this.tableLayoutPanel3.Controls.Add(this.cbo_PROD_UNIT, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.cbo_PROD_CODE, 5, 1);
+            this.tableLayoutPanel3.Controls.Add(this.cbo_MRP_MGR, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.txt_EXCHG_RATE, 3, 5);
             this.tableLayoutPanel3.Controls.Add(this.txt_ORDER_UNIT_PRICE, 1, 5);
             this.tableLayoutPanel3.Controls.Add(this.txt_ROLL_METER, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.txt_DUE_DATE_B, 4, 3);
-            this.tableLayoutPanel3.Controls.Add(this.txt_DUE_DATE_A, 3, 3);
-            this.tableLayoutPanel3.Controls.Add(this.txt_WC_CODE, 2, 3);
             this.tableLayoutPanel3.Controls.Add(this.txt_P_VERSION, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.txt_PROD_UNIT, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.txt_ORDER_DATE, 4, 1);
             this.tableLayoutPanel3.Controls.Add(this.txt_ORDER_SEQ, 3, 1);
             this.tableLayoutPanel3.Controls.Add(this.txt_ORDER_NO, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.txt_MRP_MGR, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.metroLabel4, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.metroLabel3, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.metroLabel2, 1, 0);
@@ -158,7 +155,6 @@
             this.tableLayoutPanel3.Controls.Add(this.metroLabel15, 2, 4);
             this.tableLayoutPanel3.Controls.Add(this.metroLabel16, 3, 4);
             this.tableLayoutPanel3.Controls.Add(this.metroLabel17, 4, 4);
-            this.tableLayoutPanel3.Controls.Add(this.txt_PROD_CODE, 5, 1);
             this.tableLayoutPanel3.Controls.Add(this.txt_ORDER_QTY, 5, 3);
             this.tableLayoutPanel3.Controls.Add(this.txt_PROD_TYPE, 5, 5);
             this.tableLayoutPanel3.Controls.Add(this.metroLabel19, 5, 4);
@@ -175,11 +171,15 @@
             this.tableLayoutPanel3.Controls.Add(this.metroLabel29, 4, 8);
             this.tableLayoutPanel3.Controls.Add(this.txt_CUST_CODE, 0, 7);
             this.tableLayoutPanel3.Controls.Add(this.txt_CUST_NAME, 1, 7);
-            this.tableLayoutPanel3.Controls.Add(this.txt_DISTRB_CHL, 2, 7);
-            this.tableLayoutPanel3.Controls.Add(this.txt_ORDER_TYPE, 3, 7);
             this.tableLayoutPanel3.Controls.Add(this.txt_CONFIRM_FLAG, 4, 7);
             this.tableLayoutPanel3.Controls.Add(this.txt_REMARK, 5, 7);
             this.tableLayoutPanel3.Controls.Add(this.cbo_PLANT_CODE, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.dtp_ORDER_DATE, 4, 1);
+            this.tableLayoutPanel3.Controls.Add(this.cbo_COMPLETE_FLAG, 0, 9);
+            this.tableLayoutPanel3.Controls.Add(this.txt_PLAN_QTY, 1, 9);
+            this.tableLayoutPanel3.Controls.Add(this.txt_INPUT_QTY, 2, 9);
+            this.tableLayoutPanel3.Controls.Add(this.txt_WORK_TIME, 3, 9);
+            this.tableLayoutPanel3.Controls.Add(this.txt_INSERT_DATE, 4, 9);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -213,7 +213,7 @@
             this.txt_PLAN_QTY.CustomButton.UseSelectable = true;
             this.txt_PLAN_QTY.CustomButton.Visible = false;
             this.txt_PLAN_QTY.Lines = new string[0];
-            this.txt_PLAN_QTY.Location = new System.Drawing.Point(4, 473);
+            this.txt_PLAN_QTY.Location = new System.Drawing.Point(148, 473);
             this.txt_PLAN_QTY.MaxLength = 32767;
             this.txt_PLAN_QTY.Name = "txt_PLAN_QTY";
             this.txt_PLAN_QTY.PasswordChar = '\0';
@@ -227,68 +227,6 @@
             this.txt_PLAN_QTY.UseSelectable = true;
             this.txt_PLAN_QTY.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_PLAN_QTY.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txt_COMPLETE_FLAG
-            // 
-            this.txt_COMPLETE_FLAG.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_COMPLETE_FLAG.CustomButton.Image = null;
-            this.txt_COMPLETE_FLAG.CustomButton.Location = new System.Drawing.Point(115, 1);
-            this.txt_COMPLETE_FLAG.CustomButton.Name = "";
-            this.txt_COMPLETE_FLAG.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_COMPLETE_FLAG.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_COMPLETE_FLAG.CustomButton.TabIndex = 1;
-            this.txt_COMPLETE_FLAG.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_COMPLETE_FLAG.CustomButton.UseSelectable = true;
-            this.txt_COMPLETE_FLAG.CustomButton.Visible = false;
-            this.txt_COMPLETE_FLAG.Lines = new string[0];
-            this.txt_COMPLETE_FLAG.Location = new System.Drawing.Point(436, 473);
-            this.txt_COMPLETE_FLAG.MaxLength = 32767;
-            this.txt_COMPLETE_FLAG.Name = "txt_COMPLETE_FLAG";
-            this.txt_COMPLETE_FLAG.PasswordChar = '\0';
-            this.txt_COMPLETE_FLAG.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_COMPLETE_FLAG.SelectedText = "";
-            this.txt_COMPLETE_FLAG.SelectionLength = 0;
-            this.txt_COMPLETE_FLAG.SelectionStart = 0;
-            this.txt_COMPLETE_FLAG.ShortcutsEnabled = true;
-            this.txt_COMPLETE_FLAG.Size = new System.Drawing.Size(137, 23);
-            this.txt_COMPLETE_FLAG.TabIndex = 24;
-            this.txt_COMPLETE_FLAG.UseSelectable = true;
-            this.txt_COMPLETE_FLAG.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_COMPLETE_FLAG.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txt_INPUT_QTY
-            // 
-            this.txt_INPUT_QTY.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_INPUT_QTY.CustomButton.Image = null;
-            this.txt_INPUT_QTY.CustomButton.Location = new System.Drawing.Point(115, 1);
-            this.txt_INPUT_QTY.CustomButton.Name = "";
-            this.txt_INPUT_QTY.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_INPUT_QTY.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_INPUT_QTY.CustomButton.TabIndex = 1;
-            this.txt_INPUT_QTY.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_INPUT_QTY.CustomButton.UseSelectable = true;
-            this.txt_INPUT_QTY.CustomButton.Visible = false;
-            this.txt_INPUT_QTY.Lines = new string[0];
-            this.txt_INPUT_QTY.Location = new System.Drawing.Point(580, 473);
-            this.txt_INPUT_QTY.MaxLength = 32767;
-            this.txt_INPUT_QTY.Name = "txt_INPUT_QTY";
-            this.txt_INPUT_QTY.PasswordChar = '\0';
-            this.txt_INPUT_QTY.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_INPUT_QTY.SelectedText = "";
-            this.txt_INPUT_QTY.SelectionLength = 0;
-            this.txt_INPUT_QTY.SelectionStart = 0;
-            this.txt_INPUT_QTY.ShortcutsEnabled = true;
-            this.txt_INPUT_QTY.Size = new System.Drawing.Size(137, 23);
-            this.txt_INPUT_QTY.TabIndex = 26;
-            this.txt_INPUT_QTY.UseSelectable = true;
-            this.txt_INPUT_QTY.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_INPUT_QTY.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txt_INSERT_DATE
             // 
@@ -306,7 +244,7 @@
             this.txt_INSERT_DATE.CustomButton.UseSelectable = true;
             this.txt_INSERT_DATE.CustomButton.Visible = false;
             this.txt_INSERT_DATE.Lines = new string[0];
-            this.txt_INSERT_DATE.Location = new System.Drawing.Point(148, 473);
+            this.txt_INSERT_DATE.Location = new System.Drawing.Point(580, 473);
             this.txt_INSERT_DATE.MaxLength = 32767;
             this.txt_INSERT_DATE.Name = "txt_INSERT_DATE";
             this.txt_INSERT_DATE.PasswordChar = '\0';
@@ -316,10 +254,41 @@
             this.txt_INSERT_DATE.SelectionStart = 0;
             this.txt_INSERT_DATE.ShortcutsEnabled = true;
             this.txt_INSERT_DATE.Size = new System.Drawing.Size(137, 23);
-            this.txt_INSERT_DATE.TabIndex = 28;
+            this.txt_INSERT_DATE.TabIndex = 24;
             this.txt_INSERT_DATE.UseSelectable = true;
             this.txt_INSERT_DATE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_INSERT_DATE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txt_INPUT_QTY
+            // 
+            this.txt_INPUT_QTY.Anchor = System.Windows.Forms.AnchorStyles.None;
+            // 
+            // 
+            // 
+            this.txt_INPUT_QTY.CustomButton.Image = null;
+            this.txt_INPUT_QTY.CustomButton.Location = new System.Drawing.Point(115, 1);
+            this.txt_INPUT_QTY.CustomButton.Name = "";
+            this.txt_INPUT_QTY.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_INPUT_QTY.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_INPUT_QTY.CustomButton.TabIndex = 1;
+            this.txt_INPUT_QTY.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_INPUT_QTY.CustomButton.UseSelectable = true;
+            this.txt_INPUT_QTY.CustomButton.Visible = false;
+            this.txt_INPUT_QTY.Lines = new string[0];
+            this.txt_INPUT_QTY.Location = new System.Drawing.Point(292, 473);
+            this.txt_INPUT_QTY.MaxLength = 32767;
+            this.txt_INPUT_QTY.Name = "txt_INPUT_QTY";
+            this.txt_INPUT_QTY.PasswordChar = '\0';
+            this.txt_INPUT_QTY.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_INPUT_QTY.SelectedText = "";
+            this.txt_INPUT_QTY.SelectionLength = 0;
+            this.txt_INPUT_QTY.SelectionStart = 0;
+            this.txt_INPUT_QTY.ShortcutsEnabled = true;
+            this.txt_INPUT_QTY.Size = new System.Drawing.Size(137, 23);
+            this.txt_INPUT_QTY.TabIndex = 26;
+            this.txt_INPUT_QTY.UseSelectable = true;
+            this.txt_INPUT_QTY.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_INPUT_QTY.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txt_WORK_TIME
             // 
@@ -337,7 +306,7 @@
             this.txt_WORK_TIME.CustomButton.UseSelectable = true;
             this.txt_WORK_TIME.CustomButton.Visible = false;
             this.txt_WORK_TIME.Lines = new string[0];
-            this.txt_WORK_TIME.Location = new System.Drawing.Point(292, 473);
+            this.txt_WORK_TIME.Location = new System.Drawing.Point(436, 473);
             this.txt_WORK_TIME.MaxLength = 32767;
             this.txt_WORK_TIME.Name = "txt_WORK_TIME";
             this.txt_WORK_TIME.PasswordChar = '\0';
@@ -351,37 +320,6 @@
             this.txt_WORK_TIME.UseSelectable = true;
             this.txt_WORK_TIME.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_WORK_TIME.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txt_CURRENCY_UNIT
-            // 
-            this.txt_CURRENCY_UNIT.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_CURRENCY_UNIT.CustomButton.Image = null;
-            this.txt_CURRENCY_UNIT.CustomButton.Location = new System.Drawing.Point(115, 1);
-            this.txt_CURRENCY_UNIT.CustomButton.Name = "";
-            this.txt_CURRENCY_UNIT.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_CURRENCY_UNIT.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_CURRENCY_UNIT.CustomButton.TabIndex = 1;
-            this.txt_CURRENCY_UNIT.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_CURRENCY_UNIT.CustomButton.UseSelectable = true;
-            this.txt_CURRENCY_UNIT.CustomButton.Visible = false;
-            this.txt_CURRENCY_UNIT.Lines = new string[0];
-            this.txt_CURRENCY_UNIT.Location = new System.Drawing.Point(580, 264);
-            this.txt_CURRENCY_UNIT.MaxLength = 32767;
-            this.txt_CURRENCY_UNIT.Name = "txt_CURRENCY_UNIT";
-            this.txt_CURRENCY_UNIT.PasswordChar = '\0';
-            this.txt_CURRENCY_UNIT.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_CURRENCY_UNIT.SelectedText = "";
-            this.txt_CURRENCY_UNIT.SelectionLength = 0;
-            this.txt_CURRENCY_UNIT.SelectionStart = 0;
-            this.txt_CURRENCY_UNIT.ShortcutsEnabled = true;
-            this.txt_CURRENCY_UNIT.Size = new System.Drawing.Size(137, 23);
-            this.txt_CURRENCY_UNIT.TabIndex = 16;
-            this.txt_CURRENCY_UNIT.UseSelectable = true;
-            this.txt_CURRENCY_UNIT.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_CURRENCY_UNIT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txt_EXCHG_RATE
             // 
@@ -476,99 +414,6 @@
             this.txt_ROLL_METER.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_ROLL_METER.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // txt_DUE_DATE_B
-            // 
-            this.txt_DUE_DATE_B.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_DUE_DATE_B.CustomButton.Image = null;
-            this.txt_DUE_DATE_B.CustomButton.Location = new System.Drawing.Point(115, 1);
-            this.txt_DUE_DATE_B.CustomButton.Name = "";
-            this.txt_DUE_DATE_B.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_DUE_DATE_B.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_DUE_DATE_B.CustomButton.TabIndex = 1;
-            this.txt_DUE_DATE_B.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_DUE_DATE_B.CustomButton.UseSelectable = true;
-            this.txt_DUE_DATE_B.CustomButton.Visible = false;
-            this.txt_DUE_DATE_B.Lines = new string[0];
-            this.txt_DUE_DATE_B.Location = new System.Drawing.Point(580, 160);
-            this.txt_DUE_DATE_B.MaxLength = 32767;
-            this.txt_DUE_DATE_B.Name = "txt_DUE_DATE_B";
-            this.txt_DUE_DATE_B.PasswordChar = '\0';
-            this.txt_DUE_DATE_B.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_DUE_DATE_B.SelectedText = "";
-            this.txt_DUE_DATE_B.SelectionLength = 0;
-            this.txt_DUE_DATE_B.SelectionStart = 0;
-            this.txt_DUE_DATE_B.ShortcutsEnabled = true;
-            this.txt_DUE_DATE_B.Size = new System.Drawing.Size(137, 23);
-            this.txt_DUE_DATE_B.TabIndex = 10;
-            this.txt_DUE_DATE_B.UseSelectable = true;
-            this.txt_DUE_DATE_B.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_DUE_DATE_B.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txt_DUE_DATE_A
-            // 
-            this.txt_DUE_DATE_A.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_DUE_DATE_A.CustomButton.Image = null;
-            this.txt_DUE_DATE_A.CustomButton.Location = new System.Drawing.Point(115, 1);
-            this.txt_DUE_DATE_A.CustomButton.Name = "";
-            this.txt_DUE_DATE_A.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_DUE_DATE_A.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_DUE_DATE_A.CustomButton.TabIndex = 1;
-            this.txt_DUE_DATE_A.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_DUE_DATE_A.CustomButton.UseSelectable = true;
-            this.txt_DUE_DATE_A.CustomButton.Visible = false;
-            this.txt_DUE_DATE_A.Lines = new string[0];
-            this.txt_DUE_DATE_A.Location = new System.Drawing.Point(436, 160);
-            this.txt_DUE_DATE_A.MaxLength = 32767;
-            this.txt_DUE_DATE_A.Name = "txt_DUE_DATE_A";
-            this.txt_DUE_DATE_A.PasswordChar = '\0';
-            this.txt_DUE_DATE_A.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_DUE_DATE_A.SelectedText = "";
-            this.txt_DUE_DATE_A.SelectionLength = 0;
-            this.txt_DUE_DATE_A.SelectionStart = 0;
-            this.txt_DUE_DATE_A.ShortcutsEnabled = true;
-            this.txt_DUE_DATE_A.Size = new System.Drawing.Size(137, 23);
-            this.txt_DUE_DATE_A.TabIndex = 9;
-            this.txt_DUE_DATE_A.UseSelectable = true;
-            this.txt_DUE_DATE_A.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_DUE_DATE_A.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txt_WC_CODE
-            // 
-            this.txt_WC_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_WC_CODE.CustomButton.Image = null;
-            this.txt_WC_CODE.CustomButton.Location = new System.Drawing.Point(115, 1);
-            this.txt_WC_CODE.CustomButton.Name = "";
-            this.txt_WC_CODE.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_WC_CODE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_WC_CODE.CustomButton.TabIndex = 1;
-            this.txt_WC_CODE.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_WC_CODE.CustomButton.UseSelectable = true;
-            this.txt_WC_CODE.CustomButton.Visible = false;
-            this.txt_WC_CODE.Lines = new string[0];
-            this.txt_WC_CODE.Location = new System.Drawing.Point(292, 160);
-            this.txt_WC_CODE.MaxLength = 32767;
-            this.txt_WC_CODE.Name = "txt_WC_CODE";
-            this.txt_WC_CODE.PasswordChar = '\0';
-            this.txt_WC_CODE.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_WC_CODE.SelectedText = "";
-            this.txt_WC_CODE.SelectionLength = 0;
-            this.txt_WC_CODE.SelectionStart = 0;
-            this.txt_WC_CODE.ShortcutsEnabled = true;
-            this.txt_WC_CODE.Size = new System.Drawing.Size(137, 23);
-            this.txt_WC_CODE.TabIndex = 8;
-            this.txt_WC_CODE.UseSelectable = true;
-            this.txt_WC_CODE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_WC_CODE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // txt_P_VERSION
             // 
             this.txt_P_VERSION.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -599,68 +444,6 @@
             this.txt_P_VERSION.UseSelectable = true;
             this.txt_P_VERSION.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_P_VERSION.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txt_PROD_UNIT
-            // 
-            this.txt_PROD_UNIT.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_PROD_UNIT.CustomButton.Image = null;
-            this.txt_PROD_UNIT.CustomButton.Location = new System.Drawing.Point(115, 1);
-            this.txt_PROD_UNIT.CustomButton.Name = "";
-            this.txt_PROD_UNIT.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_PROD_UNIT.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_PROD_UNIT.CustomButton.TabIndex = 1;
-            this.txt_PROD_UNIT.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_PROD_UNIT.CustomButton.UseSelectable = true;
-            this.txt_PROD_UNIT.CustomButton.Visible = false;
-            this.txt_PROD_UNIT.Lines = new string[0];
-            this.txt_PROD_UNIT.Location = new System.Drawing.Point(4, 160);
-            this.txt_PROD_UNIT.MaxLength = 32767;
-            this.txt_PROD_UNIT.Name = "txt_PROD_UNIT";
-            this.txt_PROD_UNIT.PasswordChar = '\0';
-            this.txt_PROD_UNIT.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_PROD_UNIT.SelectedText = "";
-            this.txt_PROD_UNIT.SelectionLength = 0;
-            this.txt_PROD_UNIT.SelectionStart = 0;
-            this.txt_PROD_UNIT.ShortcutsEnabled = true;
-            this.txt_PROD_UNIT.Size = new System.Drawing.Size(137, 23);
-            this.txt_PROD_UNIT.TabIndex = 6;
-            this.txt_PROD_UNIT.UseSelectable = true;
-            this.txt_PROD_UNIT.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_PROD_UNIT.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txt_ORDER_DATE
-            // 
-            this.txt_ORDER_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_ORDER_DATE.CustomButton.Image = null;
-            this.txt_ORDER_DATE.CustomButton.Location = new System.Drawing.Point(115, 1);
-            this.txt_ORDER_DATE.CustomButton.Name = "";
-            this.txt_ORDER_DATE.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_ORDER_DATE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_ORDER_DATE.CustomButton.TabIndex = 1;
-            this.txt_ORDER_DATE.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_ORDER_DATE.CustomButton.UseSelectable = true;
-            this.txt_ORDER_DATE.CustomButton.Visible = false;
-            this.txt_ORDER_DATE.Lines = new string[0];
-            this.txt_ORDER_DATE.Location = new System.Drawing.Point(580, 56);
-            this.txt_ORDER_DATE.MaxLength = 32767;
-            this.txt_ORDER_DATE.Name = "txt_ORDER_DATE";
-            this.txt_ORDER_DATE.PasswordChar = '\0';
-            this.txt_ORDER_DATE.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_ORDER_DATE.SelectedText = "";
-            this.txt_ORDER_DATE.SelectionLength = 0;
-            this.txt_ORDER_DATE.SelectionStart = 0;
-            this.txt_ORDER_DATE.ShortcutsEnabled = true;
-            this.txt_ORDER_DATE.Size = new System.Drawing.Size(137, 23);
-            this.txt_ORDER_DATE.TabIndex = 4;
-            this.txt_ORDER_DATE.UseSelectable = true;
-            this.txt_ORDER_DATE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_ORDER_DATE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txt_ORDER_SEQ
             // 
@@ -723,37 +506,6 @@
             this.txt_ORDER_NO.UseSelectable = true;
             this.txt_ORDER_NO.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_ORDER_NO.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txt_MRP_MGR
-            // 
-            this.txt_MRP_MGR.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_MRP_MGR.CustomButton.Image = null;
-            this.txt_MRP_MGR.CustomButton.Location = new System.Drawing.Point(115, 1);
-            this.txt_MRP_MGR.CustomButton.Name = "";
-            this.txt_MRP_MGR.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_MRP_MGR.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_MRP_MGR.CustomButton.TabIndex = 1;
-            this.txt_MRP_MGR.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_MRP_MGR.CustomButton.UseSelectable = true;
-            this.txt_MRP_MGR.CustomButton.Visible = false;
-            this.txt_MRP_MGR.Lines = new string[0];
-            this.txt_MRP_MGR.Location = new System.Drawing.Point(148, 56);
-            this.txt_MRP_MGR.MaxLength = 32767;
-            this.txt_MRP_MGR.Name = "txt_MRP_MGR";
-            this.txt_MRP_MGR.PasswordChar = '\0';
-            this.txt_MRP_MGR.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_MRP_MGR.SelectedText = "";
-            this.txt_MRP_MGR.SelectionLength = 0;
-            this.txt_MRP_MGR.SelectionStart = 0;
-            this.txt_MRP_MGR.ShortcutsEnabled = true;
-            this.txt_MRP_MGR.Size = new System.Drawing.Size(137, 23);
-            this.txt_MRP_MGR.TabIndex = 1;
-            this.txt_MRP_MGR.UseSelectable = true;
-            this.txt_MRP_MGR.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_MRP_MGR.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel4
             // 
@@ -972,37 +724,6 @@
             this.metroLabel17.Size = new System.Drawing.Size(84, 25);
             this.metroLabel17.TabIndex = 31;
             this.metroLabel17.Text = "통화단위";
-            // 
-            // txt_PROD_CODE
-            // 
-            this.txt_PROD_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_PROD_CODE.CustomButton.Image = null;
-            this.txt_PROD_CODE.CustomButton.Location = new System.Drawing.Point(116, 1);
-            this.txt_PROD_CODE.CustomButton.Name = "";
-            this.txt_PROD_CODE.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_PROD_CODE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_PROD_CODE.CustomButton.TabIndex = 1;
-            this.txt_PROD_CODE.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_PROD_CODE.CustomButton.UseSelectable = true;
-            this.txt_PROD_CODE.CustomButton.Visible = false;
-            this.txt_PROD_CODE.Lines = new string[0];
-            this.txt_PROD_CODE.Location = new System.Drawing.Point(724, 56);
-            this.txt_PROD_CODE.MaxLength = 32767;
-            this.txt_PROD_CODE.Name = "txt_PROD_CODE";
-            this.txt_PROD_CODE.PasswordChar = '\0';
-            this.txt_PROD_CODE.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_PROD_CODE.SelectedText = "";
-            this.txt_PROD_CODE.SelectionLength = 0;
-            this.txt_PROD_CODE.SelectionStart = 0;
-            this.txt_PROD_CODE.ShortcutsEnabled = true;
-            this.txt_PROD_CODE.Size = new System.Drawing.Size(138, 23);
-            this.txt_PROD_CODE.TabIndex = 5;
-            this.txt_PROD_CODE.UseSelectable = true;
-            this.txt_PROD_CODE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_PROD_CODE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txt_ORDER_QTY
             // 
@@ -1260,68 +981,6 @@
             this.txt_CUST_NAME.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_CUST_NAME.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // txt_DISTRB_CHL
-            // 
-            this.txt_DISTRB_CHL.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_DISTRB_CHL.CustomButton.Image = null;
-            this.txt_DISTRB_CHL.CustomButton.Location = new System.Drawing.Point(115, 1);
-            this.txt_DISTRB_CHL.CustomButton.Name = "";
-            this.txt_DISTRB_CHL.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_DISTRB_CHL.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_DISTRB_CHL.CustomButton.TabIndex = 1;
-            this.txt_DISTRB_CHL.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_DISTRB_CHL.CustomButton.UseSelectable = true;
-            this.txt_DISTRB_CHL.CustomButton.Visible = false;
-            this.txt_DISTRB_CHL.Lines = new string[0];
-            this.txt_DISTRB_CHL.Location = new System.Drawing.Point(292, 368);
-            this.txt_DISTRB_CHL.MaxLength = 32767;
-            this.txt_DISTRB_CHL.Name = "txt_DISTRB_CHL";
-            this.txt_DISTRB_CHL.PasswordChar = '\0';
-            this.txt_DISTRB_CHL.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_DISTRB_CHL.SelectedText = "";
-            this.txt_DISTRB_CHL.SelectionLength = 0;
-            this.txt_DISTRB_CHL.SelectionStart = 0;
-            this.txt_DISTRB_CHL.ShortcutsEnabled = true;
-            this.txt_DISTRB_CHL.Size = new System.Drawing.Size(137, 23);
-            this.txt_DISTRB_CHL.TabIndex = 20;
-            this.txt_DISTRB_CHL.UseSelectable = true;
-            this.txt_DISTRB_CHL.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_DISTRB_CHL.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txt_ORDER_TYPE
-            // 
-            this.txt_ORDER_TYPE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_ORDER_TYPE.CustomButton.Image = null;
-            this.txt_ORDER_TYPE.CustomButton.Location = new System.Drawing.Point(115, 1);
-            this.txt_ORDER_TYPE.CustomButton.Name = "";
-            this.txt_ORDER_TYPE.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_ORDER_TYPE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_ORDER_TYPE.CustomButton.TabIndex = 1;
-            this.txt_ORDER_TYPE.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_ORDER_TYPE.CustomButton.UseSelectable = true;
-            this.txt_ORDER_TYPE.CustomButton.Visible = false;
-            this.txt_ORDER_TYPE.Lines = new string[0];
-            this.txt_ORDER_TYPE.Location = new System.Drawing.Point(436, 368);
-            this.txt_ORDER_TYPE.MaxLength = 32767;
-            this.txt_ORDER_TYPE.Name = "txt_ORDER_TYPE";
-            this.txt_ORDER_TYPE.PasswordChar = '\0';
-            this.txt_ORDER_TYPE.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_ORDER_TYPE.SelectedText = "";
-            this.txt_ORDER_TYPE.SelectionLength = 0;
-            this.txt_ORDER_TYPE.SelectionStart = 0;
-            this.txt_ORDER_TYPE.ShortcutsEnabled = true;
-            this.txt_ORDER_TYPE.Size = new System.Drawing.Size(137, 23);
-            this.txt_ORDER_TYPE.TabIndex = 21;
-            this.txt_ORDER_TYPE.UseSelectable = true;
-            this.txt_ORDER_TYPE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_ORDER_TYPE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // txt_CONFIRM_FLAG
             // 
             this.txt_CONFIRM_FLAG.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -1433,7 +1092,7 @@
             // cbo_PLANT_CODE
             // 
             this.cbo_PLANT_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbo_PLANT_CODE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_PLANT_CODE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.cbo_PLANT_CODE.FormattingEnabled = true;
             this.cbo_PLANT_CODE.Items.AddRange(new object[] {
             "선택",
@@ -1442,6 +1101,155 @@
             this.cbo_PLANT_CODE.Name = "cbo_PLANT_CODE";
             this.cbo_PLANT_CODE.Size = new System.Drawing.Size(137, 23);
             this.cbo_PLANT_CODE.TabIndex = 59;
+            // 
+            // cbo_MRP_MGR
+            // 
+            this.cbo_MRP_MGR.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_MRP_MGR.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_MRP_MGR.FormattingEnabled = true;
+            this.cbo_MRP_MGR.Items.AddRange(new object[] {
+            "선택",
+            "F63"});
+            this.cbo_MRP_MGR.Location = new System.Drawing.Point(148, 56);
+            this.cbo_MRP_MGR.Name = "cbo_MRP_MGR";
+            this.cbo_MRP_MGR.Size = new System.Drawing.Size(137, 23);
+            this.cbo_MRP_MGR.TabIndex = 60;
+            // 
+            // dtp_ORDER_DATE
+            // 
+            this.dtp_ORDER_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtp_ORDER_DATE.CustomFormat = "yyyyMMdd";
+            this.dtp_ORDER_DATE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dtp_ORDER_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_ORDER_DATE.Location = new System.Drawing.Point(580, 56);
+            this.dtp_ORDER_DATE.Name = "dtp_ORDER_DATE";
+            this.dtp_ORDER_DATE.Size = new System.Drawing.Size(137, 23);
+            this.dtp_ORDER_DATE.TabIndex = 61;
+            // 
+            // cbo_PROD_CODE
+            // 
+            this.cbo_PROD_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_PROD_CODE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_PROD_CODE.FormattingEnabled = true;
+            this.cbo_PROD_CODE.Items.AddRange(new object[] {
+            "선택",
+            "ASW0951-02",
+            "DXM0001-01",
+            "DXM0001-02",
+            "DXM0001-03",
+            "DXM0002-01",
+            "ASW0951-01"});
+            this.cbo_PROD_CODE.Location = new System.Drawing.Point(724, 56);
+            this.cbo_PROD_CODE.Name = "cbo_PROD_CODE";
+            this.cbo_PROD_CODE.Size = new System.Drawing.Size(137, 23);
+            this.cbo_PROD_CODE.TabIndex = 62;
+            // 
+            // cbo_PROD_UNIT
+            // 
+            this.cbo_PROD_UNIT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_PROD_UNIT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_PROD_UNIT.FormattingEnabled = true;
+            this.cbo_PROD_UNIT.Items.AddRange(new object[] {
+            "선택",
+            "EA"});
+            this.cbo_PROD_UNIT.Location = new System.Drawing.Point(4, 160);
+            this.cbo_PROD_UNIT.Name = "cbo_PROD_UNIT";
+            this.cbo_PROD_UNIT.Size = new System.Drawing.Size(137, 23);
+            this.cbo_PROD_UNIT.TabIndex = 63;
+            // 
+            // cbo_WC_CODE
+            // 
+            this.cbo_WC_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_WC_CODE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_WC_CODE.FormattingEnabled = true;
+            this.cbo_WC_CODE.Items.AddRange(new object[] {
+            "선택",
+            "AT01",
+            "AT02"});
+            this.cbo_WC_CODE.Location = new System.Drawing.Point(292, 160);
+            this.cbo_WC_CODE.Name = "cbo_WC_CODE";
+            this.cbo_WC_CODE.Size = new System.Drawing.Size(137, 23);
+            this.cbo_WC_CODE.TabIndex = 64;
+            // 
+            // dtp_DUE_DATE_A
+            // 
+            this.dtp_DUE_DATE_A.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtp_DUE_DATE_A.CustomFormat = "yyyyMMdd";
+            this.dtp_DUE_DATE_A.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dtp_DUE_DATE_A.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_DUE_DATE_A.Location = new System.Drawing.Point(436, 160);
+            this.dtp_DUE_DATE_A.Name = "dtp_DUE_DATE_A";
+            this.dtp_DUE_DATE_A.Size = new System.Drawing.Size(137, 23);
+            this.dtp_DUE_DATE_A.TabIndex = 65;
+            // 
+            // dtp_DUE_DATE_B
+            // 
+            this.dtp_DUE_DATE_B.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtp_DUE_DATE_B.CustomFormat = "yyyyMMdd";
+            this.dtp_DUE_DATE_B.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dtp_DUE_DATE_B.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_DUE_DATE_B.Location = new System.Drawing.Point(580, 160);
+            this.dtp_DUE_DATE_B.Name = "dtp_DUE_DATE_B";
+            this.dtp_DUE_DATE_B.Size = new System.Drawing.Size(137, 23);
+            this.dtp_DUE_DATE_B.TabIndex = 66;
+            // 
+            // cbo_CURRENCY_UNIT
+            // 
+            this.cbo_CURRENCY_UNIT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_CURRENCY_UNIT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_CURRENCY_UNIT.FormattingEnabled = true;
+            this.cbo_CURRENCY_UNIT.Items.AddRange(new object[] {
+            "KRW"});
+            this.cbo_CURRENCY_UNIT.Location = new System.Drawing.Point(580, 264);
+            this.cbo_CURRENCY_UNIT.Name = "cbo_CURRENCY_UNIT";
+            this.cbo_CURRENCY_UNIT.Size = new System.Drawing.Size(137, 23);
+            this.cbo_CURRENCY_UNIT.TabIndex = 67;
+            // 
+            // cbo_DISTRB_CHL
+            // 
+            this.cbo_DISTRB_CHL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_DISTRB_CHL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_DISTRB_CHL.FormattingEnabled = true;
+            this.cbo_DISTRB_CHL.Items.AddRange(new object[] {
+            "10",
+            "20",
+            "40",
+            "50",
+            "51",
+            "52"});
+            this.cbo_DISTRB_CHL.Location = new System.Drawing.Point(292, 368);
+            this.cbo_DISTRB_CHL.Name = "cbo_DISTRB_CHL";
+            this.cbo_DISTRB_CHL.Size = new System.Drawing.Size(137, 23);
+            this.cbo_DISTRB_CHL.TabIndex = 68;
+            // 
+            // cbo_ORDER_TYPE
+            // 
+            this.cbo_ORDER_TYPE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_ORDER_TYPE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_ORDER_TYPE.FormattingEnabled = true;
+            this.cbo_ORDER_TYPE.Items.AddRange(new object[] {
+            "선택",
+            "P",
+            "S"});
+            this.cbo_ORDER_TYPE.Location = new System.Drawing.Point(436, 368);
+            this.cbo_ORDER_TYPE.Name = "cbo_ORDER_TYPE";
+            this.cbo_ORDER_TYPE.Size = new System.Drawing.Size(137, 23);
+            this.cbo_ORDER_TYPE.TabIndex = 69;
+            // 
+            // cbo_COMPLETE_FLAG
+            // 
+            this.cbo_COMPLETE_FLAG.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_COMPLETE_FLAG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_COMPLETE_FLAG.FormattingEnabled = true;
+            this.cbo_COMPLETE_FLAG.Items.AddRange(new object[] {
+            "선택",
+            "N",
+            "Y",
+            "C"});
+            this.cbo_COMPLETE_FLAG.Location = new System.Drawing.Point(4, 473);
+            this.cbo_COMPLETE_FLAG.Name = "cbo_COMPLETE_FLAG";
+            this.cbo_COMPLETE_FLAG.Size = new System.Drawing.Size(137, 23);
+            this.cbo_COMPLETE_FLAG.TabIndex = 70;
             // 
             // InputPopup_SAPOrder
             // 
@@ -1464,23 +1272,15 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private MetroFramework.Controls.MetroTextBox txt_PLAN_QTY;
-        private MetroFramework.Controls.MetroTextBox txt_COMPLETE_FLAG;
-        private MetroFramework.Controls.MetroTextBox txt_INPUT_QTY;
         private MetroFramework.Controls.MetroTextBox txt_INSERT_DATE;
+        private MetroFramework.Controls.MetroTextBox txt_INPUT_QTY;
         private MetroFramework.Controls.MetroTextBox txt_WORK_TIME;
-        private MetroFramework.Controls.MetroTextBox txt_CURRENCY_UNIT;
         private MetroFramework.Controls.MetroTextBox txt_EXCHG_RATE;
         private MetroFramework.Controls.MetroTextBox txt_ORDER_UNIT_PRICE;
         private MetroFramework.Controls.MetroTextBox txt_ROLL_METER;
-        private MetroFramework.Controls.MetroTextBox txt_DUE_DATE_B;
-        private MetroFramework.Controls.MetroTextBox txt_DUE_DATE_A;
-        private MetroFramework.Controls.MetroTextBox txt_WC_CODE;
         private MetroFramework.Controls.MetroTextBox txt_P_VERSION;
-        private MetroFramework.Controls.MetroTextBox txt_PROD_UNIT;
-        private MetroFramework.Controls.MetroTextBox txt_ORDER_DATE;
         private MetroFramework.Controls.MetroTextBox txt_ORDER_SEQ;
         private MetroFramework.Controls.MetroTextBox txt_ORDER_NO;
-        private MetroFramework.Controls.MetroTextBox txt_MRP_MGR;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
@@ -1499,7 +1299,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel15;
         private MetroFramework.Controls.MetroLabel metroLabel16;
         private MetroFramework.Controls.MetroLabel metroLabel17;
-        private MetroFramework.Controls.MetroTextBox txt_PROD_CODE;
         private MetroFramework.Controls.MetroTextBox txt_ORDER_QTY;
         private MetroFramework.Controls.MetroTextBox txt_PROD_TYPE;
         private MetroFramework.Controls.MetroLabel metroLabel19;
@@ -1516,13 +1315,22 @@
         private MetroFramework.Controls.MetroLabel metroLabel29;
         private MetroFramework.Controls.MetroTextBox txt_CUST_CODE;
         private MetroFramework.Controls.MetroTextBox txt_CUST_NAME;
-        private MetroFramework.Controls.MetroTextBox txt_DISTRB_CHL;
-        private MetroFramework.Controls.MetroTextBox txt_ORDER_TYPE;
         private MetroFramework.Controls.MetroTextBox txt_CONFIRM_FLAG;
         private MetroFramework.Controls.MetroTextBox txt_REMARK;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private MetroFramework.Controls.MetroButton btn_Close;
         private MetroFramework.Controls.MetroButton btn_Save;
         private System.Windows.Forms.ComboBox cbo_PLANT_CODE;
+        private System.Windows.Forms.ComboBox cbo_MRP_MGR;
+        private System.Windows.Forms.DateTimePicker dtp_ORDER_DATE;
+        private System.Windows.Forms.ComboBox cbo_PROD_CODE;
+        private System.Windows.Forms.ComboBox cbo_PROD_UNIT;
+        private System.Windows.Forms.ComboBox cbo_WC_CODE;
+        private System.Windows.Forms.DateTimePicker dtp_DUE_DATE_B;
+        private System.Windows.Forms.DateTimePicker dtp_DUE_DATE_A;
+        private System.Windows.Forms.ComboBox cbo_CURRENCY_UNIT;
+        private System.Windows.Forms.ComboBox cbo_DISTRB_CHL;
+        private System.Windows.Forms.ComboBox cbo_ORDER_TYPE;
+        private System.Windows.Forms.ComboBox cbo_COMPLETE_FLAG;
     }
 }

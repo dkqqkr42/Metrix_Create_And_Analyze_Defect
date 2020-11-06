@@ -20,43 +20,16 @@ namespace FinalProject_Profile.PopupForm
         {
             InitializeComponent();
             cbo_PLANT_CODE.SelectedIndex = 0;
+            cbo_MRP_MGR.SelectedIndex = 0;
+            cbo_PROD_CODE.SelectedIndex = 0;
+            cbo_PROD_UNIT.SelectedIndex = 0;
+            cbo_WC_CODE.SelectedIndex = 0;
+            cbo_CURRENCY_UNIT.SelectedIndex = 0;
+            cbo_DISTRB_CHL.SelectedIndex = 1;
+            cbo_ORDER_TYPE.SelectedIndex = 0;
+            cbo_COMPLETE_FLAG.SelectedIndex = 0;
         }
 
-        /*
-        public InputPopup_SAPOrder(List<string> list)
-        {
-            InitializeComponent();
-            txt_PLANT_CODE.Text = list[1];
-            txt_MRP_MGR.Text = list[2];
-            txt_ORDER_NO.Text = list[3];
-            txt_ORDER_SEQ.Text = list[4];
-            txt_ORDER_DATE.Text = list[5];
-            txt_PROD_CODE.Text = list[6];
-            txt_PROD_UNIT.Text = list[7];
-            txt_P_VERSION.Text = list[8];
-            txt_WC_CODE.Text = list[9];
-            txt_DUE_DATE_A.Text = list[10];
-            txt_DUE_DATE_B.Text = list[11];
-            txt_ORDER_QTY.Text = list[12];
-            txt_ROLL_METER.Text = list[13];
-            txt_ORDER_UNIT_PRICE.Text = list[14];
-            txt_S_LOCATION.Text = list[15];
-            txt_EXCHG_RATE.Text = list[16];
-            txt_CURRENCY_UNIT.Text = list[17];
-            txt_PROD_TYPE.Text = list[18];
-            txt_CUST_CODE.Text = list[19];
-            txt_CUST_NAME.Text = list[20];
-            txt_DISTRB_CHL.Text = list[21];
-            txt_ORDER_TYPE.Text = list[22];
-            txt_CONFIRM_FLAG.Text = list[23];
-            txt_REMARK.Text = list[24];
-            txt_COMPLETE_FLAG.Text = list[25];
-            txt_PLAN_QTY.Text = list[26];
-            txt_INPUT_QTY.Text = list[27];
-            txt_WORK_TIME.Text = list[28];
-            txt_INSERT_DATE.Text = list[29];
-        }
-        */
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
@@ -78,30 +51,30 @@ namespace FinalProject_Profile.PopupForm
                 };
 
                 cmd.Parameters.Add("IN_PLANT_CODE", cbo_PLANT_CODE.Text);
-                cmd.Parameters.Add("IN_MRP_MGR", txt_MRP_MGR.Text);
+                cmd.Parameters.Add("IN_MRP_MGR", cbo_MRP_MGR.Text);
                 cmd.Parameters.Add("IN_ORDER_NO", txt_ORDER_NO.Text);
                 cmd.Parameters.Add("IN_ORDER_SEQ", txt_ORDER_SEQ.Text);
-                cmd.Parameters.Add("IN_ORDER_DATE", txt_ORDER_DATE.Text);
-                cmd.Parameters.Add("IN_PROD_CODE", txt_PROD_CODE.Text);
-                cmd.Parameters.Add("IN_PROD_UNIT", txt_PROD_UNIT.Text);
+                cmd.Parameters.Add("IN_ORDER_DATE", dtp_ORDER_DATE.Text);
+                cmd.Parameters.Add("IN_PROD_CODE", cbo_PROD_CODE.Text);
+                cmd.Parameters.Add("IN_PROD_UNIT", cbo_PROD_UNIT.Text);
                 cmd.Parameters.Add("IN_P_VERSION", txt_P_VERSION.Text);
-                cmd.Parameters.Add("IN_WC_CODE", txt_WC_CODE.Text);
-                cmd.Parameters.Add("IN_DUE_DATE_A", txt_DUE_DATE_A.Text);
-                cmd.Parameters.Add("IN_DUE_DATE_B", txt_DUE_DATE_B.Text);
+                cmd.Parameters.Add("IN_WC_CODE", cbo_WC_CODE.Text);
+                cmd.Parameters.Add("IN_DUE_DATE_A", dtp_DUE_DATE_A.Text);
+                cmd.Parameters.Add("IN_DUE_DATE_B", dtp_DUE_DATE_B.Text);
                 cmd.Parameters.Add("IN_ORDER_QTY", txt_ORDER_QTY.Text);
                 cmd.Parameters.Add("IN_ROLL_METER", txt_ROLL_METER.Text);
                 cmd.Parameters.Add("IN_ORDER_UNIT_PRICE", txt_ORDER_UNIT_PRICE.Text);
                 cmd.Parameters.Add("IN_S_LOCATION", txt_S_LOCATION.Text);
                 cmd.Parameters.Add("IN_EXCHG_RATE", txt_EXCHG_RATE.Text);
-                cmd.Parameters.Add("IN_CURRENCY_UNIT", txt_CURRENCY_UNIT.Text);
+                cmd.Parameters.Add("IN_CURRENCY_UNIT", cbo_CURRENCY_UNIT.Text);
                 cmd.Parameters.Add("IN_PROD_TYPE", txt_PROD_TYPE.Text);
                 cmd.Parameters.Add("IN_CUST_CODE", txt_CUST_CODE.Text);
                 cmd.Parameters.Add("IN_CUST_NAME", txt_CUST_NAME.Text);
-                cmd.Parameters.Add("IN_DISTRB_CHL", txt_DISTRB_CHL.Text);
-                cmd.Parameters.Add("IN_ORDER_TYPE", txt_ORDER_TYPE.Text);
-                cmd.Parameters.Add("IN_CONFIRM_FLAG", txt_CONFIRM_FLAG.Text);
+                cmd.Parameters.Add("IN_DISTRB_CHL", cbo_DISTRB_CHL.Text);
+                cmd.Parameters.Add("IN_ORDER_TYPE", cbo_ORDER_TYPE.Text);
+                cmd.Parameters.Add("IN_CONFIRM_FLAG", txt_CONFIRM_FLAG.Text.Equals("")? "N" : txt_CONFIRM_FLAG.Text);
                 cmd.Parameters.Add("IN_REMARK", txt_REMARK.Text);
-                cmd.Parameters.Add("IN_COMPLETE_FLAG", txt_COMPLETE_FLAG.Text);
+                cmd.Parameters.Add("IN_COMPLETE_FLAG", txt_INSERT_DATE.Text);
                 cmd.Parameters.Add("IN_PLAN_QTY", txt_PLAN_QTY.Text);
                 cmd.Parameters.Add("IN_INPUT_QTY", txt_INPUT_QTY.Text);
                 cmd.Parameters.Add("IN_WORK_TIME", txt_WORK_TIME.Text);
