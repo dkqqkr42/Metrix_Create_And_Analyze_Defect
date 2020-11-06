@@ -46,10 +46,10 @@ namespace FinalProject_Profile
                 cmd.Parameters.Add("ARG_PLANT", "2020");
                 cmd.Parameters.Add("ARG_MRP1", "F63");
                 cmd.Parameters.Add("ARG_MRP2", "F63");
-                cmd.Parameters.Add("ARG_WC", "AT02");
+                cmd.Parameters.Add("ARG_WC", "AT01");
                 //todo 날짜
-                cmd.Parameters.Add("ARG_O_DATE", "20201105");
-                cmd.Parameters.Add("ARG_E_DATE", "20201105");
+                cmd.Parameters.Add("ARG_O_DATE", "20201106");
+                cmd.Parameters.Add("ARG_E_DATE", "20201106");
 
 
                 OracleDataReader reader = cmd.ExecuteReader();

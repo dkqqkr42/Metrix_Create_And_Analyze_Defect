@@ -48,7 +48,6 @@
             this.txt_ORDER_SEQ = new MetroFramework.Controls.MetroTextBox();
             this.txt_ORDER_NO = new MetroFramework.Controls.MetroTextBox();
             this.txt_MRP_MGR = new MetroFramework.Controls.MetroTextBox();
-            this.txt_PLANT_CODE = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
@@ -91,6 +90,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Close = new MetroFramework.Controls.MetroButton();
             this.btn_Save = new MetroFramework.Controls.MetroButton();
+            this.cbo_PLANT_CODE = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -140,7 +140,6 @@
             this.tableLayoutPanel3.Controls.Add(this.txt_ORDER_SEQ, 3, 1);
             this.tableLayoutPanel3.Controls.Add(this.txt_ORDER_NO, 2, 1);
             this.tableLayoutPanel3.Controls.Add(this.txt_MRP_MGR, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.txt_PLANT_CODE, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.metroLabel4, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.metroLabel3, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.metroLabel2, 1, 0);
@@ -180,6 +179,7 @@
             this.tableLayoutPanel3.Controls.Add(this.txt_ORDER_TYPE, 3, 7);
             this.tableLayoutPanel3.Controls.Add(this.txt_CONFIRM_FLAG, 4, 7);
             this.tableLayoutPanel3.Controls.Add(this.txt_REMARK, 5, 7);
+            this.tableLayoutPanel3.Controls.Add(this.cbo_PLANT_CODE, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -213,7 +213,7 @@
             this.txt_PLAN_QTY.CustomButton.UseSelectable = true;
             this.txt_PLAN_QTY.CustomButton.Visible = false;
             this.txt_PLAN_QTY.Lines = new string[0];
-            this.txt_PLAN_QTY.Location = new System.Drawing.Point(148, 473);
+            this.txt_PLAN_QTY.Location = new System.Drawing.Point(4, 473);
             this.txt_PLAN_QTY.MaxLength = 32767;
             this.txt_PLAN_QTY.Name = "txt_PLAN_QTY";
             this.txt_PLAN_QTY.PasswordChar = '\0';
@@ -244,7 +244,7 @@
             this.txt_COMPLETE_FLAG.CustomButton.UseSelectable = true;
             this.txt_COMPLETE_FLAG.CustomButton.Visible = false;
             this.txt_COMPLETE_FLAG.Lines = new string[0];
-            this.txt_COMPLETE_FLAG.Location = new System.Drawing.Point(4, 473);
+            this.txt_COMPLETE_FLAG.Location = new System.Drawing.Point(436, 473);
             this.txt_COMPLETE_FLAG.MaxLength = 32767;
             this.txt_COMPLETE_FLAG.Name = "txt_COMPLETE_FLAG";
             this.txt_COMPLETE_FLAG.PasswordChar = '\0';
@@ -275,7 +275,7 @@
             this.txt_INPUT_QTY.CustomButton.UseSelectable = true;
             this.txt_INPUT_QTY.CustomButton.Visible = false;
             this.txt_INPUT_QTY.Lines = new string[0];
-            this.txt_INPUT_QTY.Location = new System.Drawing.Point(292, 473);
+            this.txt_INPUT_QTY.Location = new System.Drawing.Point(580, 473);
             this.txt_INPUT_QTY.MaxLength = 32767;
             this.txt_INPUT_QTY.Name = "txt_INPUT_QTY";
             this.txt_INPUT_QTY.PasswordChar = '\0';
@@ -306,7 +306,7 @@
             this.txt_INSERT_DATE.CustomButton.UseSelectable = true;
             this.txt_INSERT_DATE.CustomButton.Visible = false;
             this.txt_INSERT_DATE.Lines = new string[0];
-            this.txt_INSERT_DATE.Location = new System.Drawing.Point(580, 473);
+            this.txt_INSERT_DATE.Location = new System.Drawing.Point(148, 473);
             this.txt_INSERT_DATE.MaxLength = 32767;
             this.txt_INSERT_DATE.Name = "txt_INSERT_DATE";
             this.txt_INSERT_DATE.PasswordChar = '\0';
@@ -337,7 +337,7 @@
             this.txt_WORK_TIME.CustomButton.UseSelectable = true;
             this.txt_WORK_TIME.CustomButton.Visible = false;
             this.txt_WORK_TIME.Lines = new string[0];
-            this.txt_WORK_TIME.Location = new System.Drawing.Point(436, 473);
+            this.txt_WORK_TIME.Location = new System.Drawing.Point(292, 473);
             this.txt_WORK_TIME.MaxLength = 32767;
             this.txt_WORK_TIME.Name = "txt_WORK_TIME";
             this.txt_WORK_TIME.PasswordChar = '\0';
@@ -754,37 +754,6 @@
             this.txt_MRP_MGR.UseSelectable = true;
             this.txt_MRP_MGR.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_MRP_MGR.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txt_PLANT_CODE
-            // 
-            this.txt_PLANT_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_PLANT_CODE.CustomButton.Image = null;
-            this.txt_PLANT_CODE.CustomButton.Location = new System.Drawing.Point(115, 1);
-            this.txt_PLANT_CODE.CustomButton.Name = "";
-            this.txt_PLANT_CODE.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_PLANT_CODE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_PLANT_CODE.CustomButton.TabIndex = 1;
-            this.txt_PLANT_CODE.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_PLANT_CODE.CustomButton.UseSelectable = true;
-            this.txt_PLANT_CODE.CustomButton.Visible = false;
-            this.txt_PLANT_CODE.Lines = new string[0];
-            this.txt_PLANT_CODE.Location = new System.Drawing.Point(4, 56);
-            this.txt_PLANT_CODE.MaxLength = 32767;
-            this.txt_PLANT_CODE.Name = "txt_PLANT_CODE";
-            this.txt_PLANT_CODE.PasswordChar = '\0';
-            this.txt_PLANT_CODE.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_PLANT_CODE.SelectedText = "";
-            this.txt_PLANT_CODE.SelectionLength = 0;
-            this.txt_PLANT_CODE.SelectionStart = 0;
-            this.txt_PLANT_CODE.ShortcutsEnabled = true;
-            this.txt_PLANT_CODE.Size = new System.Drawing.Size(137, 23);
-            this.txt_PLANT_CODE.TabIndex = 0;
-            this.txt_PLANT_CODE.UseSelectable = true;
-            this.txt_PLANT_CODE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_PLANT_CODE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel4
             // 
@@ -1461,6 +1430,19 @@
             this.btn_Save.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseDown);
             this.btn_Save.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseUp);
             // 
+            // cbo_PLANT_CODE
+            // 
+            this.cbo_PLANT_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_PLANT_CODE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_PLANT_CODE.FormattingEnabled = true;
+            this.cbo_PLANT_CODE.Items.AddRange(new object[] {
+            "선택",
+            "2020"});
+            this.cbo_PLANT_CODE.Location = new System.Drawing.Point(4, 57);
+            this.cbo_PLANT_CODE.Name = "cbo_PLANT_CODE";
+            this.cbo_PLANT_CODE.Size = new System.Drawing.Size(137, 23);
+            this.cbo_PLANT_CODE.TabIndex = 59;
+            // 
             // InputPopup_SAPOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -1499,7 +1481,6 @@
         private MetroFramework.Controls.MetroTextBox txt_ORDER_SEQ;
         private MetroFramework.Controls.MetroTextBox txt_ORDER_NO;
         private MetroFramework.Controls.MetroTextBox txt_MRP_MGR;
-        private MetroFramework.Controls.MetroTextBox txt_PLANT_CODE;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
@@ -1542,5 +1523,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private MetroFramework.Controls.MetroButton btn_Close;
         private MetroFramework.Controls.MetroButton btn_Save;
+        private System.Windows.Forms.ComboBox cbo_PLANT_CODE;
     }
 }
