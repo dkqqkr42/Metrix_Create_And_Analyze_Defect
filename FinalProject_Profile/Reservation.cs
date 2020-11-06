@@ -21,6 +21,7 @@ namespace FinalProject_Profile
         List<string> GetJob_No = new List<string>();
         List<string> GetReserve_Rank = new List<string>();
         DataTable table = null;
+        WorkPlan wp = null;
         public Reservation()
         {
             InitializeComponent();
@@ -31,52 +32,15 @@ namespace FinalProject_Profile
             InitializeComponent();
             table = dt;
             metroGrid2.DataSource = table;
-            
-            /*OracleConnection connection = null;
-            try
-            {
-                connection = new OracleConnection
-                {
-                    ConnectionString = connectionString
-                };
-                connection.Open();
-
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-
-                    OracleCommand cmd = new OracleCommand
-                    {
-                        CommandType = CommandType.Text,
-                        Connection = connection,
-                        CommandText = "select trim(wc_code) from tbl_productplan where job_no = :IN_JOB_NO"
-                    };
-
-
-                    cmd.Parameters.Add("IN_JOB_NO", GetJob_No[i]);
-
-
-                    OracleDataReader reader = cmd.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        GetWC_CODE.Add(reader.GetValue(0).ToString());
-                    }
-                }
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    metroGrid2.Rows.Add(GetWC_CODE[i], GetJob_No[i], i+1);
-                }
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                connection.Close();
-            }*/
         }
 
+        public Reservation(WorkPlan _wp, DataTable dt)
+        {
+            InitializeComponent();
+            table = dt;
+            metroGrid2.DataSource = table;
+            wp = _wp;
+        }
 
         private void Child3_Load(object sender, EventArgs e)                        // 실행되었을때, 어떤 항목을 추가해주려고 미리 만들어놓음
         {
@@ -183,7 +147,11 @@ namespace FinalProject_Profile
             metroGrid2.ClearSelection();                                                // 선택된 셀의 선택을 취소한다(?)
             metroGrid2.Rows[metroGrid2.Rows.Count-1].Cells[colIndex].Selected = true;   // metroGrid2.Rows[] 항목에다 metroGrid2.Rows.Count 값을 넣어주면 행 마지막으로 감.
         }
-
+        /// <summary>
+        /// 예약
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void metroButton1_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < table.Rows.Count; i++)
@@ -248,6 +216,67 @@ namespace FinalProject_Profile
                 connection.Close();
                 this.Close();
             }
+        }
+        /// <summary>
+        /// 예약취소
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            OracleConnection connection = null;
+            try
+            {
+                int rowIndex = metroGrid2.SelectedCells[0].OwningRow.Index;
+                DataRow selectedRow = table.Rows[rowIndex];
+                string del_Job_No = selectedRow[12].ToString();
+                GetJob_No.Remove(del_Job_No);
+                table.Rows.Remove(selectedRow);
+
+                connection = new OracleConnection
+                {
+                    ConnectionString = connectionString
+                };
+                connection.Open();
+
+                OracleCommand cmd = new OracleCommand
+                {
+                    CommandType = CommandType.Text,
+                    Connection = connection,
+                    CommandText = "delete from TBL_PRODRESERVE where JOB_NO = :IN_JOB_NO"
+                };
+
+
+                cmd.Parameters.Add("IN_JOB_NO", del_Job_No);
+
+
+                cmd.ExecuteNonQuery();
+
+                cmd = new OracleCommand
+                {
+                    CommandType = CommandType.Text,
+                    Connection = connection,
+                    CommandText = "Update TBL_PRODUCTPLAN SET PROC_STATUS = 'D' where JOB_NO = :IN_JOB_NO"
+                };
+
+                cmd.Parameters.Add("IN_JOB_NO", del_Job_No);
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void Reservation_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            wp.FillGrid();
         }
     }
 }

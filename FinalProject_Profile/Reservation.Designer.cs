@@ -275,6 +275,7 @@
             this.metroButton2.TabIndex = 31;
             this.metroButton2.Text = "예약취소";
             this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // metroGrid2
             // 
@@ -340,6 +341,7 @@
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "작업예약";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Reservation_FormClosing);
             this.Load += new System.EventHandler(this.Child3_Load);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
