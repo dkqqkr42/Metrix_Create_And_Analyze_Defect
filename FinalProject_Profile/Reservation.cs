@@ -20,6 +20,7 @@ namespace FinalProject_Profile
         List<string> GetWC_CODE = new List<string>();
         List<string> GetJob_No = new List<string>();
         List<string> GetReserve_Rank = new List<string>();
+        DataTable table = null;
         public Reservation()
         {
             InitializeComponent();
@@ -28,11 +29,10 @@ namespace FinalProject_Profile
         public Reservation(DataTable dt)
         {
             InitializeComponent();
-            for(int i = 0; i < dt.Rows.Count; i++)
-            {
-                GetJob_No.Add(dt.Rows[i][12].ToString());
-            }
-            OracleConnection connection = null;
+            table = dt;
+            metroGrid2.DataSource = table;
+            
+            /*OracleConnection connection = null;
             try
             {
                 connection = new OracleConnection
@@ -48,7 +48,7 @@ namespace FinalProject_Profile
                     {
                         CommandType = CommandType.Text,
                         Connection = connection,
-                        CommandText = "select trim(wc_code), trim(order_seq) from tbl_productplan where job_no = :IN_JOB_NO"
+                        CommandText = "select trim(wc_code) from tbl_productplan where job_no = :IN_JOB_NO"
                     };
 
 
@@ -59,8 +59,6 @@ namespace FinalProject_Profile
                     while (reader.Read())
                     {
                         GetWC_CODE.Add(reader.GetValue(0).ToString());
-                        GetReserve_Rank.Add(reader.GetValue(1).ToString());
-
                     }
                 }
                 for (int i = 0; i < dt.Rows.Count; i++)
@@ -76,7 +74,7 @@ namespace FinalProject_Profile
             finally
             {
                 connection.Close();
-            }
+            }*/
         }
 
 
@@ -97,10 +95,16 @@ namespace FinalProject_Profile
 
             // get index of the column for the selected cell
             int colIndex = metroGrid2.SelectedCells[0].OwningColumn.Index;          // 요 항목이 포함하는 열을 가져옵니다.
-            DataGridViewRow selectedRow = metroGrid2.Rows[rowIndex];                // DataGridViewRow = DataGridView의 행을 나타냄. selectedRow라는 지역 변수로 지정.
+            //DataGridViewRow selectedRow = metroGrid2.Rows[rowIndex];                // DataGridViewRow = DataGridView의 행을 나타냄. selectedRow라는 지역 변수로 지정.
+            DataRow oldRow = table.Rows[rowIndex];
+            DataRow newRow = table.NewRow();
+            newRow.ItemArray = oldRow.ItemArray;
+
+            table.Rows.Remove(oldRow);
+            table.Rows.InsertAt(newRow, rowIndex - 1);
                                                                                     // rowIndex에 해당하는 Metro Grid의 모든 행들을 가져와줌. (?)
-            metroGrid2.Rows.Remove(selectedRow);                                    // metroGrid.Rows (행을 포함하는 컬렉션) 에서 selectedRow (= 위에서 지정한 변수) 를 제거
-            metroGrid2.Rows.Insert(rowIndex - 1, selectedRow);                      // 제거했던 내용을 삽입해주는데, 기존 rowIndex의 -1 만큼 (한 줄 위) 의 위치에다가!!
+            //metroGrid2.Rows.Remove(selectedRow);                                    // metroGrid.Rows (행을 포함하는 컬렉션) 에서 selectedRow (= 위에서 지정한 변수) 를 제거
+            //metroGrid2.Rows.Insert(rowIndex - 1, selectedRow);                      // 제거했던 내용을 삽입해주는데, 기존 rowIndex의 -1 만큼 (한 줄 위) 의 위치에다가!!
             metroGrid2.ClearSelection();                                            // 기존 셀 선택을 초기화 해줍니다.
             metroGrid2.Rows[rowIndex - 1].Cells[colIndex].Selected = true;          // ??? ( rowIndex-1만큼 Row를 이동 )
         }
@@ -117,9 +121,15 @@ namespace FinalProject_Profile
 
             // get index of the column for the selected cell
             int colIndex = metroGrid2.SelectedCells[0].OwningColumn.Index;
-            DataGridViewRow selectedRow = metroGrid2.Rows[rowIndex];
-            metroGrid2.Rows.Remove(selectedRow);
-            metroGrid2.Rows.Insert(rowIndex + 1, selectedRow);                      // 지정된 selectedRow를 rowIndex +1(한 줄 아래) 만큼 행에다 삽입.
+            //DataGridViewRow selectedRow = metroGrid2.Rows[rowIndex];
+            DataRow oldRow = table.Rows[rowIndex];
+            DataRow newRow = table.NewRow();
+            newRow.ItemArray = oldRow.ItemArray;
+
+            table.Rows.Remove(oldRow);
+            table.Rows.InsertAt(newRow, rowIndex + 1);
+            //metroGrid2.Rows.Remove(selectedRow);
+            //metroGrid2.Rows.Insert(rowIndex + 1, selectedRow);                      // 지정된 selectedRow를 rowIndex +1(한 줄 아래) 만큼 행에다 삽입.
             metroGrid2.ClearSelection();
             metroGrid2.Rows[rowIndex + 1].Cells[colIndex].Selected = true;          // metroGrid2의 행[항목].행 안에 셀[항목].선택됨 = True
         }
@@ -136,9 +146,15 @@ namespace FinalProject_Profile
 
             // get index of the column for the selected cell
             int colIndex = metroGrid2.SelectedCells[0].OwningColumn.Index;
-            DataGridViewRow selectedRow = metroGrid2.Rows[rowIndex];
-            metroGrid2.Rows.Remove(selectedRow);
-            metroGrid2.Rows.Insert(0, selectedRow);
+            //DataGridViewRow selectedRow = metroGrid2.Rows[rowIndex];
+            DataRow oldRow = table.Rows[rowIndex];
+            DataRow newRow = table.NewRow();
+            newRow.ItemArray = oldRow.ItemArray;
+
+            table.Rows.Remove(oldRow);
+            table.Rows.InsertAt(newRow, 0);
+            //metroGrid2.Rows.Remove(selectedRow);
+            //metroGrid2.Rows.Insert(0, selectedRow);
             metroGrid2.ClearSelection();
             metroGrid2.Rows[0].Cells[colIndex].Selected = true;                     // metroGrid2.Rows[] 항목에다 0 집어넣으면, 위치 맨 위로
         }
@@ -155,11 +171,83 @@ namespace FinalProject_Profile
 
             // get index of the column for the selected cell
             int colIndex = metroGrid2.SelectedCells[0].OwningColumn.Index;              // colIndex는 metroGrid의 0번째 선택된 셀을 포함하는 열(컬럼)의 인덱스
-            DataGridViewRow selectedRow = metroGrid2.Rows[rowIndex];                    // selectedRow라는 지역 변수 = 
-            metroGrid2.Rows.Remove(selectedRow);                                        // 기존 줄에 있는 선택된 selectedRow 제거
-            metroGrid2.Rows.Insert(metroGrid2.Rows.Count, selectedRow);             // 기존 줄에 있는 선택된 selectedRowf 를 카운트값 만큼의 위치에 삽입
+            //DataGridViewRow selectedRow = metroGrid2.Rows[rowIndex];                    // selectedRow라는 지역 변수 = 
+            DataRow oldRow = table.Rows[rowIndex];
+            DataRow newRow = table.NewRow();
+            newRow.ItemArray = oldRow.ItemArray;
+
+            table.Rows.Remove(oldRow);
+            table.Rows.InsertAt(newRow, table.Rows.Count);
+            //metroGrid2.Rows.Remove(selectedRow);                                        // 기존 줄에 있는 선택된 selectedRow 제거
+            //metroGrid2.Rows.Insert(metroGrid2.Rows.Count, selectedRow);             // 기존 줄에 있는 선택된 selectedRowf 를 카운트값 만큼의 위치에 삽입
             metroGrid2.ClearSelection();                                                // 선택된 셀의 선택을 취소한다(?)
             metroGrid2.Rows[metroGrid2.Rows.Count-1].Cells[colIndex].Selected = true;   // metroGrid2.Rows[] 항목에다 metroGrid2.Rows.Count 값을 넣어주면 행 마지막으로 감.
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                GetJob_No.Add(table.Rows[i][12].ToString());
+            }
+            
+            OracleConnection connection = null;
+            try
+            {
+                connection = new OracleConnection
+                {
+                    ConnectionString = connectionString
+                };
+                connection.Open();
+
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+
+                    OracleCommand cmd = new OracleCommand
+                    {
+                        CommandType = CommandType.Text,
+                        Connection = connection,
+                        CommandText = "select trim(wc_code) from tbl_productplan where job_no = :IN_JOB_NO"
+                    };
+
+
+                    cmd.Parameters.Add("IN_JOB_NO", GetJob_No[i]);
+
+
+                    OracleDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        GetWC_CODE.Add(reader.GetValue(0).ToString());
+                    }
+                }
+
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+
+                    OracleCommand cmd = new OracleCommand
+                    {
+                        CommandType = CommandType.Text,
+                        Connection = connection,
+                        CommandText = "Insert into tbl_prodreserve values(:IN_WC_CODE, :IN_JOB_NO, :IN_RESERVE_RANK)"
+                    };
+
+                    cmd.Parameters.Add("IN_WC_CODE", GetWC_CODE[i]);
+                    cmd.Parameters.Add("IN_JOB_NO", GetJob_No[i]);
+                    cmd.Parameters.Add("IN_RESERVE_RANK", i+1);
+
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+                this.Close();
+            }
         }
     }
 }
