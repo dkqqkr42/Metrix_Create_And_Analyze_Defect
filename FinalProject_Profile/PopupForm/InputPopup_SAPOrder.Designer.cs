@@ -30,10 +30,15 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.txt_PLAN_QTY = new MetroFramework.Controls.MetroTextBox();
-            this.txt_INSERT_DATE = new MetroFramework.Controls.MetroTextBox();
-            this.txt_INPUT_QTY = new MetroFramework.Controls.MetroTextBox();
-            this.txt_WORK_TIME = new MetroFramework.Controls.MetroTextBox();
+            this.cbo_ORDER_TYPE = new System.Windows.Forms.ComboBox();
+            this.cbo_DISTRB_CHL = new System.Windows.Forms.ComboBox();
+            this.cbo_CURRENCY_UNIT = new System.Windows.Forms.ComboBox();
+            this.dtp_DUE_DATE_B = new System.Windows.Forms.DateTimePicker();
+            this.dtp_DUE_DATE_A = new System.Windows.Forms.DateTimePicker();
+            this.cbo_WC_CODE = new System.Windows.Forms.ComboBox();
+            this.cbo_PROD_UNIT = new System.Windows.Forms.ComboBox();
+            this.cbo_PROD_CODE = new System.Windows.Forms.ComboBox();
+            this.cbo_MRP_MGR = new System.Windows.Forms.ComboBox();
             this.txt_EXCHG_RATE = new MetroFramework.Controls.MetroTextBox();
             this.txt_ORDER_UNIT_PRICE = new MetroFramework.Controls.MetroTextBox();
             this.txt_ROLL_METER = new MetroFramework.Controls.MetroTextBox();
@@ -76,21 +81,16 @@
             this.txt_CUST_NAME = new MetroFramework.Controls.MetroTextBox();
             this.txt_CONFIRM_FLAG = new MetroFramework.Controls.MetroTextBox();
             this.txt_REMARK = new MetroFramework.Controls.MetroTextBox();
+            this.cbo_PLANT_CODE = new System.Windows.Forms.ComboBox();
+            this.dtp_ORDER_DATE = new System.Windows.Forms.DateTimePicker();
+            this.cbo_COMPLETE_FLAG = new System.Windows.Forms.ComboBox();
+            this.txt_PLAN_QTY = new MetroFramework.Controls.MetroTextBox();
+            this.txt_INPUT_QTY = new MetroFramework.Controls.MetroTextBox();
+            this.txt_WORK_TIME = new MetroFramework.Controls.MetroTextBox();
+            this.txt_INSERT_DATE = new MetroFramework.Controls.MetroTextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Close = new MetroFramework.Controls.MetroButton();
             this.btn_Save = new MetroFramework.Controls.MetroButton();
-            this.cbo_PLANT_CODE = new System.Windows.Forms.ComboBox();
-            this.cbo_MRP_MGR = new System.Windows.Forms.ComboBox();
-            this.dtp_ORDER_DATE = new System.Windows.Forms.DateTimePicker();
-            this.cbo_PROD_CODE = new System.Windows.Forms.ComboBox();
-            this.cbo_PROD_UNIT = new System.Windows.Forms.ComboBox();
-            this.cbo_WC_CODE = new System.Windows.Forms.ComboBox();
-            this.dtp_DUE_DATE_A = new System.Windows.Forms.DateTimePicker();
-            this.dtp_DUE_DATE_B = new System.Windows.Forms.DateTimePicker();
-            this.cbo_CURRENCY_UNIT = new System.Windows.Forms.ComboBox();
-            this.cbo_DISTRB_CHL = new System.Windows.Forms.ComboBox();
-            this.cbo_ORDER_TYPE = new System.Windows.Forms.ComboBox();
-            this.cbo_COMPLETE_FLAG = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -197,129 +197,128 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(866, 523);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
-            // txt_PLAN_QTY
+            // cbo_ORDER_TYPE
             // 
-            this.txt_PLAN_QTY.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_ORDER_TYPE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_ORDER_TYPE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_ORDER_TYPE.FormattingEnabled = true;
+            this.cbo_ORDER_TYPE.Items.AddRange(new object[] {
+            "선택",
+            "P",
+            "S"});
+            this.cbo_ORDER_TYPE.Location = new System.Drawing.Point(436, 368);
+            this.cbo_ORDER_TYPE.Name = "cbo_ORDER_TYPE";
+            this.cbo_ORDER_TYPE.Size = new System.Drawing.Size(137, 23);
+            this.cbo_ORDER_TYPE.TabIndex = 22;
             // 
+            // cbo_DISTRB_CHL
             // 
+            this.cbo_DISTRB_CHL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_DISTRB_CHL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_DISTRB_CHL.FormattingEnabled = true;
+            this.cbo_DISTRB_CHL.Items.AddRange(new object[] {
+            "10",
+            "20",
+            "40",
+            "50",
+            "51",
+            "52"});
+            this.cbo_DISTRB_CHL.Location = new System.Drawing.Point(292, 368);
+            this.cbo_DISTRB_CHL.Name = "cbo_DISTRB_CHL";
+            this.cbo_DISTRB_CHL.Size = new System.Drawing.Size(137, 23);
+            this.cbo_DISTRB_CHL.TabIndex = 21;
             // 
-            this.txt_PLAN_QTY.CustomButton.Image = null;
-            this.txt_PLAN_QTY.CustomButton.Location = new System.Drawing.Point(115, 1);
-            this.txt_PLAN_QTY.CustomButton.Name = "";
-            this.txt_PLAN_QTY.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_PLAN_QTY.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_PLAN_QTY.CustomButton.TabIndex = 1;
-            this.txt_PLAN_QTY.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_PLAN_QTY.CustomButton.UseSelectable = true;
-            this.txt_PLAN_QTY.CustomButton.Visible = false;
-            this.txt_PLAN_QTY.Lines = new string[0];
-            this.txt_PLAN_QTY.Location = new System.Drawing.Point(148, 473);
-            this.txt_PLAN_QTY.MaxLength = 32767;
-            this.txt_PLAN_QTY.Name = "txt_PLAN_QTY";
-            this.txt_PLAN_QTY.PasswordChar = '\0';
-            this.txt_PLAN_QTY.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_PLAN_QTY.SelectedText = "";
-            this.txt_PLAN_QTY.SelectionLength = 0;
-            this.txt_PLAN_QTY.SelectionStart = 0;
-            this.txt_PLAN_QTY.ShortcutsEnabled = true;
-            this.txt_PLAN_QTY.Size = new System.Drawing.Size(137, 23);
-            this.txt_PLAN_QTY.TabIndex = 26;
-            this.txt_PLAN_QTY.UseSelectable = true;
-            this.txt_PLAN_QTY.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_PLAN_QTY.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // cbo_CURRENCY_UNIT
             // 
-            // txt_INSERT_DATE
+            this.cbo_CURRENCY_UNIT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_CURRENCY_UNIT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_CURRENCY_UNIT.FormattingEnabled = true;
+            this.cbo_CURRENCY_UNIT.Items.AddRange(new object[] {
+            "KRW"});
+            this.cbo_CURRENCY_UNIT.Location = new System.Drawing.Point(580, 264);
+            this.cbo_CURRENCY_UNIT.Name = "cbo_CURRENCY_UNIT";
+            this.cbo_CURRENCY_UNIT.Size = new System.Drawing.Size(137, 23);
+            this.cbo_CURRENCY_UNIT.TabIndex = 17;
             // 
-            this.txt_INSERT_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            // dtp_DUE_DATE_B
             // 
+            this.dtp_DUE_DATE_B.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtp_DUE_DATE_B.CustomFormat = "yyyyMMdd";
+            this.dtp_DUE_DATE_B.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dtp_DUE_DATE_B.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_DUE_DATE_B.Location = new System.Drawing.Point(580, 160);
+            this.dtp_DUE_DATE_B.Name = "dtp_DUE_DATE_B";
+            this.dtp_DUE_DATE_B.Size = new System.Drawing.Size(137, 23);
+            this.dtp_DUE_DATE_B.TabIndex = 11;
             // 
+            // dtp_DUE_DATE_A
             // 
-            this.txt_INSERT_DATE.CustomButton.Image = null;
-            this.txt_INSERT_DATE.CustomButton.Location = new System.Drawing.Point(115, 1);
-            this.txt_INSERT_DATE.CustomButton.Name = "";
-            this.txt_INSERT_DATE.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_INSERT_DATE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_INSERT_DATE.CustomButton.TabIndex = 1;
-            this.txt_INSERT_DATE.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_INSERT_DATE.CustomButton.UseSelectable = true;
-            this.txt_INSERT_DATE.CustomButton.Visible = false;
-            this.txt_INSERT_DATE.Lines = new string[0];
-            this.txt_INSERT_DATE.Location = new System.Drawing.Point(580, 473);
-            this.txt_INSERT_DATE.MaxLength = 32767;
-            this.txt_INSERT_DATE.Name = "txt_INSERT_DATE";
-            this.txt_INSERT_DATE.PasswordChar = '\0';
-            this.txt_INSERT_DATE.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_INSERT_DATE.SelectedText = "";
-            this.txt_INSERT_DATE.SelectionLength = 0;
-            this.txt_INSERT_DATE.SelectionStart = 0;
-            this.txt_INSERT_DATE.ShortcutsEnabled = true;
-            this.txt_INSERT_DATE.Size = new System.Drawing.Size(137, 23);
-            this.txt_INSERT_DATE.TabIndex = 29;
-            this.txt_INSERT_DATE.UseSelectable = true;
-            this.txt_INSERT_DATE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_INSERT_DATE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.dtp_DUE_DATE_A.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtp_DUE_DATE_A.CustomFormat = "yyyyMMdd";
+            this.dtp_DUE_DATE_A.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dtp_DUE_DATE_A.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_DUE_DATE_A.Location = new System.Drawing.Point(436, 160);
+            this.dtp_DUE_DATE_A.Name = "dtp_DUE_DATE_A";
+            this.dtp_DUE_DATE_A.Size = new System.Drawing.Size(137, 23);
+            this.dtp_DUE_DATE_A.TabIndex = 10;
             // 
-            // txt_INPUT_QTY
+            // cbo_WC_CODE
             // 
-            this.txt_INPUT_QTY.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_WC_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_WC_CODE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_WC_CODE.FormattingEnabled = true;
+            this.cbo_WC_CODE.Items.AddRange(new object[] {
+            "선택",
+            "AT01",
+            "AT02"});
+            this.cbo_WC_CODE.Location = new System.Drawing.Point(292, 160);
+            this.cbo_WC_CODE.Name = "cbo_WC_CODE";
+            this.cbo_WC_CODE.Size = new System.Drawing.Size(137, 23);
+            this.cbo_WC_CODE.TabIndex = 9;
             // 
+            // cbo_PROD_UNIT
             // 
+            this.cbo_PROD_UNIT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_PROD_UNIT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_PROD_UNIT.FormattingEnabled = true;
+            this.cbo_PROD_UNIT.Items.AddRange(new object[] {
+            "선택",
+            "EA"});
+            this.cbo_PROD_UNIT.Location = new System.Drawing.Point(4, 160);
+            this.cbo_PROD_UNIT.Name = "cbo_PROD_UNIT";
+            this.cbo_PROD_UNIT.Size = new System.Drawing.Size(137, 23);
+            this.cbo_PROD_UNIT.TabIndex = 7;
             // 
-            this.txt_INPUT_QTY.CustomButton.Image = null;
-            this.txt_INPUT_QTY.CustomButton.Location = new System.Drawing.Point(115, 1);
-            this.txt_INPUT_QTY.CustomButton.Name = "";
-            this.txt_INPUT_QTY.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_INPUT_QTY.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_INPUT_QTY.CustomButton.TabIndex = 1;
-            this.txt_INPUT_QTY.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_INPUT_QTY.CustomButton.UseSelectable = true;
-            this.txt_INPUT_QTY.CustomButton.Visible = false;
-            this.txt_INPUT_QTY.Lines = new string[0];
-            this.txt_INPUT_QTY.Location = new System.Drawing.Point(292, 473);
-            this.txt_INPUT_QTY.MaxLength = 32767;
-            this.txt_INPUT_QTY.Name = "txt_INPUT_QTY";
-            this.txt_INPUT_QTY.PasswordChar = '\0';
-            this.txt_INPUT_QTY.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_INPUT_QTY.SelectedText = "";
-            this.txt_INPUT_QTY.SelectionLength = 0;
-            this.txt_INPUT_QTY.SelectionStart = 0;
-            this.txt_INPUT_QTY.ShortcutsEnabled = true;
-            this.txt_INPUT_QTY.Size = new System.Drawing.Size(137, 23);
-            this.txt_INPUT_QTY.TabIndex = 27;
-            this.txt_INPUT_QTY.UseSelectable = true;
-            this.txt_INPUT_QTY.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_INPUT_QTY.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // cbo_PROD_CODE
             // 
-            // txt_WORK_TIME
+            this.cbo_PROD_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_PROD_CODE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_PROD_CODE.FormattingEnabled = true;
+            this.cbo_PROD_CODE.Items.AddRange(new object[] {
+            "선택",
+            "ASW0951-02",
+            "DXM0001-01",
+            "DXM0001-02",
+            "DXM0001-03",
+            "DXM0002-01",
+            "ASW0951-01"});
+            this.cbo_PROD_CODE.Location = new System.Drawing.Point(724, 56);
+            this.cbo_PROD_CODE.Name = "cbo_PROD_CODE";
+            this.cbo_PROD_CODE.Size = new System.Drawing.Size(137, 23);
+            this.cbo_PROD_CODE.TabIndex = 6;
             // 
-            this.txt_WORK_TIME.Anchor = System.Windows.Forms.AnchorStyles.None;
+            // cbo_MRP_MGR
             // 
-            // 
-            // 
-            this.txt_WORK_TIME.CustomButton.Image = null;
-            this.txt_WORK_TIME.CustomButton.Location = new System.Drawing.Point(115, 1);
-            this.txt_WORK_TIME.CustomButton.Name = "";
-            this.txt_WORK_TIME.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_WORK_TIME.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_WORK_TIME.CustomButton.TabIndex = 1;
-            this.txt_WORK_TIME.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_WORK_TIME.CustomButton.UseSelectable = true;
-            this.txt_WORK_TIME.CustomButton.Visible = false;
-            this.txt_WORK_TIME.Lines = new string[0];
-            this.txt_WORK_TIME.Location = new System.Drawing.Point(436, 473);
-            this.txt_WORK_TIME.MaxLength = 32767;
-            this.txt_WORK_TIME.Name = "txt_WORK_TIME";
-            this.txt_WORK_TIME.PasswordChar = '\0';
-            this.txt_WORK_TIME.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_WORK_TIME.SelectedText = "";
-            this.txt_WORK_TIME.SelectionLength = 0;
-            this.txt_WORK_TIME.SelectionStart = 0;
-            this.txt_WORK_TIME.ShortcutsEnabled = true;
-            this.txt_WORK_TIME.Size = new System.Drawing.Size(137, 23);
-            this.txt_WORK_TIME.TabIndex = 28;
-            this.txt_WORK_TIME.UseSelectable = true;
-            this.txt_WORK_TIME.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_WORK_TIME.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_MRP_MGR.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_MRP_MGR.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_MRP_MGR.FormattingEnabled = true;
+            this.cbo_MRP_MGR.Items.AddRange(new object[] {
+            "선택",
+            "F63"});
+            this.cbo_MRP_MGR.Location = new System.Drawing.Point(148, 56);
+            this.cbo_MRP_MGR.Name = "cbo_MRP_MGR";
+            this.cbo_MRP_MGR.Size = new System.Drawing.Size(137, 23);
+            this.cbo_MRP_MGR.TabIndex = 2;
             // 
             // txt_EXCHG_RATE
             // 
@@ -1043,6 +1042,169 @@
             this.txt_REMARK.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_REMARK.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // cbo_PLANT_CODE
+            // 
+            this.cbo_PLANT_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_PLANT_CODE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_PLANT_CODE.FormattingEnabled = true;
+            this.cbo_PLANT_CODE.Items.AddRange(new object[] {
+            "선택",
+            "2020"});
+            this.cbo_PLANT_CODE.Location = new System.Drawing.Point(4, 56);
+            this.cbo_PLANT_CODE.Name = "cbo_PLANT_CODE";
+            this.cbo_PLANT_CODE.Size = new System.Drawing.Size(137, 23);
+            this.cbo_PLANT_CODE.TabIndex = 1;
+            // 
+            // dtp_ORDER_DATE
+            // 
+            this.dtp_ORDER_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtp_ORDER_DATE.CustomFormat = "yyyyMMdd";
+            this.dtp_ORDER_DATE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dtp_ORDER_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_ORDER_DATE.Location = new System.Drawing.Point(580, 56);
+            this.dtp_ORDER_DATE.Name = "dtp_ORDER_DATE";
+            this.dtp_ORDER_DATE.Size = new System.Drawing.Size(137, 23);
+            this.dtp_ORDER_DATE.TabIndex = 5;
+            // 
+            // cbo_COMPLETE_FLAG
+            // 
+            this.cbo_COMPLETE_FLAG.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_COMPLETE_FLAG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_COMPLETE_FLAG.FormattingEnabled = true;
+            this.cbo_COMPLETE_FLAG.Items.AddRange(new object[] {
+            "선택",
+            "N",
+            "Y",
+            "C"});
+            this.cbo_COMPLETE_FLAG.Location = new System.Drawing.Point(4, 473);
+            this.cbo_COMPLETE_FLAG.Name = "cbo_COMPLETE_FLAG";
+            this.cbo_COMPLETE_FLAG.Size = new System.Drawing.Size(137, 23);
+            this.cbo_COMPLETE_FLAG.TabIndex = 25;
+            // 
+            // txt_PLAN_QTY
+            // 
+            this.txt_PLAN_QTY.Anchor = System.Windows.Forms.AnchorStyles.None;
+            // 
+            // 
+            // 
+            this.txt_PLAN_QTY.CustomButton.Image = null;
+            this.txt_PLAN_QTY.CustomButton.Location = new System.Drawing.Point(115, 1);
+            this.txt_PLAN_QTY.CustomButton.Name = "";
+            this.txt_PLAN_QTY.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_PLAN_QTY.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_PLAN_QTY.CustomButton.TabIndex = 1;
+            this.txt_PLAN_QTY.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_PLAN_QTY.CustomButton.UseSelectable = true;
+            this.txt_PLAN_QTY.CustomButton.Visible = false;
+            this.txt_PLAN_QTY.Lines = new string[0];
+            this.txt_PLAN_QTY.Location = new System.Drawing.Point(148, 473);
+            this.txt_PLAN_QTY.MaxLength = 32767;
+            this.txt_PLAN_QTY.Name = "txt_PLAN_QTY";
+            this.txt_PLAN_QTY.PasswordChar = '\0';
+            this.txt_PLAN_QTY.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_PLAN_QTY.SelectedText = "";
+            this.txt_PLAN_QTY.SelectionLength = 0;
+            this.txt_PLAN_QTY.SelectionStart = 0;
+            this.txt_PLAN_QTY.ShortcutsEnabled = true;
+            this.txt_PLAN_QTY.Size = new System.Drawing.Size(137, 23);
+            this.txt_PLAN_QTY.TabIndex = 26;
+            this.txt_PLAN_QTY.UseSelectable = true;
+            this.txt_PLAN_QTY.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_PLAN_QTY.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txt_INPUT_QTY
+            // 
+            this.txt_INPUT_QTY.Anchor = System.Windows.Forms.AnchorStyles.None;
+            // 
+            // 
+            // 
+            this.txt_INPUT_QTY.CustomButton.Image = null;
+            this.txt_INPUT_QTY.CustomButton.Location = new System.Drawing.Point(115, 1);
+            this.txt_INPUT_QTY.CustomButton.Name = "";
+            this.txt_INPUT_QTY.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_INPUT_QTY.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_INPUT_QTY.CustomButton.TabIndex = 1;
+            this.txt_INPUT_QTY.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_INPUT_QTY.CustomButton.UseSelectable = true;
+            this.txt_INPUT_QTY.CustomButton.Visible = false;
+            this.txt_INPUT_QTY.Lines = new string[0];
+            this.txt_INPUT_QTY.Location = new System.Drawing.Point(292, 473);
+            this.txt_INPUT_QTY.MaxLength = 32767;
+            this.txt_INPUT_QTY.Name = "txt_INPUT_QTY";
+            this.txt_INPUT_QTY.PasswordChar = '\0';
+            this.txt_INPUT_QTY.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_INPUT_QTY.SelectedText = "";
+            this.txt_INPUT_QTY.SelectionLength = 0;
+            this.txt_INPUT_QTY.SelectionStart = 0;
+            this.txt_INPUT_QTY.ShortcutsEnabled = true;
+            this.txt_INPUT_QTY.Size = new System.Drawing.Size(137, 23);
+            this.txt_INPUT_QTY.TabIndex = 27;
+            this.txt_INPUT_QTY.UseSelectable = true;
+            this.txt_INPUT_QTY.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_INPUT_QTY.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txt_WORK_TIME
+            // 
+            this.txt_WORK_TIME.Anchor = System.Windows.Forms.AnchorStyles.None;
+            // 
+            // 
+            // 
+            this.txt_WORK_TIME.CustomButton.Image = null;
+            this.txt_WORK_TIME.CustomButton.Location = new System.Drawing.Point(115, 1);
+            this.txt_WORK_TIME.CustomButton.Name = "";
+            this.txt_WORK_TIME.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_WORK_TIME.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_WORK_TIME.CustomButton.TabIndex = 1;
+            this.txt_WORK_TIME.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_WORK_TIME.CustomButton.UseSelectable = true;
+            this.txt_WORK_TIME.CustomButton.Visible = false;
+            this.txt_WORK_TIME.Lines = new string[0];
+            this.txt_WORK_TIME.Location = new System.Drawing.Point(436, 473);
+            this.txt_WORK_TIME.MaxLength = 32767;
+            this.txt_WORK_TIME.Name = "txt_WORK_TIME";
+            this.txt_WORK_TIME.PasswordChar = '\0';
+            this.txt_WORK_TIME.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_WORK_TIME.SelectedText = "";
+            this.txt_WORK_TIME.SelectionLength = 0;
+            this.txt_WORK_TIME.SelectionStart = 0;
+            this.txt_WORK_TIME.ShortcutsEnabled = true;
+            this.txt_WORK_TIME.Size = new System.Drawing.Size(137, 23);
+            this.txt_WORK_TIME.TabIndex = 28;
+            this.txt_WORK_TIME.UseSelectable = true;
+            this.txt_WORK_TIME.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_WORK_TIME.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txt_INSERT_DATE
+            // 
+            this.txt_INSERT_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            // 
+            // 
+            // 
+            this.txt_INSERT_DATE.CustomButton.Image = null;
+            this.txt_INSERT_DATE.CustomButton.Location = new System.Drawing.Point(115, 1);
+            this.txt_INSERT_DATE.CustomButton.Name = "";
+            this.txt_INSERT_DATE.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_INSERT_DATE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_INSERT_DATE.CustomButton.TabIndex = 1;
+            this.txt_INSERT_DATE.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_INSERT_DATE.CustomButton.UseSelectable = true;
+            this.txt_INSERT_DATE.CustomButton.Visible = false;
+            this.txt_INSERT_DATE.Lines = new string[0];
+            this.txt_INSERT_DATE.Location = new System.Drawing.Point(580, 473);
+            this.txt_INSERT_DATE.MaxLength = 32767;
+            this.txt_INSERT_DATE.Name = "txt_INSERT_DATE";
+            this.txt_INSERT_DATE.PasswordChar = '\0';
+            this.txt_INSERT_DATE.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_INSERT_DATE.SelectedText = "";
+            this.txt_INSERT_DATE.SelectionLength = 0;
+            this.txt_INSERT_DATE.SelectionStart = 0;
+            this.txt_INSERT_DATE.ShortcutsEnabled = true;
+            this.txt_INSERT_DATE.Size = new System.Drawing.Size(137, 23);
+            this.txt_INSERT_DATE.TabIndex = 29;
+            this.txt_INSERT_DATE.UseSelectable = true;
+            this.txt_INSERT_DATE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_INSERT_DATE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
@@ -1088,168 +1250,6 @@
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             this.btn_Save.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseDown);
             this.btn_Save.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseUp);
-            // 
-            // cbo_PLANT_CODE
-            // 
-            this.cbo_PLANT_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbo_PLANT_CODE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.cbo_PLANT_CODE.FormattingEnabled = true;
-            this.cbo_PLANT_CODE.Items.AddRange(new object[] {
-            "선택",
-            "2020"});
-            this.cbo_PLANT_CODE.Location = new System.Drawing.Point(4, 57);
-            this.cbo_PLANT_CODE.Name = "cbo_PLANT_CODE";
-            this.cbo_PLANT_CODE.Size = new System.Drawing.Size(137, 23);
-            this.cbo_PLANT_CODE.TabIndex = 1;
-            // 
-            // cbo_MRP_MGR
-            // 
-            this.cbo_MRP_MGR.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbo_MRP_MGR.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.cbo_MRP_MGR.FormattingEnabled = true;
-            this.cbo_MRP_MGR.Items.AddRange(new object[] {
-            "선택",
-            "F63"});
-            this.cbo_MRP_MGR.Location = new System.Drawing.Point(148, 56);
-            this.cbo_MRP_MGR.Name = "cbo_MRP_MGR";
-            this.cbo_MRP_MGR.Size = new System.Drawing.Size(137, 23);
-            this.cbo_MRP_MGR.TabIndex = 2;
-            // 
-            // dtp_ORDER_DATE
-            // 
-            this.dtp_ORDER_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtp_ORDER_DATE.CustomFormat = "yyyyMMdd";
-            this.dtp_ORDER_DATE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dtp_ORDER_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_ORDER_DATE.Location = new System.Drawing.Point(580, 56);
-            this.dtp_ORDER_DATE.Name = "dtp_ORDER_DATE";
-            this.dtp_ORDER_DATE.Size = new System.Drawing.Size(137, 23);
-            this.dtp_ORDER_DATE.TabIndex = 5;
-            // 
-            // cbo_PROD_CODE
-            // 
-            this.cbo_PROD_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbo_PROD_CODE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.cbo_PROD_CODE.FormattingEnabled = true;
-            this.cbo_PROD_CODE.Items.AddRange(new object[] {
-            "선택",
-            "ASW0951-02",
-            "DXM0001-01",
-            "DXM0001-02",
-            "DXM0001-03",
-            "DXM0002-01",
-            "ASW0951-01"});
-            this.cbo_PROD_CODE.Location = new System.Drawing.Point(724, 56);
-            this.cbo_PROD_CODE.Name = "cbo_PROD_CODE";
-            this.cbo_PROD_CODE.Size = new System.Drawing.Size(137, 23);
-            this.cbo_PROD_CODE.TabIndex = 6;
-            // 
-            // cbo_PROD_UNIT
-            // 
-            this.cbo_PROD_UNIT.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbo_PROD_UNIT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.cbo_PROD_UNIT.FormattingEnabled = true;
-            this.cbo_PROD_UNIT.Items.AddRange(new object[] {
-            "선택",
-            "EA"});
-            this.cbo_PROD_UNIT.Location = new System.Drawing.Point(4, 160);
-            this.cbo_PROD_UNIT.Name = "cbo_PROD_UNIT";
-            this.cbo_PROD_UNIT.Size = new System.Drawing.Size(137, 23);
-            this.cbo_PROD_UNIT.TabIndex = 7;
-            // 
-            // cbo_WC_CODE
-            // 
-            this.cbo_WC_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbo_WC_CODE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.cbo_WC_CODE.FormattingEnabled = true;
-            this.cbo_WC_CODE.Items.AddRange(new object[] {
-            "선택",
-            "AT01",
-            "AT02"});
-            this.cbo_WC_CODE.Location = new System.Drawing.Point(292, 160);
-            this.cbo_WC_CODE.Name = "cbo_WC_CODE";
-            this.cbo_WC_CODE.Size = new System.Drawing.Size(137, 23);
-            this.cbo_WC_CODE.TabIndex = 9;
-            // 
-            // dtp_DUE_DATE_A
-            // 
-            this.dtp_DUE_DATE_A.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtp_DUE_DATE_A.CustomFormat = "yyyyMMdd";
-            this.dtp_DUE_DATE_A.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dtp_DUE_DATE_A.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_DUE_DATE_A.Location = new System.Drawing.Point(436, 160);
-            this.dtp_DUE_DATE_A.Name = "dtp_DUE_DATE_A";
-            this.dtp_DUE_DATE_A.Size = new System.Drawing.Size(137, 23);
-            this.dtp_DUE_DATE_A.TabIndex = 10;
-            // 
-            // dtp_DUE_DATE_B
-            // 
-            this.dtp_DUE_DATE_B.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtp_DUE_DATE_B.CustomFormat = "yyyyMMdd";
-            this.dtp_DUE_DATE_B.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dtp_DUE_DATE_B.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_DUE_DATE_B.Location = new System.Drawing.Point(580, 160);
-            this.dtp_DUE_DATE_B.Name = "dtp_DUE_DATE_B";
-            this.dtp_DUE_DATE_B.Size = new System.Drawing.Size(137, 23);
-            this.dtp_DUE_DATE_B.TabIndex = 11;
-            // 
-            // cbo_CURRENCY_UNIT
-            // 
-            this.cbo_CURRENCY_UNIT.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbo_CURRENCY_UNIT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.cbo_CURRENCY_UNIT.FormattingEnabled = true;
-            this.cbo_CURRENCY_UNIT.Items.AddRange(new object[] {
-            "KRW"});
-            this.cbo_CURRENCY_UNIT.Location = new System.Drawing.Point(580, 264);
-            this.cbo_CURRENCY_UNIT.Name = "cbo_CURRENCY_UNIT";
-            this.cbo_CURRENCY_UNIT.Size = new System.Drawing.Size(137, 23);
-            this.cbo_CURRENCY_UNIT.TabIndex = 17;
-            // 
-            // cbo_DISTRB_CHL
-            // 
-            this.cbo_DISTRB_CHL.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbo_DISTRB_CHL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.cbo_DISTRB_CHL.FormattingEnabled = true;
-            this.cbo_DISTRB_CHL.Items.AddRange(new object[] {
-            "10",
-            "20",
-            "40",
-            "50",
-            "51",
-            "52"});
-            this.cbo_DISTRB_CHL.Location = new System.Drawing.Point(292, 368);
-            this.cbo_DISTRB_CHL.Name = "cbo_DISTRB_CHL";
-            this.cbo_DISTRB_CHL.Size = new System.Drawing.Size(137, 23);
-            this.cbo_DISTRB_CHL.TabIndex = 21;
-            // 
-            // cbo_ORDER_TYPE
-            // 
-            this.cbo_ORDER_TYPE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbo_ORDER_TYPE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.cbo_ORDER_TYPE.FormattingEnabled = true;
-            this.cbo_ORDER_TYPE.Items.AddRange(new object[] {
-            "선택",
-            "P",
-            "S"});
-            this.cbo_ORDER_TYPE.Location = new System.Drawing.Point(436, 368);
-            this.cbo_ORDER_TYPE.Name = "cbo_ORDER_TYPE";
-            this.cbo_ORDER_TYPE.Size = new System.Drawing.Size(137, 23);
-            this.cbo_ORDER_TYPE.TabIndex = 22;
-            // 
-            // cbo_COMPLETE_FLAG
-            // 
-            this.cbo_COMPLETE_FLAG.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbo_COMPLETE_FLAG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.cbo_COMPLETE_FLAG.FormattingEnabled = true;
-            this.cbo_COMPLETE_FLAG.Items.AddRange(new object[] {
-            "선택",
-            "N",
-            "Y",
-            "C"});
-            this.cbo_COMPLETE_FLAG.Location = new System.Drawing.Point(4, 473);
-            this.cbo_COMPLETE_FLAG.Name = "cbo_COMPLETE_FLAG";
-            this.cbo_COMPLETE_FLAG.Size = new System.Drawing.Size(137, 23);
-            this.cbo_COMPLETE_FLAG.TabIndex = 25;
             // 
             // InputPopup_SAPOrder
             // 
