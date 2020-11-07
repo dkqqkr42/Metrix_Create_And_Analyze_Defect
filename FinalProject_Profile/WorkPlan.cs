@@ -100,5 +100,10 @@ namespace FinalProject_Profile
                 e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Regular);
             }
         }
+
+        private void grd_Result_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

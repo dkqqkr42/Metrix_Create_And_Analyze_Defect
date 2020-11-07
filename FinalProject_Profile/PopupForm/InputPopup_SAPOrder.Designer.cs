@@ -283,7 +283,7 @@
             this.cbo_PROD_UNIT.FormattingEnabled = true;
             this.cbo_PROD_UNIT.Items.AddRange(new object[] {
             "선택",
-            "EA"});
+            "BOX"});
             this.cbo_PROD_UNIT.Location = new System.Drawing.Point(4, 160);
             this.cbo_PROD_UNIT.Name = "cbo_PROD_UNIT";
             this.cbo_PROD_UNIT.Size = new System.Drawing.Size(137, 23);

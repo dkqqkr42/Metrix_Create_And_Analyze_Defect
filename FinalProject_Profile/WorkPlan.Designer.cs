@@ -325,6 +325,7 @@
             this.grd_Result.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grd_Result.Size = new System.Drawing.Size(1488, 627);
             this.grd_Result.TabIndex = 23;
+            this.grd_Result.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_Result_CellContentClick);
             this.grd_Result.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.grd_Result_CellFormatting);
             // 
             // tableLayoutPanel6

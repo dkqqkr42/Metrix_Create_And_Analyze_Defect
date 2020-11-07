@@ -17,10 +17,6 @@ namespace FinalProject_Profile
         public Working()
         {
             InitializeComponent();
-            for (int i = 0; i < 1; i++)
-            {
-                metroGrid1.Rows.Add("1", "1234", "2020/09/20", "2020/09/20", "내수");
-            }
         }
 
         private void Child4_Load(object sender, EventArgs e)
