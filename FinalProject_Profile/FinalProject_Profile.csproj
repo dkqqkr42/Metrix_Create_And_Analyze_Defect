@@ -212,8 +212,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
-    <None Include="Resources\검사시작클릭1.jpg" />
-    <None Include="Resources\검사시작1.jpg" />
     <None Include="Resources\검사시작클릭.jpg" />
     <None Include="Resources\검사시작.jpg" />
     <None Include="Resources\확정클릭.jpg" />
