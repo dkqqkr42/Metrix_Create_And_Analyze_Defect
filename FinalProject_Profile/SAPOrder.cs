@@ -22,7 +22,7 @@ namespace FinalProject_Profile
         public SAPOrder()
         {
             InitializeComponent();
-            cbo_TEAM.SelectedIndex = 0;
+            cbo_TEAM.SelectedIndex = 0;                     // 콤보박스의 기본값을 0번째(첫번째)에 있는 항목으로 설정
             cbo_WORKCENTER.SelectedIndex = 0;
             cbo_ORDER_TYPE.SelectedIndex = 0;
         }
@@ -51,7 +51,7 @@ namespace FinalProject_Profile
                 };
 
                 
-                // 생산팀 콤보박스 값에 따른 조회
+                // 생산팀 콤보박스 값에 따른 조회 (코드번호를 이용하여 조회하기)
                 if (cbo_TEAM.Text.Equals("전체"))
                 {
                     if (cbo_WORKCENTER.Text.Equals("전체"))
@@ -152,6 +152,19 @@ namespace FinalProject_Profile
         private void btn_Decide_MouseDown(object sender, MouseEventArgs e)
         {
             btn_Decide.BackgroundImage = FinalProject_Profile.Properties.Resources.확정클릭;
+        }
+
+        private void grd_Result_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)  // 그리드에서 선택된 셀의 폰트는 굵게, 선택되지 않은 셀의 폰트는 보통으로 설정
+        {
+            if (e.ColumnIndex >= 0 && e.RowIndex >= 0 &&
+            grd_Result.Rows[e.RowIndex].Cells[e.ColumnIndex].Selected)
+            {
+                e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Bold);
+            }
+            else
+            {
+                e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Regular);
+            }
         }
     }
 }

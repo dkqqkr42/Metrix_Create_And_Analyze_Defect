@@ -37,9 +37,8 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroContextMenu2 = new MetroFramework.Controls.MetroContextMenu(this.components);
-            this.form1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.form2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.form3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.form1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.form4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.form5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.form7ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -117,21 +116,13 @@
             this.metroContextMenu2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.form2ToolStripMenuItem,
             this.form1ToolStripMenuItem,
-            this.form3ToolStripMenuItem,
             this.form4ToolStripMenuItem,
             this.form5ToolStripMenuItem,
             this.form7ToolStripMenuItem,
             this.공부동ToolStripMenuItem});
             this.metroContextMenu2.Name = "metroContextMenu2";
             this.metroContextMenu2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.metroContextMenu2.Size = new System.Drawing.Size(147, 158);
-            // 
-            // form1ToolStripMenuItem
-            // 
-            this.form1ToolStripMenuItem.Name = "form1ToolStripMenuItem";
-            this.form1ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.form1ToolStripMenuItem.Text = "작업계획";
-            this.form1ToolStripMenuItem.Click += new System.EventHandler(this.form1ToolStripMenuItem_Click);
+            this.metroContextMenu2.Size = new System.Drawing.Size(147, 136);
             // 
             // form2ToolStripMenuItem
             // 
@@ -140,12 +131,12 @@
             this.form2ToolStripMenuItem.Text = "생산계획접수";
             this.form2ToolStripMenuItem.Click += new System.EventHandler(this.form2ToolStripMenuItem_Click);
             // 
-            // form3ToolStripMenuItem
+            // form1ToolStripMenuItem
             // 
-            this.form3ToolStripMenuItem.Name = "form3ToolStripMenuItem";
-            this.form3ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.form3ToolStripMenuItem.Text = "작업예약";
-            this.form3ToolStripMenuItem.Click += new System.EventHandler(this.form3ToolStripMenuItem_Click);
+            this.form1ToolStripMenuItem.Name = "form1ToolStripMenuItem";
+            this.form1ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.form1ToolStripMenuItem.Text = "작업계획";
+            this.form1ToolStripMenuItem.Click += new System.EventHandler(this.form1ToolStripMenuItem_Click);
             // 
             // form4ToolStripMenuItem
             // 
@@ -208,7 +199,6 @@
         private MetroFramework.Controls.MetroContextMenu metroContextMenu2;
         private System.Windows.Forms.ToolStripMenuItem form1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem form2ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem form3ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem form4ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem form5ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem form7ToolStripMenuItem;

@@ -186,6 +186,5 @@ namespace FinalProject_Profile
                 mChildForm9 = ShowOrActiveForm(mChildForm9, typeof(Child9)) as Child9;
             }
         }
-
     }
 }
