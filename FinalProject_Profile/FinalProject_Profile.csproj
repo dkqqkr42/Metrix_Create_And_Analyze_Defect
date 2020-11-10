@@ -76,11 +76,11 @@
     <Compile Include="SAPOrder.Designer.cs">
       <DependentUpon>SAPOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Working2.cs">
+    <Compile Include="Working.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Working2.Designer.cs">
-      <DependentUpon>Working2.cs</DependentUpon>
+    <Compile Include="Working.Designer.cs">
+      <DependentUpon>Working.cs</DependentUpon>
     </Compile>
     <Compile Include="WorkPlan.cs">
       <SubType>Form</SubType>
@@ -94,11 +94,11 @@
     <Compile Include="Reservation.Designer.cs">
       <DependentUpon>Reservation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Working.cs">
+    <Compile Include="_Working.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Working.Designer.cs">
-      <DependentUpon>Working.cs</DependentUpon>
+    <Compile Include="_Working.Designer.cs">
+      <DependentUpon>_Working.cs</DependentUpon>
     </Compile>
     <Compile Include="Child5.cs">
       <SubType>Form</SubType>
@@ -153,8 +153,8 @@
     <EmbeddedResource Include="SAPOrder.resx">
       <DependentUpon>SAPOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Working2.resx">
-      <DependentUpon>Working2.cs</DependentUpon>
+    <EmbeddedResource Include="Working.resx">
+      <DependentUpon>Working.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkPlan.resx">
       <DependentUpon>WorkPlan.cs</DependentUpon>
@@ -162,8 +162,8 @@
     <EmbeddedResource Include="Reservation.resx">
       <DependentUpon>Reservation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Working.resx">
-      <DependentUpon>Working.cs</DependentUpon>
+    <EmbeddedResource Include="_Working.resx">
+      <DependentUpon>_Working.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Child5.resx">
       <DependentUpon>Child5.cs</DependentUpon>
