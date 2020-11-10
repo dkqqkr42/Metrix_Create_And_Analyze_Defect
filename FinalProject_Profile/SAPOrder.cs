@@ -16,7 +16,6 @@ namespace FinalProject_Profile
     public partial class SAPOrder : MetroForm
     {
         protected const string connectionString = "DATA SOURCE=220.69.249.228:1521/xe;PASSWORD=1234;PERSIST SECURITY INFO=True;USER ID=MAT_MGR";
-        InputPopup_SAPOrder popup;
         List<string> list = new List<string>();
 
         public SAPOrder()

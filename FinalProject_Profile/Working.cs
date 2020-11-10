@@ -47,11 +47,12 @@ namespace FinalProject_Profile
                 };
                 connection.Open();
 
+                //RESERVE RANK의 우선순위가 가장 높은 작업의 데이터를 가져오는 쿼리
                 OracleCommand cmd = new OracleCommand
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "SELECT A.JOB_NO JOB_NO, RESERVE_RANK, A.PLANT_CODE PLANT_CODE, A.ORDER_NO||' - '||A.ORDER_SEQ ORDER_NO, A.ORDER_M ORDER_M, A.ADD_GOOD_QTY ADD_GOOD_QTY, DECODE(A.GUBUN, 20, '내수', 40, '수출', 10, '특판') GUBUN, DECODE(A.WORK_GUBUN, 'A', '정상작업', 'U', '재작업', 'R', '연구개발', 'T', '기술테스트', 'S', 'S/BOOK', 'C', 'C/MATCH') WORK_GBN, DECODE(A.NOTE_FLAG, 'Y', '★') NOTE_FLAG, A.WORK_GUBUN WORK_GUBUN, A.WC_CODE WC_CODE, trim(A.PROD_CODE) PROD_CODE, PROD_NAME, A.PROD_UNIT PROD_UNIT, A.MRP_MGR MRP_MGR, NOTE0, NOTE1, TO_CHAR(START_DATE, 'HH24:MI') SDATE, TO_CHAR(END_DATE, 'HH24:MI') EDATE FROM TBL_PRODUCTPLAN A, TBL_PRODUCTMASTER B, TBL_PRODRESERVE C WHERE A.PROD_CODE  = B.PROD_CODE AND A.WC_CODE = C.WC_CODE AND A.JOB_NO = C.JOB_NO AND A.PLANT_CODE = '2020' AND A.PROC_STATUS = 'A' AND A.DEL_FLAG = 'A' ORDER BY RESERVE_RANK"
+                    CommandText = "SELECT * FROM (select A.JOB_NO JOB_NO, RESERVE_RANK, A.PLANT_CODE PLANT_CODE, A.ORDER_NO||' - '||A.ORDER_SEQ ORDER_NO, A.ORDER_M ORDER_M, A.ADD_GOOD_QTY ADD_GOOD_QTY, DECODE(A.GUBUN, 20, '내수', 40, '수출', 10, '특판') GUBUN, DECODE(A.WORK_GUBUN, 'A', '정상작업', 'U', '재작업', 'R', '연구개발', 'T', '기술테스트', 'S', 'S/BOOK', 'C', 'C/MATCH') WORK_GBN, DECODE(A.NOTE_FLAG, 'Y', '★') NOTE_FLAG, A.WORK_GUBUN WORK_GUBUN, A.WC_CODE WC_CODE, trim(A.PROD_CODE) PROD_CODE, PROD_NAME, A.PROD_UNIT PROD_UNIT, A.MRP_MGR MRP_MGR, NOTE0, NOTE1, TO_CHAR(START_DATE, 'HH24:MI') SDATE, TO_CHAR(END_DATE, 'HH24:MI') EDATE FROM TBL_PRODUCTPLAN A, TBL_PRODUCTMASTER B, TBL_PRODRESERVE C WHERE A.PROD_CODE  = B.PROD_CODE AND A.WC_CODE = C.WC_CODE AND A.JOB_NO = C.JOB_NO AND A.PLANT_CODE = '2020' AND A.PROC_STATUS = 'A' AND A.DEL_FLAG = 'A' ORDER BY RESERVE_RANK) WHERE ROWNUM = 1"
                 };
 
 
@@ -72,6 +73,7 @@ namespace FinalProject_Profile
 
                 reader.Close();
 
+                //진행중인 작업의 박스당 피스 수, 팔레트당 박스 수, 한번에 생산되는 피스 수를 가져오는 쿼리
                 cmd = new OracleCommand
                 {
                     CommandType = CommandType.Text,
@@ -87,6 +89,21 @@ namespace FinalProject_Profile
                 plt_box = Int32.Parse(reader["PLTBOX"].ToString());
                 cut_pcs = Int32.Parse(reader["CUTPCS"].ToString());
 
+                //todo 생산테이블에서 데이터 조회 후 데이터를 컨트롤에 집어 넣는 작업
+
+                //현재 진행중인 작업을 생산진행중 으로 바꾸는 쿼리
+                cmd = new OracleCommand
+                {
+                    CommandType = CommandType.Text,
+                    Connection = connection,
+                    CommandText = "UPDATE TBL_PRODUCTPLAN SET PROC_STATUS = 'B' WHERE JOB_NO = :IN_JOB_NO"
+                };
+
+                cmd.Parameters.Add("IN_JOB_NO", job_no);
+
+                cmd.ExecuteNonQuery();
+
+                //todo 진행 시작한 작업을 PRODRESERVE 테이블에서 지우고 RESERVE_RANK 값을 1씩 낮추는 쿼리(프로시저로 구현 예정)
             }
             catch (Exception ex)
             {
