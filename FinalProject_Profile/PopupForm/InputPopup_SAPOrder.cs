@@ -30,6 +30,16 @@ namespace FinalProject_Profile.PopupForm
             cbo_COMPLETE_FLAG.SelectedIndex = 0;
         }
 
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
+        }
+
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
