@@ -49,6 +49,16 @@ namespace FinalProject_Profile
             FillGird();
         }
 
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
+        }
+
         private void Child3_Load(object sender, EventArgs e)                        // 실행되었을때, 어떤 항목을 추가해주려고 미리 만들어놓음
         {
 

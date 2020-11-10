@@ -26,6 +26,16 @@ namespace FinalProject_Profile
             cbo_ORDER_TYPE.SelectedIndex = 0;
         }
 
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
+        }
+
         public void FillGrid(DataSet ds)  // 데이터 조회 결과를 adapter로 받아 DataSet을 반환 받은 경우 사용되는 메서드
         {
             grd_Result.DataSource = ds.Tables[0];

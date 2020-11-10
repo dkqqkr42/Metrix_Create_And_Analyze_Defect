@@ -24,6 +24,16 @@ namespace FinalProject_Profile
         {
             SelectItem();
         }
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
+        }
+
         public DataTable SelectItem()
         {
             OracleConnection connection = null;
