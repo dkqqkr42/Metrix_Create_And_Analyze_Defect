@@ -116,7 +116,8 @@ namespace FinalProject_Profile
 
         private void metroButton1_Click(object sender, EventArgs e)  // 확정버튼 누를 경우 실행
         {
-
+            PlanInsert plantinsert = new PlanInsert();
+            plantinsert.ShowDialog();
         }
 
         private void metroButton3_Click(object sender, EventArgs e)  // 조회버튼 누를 경우 실행

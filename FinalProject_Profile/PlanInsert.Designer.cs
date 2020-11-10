@@ -1,6 +1,6 @@
 ﻿namespace FinalProject_Profile
 {
-    partial class PlanInsertTest
+    partial class PlanInsert
     {
         /// <summary>
         /// Required designer variable.

@@ -124,7 +124,7 @@ namespace FinalProject_Profile
         }
         public void UpdateData()
         {
-            if (label1.InvokeRequired)
+            if (lbl_PCS.InvokeRequired || lbl_BOX.InvokeRequired || lbl_PLT.InvokeRequired)
             {
                 Invoke((MethodInvoker)delegate () {
                     UpdateData();
@@ -132,9 +132,9 @@ namespace FinalProject_Profile
             }
             else
             {
-                label1.Text = pcs.ToString();
-                label3.Text = box.ToString();
-                label5.Text = plt.ToString();
+                lbl_PCS.Text = pcs.ToString();
+                lbl_BOX.Text = box.ToString();
+                lbl_PLT.Text = plt.ToString();
             }
 
             
