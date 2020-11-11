@@ -100,11 +100,11 @@
     <Compile Include="_Working.Designer.cs">
       <DependentUpon>_Working.cs</DependentUpon>
     </Compile>
-    <Compile Include="Child5.cs">
+    <Compile Include="Inspection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Child5.Designer.cs">
-      <DependentUpon>Child5.cs</DependentUpon>
+    <Compile Include="Inspection.Designer.cs">
+      <DependentUpon>Inspection.cs</DependentUpon>
     </Compile>
     <Compile Include="Child6.cs">
       <SubType>Form</SubType>
@@ -165,8 +165,8 @@
     <EmbeddedResource Include="_Working.resx">
       <DependentUpon>_Working.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Child5.resx">
-      <DependentUpon>Child5.cs</DependentUpon>
+    <EmbeddedResource Include="Inspection.resx">
+      <DependentUpon>Inspection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Child6.resx">
       <DependentUpon>Child6.cs</DependentUpon>

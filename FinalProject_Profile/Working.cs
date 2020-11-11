@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
@@ -19,12 +20,19 @@ namespace FinalProject_Profile
         string prod_code, order_no, job_no, prod_name, prod_unit, order_m, work_gbn, gubun, wc_code;
         int good_qty = 0, good_box = 0, good_plt = 0;
         int total_box = 0, total_plt = 0;
-        int now_seq = 1, punching = 0;
+        int now_seq = 1, plt_seq = 1,punching = 0;
         int total_qty = 0;
         int bad_qty = 0;
 
+        System.Timers.Timer timer = new System.Timers.Timer
+        {
+            Interval = 100,
+            AutoReset = false
+        };
+
         private void btn_InspectionStart_Click(object sender, EventArgs e)
         {
+            SelectItem();
             StartTimer();
         }
 
@@ -165,6 +173,10 @@ namespace FinalProject_Profile
                     UpdateData();
 
                 }
+                else
+                {
+                    
+                }
 
 
                 //현재 진행중인 작업을 생산진행중 으로 바꾸는 쿼리
@@ -238,50 +250,109 @@ namespace FinalProject_Profile
             }
         }
 
+        public void InsertRSLT_DTL()
+        {
+            OracleConnection connection = null;
+            try
+            {
+                connection = new OracleConnection
+                {
+                    ConnectionString = connectionString
+                };
+                connection.Open();
+
+                //RESERVE RANK의 우선순위가 가장 높은 작업의 데이터를 가져오는 쿼리
+                OracleCommand cmd = new OracleCommand
+                {
+                    CommandType = CommandType.StoredProcedure,
+                    Connection = connection,
+                    CommandText = "PRODRSLT_UPSERT"
+                };
+
+                cmd.Parameters.Add("IN_ROLL_NO", DateTime.Now.ToString("yyyyMMdd") + wc_code + now_seq.ToString("000"));
+                cmd.Parameters.Add("IN_S_SEQ", 1);
+                cmd.Parameters.Add("IN_JOB_NO", job_no);
+                cmd.Parameters.Add("IN_WC_CODE", wc_code);
+                cmd.Parameters.Add("IN_SHIFT_CODE", wc_code.Equals("AT01") ? "A" : "B");
+                cmd.Parameters.Add("IN_PROD_DATE", DateTime.Now.ToString("yyyyMMdd"));
+                cmd.Parameters.Add("IN_IPGO_QTY", good_qty);
+                cmd.Parameters.Add("IN_INSU_QTY", total_qty);
+                cmd.Parameters.Add("IN_TUIP_QTY", total_qty);
+                cmd.Parameters.Add("IN_GOOD_QTY", good_qty);
+                cmd.Parameters.Add("IN_STD_QTY", good_qty);
+                cmd.Parameters.Add("IN_BAD_QTY", bad_qty);
+                cmd.Parameters.Add("IN_EXT1_QTY", box_pcs);
+                cmd.Parameters.Add("IN_EXT2_QTY", plt_box);
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
         public void StartTimer()
         {
-            System.Timers.Timer timer = new System.Timers.Timer
-            {
-                Interval = 1000,
-            };
             timer.Elapsed += new ElapsedEventHandler(timer_Elapsed);
             timer.Start();
         }
 
         void timer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            for (int i = 0; i < 4; i++)
+            try
             {
-                if(i == 3)
+                for (int i = 0; i < 5; i++)
                 {
-                    bad_qty += cut_pcs;
-                    total_qty = good_qty + bad_qty;
-                    if (total_qty % box_pcs == 0)
+                    if (i == 4)
                     {
-                        total_box++;
-                        if (total_box % plt_box == 0)
-                        {
-                            total_plt++;
-                        }
+                        good_qty += cut_pcs - 1;
+                        bad_qty += 1;
+                        total_qty = good_qty + bad_qty;
                     }
-                }
 
-                else
-                {
-                    good_qty += cut_pcs;
-                    if (good_qty % box_pcs == 0)
+                    else
                     {
-                        good_box++;
-                        if (good_box % plt_box == 0)
-                        {
-                            good_plt++;
-                        }
+                        good_qty += cut_pcs;
+                        total_qty = good_qty + bad_qty;
                     }
-                }                
-                punching++;
-                UpdateData();
-                InsertRSLT();
+
+
+                    total_box = total_qty / box_pcs;
+                    total_plt = total_box / plt_box;
+                    good_box = good_qty / box_pcs;
+                    good_plt = good_box / plt_box;
+                    plt_seq = total_plt + 1;
+                    punching++;
+
+                    UpdateData();
+                    InsertRSLT();
+
+                    timer.Enabled = true;
+
+                    if (Int32.Parse(order_m) <= total_qty)
+                    {
+                        timer.Enabled = false;
+
+                        now_seq++;
+
+                        //todo 작업 순위에서 삭제 후 작업 순위 랭크 -1 후 Plan에 완료처리 하는 쿼리(프로시저로 구현 예정)
+
+                        MessageBox.Show("작업이 완료되었습니다.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                        
+                }
             }
+            catch
+            {
+                timer.Enabled = false;
+            }
+            
         }
         public void UpdateData()
         {
