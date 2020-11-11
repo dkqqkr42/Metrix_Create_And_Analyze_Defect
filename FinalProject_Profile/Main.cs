@@ -21,7 +21,7 @@ namespace FinalProject_Profile
         private SAPOrder mChildForm2 = null;
         private Reservation mChildForm3 = null;
         private Working mChildForm4 = null;
-        private Child5 mChildForm5 = null;
+        private Inspection mChildForm5 = null;
         private Child7 mChildForm7 = null;
         private Child9 mChildForm9 = null;
 
@@ -147,11 +147,11 @@ namespace FinalProject_Profile
                 {
                     ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
                 }
-                mChildForm5 = ShowOrActiveForm(mChildForm5, typeof(Child5)) as Child5;
+                mChildForm5 = ShowOrActiveForm(mChildForm5, typeof(Inspection)) as Inspection;
             }
             else
             {
-                mChildForm5 = ShowOrActiveForm(mChildForm5, typeof(Child5)) as Child5;
+                mChildForm5 = ShowOrActiveForm(mChildForm5, typeof(Inspection)) as Inspection;
             }
         }
 
