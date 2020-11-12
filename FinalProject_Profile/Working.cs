@@ -19,25 +19,40 @@ namespace FinalProject_Profile
         int box_pcs, plt_box, cut_pcs;
         string prod_code, order_no, job_no, prod_name, prod_unit, order_m, work_gbn, gubun, wc_code;
         int good_qty = 0, good_box = 0, good_plt = 0;
-        int total_box = 0, total_plt = 0;
+        int total_qty = 0, total_box = 0, total_plt = 0;
         int now_seq = 1, plt_seq = 1,punching = 0;
-        int total_qty = 0;
         int bad_qty = 0;
+        bool btn_flag = true;
+
+        int _good_qty = 0, _bad_qty = 0;
 
         System.Timers.Timer timer = new System.Timers.Timer
         {
-            Interval = 100,
+            Interval = 1000,
             AutoReset = false
         };
 
         private void btn_InspectionStart_Click(object sender, EventArgs e)
-        {
-            SelectItem();
-            StartTimer();
+        {           
+            if (btn_flag == true)
+            {
+                //멈추는 이미지로 바꾸기
+                timer.Start();
+                btn_flag = false;
+            }
+                
+            else if (btn_flag == false)
+            {
+                //시작 이미지로 바꾸기
+                timer.Stop();
+                btn_flag = true;
+            }
+                
         }
 
         private void Working2_Load(object sender, EventArgs e)
         {
+            timer.Elapsed += new ElapsedEventHandler(timer_Elapsed);
             SelectItem();
         }
 
@@ -68,6 +83,10 @@ namespace FinalProject_Profile
 
         public void SelectItem()
         {
+            good_qty = 0; good_box = 0; good_plt = 0;
+            total_qty = 0; total_box = 0; total_plt = 0;
+            plt_seq = 1; punching = 0; bad_qty = 0;
+            _good_qty = 0; _bad_qty = 0;
             OracleConnection connection = null;
             try
             {
@@ -103,7 +122,6 @@ namespace FinalProject_Profile
                 gubun = reader["GUBUN"].ToString();
                 wc_code = reader["WC_CODE"].ToString();
 
-                reader.Close();
 
                 //진행중인 작업의 박스당 피스 수, 팔레트당 박스 수, 한번에 생산되는 피스 수를 가져오는 쿼리
                 cmd = new OracleCommand
@@ -122,19 +140,8 @@ namespace FinalProject_Profile
                 cut_pcs = Int32.Parse(reader["CUTPCS"].ToString());
 
                 //생산테이블에서 데이터 조회 후 데이터를 컨트롤에 집어 넣는 작업
-                lbl_PROD_CODE.Text = prod_code;
-                lbl_ORDER_NO.Text = order_no;
-                lbl_PROD_NAME.Text = prod_name;
-                lbl_PROD_UNIT.Text = prod_unit;
-                lbl_ORDER_M.Text = order_m;
-                lbl_WORK_GBN.Text = work_gbn;
-                lbl_GUBUN.Text = gubun;
-                lbl_BOX_PCS.Text = box_pcs.ToString();
-                lbl_PLT_BOX.Text = plt_box.ToString();
-                lbl_CUT_PCS.Text = cut_pcs.ToString();
 
-                reader.Close();
-
+                UpdateDefaultData();
 
                 //작업이 진행되었다가 중단되었는지 확인하는 쿼리
                 cmd = new OracleCommand
@@ -148,6 +155,7 @@ namespace FinalProject_Profile
 
                 int check_Flag = Int32.Parse(cmd.ExecuteScalar().ToString());
 
+                //작업이 진행중이였다가 중단되었으면 작업의 진행 정도를 불러움
                 if(check_Flag == 1)
                 {
                     cmd = new OracleCommand
@@ -166,18 +174,36 @@ namespace FinalProject_Profile
                     good_qty = Int32.Parse(reader["GOOD_QTY"].ToString());
                     bad_qty = Int32.Parse(reader["BAD_QTY"].ToString());
 
+                    reader.Close();
+
+                    //받아온 데이터 설정
+
                     total_qty = good_qty + bad_qty; 
                     total_box = total_qty / box_pcs; total_plt = total_box / plt_box;
                     good_box = good_qty / box_pcs; good_plt = good_box / plt_box;
                     punching = total_qty / cut_pcs;
-                    UpdateData();
 
+                    _good_qty = good_qty % (box_pcs * plt_box - 40);
+                    _bad_qty = bad_qty % 40;
+                    plt_seq = total_plt + 1;
                 }
-                else
+
+                //now_seq 설정값 받아오기
+                cmd = new OracleCommand
                 {
-                    
-                }
+                    CommandType = CommandType.Text,
+                    Connection = connection,
+                    CommandText = "select count(*) from tbl_prodrslt where roll_no like '%' || :IN_SYSDATE || '%'"
+                };
 
+                cmd.Parameters.Add("IN_SYSDATE", DateTime.Now.ToString("yyyyMMdd"));
+
+                if (check_Flag == 1)
+                    now_seq = Int32.Parse(cmd.ExecuteScalar().ToString());
+                else
+                    now_seq = Int32.Parse(cmd.ExecuteScalar().ToString()) + 1;
+
+                UpdateData();
 
                 //현재 진행중인 작업을 생산진행중 으로 바꾸는 쿼리
                 cmd = new OracleCommand
@@ -190,8 +216,6 @@ namespace FinalProject_Profile
                 cmd.Parameters.Add("IN_JOB_NO", job_no);
 
                 cmd.ExecuteNonQuery();
-
-                //todo 진행 시작한 작업을 PRODRESERVE 테이블에서 지우고 RESERVE_RANK 값을 1씩 낮추는 쿼리(프로시저로 구현 예정)
             }
             catch (Exception ex)
             {
@@ -200,6 +224,29 @@ namespace FinalProject_Profile
             finally
             {
                 connection.Close();
+            }
+        }
+
+        public void UpdateDefaultData()
+        {
+            if (lbl_PROD_CODE.InvokeRequired || lbl_ORDER_NO.InvokeRequired || lbl_PROD_NAME.InvokeRequired)
+            {
+                Invoke((MethodInvoker)delegate () {
+                    UpdateDefaultData();
+                });
+            }
+            else
+            {
+                lbl_PROD_CODE.Text = prod_code;
+                lbl_ORDER_NO.Text = order_no;
+                lbl_PROD_NAME.Text = prod_name;
+                lbl_PROD_UNIT.Text = prod_unit;
+                lbl_ORDER_M.Text = order_m;
+                lbl_WORK_GBN.Text = work_gbn;
+                lbl_GUBUN.Text = gubun;
+                lbl_BOX_PCS.Text = box_pcs.ToString();
+                lbl_PLT_BOX.Text = plt_box.ToString();
+                lbl_CUT_PCS.Text = cut_pcs.ToString();
             }
         }
 
@@ -234,6 +281,7 @@ namespace FinalProject_Profile
                 cmd.Parameters.Add("IN_GOOD_QTY", good_qty);
                 cmd.Parameters.Add("IN_STD_QTY", good_qty);
                 cmd.Parameters.Add("IN_BAD_QTY", bad_qty);
+                cmd.Parameters.Add("IN_ETC_QTY", plt_seq);
                 cmd.Parameters.Add("IN_EXT1_QTY", box_pcs);
                 cmd.Parameters.Add("IN_EXT2_QTY", plt_box);
 
@@ -261,28 +309,25 @@ namespace FinalProject_Profile
                 };
                 connection.Open();
 
-                //RESERVE RANK의 우선순위가 가장 높은 작업의 데이터를 가져오는 쿼리
+                //DTL에 값을 넣는 쿼리
                 OracleCommand cmd = new OracleCommand
                 {
                     CommandType = CommandType.StoredProcedure,
                     Connection = connection,
-                    CommandText = "PRODRSLT_UPSERT"
+                    CommandText = "PRODRSLT_DTL_UPSERT"
                 };
 
                 cmd.Parameters.Add("IN_ROLL_NO", DateTime.Now.ToString("yyyyMMdd") + wc_code + now_seq.ToString("000"));
                 cmd.Parameters.Add("IN_S_SEQ", 1);
-                cmd.Parameters.Add("IN_JOB_NO", job_no);
-                cmd.Parameters.Add("IN_WC_CODE", wc_code);
+                cmd.Parameters.Add("IN_U_SEQ", plt_seq);
+                cmd.Parameters.Add("IN_UNIT_ROLL_NO", plt_seq);
+                cmd.Parameters.Add("IN_IPGO_QTY", _good_qty);
+                cmd.Parameters.Add("IN_GOOD_QTY", _good_qty);
+                cmd.Parameters.Add("IN_STD_QTY", _good_qty);
+                cmd.Parameters.Add("IN_GOOD_QTY2", _good_qty);
+                cmd.Parameters.Add("IN_GOOD_QTY3", _good_qty);
+                cmd.Parameters.Add("IN_BAD_QTY", _bad_qty);
                 cmd.Parameters.Add("IN_SHIFT_CODE", wc_code.Equals("AT01") ? "A" : "B");
-                cmd.Parameters.Add("IN_PROD_DATE", DateTime.Now.ToString("yyyyMMdd"));
-                cmd.Parameters.Add("IN_IPGO_QTY", good_qty);
-                cmd.Parameters.Add("IN_INSU_QTY", total_qty);
-                cmd.Parameters.Add("IN_TUIP_QTY", total_qty);
-                cmd.Parameters.Add("IN_GOOD_QTY", good_qty);
-                cmd.Parameters.Add("IN_STD_QTY", good_qty);
-                cmd.Parameters.Add("IN_BAD_QTY", bad_qty);
-                cmd.Parameters.Add("IN_EXT1_QTY", box_pcs);
-                cmd.Parameters.Add("IN_EXT2_QTY", plt_box);
 
                 cmd.ExecuteNonQuery();
 
@@ -297,12 +342,6 @@ namespace FinalProject_Profile
             }
         }
 
-        public void StartTimer()
-        {
-            timer.Elapsed += new ElapsedEventHandler(timer_Elapsed);
-            timer.Start();
-        }
-
         void timer_Elapsed(object sender, ElapsedEventArgs e)
         {
             try
@@ -312,13 +351,16 @@ namespace FinalProject_Profile
                     if (i == 4)
                     {
                         good_qty += cut_pcs - 1;
+                        _good_qty += cut_pcs - 1;
                         bad_qty += 1;
+                        _bad_qty += 1;
                         total_qty = good_qty + bad_qty;
                     }
 
                     else
                     {
                         good_qty += cut_pcs;
+                        _good_qty += cut_pcs;
                         total_qty = good_qty + bad_qty;
                     }
 
@@ -327,11 +369,17 @@ namespace FinalProject_Profile
                     total_plt = total_box / plt_box;
                     good_box = good_qty / box_pcs;
                     good_plt = good_box / plt_box;
-                    plt_seq = total_plt + 1;
                     punching++;
 
                     UpdateData();
                     InsertRSLT();
+                    InsertRSLT_DTL();
+
+                    if (total_qty % (box_pcs * plt_box) == 0)
+                    {
+                        _good_qty = 0; _bad_qty = 0;
+                        plt_seq = total_plt + 1;
+                    }
 
                     timer.Enabled = true;
 
@@ -339,11 +387,16 @@ namespace FinalProject_Profile
                     {
                         timer.Enabled = false;
 
-                        now_seq++;
-
-                        //todo 작업 순위에서 삭제 후 작업 순위 랭크 -1 후 Plan에 완료처리 하는 쿼리(프로시저로 구현 예정)
+                        //작업 순위에서 삭제 후 작업 순위 랭크 -1 후 Plan에 완료처리 하는 쿼리
+                        ChangePlan();
+                        //다음 데이터 조회
+                        SelectItem();
 
                         MessageBox.Show("작업이 완료되었습니다.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        timer.Stop();
+
+                        return;
                     }
                         
                 }
@@ -354,6 +407,41 @@ namespace FinalProject_Profile
             }
             
         }
+
+        public void ChangePlan()
+        {
+            OracleConnection connection = null;
+            try
+            {
+                connection = new OracleConnection
+                {
+                    ConnectionString = connectionString
+                };
+                connection.Open();
+
+                //작업 완료 후 Plan의 PROD
+                OracleCommand cmd = new OracleCommand
+                {
+                    CommandType = CommandType.StoredProcedure,
+                    Connection = connection,
+                    CommandText = "PRODRLST_END"
+                };
+
+                cmd.Parameters.Add("IN_JOB_NO", job_no);
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
         public void UpdateData()
         {
             if (lbl_Punching.InvokeRequired || lbl_Total_BOX.InvokeRequired || lbl_Total_PLT.InvokeRequired)
@@ -365,14 +453,25 @@ namespace FinalProject_Profile
             else
             {
                 lbl_Punching.Text = punching.ToString();
+                lbl_Punching2.Text = punching.ToString();
 
                 lbl_Total_PCS.Text = total_qty.ToString();
                 lbl_Total_BOX.Text = total_box.ToString();
                 lbl_Total_PLT.Text = total_plt.ToString();
 
+                lbl_Total_PCS2.Text = total_qty.ToString();
+                lbl_Total_BOX2.Text = total_box.ToString();
+                lbl_Total_PLT2.Text = total_plt.ToString();
+
                 lbl_Good_PCS.Text = good_qty.ToString();
                 lbl_Good_BOX.Text = good_box.ToString();
                 lbl_Good_PLT.Text = good_plt.ToString();
+
+                lbl_Good_PCS2.Text = good_qty.ToString();
+                lbl_Good_BOX2.Text = good_box.ToString();
+                lbl_Good_PLT2.Text = good_plt.ToString();
+
+                lbl_Top_PCS.Text = total_qty.ToString();
             }
         }
     }
