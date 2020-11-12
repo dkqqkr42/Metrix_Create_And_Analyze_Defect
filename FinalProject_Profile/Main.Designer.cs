@@ -143,7 +143,7 @@
             this.공부동ToolStripMenuItem.Name = "공부동ToolStripMenuItem";
             this.공부동ToolStripMenuItem.Size = new System.Drawing.Size(346, 58);
             this.공부동ToolStripMenuItem.Text = "공부동";
-            this.공부동ToolStripMenuItem.Click += new System.EventHandler(this.공부동ToolStripMenuItem_Click);
+            this.공부동ToolStripMenuItem.Click += new System.EventHandler(this.form9ToolStripMenuItem_Click);
             // 
             // tableLayoutPanel1
             // 

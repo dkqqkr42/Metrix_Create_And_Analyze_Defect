@@ -143,8 +143,7 @@ namespace FinalProject_Profile
                     cmd.Parameters.Add("LDC_JOB_QTY_MODI", dt.Rows[i]["ORDER_QTY"].ToString());
                     cmd.Parameters.Add("LS_WC_CODE", dt.Rows[i]["WC_CODE"].ToString());
                     cmd.Parameters.Add("LS_PROD_UNIT", dt.Rows[i]["PROD_UNIT"].ToString());
-                    cmd.Parameters.Add("LDT_START_DATE", DateTime.Now);
-                    cmd.Parameters.Add("LDT_END_DATE", DateTime.Now);
+                    cmd.Parameters.Add("LS_START_DATE", DateTime.Now);
                     cmd.Parameters.Add("LS_JOB_DATE", DateTime.Now.ToString("yyyyMMdd"));
                     cmd.Parameters.Add("LS_NOTE_FLAG", "n");
                     cmd.Parameters.Add("LS_NOTE0", dt.Rows[i]["REMARK"].ToString());

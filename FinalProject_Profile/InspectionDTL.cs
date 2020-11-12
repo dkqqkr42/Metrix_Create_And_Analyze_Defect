@@ -11,9 +11,9 @@ using MetroFramework.Forms;
 
 namespace FinalProject_Profile
 {
-    public partial class Child6 : MetroForm
+    public partial class InspectionDTL : MetroForm
     {
-        public Child6()
+        public InspectionDTL()
         {
             InitializeComponent();
         }
@@ -25,6 +25,11 @@ namespace FinalProject_Profile
                 cp.ExStyle |= 0x02000000;
                 return cp;
             }
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 

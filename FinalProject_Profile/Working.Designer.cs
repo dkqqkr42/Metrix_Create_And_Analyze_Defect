@@ -106,10 +106,10 @@
             this.label33 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
-            this.metroTile4 = new MetroFramework.Controls.MetroTile();
-            this.metroTile3 = new MetroFramework.Controls.MetroTile();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.tile_Inspection = new MetroFramework.Controls.MetroTile();
+            this.tile_Working = new MetroFramework.Controls.MetroTile();
+            this.tile_Reservation = new MetroFramework.Controls.MetroTile();
+            this.tile_WorkPlan = new MetroFramework.Controls.MetroTile();
             this.label30 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -1321,10 +1321,10 @@
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.Controls.Add(this.metroTile5, 0, 4);
-            this.tableLayoutPanel5.Controls.Add(this.metroTile4, 0, 3);
-            this.tableLayoutPanel5.Controls.Add(this.metroTile3, 0, 2);
-            this.tableLayoutPanel5.Controls.Add(this.metroTile2, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.metroTile1, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.tile_Inspection, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.tile_Working, 0, 2);
+            this.tableLayoutPanel5.Controls.Add(this.tile_Reservation, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.tile_WorkPlan, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
@@ -1351,57 +1351,57 @@
             this.metroTile5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile5.UseSelectable = true;
             // 
-            // metroTile4
+            // tile_Inspection
             // 
-            this.metroTile4.ActiveControl = null;
-            this.metroTile4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile4.Location = new System.Drawing.Point(4, 541);
-            this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(212, 172);
-            this.metroTile4.Style = MetroFramework.MetroColorStyle.Teal;
-            this.metroTile4.TabIndex = 3;
-            this.metroTile4.Text = "검사성적서";
-            this.metroTile4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile4.UseSelectable = true;
+            this.tile_Inspection.ActiveControl = null;
+            this.tile_Inspection.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tile_Inspection.Location = new System.Drawing.Point(4, 541);
+            this.tile_Inspection.Name = "tile_Inspection";
+            this.tile_Inspection.Size = new System.Drawing.Size(212, 172);
+            this.tile_Inspection.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tile_Inspection.TabIndex = 3;
+            this.tile_Inspection.Text = "검사성적서";
+            this.tile_Inspection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tile_Inspection.UseSelectable = true;
             // 
-            // metroTile3
+            // tile_Working
             // 
-            this.metroTile3.ActiveControl = null;
-            this.metroTile3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile3.Location = new System.Drawing.Point(4, 362);
-            this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(212, 172);
-            this.metroTile3.Style = MetroFramework.MetroColorStyle.Teal;
-            this.metroTile3.TabIndex = 2;
-            this.metroTile3.Text = "작업진행";
-            this.metroTile3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile3.UseSelectable = true;
+            this.tile_Working.ActiveControl = null;
+            this.tile_Working.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tile_Working.Location = new System.Drawing.Point(4, 362);
+            this.tile_Working.Name = "tile_Working";
+            this.tile_Working.Size = new System.Drawing.Size(212, 172);
+            this.tile_Working.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tile_Working.TabIndex = 2;
+            this.tile_Working.Text = "작업진행";
+            this.tile_Working.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tile_Working.UseSelectable = true;
             // 
-            // metroTile2
+            // tile_Reservation
             // 
-            this.metroTile2.ActiveControl = null;
-            this.metroTile2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile2.Location = new System.Drawing.Point(4, 183);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(212, 172);
-            this.metroTile2.Style = MetroFramework.MetroColorStyle.Teal;
-            this.metroTile2.TabIndex = 1;
-            this.metroTile2.Text = "작업예약";
-            this.metroTile2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile2.UseSelectable = true;
+            this.tile_Reservation.ActiveControl = null;
+            this.tile_Reservation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tile_Reservation.Location = new System.Drawing.Point(4, 183);
+            this.tile_Reservation.Name = "tile_Reservation";
+            this.tile_Reservation.Size = new System.Drawing.Size(212, 172);
+            this.tile_Reservation.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tile_Reservation.TabIndex = 1;
+            this.tile_Reservation.Text = "작업예약";
+            this.tile_Reservation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tile_Reservation.UseSelectable = true;
             // 
-            // metroTile1
+            // tile_WorkPlan
             // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile1.Location = new System.Drawing.Point(4, 4);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(212, 172);
-            this.metroTile1.Style = MetroFramework.MetroColorStyle.Teal;
-            this.metroTile1.TabIndex = 0;
-            this.metroTile1.Text = "작업계획";
-            this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile1.UseSelectable = true;
+            this.tile_WorkPlan.ActiveControl = null;
+            this.tile_WorkPlan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tile_WorkPlan.Location = new System.Drawing.Point(4, 4);
+            this.tile_WorkPlan.Name = "tile_WorkPlan";
+            this.tile_WorkPlan.Size = new System.Drawing.Size(212, 172);
+            this.tile_WorkPlan.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tile_WorkPlan.TabIndex = 0;
+            this.tile_WorkPlan.Text = "작업계획";
+            this.tile_WorkPlan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tile_WorkPlan.UseSelectable = true;
             // 
             // label30
             // 
@@ -1464,10 +1464,10 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private MetroFramework.Controls.MetroTile metroTile5;
-        private MetroFramework.Controls.MetroTile metroTile4;
-        private MetroFramework.Controls.MetroTile metroTile3;
-        private MetroFramework.Controls.MetroTile metroTile2;
-        private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroTile tile_Inspection;
+        private MetroFramework.Controls.MetroTile tile_Working;
+        private MetroFramework.Controls.MetroTile tile_Reservation;
+        private MetroFramework.Controls.MetroTile tile_WorkPlan;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
