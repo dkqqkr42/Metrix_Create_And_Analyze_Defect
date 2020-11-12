@@ -12,10 +12,10 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace FinalProject_Profile
 {
-    public partial class PlanInsertTest : MetroForm
+    public partial class PlanInsert : MetroForm
     {
         protected const string connectionString = "DATA SOURCE=220.69.249.228:1521/xe;PASSWORD=1234;PERSIST SECURITY INFO=True;USER ID=MAT_MGR";
-        public PlanInsertTest()
+        public PlanInsert()
         {
             InitializeComponent();
         }
@@ -24,6 +24,16 @@ namespace FinalProject_Profile
         {
             SelectItem();
         }
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
+        }
+
         public DataTable SelectItem()
         {
             OracleConnection connection = null;
@@ -39,17 +49,17 @@ namespace FinalProject_Profile
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "SELECT trim(TBL_SAPORDER.PLANT_CODE) PLANT_CODE, trim(TBL_SAPORDER.ORDER_NO) ORDER_NO, trim(TBL_SAPORDER.ORDER_SEQ) ORDER_SEQ, trim(TBL_SAPORDER.PROD_CODE) PROD_CODE, trim(TBL_SAPORDER.PROD_UNIT) PROD_UNIT, trim(TBL_SAPORDER.WC_CODE) WC_CODE, TBL_SAPORDER.ORDER_QTY, trim(TBL_SAPORDER.MRP_MGR) MRP_MGR, trim(TBL_SAPORDER.CUST_NAME) CUST_NAME, trim(TBL_SAPORDER.DISTRB_CHL) AS GUBUN, TBL_SAPORDER.REMARK FROM TBL_SAPORDER , TBL_WORKCENTER WHERE TBL_SAPORDER.PLANT_CODE = TBL_WORKCENTER.PLANT_CODE AND TBL_SAPORDER.WC_CODE = TBL_WORKCENTER.WC_CODE AND TBL_SAPORDER.PLANT_CODE = :ARG_PLANT AND ( TBL_SAPORDER.MRP_MGR  = :ARG_MRP1 OR TBL_SAPORDER.MRP_MGR  = :ARG_MRP2 ) AND TBL_SAPORDER.WC_CODE LIKE :ARG_WC AND TBL_SAPORDER.COMPLETE_FLAG = 'N' AND TBL_SAPORDER.ORDER_QTY - TBL_SAPORDER.PLAN_QTY > 0 AND TBL_SAPORDER.ORDER_DATE BETWEEN :ARG_O_DATE AND :ARG_E_DATE ORDER BY TBL_WORKCENTER.GONGBU_DIV, TBL_SAPORDER.WC_CODE, TBL_SAPORDER.PROD_CODE"
+                    CommandText = "SELECT trim(TBL_SAPORDER.PLANT_CODE) PLANT_CODE, trim(TBL_SAPORDER.ORDER_NO) ORDER_NO, trim(TBL_SAPORDER.ORDER_SEQ) ORDER_SEQ, trim(TBL_SAPORDER.PROD_CODE) PROD_CODE, trim(TBL_SAPORDER.PROD_UNIT) PROD_UNIT, trim(TBL_SAPORDER.WC_CODE) WC_CODE, TBL_SAPORDER.ORDER_QTY, trim(TBL_SAPORDER.MRP_MGR) MRP_MGR, trim(TBL_SAPORDER.CUST_NAME) CUST_NAME, trim(TBL_SAPORDER.DISTRB_CHL) AS GUBUN, TBL_SAPORDER.REMARK FROM TBL_SAPORDER , TBL_WORKCENTER WHERE TBL_SAPORDER.PLANT_CODE = TBL_WORKCENTER.PLANT_CODE AND TBL_SAPORDER.WC_CODE = TBL_WORKCENTER.WC_CODE AND TBL_SAPORDER.PLANT_CODE = :ARG_PLANT AND ( TBL_SAPORDER.MRP_MGR  = :ARG_MRP1 OR TBL_SAPORDER.MRP_MGR  = :ARG_MRP2 ) AND TBL_SAPORDER.COMPLETE_FLAG = 'N' AND TBL_SAPORDER.ORDER_QTY - TBL_SAPORDER.PLAN_QTY > 0 AND TBL_SAPORDER.ORDER_DATE BETWEEN :ARG_O_DATE AND :ARG_E_DATE AND TBL_SAPORDER.ORDER_NO NOT IN(SELECT ORDER_NO FROM TBL_PRODUCTPLAN) ORDER BY TBL_WORKCENTER.GONGBU_DIV, TBL_SAPORDER.WC_CODE, TBL_SAPORDER.PROD_CODE"
                 };
                 
 
                 cmd.Parameters.Add("ARG_PLANT", "2020");
                 cmd.Parameters.Add("ARG_MRP1", "F63");
                 cmd.Parameters.Add("ARG_MRP2", "F63");
-                cmd.Parameters.Add("ARG_WC", "AT01");
+                //cmd.Parameters.Add("ARG_WC", "AT01");
                 //todo 날짜
-                cmd.Parameters.Add("ARG_O_DATE", "20201106");
-                cmd.Parameters.Add("ARG_E_DATE", "20201106");
+                cmd.Parameters.Add("ARG_O_DATE", "20201001");
+                cmd.Parameters.Add("ARG_E_DATE", DateTime.Now.ToString("yyyyMMdd"));
 
 
                 OracleDataReader reader = cmd.ExecuteReader();

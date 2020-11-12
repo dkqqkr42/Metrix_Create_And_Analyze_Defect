@@ -21,7 +21,7 @@ namespace FinalProject_Profile
         private SAPOrder mChildForm2 = null;
         private Reservation mChildForm3 = null;
         private Working mChildForm4 = null;
-        private Child5 mChildForm5 = null;
+        private Inspection mChildForm5 = null;
         private Child7 mChildForm7 = null;
         private Child9 mChildForm9 = null;
 
@@ -48,11 +48,11 @@ namespace FinalProject_Profile
                 form = (Form)Activator.CreateInstance(t);
                 form.MdiParent = this;
                 form.StartPosition = FormStartPosition.CenterParent;
-                form.WindowState = FormWindowState.Minimized;
+                //form.WindowState = FormWindowState.Minimized;
                 form.Dock = DockStyle.Fill;
                 form.Show();
                 //form.WindowState = FormWindowState.Maximized;
-                form.WindowState = FormWindowState.Normal;
+                //form.WindowState = FormWindowState.Normal;
             }
             else
             {
@@ -61,11 +61,11 @@ namespace FinalProject_Profile
                     form = (Form)Activator.CreateInstance(t);
                     form.MdiParent = this;
                     form.StartPosition = FormStartPosition.CenterParent;
-                    form.WindowState = FormWindowState.Minimized;
+                    //form.WindowState = FormWindowState.Minimized;
                     form.Dock = DockStyle.Fill;
                     form.Show();
                     //form.WindowState = FormWindowState.Maximized;
-                    form.WindowState = FormWindowState.Normal;
+                    //form.WindowState = FormWindowState.Normal;
                 }
                 else
                 {
@@ -147,11 +147,11 @@ namespace FinalProject_Profile
                 {
                     ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
                 }
-                mChildForm5 = ShowOrActiveForm(mChildForm5, typeof(Child5)) as Child5;
+                mChildForm5 = ShowOrActiveForm(mChildForm5, typeof(Inspection)) as Inspection;
             }
             else
             {
-                mChildForm5 = ShowOrActiveForm(mChildForm5, typeof(Child5)) as Child5;
+                mChildForm5 = ShowOrActiveForm(mChildForm5, typeof(Inspection)) as Inspection;
             }
         }
 

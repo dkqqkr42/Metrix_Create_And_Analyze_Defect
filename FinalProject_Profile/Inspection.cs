@@ -15,13 +15,23 @@ using System.Threading;
 
 namespace FinalProject_Profile
 {
-    public partial class Child5 : MetroForm
+    public partial class Inspection : MetroForm
     {
         protected const string connectionString = "DATA SOURCE=220.69.249.228:1521/xe;PASSWORD=1234;PERSIST SECURITY INFO=True;USER ID=MAT_MGR";
 
-        public Child5()
+        public Inspection()
         {
             InitializeComponent();
+        }
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
         }
 
         private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
@@ -82,10 +92,10 @@ namespace FinalProject_Profile
                     "(SELECT ROLL_NO, S_SEQ, SUM(STD_QTY) OKBAD_QTY " +
                     "FROM TBL_WCDEFECT " +
                     // Where
-                    "WHERE (ROLL_NO, S_SEQ) IN (SELECT ROLL_NO, S_SEQ FROM TBL_PRODRSLT WHERE PROD_DATE= '20201107' AND WC_CODE= 'AT01') " + 
+                    "WHERE (ROLL_NO, S_SEQ) IN (SELECT ROLL_NO, S_SEQ FROM TBL_PRODRSLT WHERE PROD_DATE= :IN_DATE) " + 
                     "AND FACTOR_CODE <>'XXX' AND DEL_FLAG = 'A' GROUP BY ROLL_NO, S_SEQ) D " +
                     "WHERE A.JOB_NO=C.JOB_NO AND A.PROD_CODE = B.PROD_CODE AND (C.ROLL_NO = D.ROLL_NO(+) AND C.S_SEQ = D.S_SEQ(+))" +
-                    "AND C.PROD_DATE = '20201107' AND A.PLANT_CODE = '2020' AND A.WC_CODE = 'AT01' " +
+                    "AND C.PROD_DATE = :IN_DATE AND A.PLANT_CODE = '2020' " +
                     "AND A.DEL_FLAG = 'A' ORDER BY C.START_TIME";
 
                 connection = new OracleConnection
@@ -100,6 +110,8 @@ namespace FinalProject_Profile
                     Connection = connection,
                     CommandText = ct2
                 };
+
+                cmd.Parameters.Add("IN_DATE", dateTimePicker2.Value.ToString("yyyyMMdd"));
 
                 OracleDataReader reader = cmd.ExecuteReader();
 
@@ -151,6 +163,11 @@ namespace FinalProject_Profile
             {
                 connection.Close();
             }
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            FillGrid();
         }
     }
 }

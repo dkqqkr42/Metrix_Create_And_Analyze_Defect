@@ -58,11 +58,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PlanInsertTest.cs">
+    <Compile Include="PlanInsert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PlanInsertTest.Designer.cs">
-      <DependentUpon>PlanInsertTest.cs</DependentUpon>
+    <Compile Include="PlanInsert.Designer.cs">
+      <DependentUpon>PlanInsert.cs</DependentUpon>
     </Compile>
     <Compile Include="PopupForm\InputPopup_SAPOrder.cs">
       <SubType>Form</SubType>
@@ -76,11 +76,11 @@
     <Compile Include="SAPOrder.Designer.cs">
       <DependentUpon>SAPOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Working2.cs">
+    <Compile Include="Working.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Working2.Designer.cs">
-      <DependentUpon>Working2.cs</DependentUpon>
+    <Compile Include="Working.Designer.cs">
+      <DependentUpon>Working.cs</DependentUpon>
     </Compile>
     <Compile Include="WorkPlan.cs">
       <SubType>Form</SubType>
@@ -94,17 +94,17 @@
     <Compile Include="Reservation.Designer.cs">
       <DependentUpon>Reservation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Working.cs">
+    <Compile Include="_Working.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Working.Designer.cs">
-      <DependentUpon>Working.cs</DependentUpon>
+    <Compile Include="_Working.Designer.cs">
+      <DependentUpon>_Working.cs</DependentUpon>
     </Compile>
-    <Compile Include="Child5.cs">
+    <Compile Include="Inspection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Child5.Designer.cs">
-      <DependentUpon>Child5.cs</DependentUpon>
+    <Compile Include="Inspection.Designer.cs">
+      <DependentUpon>Inspection.cs</DependentUpon>
     </Compile>
     <Compile Include="Child6.cs">
       <SubType>Form</SubType>
@@ -144,8 +144,8 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="PlanInsertTest.resx">
-      <DependentUpon>PlanInsertTest.cs</DependentUpon>
+    <EmbeddedResource Include="PlanInsert.resx">
+      <DependentUpon>PlanInsert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopupForm\InputPopup_SAPOrder.resx">
       <DependentUpon>InputPopup_SAPOrder.cs</DependentUpon>
@@ -153,8 +153,8 @@
     <EmbeddedResource Include="SAPOrder.resx">
       <DependentUpon>SAPOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Working2.resx">
-      <DependentUpon>Working2.cs</DependentUpon>
+    <EmbeddedResource Include="Working.resx">
+      <DependentUpon>Working.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkPlan.resx">
       <DependentUpon>WorkPlan.cs</DependentUpon>
@@ -162,11 +162,11 @@
     <EmbeddedResource Include="Reservation.resx">
       <DependentUpon>Reservation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Working.resx">
-      <DependentUpon>Working.cs</DependentUpon>
+    <EmbeddedResource Include="_Working.resx">
+      <DependentUpon>_Working.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Child5.resx">
-      <DependentUpon>Child5.cs</DependentUpon>
+    <EmbeddedResource Include="Inspection.resx">
+      <DependentUpon>Inspection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Child6.resx">
       <DependentUpon>Child6.cs</DependentUpon>
@@ -212,8 +212,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
-    <None Include="Resources\검사시작클릭1.jpg" />
-    <None Include="Resources\검사시작1.jpg" />
     <None Include="Resources\검사시작클릭.jpg" />
     <None Include="Resources\검사시작.jpg" />
     <None Include="Resources\확정클릭.jpg" />

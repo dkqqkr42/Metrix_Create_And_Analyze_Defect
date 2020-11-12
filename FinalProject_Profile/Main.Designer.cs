@@ -61,7 +61,7 @@
             // metroButton1
             // 
             this.metroButton1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.metroButton1.Location = new System.Drawing.Point(21, 51);
+            this.metroButton1.Location = new System.Drawing.Point(21, 61);
             this.metroButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(66, 18);
@@ -101,7 +101,7 @@
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(98, 51);
+            this.metroButton2.Location = new System.Drawing.Point(98, 61);
             this.metroButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(66, 18);
@@ -178,7 +178,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Main";
             this.Padding = new System.Windows.Forms.Padding(18, 60, 18, 16);
-            this.Text = "Main";
+            this.Text = "자동차 부품(매트리스) 생산 및 불량분석";
             this.TransparencyKey = System.Drawing.Color.Empty;
             this.metroContextMenu1.ResumeLayout(false);
             this.metroContextMenu2.ResumeLayout(false);

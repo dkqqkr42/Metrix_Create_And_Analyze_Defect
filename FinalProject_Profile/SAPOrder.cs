@@ -16,7 +16,6 @@ namespace FinalProject_Profile
     public partial class SAPOrder : MetroForm
     {
         protected const string connectionString = "DATA SOURCE=220.69.249.228:1521/xe;PASSWORD=1234;PERSIST SECURITY INFO=True;USER ID=MAT_MGR";
-        InputPopup_SAPOrder popup;
         List<string> list = new List<string>();
 
         public SAPOrder()
@@ -25,6 +24,16 @@ namespace FinalProject_Profile
             cbo_TEAM.SelectedIndex = 0;                     // 콤보박스의 기본값을 0번째(첫번째)에 있는 항목으로 설정
             cbo_WORKCENTER.SelectedIndex = 0;
             cbo_ORDER_TYPE.SelectedIndex = 0;
+        }
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
         }
 
         public void FillGrid(DataSet ds)  // 데이터 조회 결과를 adapter로 받아 DataSet을 반환 받은 경우 사용되는 메서드
@@ -116,7 +125,8 @@ namespace FinalProject_Profile
 
         private void metroButton1_Click(object sender, EventArgs e)  // 확정버튼 누를 경우 실행
         {
-
+            PlanInsert plantinsert = new PlanInsert();
+            plantinsert.ShowDialog();
         }
 
         private void metroButton3_Click(object sender, EventArgs e)  // 조회버튼 누를 경우 실행
