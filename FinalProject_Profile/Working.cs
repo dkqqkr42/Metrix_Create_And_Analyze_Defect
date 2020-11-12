@@ -110,17 +110,23 @@ namespace FinalProject_Profile
 
                 OracleDataReader reader = cmd.ExecuteReader();
 
-                reader.Read();
-
-                prod_code = reader["PROD_CODE"].ToString();
-                order_no = reader["ORDER_NO"].ToString();
-                job_no = reader["JOB_NO"].ToString();
-                prod_name = reader["PROD_NAME"].ToString();
-                prod_unit = reader["PROD_UNIT"].ToString();
-                order_m = reader["ORDER_M"].ToString();
-                work_gbn = reader["WORK_GBN"].ToString();
-                gubun = reader["GUBUN"].ToString();
-                wc_code = reader["WC_CODE"].ToString();
+                if (reader.Read())
+                {
+                    prod_code = reader["PROD_CODE"].ToString();
+                    order_no = reader["ORDER_NO"].ToString();
+                    job_no = reader["JOB_NO"].ToString();
+                    prod_name = reader["PROD_NAME"].ToString();
+                    prod_unit = reader["PROD_UNIT"].ToString();
+                    order_m = reader["ORDER_M"].ToString();
+                    work_gbn = reader["WORK_GBN"].ToString();
+                    gubun = reader["GUBUN"].ToString();
+                    wc_code = reader["WC_CODE"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("예약된 작업이 없습니다.", "경고", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
 
                 //진행중인 작업의 박스당 피스 수, 팔레트당 박스 수, 한번에 생산되는 피스 수를 가져오는 쿼리
@@ -223,6 +229,7 @@ namespace FinalProject_Profile
             }
             finally
             {
+
                 connection.Close();
             }
         }
