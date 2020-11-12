@@ -107,6 +107,8 @@ namespace FinalProject_Profile
             }
         }
 
+        /* 여기서 부터 위아래 버튼 Click 이벤트 항목 */
+
         private void metroTile7_Click(object sender, EventArgs e)                   // 클릭 이벤트 (1칸 UP Button)
         {
             // metroGrid.Rows.Count (= Metro Grid의 모든 행을 포함하는 것을 카운팅 해 줌)
@@ -212,7 +214,10 @@ namespace FinalProject_Profile
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void metroButton1_Click(object sender, EventArgs e)
+        
+        /* 여기서부터 확정,취소 버튼 이벤트 */
+
+        private void metroButton1_Click(object sender, EventArgs e)             // 순위확정 버튼 이벤트
         {
             for (int i = 0; i < table.Rows.Count; i++)
             {
@@ -282,7 +287,7 @@ namespace FinalProject_Profile
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void metroButton2_Click(object sender, EventArgs e)
+        private void metroButton2_Click(object sender, EventArgs e)             // 예약 취소 버튼
         {
             OracleConnection connection = null;
             try
