@@ -143,5 +143,51 @@ namespace FinalProject_Profile
         {
             main.CallSAPOrder();
         }
+
+        private void metroTile6_Click(object sender, EventArgs e)
+        {
+            int totalRows = grd_Result.Rows.Count;
+            int colIndex = grd_Result.SelectedCells[0].OwningColumn.Index;
+            int rowIndex = grd_Result.SelectedCells[0].OwningRow.Index;
+            if (rowIndex == 0)
+                return;
+            grd_Result.ClearSelection();
+            grd_Result.Rows[0].Cells[colIndex].Selected = true;
+
+
+        }
+
+        private void metroTile7_Click(object sender, EventArgs e)
+        {
+            int totalRows = grd_Result.Rows.Count;
+            int colIndex = grd_Result.SelectedCells[0].OwningColumn.Index;
+            int rowIndex = grd_Result.SelectedCells[0].OwningRow.Index;
+            if (rowIndex == 0)
+                return;
+            grd_Result.ClearSelection();
+            grd_Result.Rows[rowIndex - 1].Cells[colIndex].Selected = true;
+        }
+
+        private void metroTile8_Click(object sender, EventArgs e)
+        {
+            int totalRows = grd_Result.Rows.Count;
+            int colIndex = grd_Result.SelectedCells[0].OwningColumn.Index;
+            int rowIndex = grd_Result.SelectedCells[0].OwningRow.Index;
+            if (rowIndex == totalRows - 1)
+                return;
+            grd_Result.ClearSelection();
+            grd_Result.Rows[rowIndex + 1].Cells[colIndex].Selected = true;
+        }
+
+        private void metroTile9_Click(object sender, EventArgs e)
+        {
+            int totalRows = grd_Result.Rows.Count;
+            int colIndex = grd_Result.SelectedCells[0].OwningColumn.Index;
+            int rowIndex = grd_Result.SelectedCells[0].OwningRow.Index;
+            if (rowIndex == totalRows - 1)
+                return;
+            grd_Result.ClearSelection();
+            grd_Result.Rows[grd_Result.Rows.Count - 1].Cells[colIndex].Selected = true;
+        }
     }
 }
