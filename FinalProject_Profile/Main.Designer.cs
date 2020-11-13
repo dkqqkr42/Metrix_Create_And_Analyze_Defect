@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.newnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -43,33 +41,12 @@
             this.form5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.form7ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.공부동ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroContextMenu1.SuspendLayout();
             this.metroContextMenu2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(18, 60);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1884, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.metroButton1.Location = new System.Drawing.Point(21, 61);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(66, 18);
-            this.metroButton1.Style = MetroFramework.MetroColorStyle.Lime;
-            this.metroButton1.TabIndex = 2;
-            this.metroButton1.Text = "Option(&O)";
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroContextMenu1
             // 
@@ -101,17 +78,19 @@
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(98, 61);
-            this.metroButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroButton2.Location = new System.Drawing.Point(0, 0);
+            this.metroButton2.Margin = new System.Windows.Forms.Padding(0);
             this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(66, 18);
+            this.metroButton2.Size = new System.Drawing.Size(376, 100);
             this.metroButton2.TabIndex = 4;
+            this.metroButton2.TabStop = false;
             this.metroButton2.Text = "Form(&F)";
             this.metroButton2.UseSelectable = true;
             this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // metroContextMenu2
             // 
+            this.metroContextMenu2.Font = new System.Drawing.Font("맑은 고딕", 20F);
             this.metroContextMenu2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.metroContextMenu2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.form2ToolStripMenuItem,
@@ -122,58 +101,88 @@
             this.공부동ToolStripMenuItem});
             this.metroContextMenu2.Name = "metroContextMenu2";
             this.metroContextMenu2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.metroContextMenu2.Size = new System.Drawing.Size(147, 136);
+            this.metroContextMenu2.Size = new System.Drawing.Size(257, 278);
             // 
             // form2ToolStripMenuItem
             // 
             this.form2ToolStripMenuItem.Name = "form2ToolStripMenuItem";
-            this.form2ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.form2ToolStripMenuItem.Size = new System.Drawing.Size(346, 58);
             this.form2ToolStripMenuItem.Text = "생산계획접수";
             this.form2ToolStripMenuItem.Click += new System.EventHandler(this.form2ToolStripMenuItem_Click);
             // 
             // form1ToolStripMenuItem
             // 
             this.form1ToolStripMenuItem.Name = "form1ToolStripMenuItem";
-            this.form1ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.form1ToolStripMenuItem.Size = new System.Drawing.Size(346, 58);
             this.form1ToolStripMenuItem.Text = "작업계획";
             this.form1ToolStripMenuItem.Click += new System.EventHandler(this.form1ToolStripMenuItem_Click);
             // 
             // form4ToolStripMenuItem
             // 
             this.form4ToolStripMenuItem.Name = "form4ToolStripMenuItem";
-            this.form4ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.form4ToolStripMenuItem.Size = new System.Drawing.Size(346, 58);
             this.form4ToolStripMenuItem.Text = "작업진행";
             this.form4ToolStripMenuItem.Click += new System.EventHandler(this.form4ToolStripMenuItem_Click);
             // 
             // form5ToolStripMenuItem
             // 
             this.form5ToolStripMenuItem.Name = "form5ToolStripMenuItem";
-            this.form5ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.form5ToolStripMenuItem.Size = new System.Drawing.Size(346, 58);
             this.form5ToolStripMenuItem.Text = "검사성적서";
             this.form5ToolStripMenuItem.Click += new System.EventHandler(this.form5ToolStripMenuItem_Click);
             // 
             // form7ToolStripMenuItem
             // 
             this.form7ToolStripMenuItem.Name = "form7ToolStripMenuItem";
-            this.form7ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.form7ToolStripMenuItem.Size = new System.Drawing.Size(346, 58);
             this.form7ToolStripMenuItem.Text = "불량";
             this.form7ToolStripMenuItem.Click += new System.EventHandler(this.form7ToolStripMenuItem_Click);
             // 
             // 공부동ToolStripMenuItem
             // 
             this.공부동ToolStripMenuItem.Name = "공부동ToolStripMenuItem";
-            this.공부동ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.공부동ToolStripMenuItem.Size = new System.Drawing.Size(346, 58);
             this.공부동ToolStripMenuItem.Text = "공부동";
-            this.공부동ToolStripMenuItem.Click += new System.EventHandler(this.공부동ToolStripMenuItem_Click);
+            this.공부동ToolStripMenuItem.Click += new System.EventHandler(this.form9ToolStripMenuItem_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 5;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.metroButton1, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.metroButton2, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(18, 60);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1884, 100);
+            this.tableLayoutPanel1.TabIndex = 6;
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.metroButton1.Location = new System.Drawing.Point(1128, 0);
+            this.metroButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(376, 100);
+            this.metroButton1.Style = MetroFramework.MetroColorStyle.Lime;
+            this.metroButton1.TabIndex = 2;
+            this.metroButton1.TabStop = false;
+            this.metroButton1.Text = "Option(&O)";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Controls.Add(this.metroButton2);
-            this.Controls.Add(this.metroButton1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Main";
@@ -182,15 +191,12 @@
             this.TransparencyKey = System.Drawing.Color.Empty;
             this.metroContextMenu1.ResumeLayout(false);
             this.metroContextMenu2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroContextMenu metroContextMenu1;
         private System.Windows.Forms.ToolStripMenuItem newnToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -203,5 +209,7 @@
         private System.Windows.Forms.ToolStripMenuItem form5ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem form7ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 공부동ToolStripMenuItem;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }

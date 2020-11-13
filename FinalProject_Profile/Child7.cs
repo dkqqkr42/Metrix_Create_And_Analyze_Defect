@@ -28,5 +28,14 @@ namespace FinalProject_Profile
             Child8 child8 = new Child8();
             child8.Show();
         }
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
+        }
     }
 }

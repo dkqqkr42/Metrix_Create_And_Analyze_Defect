@@ -89,7 +89,6 @@ namespace FinalProject_Profile
                 plt_box = Int32.Parse(reader["PLTBOX"].ToString());
                 cut_pcs = Int32.Parse(reader["CUTPCS"].ToString());
 
-                //todo 생산테이블에서 데이터 조회 후 데이터를 컨트롤에 집어 넣는 작업
 
                 //현재 진행중인 작업을 생산진행중 으로 바꾸는 쿼리
                 cmd = new OracleCommand
@@ -103,7 +102,6 @@ namespace FinalProject_Profile
 
                 cmd.ExecuteNonQuery();
 
-                //todo 진행 시작한 작업을 PRODRESERVE 테이블에서 지우고 RESERVE_RANK 값을 1씩 낮추는 쿼리(프로시저로 구현 예정)
             }
             catch (Exception ex)
             {

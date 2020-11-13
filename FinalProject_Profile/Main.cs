@@ -19,7 +19,6 @@ namespace FinalProject_Profile
         
         private WorkPlan mChildForm1 = null;
         private SAPOrder mChildForm2 = null;
-        private Reservation mChildForm3 = null;
         private Working mChildForm4 = null;
         private Inspection mChildForm5 = null;
         private Child7 mChildForm7 = null;
@@ -45,7 +44,8 @@ namespace FinalProject_Profile
         {
             if (form == null)
             {
-                form = (Form)Activator.CreateInstance(t);
+                //todo 파라미터 넘겨서 해보기
+                form = (Form)Activator.CreateInstance(t, this);
                 form.MdiParent = this;
                 form.StartPosition = FormStartPosition.CenterParent;
                 //form.WindowState = FormWindowState.Minimized;
@@ -58,7 +58,7 @@ namespace FinalProject_Profile
             {
                 if (form.IsDisposed)
                 {
-                    form = (Form)Activator.CreateInstance(t);
+                    form = (Form)Activator.CreateInstance(t, this);
                     form.MdiParent = this;
                     form.StartPosition = FormStartPosition.CenterParent;
                     //form.WindowState = FormWindowState.Minimized;
@@ -77,6 +77,11 @@ namespace FinalProject_Profile
 
         private void form1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            CallWorkPlan();
+        }
+
+        public void CallWorkPlan()
+        {
             if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
                 if (this.ActiveMdiChild != mChildForm1)  // 열려있는 자식폼이 Form1 이 아니면
@@ -93,6 +98,11 @@ namespace FinalProject_Profile
 
         private void form2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            CallSAPOrder();
+        }
+
+        public void CallSAPOrder()
+        {
             if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
                 if (this.ActiveMdiChild != mChildForm2)  // 열려있는 자식폼이 Form2 가 아니면
@@ -107,23 +117,12 @@ namespace FinalProject_Profile
             }
         }
 
-        private void form3ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void form4ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
-            {
-                if (this.ActiveMdiChild != mChildForm3)  // 열려있는 자식폼이 Form3 가 아니면
-                {
-                    ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
-                }
-                mChildForm3 = ShowOrActiveForm(mChildForm3, typeof(Reservation)) as Reservation;
-            }
-            else
-            {
-                mChildForm3 = ShowOrActiveForm(mChildForm3, typeof(Reservation)) as Reservation;
-            }
+            CallWorking();
         }
 
-        private void form4ToolStripMenuItem_Click(object sender, EventArgs e)
+        public void CallWorking()
         {
             if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
@@ -140,6 +139,11 @@ namespace FinalProject_Profile
         }
 
         private void form5ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CalIInspection();
+        }
+
+        public void CalIInspection()
         {
             if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
@@ -171,7 +175,7 @@ namespace FinalProject_Profile
             }
         }
 
-        private void 공부동ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void form9ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {

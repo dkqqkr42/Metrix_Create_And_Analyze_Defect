@@ -44,7 +44,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(48, 88);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 23);
+            this.button1.Size = new System.Drawing.Size(112, 72);
             this.button1.TabIndex = 0;
             this.button1.Text = "값 불러오기";
             this.button1.UseVisualStyleBackColor = true;
@@ -80,7 +80,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(520, 392);
+            this.label2.Location = new System.Drawing.Point(528, 392);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 12);
             this.label2.TabIndex = 2;
@@ -88,9 +88,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(240, 88);
+            this.button2.Location = new System.Drawing.Point(192, 88);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(160, 23);
+            this.button2.Size = new System.Drawing.Size(120, 72);
             this.button2.TabIndex = 0;
             this.button2.Text = "Plan에 입력";
             this.button2.UseVisualStyleBackColor = true;
@@ -98,9 +98,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(904, 88);
+            this.button3.Location = new System.Drawing.Point(984, 88);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(160, 23);
+            this.button3.Size = new System.Drawing.Size(112, 72);
             this.button3.TabIndex = 4;
             this.button3.Text = "Plan조회";
             this.button3.UseVisualStyleBackColor = true;
@@ -108,15 +108,15 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(456, 88);
+            this.button4.Location = new System.Drawing.Point(848, 88);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(160, 23);
+            this.button4.Size = new System.Drawing.Size(112, 72);
             this.button4.TabIndex = 5;
             this.button4.Text = "확정";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // PlanInsertTest
+            // PlanInsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -129,8 +129,8 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "PlanInsertTest";
-            this.Text = "값테스트";
+            this.Name = "PlanInsert";
+            this.Text = "Plan에입력";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);

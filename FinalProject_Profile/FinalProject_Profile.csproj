@@ -106,11 +106,11 @@
     <Compile Include="Inspection.Designer.cs">
       <DependentUpon>Inspection.cs</DependentUpon>
     </Compile>
-    <Compile Include="Child6.cs">
+    <Compile Include="InspectionDTL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Child6.Designer.cs">
-      <DependentUpon>Child6.cs</DependentUpon>
+    <Compile Include="InspectionDTL.Designer.cs">
+      <DependentUpon>InspectionDTL.cs</DependentUpon>
     </Compile>
     <Compile Include="Child8.cs">
       <SubType>Form</SubType>
@@ -168,8 +168,8 @@
     <EmbeddedResource Include="Inspection.resx">
       <DependentUpon>Inspection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Child6.resx">
-      <DependentUpon>Child6.cs</DependentUpon>
+    <EmbeddedResource Include="InspectionDTL.resx">
+      <DependentUpon>InspectionDTL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Child8.resx">
       <DependentUpon>Child8.cs</DependentUpon>

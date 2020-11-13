@@ -46,7 +46,7 @@ namespace FinalProject_Profile
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            Child6 child6 = new Child6();
+            InspectionDTL child6 = new InspectionDTL();
             child6.Show();
         }
 
