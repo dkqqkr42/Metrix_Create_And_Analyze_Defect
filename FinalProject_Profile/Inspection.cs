@@ -127,7 +127,7 @@ namespace FinalProject_Profile
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
                 DataTable dt = ds.Tables[0];
-                dataGridView1.DataSource = dt;
+                grd_Result.DataSource = dt;
             }
             catch (Exception ex)
             {
@@ -144,7 +144,7 @@ namespace FinalProject_Profile
             OracleConnection connection = null;
             try
             {
-                int rowIndex = dataGridView1.CurrentRow.Index;  // 현재 선택된 Row 
+                int rowIndex = grd_Result.CurrentRow.Index;  // 현재 선택된 Row 
                 connection = new OracleConnection
                 {
                     ConnectionString = connectionString
@@ -157,7 +157,7 @@ namespace FinalProject_Profile
                     Connection = connection,
                     CommandText = "update TBL_PRODRSLT set CONFIRM_FLAG = 'Y' where ROLL_NO = :IN_ROLL_NO"
                 };
-                cmd.Parameters.Add("IN_ROLL_NO", dataGridView1.Rows[rowIndex].Cells[7].Value.ToString());
+                cmd.Parameters.Add("IN_ROLL_NO", grd_Result.Rows[rowIndex].Cells[7].Value.ToString());
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("확정되었습니다.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -195,6 +195,32 @@ namespace FinalProject_Profile
         private void tile_SAPOrder_Click(object sender, EventArgs e)
         {
             main.CallSAPOrder();
+        }
+
+        private void grd_Result_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)  // grd_Result에서 선택된 셀의 폰트는 굵게, 선택되지 않은 셀의 폰트는 보통으로 설정
+        {
+            if (e.ColumnIndex >= 0 && e.RowIndex >= 0 &&
+            grd_Result.Rows[e.RowIndex].Cells[e.ColumnIndex].Selected)
+            {
+                e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Bold);
+            }
+            else
+            {
+                e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Regular);
+            }
+        }
+
+        private void grd_Defect_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)  // grd_Defect에서 선택된 셀의 폰트는 굵게, 선택되지 않은 셀의 폰트는 보통으로 설정
+        {
+            if (e.ColumnIndex >= 0 && e.RowIndex >= 0 &&
+            grd_Defect.Rows[e.RowIndex].Cells[e.ColumnIndex].Selected)
+            {
+                e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Bold);
+            }
+            else
+            {
+                e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Regular);
+            }
         }
     }
 }
