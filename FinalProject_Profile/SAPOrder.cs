@@ -261,5 +261,18 @@ namespace FinalProject_Profile
                 e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Regular);
             }
         }
+
+        private void cbo_TEAM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbo_TEAM.Text.Equals("카매트생산팀"))       // cbo_TEAM에서 카매트생산팀을 선택할 경우 발생하는 이벤트
+            {
+                cbo_WORKCENTER.Items.Clear();
+                cbo_WORKCENTER.Items.Add("전체");
+                cbo_WORKCENTER.Items.Add("1호카매트");
+                cbo_WORKCENTER.Items.Add("2호카매트");
+                cbo_WORKCENTER.SelectedIndex = 0;
+            }
+                
+        }
     }
 }
