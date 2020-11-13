@@ -76,7 +76,6 @@
             this.metroLabel26 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel27 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel28 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
             this.txt_CUST_CODE = new MetroFramework.Controls.MetroTextBox();
             this.txt_CUST_NAME = new MetroFramework.Controls.MetroTextBox();
             this.txt_CONFIRM_FLAG = new MetroFramework.Controls.MetroTextBox();
@@ -87,7 +86,6 @@
             this.txt_PLAN_QTY = new MetroFramework.Controls.MetroTextBox();
             this.txt_INPUT_QTY = new MetroFramework.Controls.MetroTextBox();
             this.txt_WORK_TIME = new MetroFramework.Controls.MetroTextBox();
-            this.txt_INSERT_DATE = new MetroFramework.Controls.MetroTextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Close = new MetroFramework.Controls.MetroButton();
             this.btn_Save = new MetroFramework.Controls.MetroButton();
@@ -168,7 +166,6 @@
             this.tableLayoutPanel3.Controls.Add(this.metroLabel26, 1, 8);
             this.tableLayoutPanel3.Controls.Add(this.metroLabel27, 2, 8);
             this.tableLayoutPanel3.Controls.Add(this.metroLabel28, 3, 8);
-            this.tableLayoutPanel3.Controls.Add(this.metroLabel29, 4, 8);
             this.tableLayoutPanel3.Controls.Add(this.txt_CUST_CODE, 0, 7);
             this.tableLayoutPanel3.Controls.Add(this.txt_CUST_NAME, 1, 7);
             this.tableLayoutPanel3.Controls.Add(this.txt_CONFIRM_FLAG, 4, 7);
@@ -179,7 +176,6 @@
             this.tableLayoutPanel3.Controls.Add(this.txt_PLAN_QTY, 1, 9);
             this.tableLayoutPanel3.Controls.Add(this.txt_INPUT_QTY, 2, 9);
             this.tableLayoutPanel3.Controls.Add(this.txt_WORK_TIME, 3, 9);
-            this.tableLayoutPanel3.Controls.Add(this.txt_INSERT_DATE, 4, 9);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -907,17 +903,6 @@
             this.metroLabel28.TabIndex = 57;
             this.metroLabel28.Text = "작업소요시간";
             // 
-            // metroLabel29
-            // 
-            this.metroLabel29.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel29.AutoSize = true;
-            this.metroLabel29.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel29.Location = new System.Drawing.Point(615, 419);
-            this.metroLabel29.Name = "metroLabel29";
-            this.metroLabel29.Size = new System.Drawing.Size(66, 25);
-            this.metroLabel29.TabIndex = 58;
-            this.metroLabel29.Text = "추가일";
-            // 
             // txt_CUST_CODE
             // 
             this.txt_CUST_CODE.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -1174,37 +1159,6 @@
             this.txt_WORK_TIME.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_WORK_TIME.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // txt_INSERT_DATE
-            // 
-            this.txt_INSERT_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_INSERT_DATE.CustomButton.Image = null;
-            this.txt_INSERT_DATE.CustomButton.Location = new System.Drawing.Point(115, 1);
-            this.txt_INSERT_DATE.CustomButton.Name = "";
-            this.txt_INSERT_DATE.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_INSERT_DATE.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_INSERT_DATE.CustomButton.TabIndex = 1;
-            this.txt_INSERT_DATE.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_INSERT_DATE.CustomButton.UseSelectable = true;
-            this.txt_INSERT_DATE.CustomButton.Visible = false;
-            this.txt_INSERT_DATE.Lines = new string[0];
-            this.txt_INSERT_DATE.Location = new System.Drawing.Point(580, 473);
-            this.txt_INSERT_DATE.MaxLength = 32767;
-            this.txt_INSERT_DATE.Name = "txt_INSERT_DATE";
-            this.txt_INSERT_DATE.PasswordChar = '\0';
-            this.txt_INSERT_DATE.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_INSERT_DATE.SelectedText = "";
-            this.txt_INSERT_DATE.SelectionLength = 0;
-            this.txt_INSERT_DATE.SelectionStart = 0;
-            this.txt_INSERT_DATE.ShortcutsEnabled = true;
-            this.txt_INSERT_DATE.Size = new System.Drawing.Size(137, 23);
-            this.txt_INSERT_DATE.TabIndex = 29;
-            this.txt_INSERT_DATE.UseSelectable = true;
-            this.txt_INSERT_DATE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_INSERT_DATE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
@@ -1272,7 +1226,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private MetroFramework.Controls.MetroTextBox txt_PLAN_QTY;
-        private MetroFramework.Controls.MetroTextBox txt_INSERT_DATE;
         private MetroFramework.Controls.MetroTextBox txt_INPUT_QTY;
         private MetroFramework.Controls.MetroTextBox txt_WORK_TIME;
         private MetroFramework.Controls.MetroTextBox txt_EXCHG_RATE;
@@ -1312,7 +1265,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel26;
         private MetroFramework.Controls.MetroLabel metroLabel27;
         private MetroFramework.Controls.MetroLabel metroLabel28;
-        private MetroFramework.Controls.MetroLabel metroLabel29;
         private MetroFramework.Controls.MetroTextBox txt_CUST_CODE;
         private MetroFramework.Controls.MetroTextBox txt_CUST_NAME;
         private MetroFramework.Controls.MetroTextBox txt_CONFIRM_FLAG;
