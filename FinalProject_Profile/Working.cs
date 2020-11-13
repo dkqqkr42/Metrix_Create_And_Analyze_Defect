@@ -23,7 +23,6 @@ namespace FinalProject_Profile
         int now_seq = 1, plt_seq = 1,punching = 0;
         int bad_qty = 0;
         bool btn_flag = true;
-
         int _good_qty = 0, _bad_qty = 0;
 
         System.Timers.Timer timer = new System.Timers.Timer

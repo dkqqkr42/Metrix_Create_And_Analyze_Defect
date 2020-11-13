@@ -15,13 +15,17 @@ namespace FinalProject_Profile
     public partial class WorkPlan : MetroForm
     {
         protected const string connectionString = "DATA SOURCE=220.69.249.228:1521/xe;PASSWORD=1234;PERSIST SECURITY INFO=True;USER ID=MAT_MGR";
-
+        Main main;
         public WorkPlan()
         {
             InitializeComponent();
 
             // this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormBorderStyle = FormBorderStyle.None;
+        }
+        public WorkPlan(Main mainForm)
+        {
+            InitializeComponent();
+            main = mainForm;
         }
 
         protected override CreateParams CreateParams
@@ -113,6 +117,11 @@ namespace FinalProject_Profile
         private void grd_Result_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void tile_Reservation_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

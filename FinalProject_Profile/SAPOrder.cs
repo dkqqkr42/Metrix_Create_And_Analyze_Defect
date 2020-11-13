@@ -17,6 +17,7 @@ namespace FinalProject_Profile
     {
         protected const string connectionString = "DATA SOURCE=220.69.249.228:1521/xe;PASSWORD=1234;PERSIST SECURITY INFO=True;USER ID=MAT_MGR";
         List<string> list = new List<string>();
+        Main main;
 
         public SAPOrder()
         {
@@ -31,6 +32,22 @@ namespace FinalProject_Profile
             dtp_INSERT_DATE_START.Value = new DateTime(int.Parse(DateTime.Now.ToString("yyyy")), int.Parse(DateTime.Now.ToString("MM")), 1);
             // dtp_ENDDATE의 기본값을 현재 월 마지막일로 설정
             dtp_INSERT_DATE_END.Value = new DateTime(int.Parse(DateTime.Now.ToString("yyyy")), int.Parse(DateTime.Now.ToString("MM")), DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month));
+        }
+        public SAPOrder(Main mainForm)
+        {
+            InitializeComponent();
+
+            // 콤보박스의 기본값을 0번째(첫번째)에 있는 항목으로 설정
+            cbo_TEAM.SelectedIndex = 0;
+            cbo_WORKCENTER.SelectedIndex = 0;
+            cbo_ORDER_TYPE.SelectedIndex = 0;
+
+            // dtp_STARTDATE의 기본값을 현재 월 1일로 설정
+            dtp_INSERT_DATE_START.Value = new DateTime(int.Parse(DateTime.Now.ToString("yyyy")), int.Parse(DateTime.Now.ToString("MM")), 1);
+            // dtp_ENDDATE의 기본값을 현재 월 마지막일로 설정
+            dtp_INSERT_DATE_END.Value = new DateTime(int.Parse(DateTime.Now.ToString("yyyy")), int.Parse(DateTime.Now.ToString("MM")), DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month));
+
+            main = mainForm;
         }
 
         protected override CreateParams CreateParams       // 폼 화면 빠른 로딩
