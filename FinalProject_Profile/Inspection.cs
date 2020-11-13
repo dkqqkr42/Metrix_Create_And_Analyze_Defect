@@ -73,7 +73,7 @@ namespace FinalProject_Profile
             OracleConnection connection = null;
             try
             {
-                ct2 = "SELECT A.PROD_CODE PROD_CODE 제품코드" + Environment.NewLine;
+                ct2 = "SELECT A.PROD_CODE PROD_CODE" + Environment.NewLine;
                 ct2 += ", B.PROD_NAME PROD_NAME, " +
                     "A.PROD_UNIT PROD_UNIT, " +
                     "A.ORDER_M ORDER_M, " +

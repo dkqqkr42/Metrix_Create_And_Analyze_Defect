@@ -146,7 +146,6 @@
             this.tile_Inspection = new MetroFramework.Controls.MetroTile();
             this.tile_Working = new MetroFramework.Controls.MetroTile();
             this.tile_WorkPlan = new MetroFramework.Controls.MetroTile();
-            this.label49 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -1848,23 +1847,11 @@
             this.tile_WorkPlan.UseSelectable = true;
             this.tile_WorkPlan.Click += new System.EventHandler(this.tile_WorkPlan_Click);
             // 
-            // label49
-            // 
-            this.label49.BackColor = System.Drawing.Color.PowderBlue;
-            this.label49.Font = new System.Drawing.Font("Segoe UI", 19F);
-            this.label49.Location = new System.Drawing.Point(848, 8);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(192, 48);
-            this.label49.TabIndex = 15;
-            this.label49.Text = "불량";
-            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Defect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1876, 972);
-            this.Controls.Add(this.label49);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Name = "Defect";
             this.Style = MetroFramework.MetroColorStyle.Teal;
@@ -2061,6 +2048,5 @@
         private MetroFramework.Controls.MetroTile tile_Inspection;
         private MetroFramework.Controls.MetroTile tile_Working;
         private MetroFramework.Controls.MetroTile tile_WorkPlan;
-        private System.Windows.Forms.Label label49;
     }
 }

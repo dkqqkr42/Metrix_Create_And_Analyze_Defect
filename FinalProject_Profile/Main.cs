@@ -30,6 +30,16 @@ namespace FinalProject_Profile
             this.FormBorderStyle = FormBorderStyle.None;
         }
 
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            metroContextMenu1.Show(metroButton1, 0, metroButton1.Height);
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            metroContextMenu2.Show(metroButton2, 0, metroButton2.Height);
+        }
+
         private Form ShowOrActiveForm(Form form, Type t)
         {
             if (form == null)
@@ -184,11 +194,6 @@ namespace FinalProject_Profile
             {
                 mChildForm9 = ShowOrActiveForm(mChildForm9, typeof(Child9)) as Child9;
             }
-        }
-
-        private void Main_Load(object sender, EventArgs e)
-        {
-            CallSAPOrder();
         }
     }
 }
