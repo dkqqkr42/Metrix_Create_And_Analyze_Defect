@@ -191,6 +191,11 @@ namespace FinalProject_Profile
         {
             main.CallDefect();
         }
+
+        private void tile_SAPOrder_Click(object sender, EventArgs e)
+        {
+            main.CallSAPOrder();
+        }
     }
 }
 

@@ -105,11 +105,12 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tile_Defect = new MetroFramework.Controls.MetroTile();
             this.tile_Inspection = new MetroFramework.Controls.MetroTile();
             this.tile_Working = new MetroFramework.Controls.MetroTile();
             this.tile_WorkPlan = new MetroFramework.Controls.MetroTile();
             this.label30 = new System.Windows.Forms.Label();
-            this.tile_Defect = new MetroFramework.Controls.MetroTile();
+            this.tile_SAPOrder = new MetroFramework.Controls.MetroTile();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -173,7 +174,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 174F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 173F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1608, 173);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
@@ -1319,29 +1320,45 @@
             this.tableLayoutPanel5.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.tile_Defect, 0, 3);
-            this.tableLayoutPanel5.Controls.Add(this.tile_Inspection, 0, 2);
-            this.tableLayoutPanel5.Controls.Add(this.tile_Working, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.tile_WorkPlan, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.tile_SAPOrder, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.tile_Defect, 0, 4);
+            this.tableLayoutPanel5.Controls.Add(this.tile_Inspection, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.tile_Working, 0, 2);
+            this.tableLayoutPanel5.Controls.Add(this.tile_WorkPlan, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 4;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
+            this.tableLayoutPanel5.RowCount = 5;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0005F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0005F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0005F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.99851F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(220, 892);
             this.tableLayoutPanel5.TabIndex = 5;
+            // 
+            // tile_Defect
+            // 
+            this.tile_Defect.ActiveControl = null;
+            this.tile_Defect.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tile_Defect.Location = new System.Drawing.Point(4, 716);
+            this.tile_Defect.Name = "tile_Defect";
+            this.tile_Defect.Size = new System.Drawing.Size(212, 172);
+            this.tile_Defect.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tile_Defect.TabIndex = 4;
+            this.tile_Defect.Text = "불량";
+            this.tile_Defect.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tile_Defect.UseSelectable = true;
+            this.tile_Defect.Click += new System.EventHandler(this.tile_Defect_Click);
             // 
             // tile_Inspection
             // 
             this.tile_Inspection.ActiveControl = null;
             this.tile_Inspection.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tile_Inspection.Location = new System.Drawing.Point(4, 448);
+            this.tile_Inspection.Location = new System.Drawing.Point(4, 538);
             this.tile_Inspection.Name = "tile_Inspection";
-            this.tile_Inspection.Size = new System.Drawing.Size(212, 215);
+            this.tile_Inspection.Size = new System.Drawing.Size(212, 171);
             this.tile_Inspection.Style = MetroFramework.MetroColorStyle.Teal;
             this.tile_Inspection.TabIndex = 3;
             this.tile_Inspection.Text = "검사성적서";
@@ -1353,9 +1370,9 @@
             // 
             this.tile_Working.ActiveControl = null;
             this.tile_Working.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tile_Working.Location = new System.Drawing.Point(4, 226);
+            this.tile_Working.Location = new System.Drawing.Point(4, 360);
             this.tile_Working.Name = "tile_Working";
-            this.tile_Working.Size = new System.Drawing.Size(212, 215);
+            this.tile_Working.Size = new System.Drawing.Size(212, 171);
             this.tile_Working.Style = MetroFramework.MetroColorStyle.Teal;
             this.tile_Working.TabIndex = 2;
             this.tile_Working.Text = "작업진행";
@@ -1366,9 +1383,9 @@
             // 
             this.tile_WorkPlan.ActiveControl = null;
             this.tile_WorkPlan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tile_WorkPlan.Location = new System.Drawing.Point(4, 4);
+            this.tile_WorkPlan.Location = new System.Drawing.Point(4, 182);
             this.tile_WorkPlan.Name = "tile_WorkPlan";
-            this.tile_WorkPlan.Size = new System.Drawing.Size(212, 215);
+            this.tile_WorkPlan.Size = new System.Drawing.Size(212, 171);
             this.tile_WorkPlan.Style = MetroFramework.MetroColorStyle.Teal;
             this.tile_WorkPlan.TabIndex = 0;
             this.tile_WorkPlan.Text = "작업계획";
@@ -1387,19 +1404,19 @@
             this.label30.Text = "작업진행";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tile_Defect
+            // tile_SAPOrder
             // 
-            this.tile_Defect.ActiveControl = null;
-            this.tile_Defect.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tile_Defect.Location = new System.Drawing.Point(4, 670);
-            this.tile_Defect.Name = "tile_Defect";
-            this.tile_Defect.Size = new System.Drawing.Size(212, 218);
-            this.tile_Defect.Style = MetroFramework.MetroColorStyle.Teal;
-            this.tile_Defect.TabIndex = 4;
-            this.tile_Defect.Text = "불량";
-            this.tile_Defect.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tile_Defect.UseSelectable = true;
-            this.tile_Defect.Click += new System.EventHandler(this.tile_Defect_Click);
+            this.tile_SAPOrder.ActiveControl = null;
+            this.tile_SAPOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tile_SAPOrder.Location = new System.Drawing.Point(4, 4);
+            this.tile_SAPOrder.Name = "tile_SAPOrder";
+            this.tile_SAPOrder.Size = new System.Drawing.Size(212, 171);
+            this.tile_SAPOrder.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tile_SAPOrder.TabIndex = 16;
+            this.tile_SAPOrder.Text = "생산계획접수";
+            this.tile_SAPOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tile_SAPOrder.UseSelectable = true;
+            this.tile_SAPOrder.Click += new System.EventHandler(this.tile_SAPOrder_Click);
             // 
             // Working
             // 
@@ -1527,5 +1544,6 @@
         private System.Windows.Forms.Label label41;
         private MetroFramework.Controls.MetroButton btn_InspectionStart;
         private MetroFramework.Controls.MetroTile tile_Defect;
+        private MetroFramework.Controls.MetroTile tile_SAPOrder;
     }
 }
