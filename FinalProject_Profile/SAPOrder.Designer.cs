@@ -61,9 +61,18 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel44 = new System.Windows.Forms.TableLayoutPanel();
+            this.tile_SAPOrder = new MetroFramework.Controls.MetroTile();
+            this.tile_Defect = new MetroFramework.Controls.MetroTile();
+            this.tile_Inspection = new MetroFramework.Controls.MetroTile();
+            this.tile_Working = new MetroFramework.Controls.MetroTile();
+            this.tile_WorkPlan = new MetroFramework.Controls.MetroTile();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd_Result)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel44.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -114,34 +123,34 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1832, 97);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1602, 96);
             this.tableLayoutPanel3.TabIndex = 10;
             // 
             // dtp_INSERT_DATE_END
             // 
             this.dtp_INSERT_DATE_END.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtp_INSERT_DATE_END.Font = new System.Drawing.Font("굴림", 14F);
-            this.dtp_INSERT_DATE_END.Location = new System.Drawing.Point(1028, 34);
+            this.dtp_INSERT_DATE_END.Location = new System.Drawing.Point(898, 33);
             this.dtp_INSERT_DATE_END.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtp_INSERT_DATE_END.Name = "dtp_INSERT_DATE_END";
-            this.dtp_INSERT_DATE_END.Size = new System.Drawing.Size(259, 29);
+            this.dtp_INSERT_DATE_END.Size = new System.Drawing.Size(225, 29);
             this.dtp_INSERT_DATE_END.TabIndex = 4;
             // 
             // dtp_INSERT_DATE_START
             // 
             this.dtp_INSERT_DATE_START.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtp_INSERT_DATE_START.Font = new System.Drawing.Font("굴림", 14F);
-            this.dtp_INSERT_DATE_START.Location = new System.Drawing.Point(727, 34);
+            this.dtp_INSERT_DATE_START.Location = new System.Drawing.Point(635, 33);
             this.dtp_INSERT_DATE_START.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtp_INSERT_DATE_START.Name = "dtp_INSERT_DATE_START";
-            this.dtp_INSERT_DATE_START.Size = new System.Drawing.Size(261, 29);
+            this.dtp_INSERT_DATE_START.Size = new System.Drawing.Size(227, 29);
             this.dtp_INSERT_DATE_START.TabIndex = 3;
             // 
             // lbl_what
             // 
             this.lbl_what.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_what.AutoSize = true;
-            this.lbl_what.Location = new System.Drawing.Point(999, 39);
+            this.lbl_what.Location = new System.Drawing.Point(871, 38);
             this.lbl_what.Name = "lbl_what";
             this.lbl_what.Size = new System.Drawing.Size(18, 19);
             this.lbl_what.TabIndex = 7;
@@ -156,7 +165,7 @@
             "전체",
             "1호카매트",
             "2호카매트"});
-            this.cbo_WORKCENTER.Location = new System.Drawing.Point(453, 34);
+            this.cbo_WORKCENTER.Location = new System.Drawing.Point(386, 33);
             this.cbo_WORKCENTER.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbo_WORKCENTER.Name = "cbo_WORKCENTER";
             this.cbo_WORKCENTER.Size = new System.Drawing.Size(133, 29);
@@ -168,7 +177,7 @@
             this.lbl_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_DATE.AutoSize = true;
             this.lbl_DATE.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_DATE.Location = new System.Drawing.Point(630, 36);
+            this.lbl_DATE.Location = new System.Drawing.Point(545, 35);
             this.lbl_DATE.Name = "lbl_DATE";
             this.lbl_DATE.Size = new System.Drawing.Size(66, 25);
             this.lbl_DATE.TabIndex = 3;
@@ -180,21 +189,21 @@
             this.btn_Select.BackgroundImage = global::FinalProject_Profile.Properties.Resources.조회;
             this.btn_Select.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Select.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Select.Location = new System.Drawing.Point(1549, 4);
+            this.btn_Select.Location = new System.Drawing.Point(1353, 4);
             this.btn_Select.Name = "btn_Select";
-            this.btn_Select.Size = new System.Drawing.Size(87, 89);
+            this.btn_Select.Size = new System.Drawing.Size(75, 88);
             this.btn_Select.TabIndex = 6;
             this.btn_Select.UseSelectable = true;
-            this.btn_Select.Click += new System.EventHandler(this.metroButton3_Click);
-            this.btn_Select.MouseDown += new System.Windows.Forms.MouseEventHandler(this.metroButton3_MouseDown);
-            this.btn_Select.MouseUp += new System.Windows.Forms.MouseEventHandler(this.metroButton3_MouseUp);
+            this.btn_Select.Click += new System.EventHandler(this.btn_Select_Click);
+            this.btn_Select.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Select_MouseDown);
+            this.btn_Select.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Select_MouseUp);
             // 
             // lbl_WORKCENTER
             // 
             this.lbl_WORKCENTER.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_WORKCENTER.AutoSize = true;
             this.lbl_WORKCENTER.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_WORKCENTER.Location = new System.Drawing.Point(348, 36);
+            this.lbl_WORKCENTER.Location = new System.Drawing.Point(300, 35);
             this.lbl_WORKCENTER.Name = "lbl_WORKCENTER";
             this.lbl_WORKCENTER.Size = new System.Drawing.Size(46, 25);
             this.lbl_WORKCENTER.TabIndex = 3;
@@ -206,26 +215,26 @@
             this.btn_Insert.BackgroundImage = global::FinalProject_Profile.Properties.Resources.입력;
             this.btn_Insert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Insert.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Insert.Location = new System.Drawing.Point(1643, 4);
+            this.btn_Insert.Location = new System.Drawing.Point(1435, 4);
             this.btn_Insert.Name = "btn_Insert";
-            this.btn_Insert.Size = new System.Drawing.Size(87, 89);
+            this.btn_Insert.Size = new System.Drawing.Size(75, 88);
             this.btn_Insert.TabIndex = 7;
             this.btn_Insert.UseSelectable = true;
-            this.btn_Insert.Click += new System.EventHandler(this.metroButton2_Click);
-            this.btn_Insert.MouseDown += new System.Windows.Forms.MouseEventHandler(this.metroButton2_MouseDown);
-            this.btn_Insert.MouseUp += new System.Windows.Forms.MouseEventHandler(this.metroButton2_MouseUp);
+            this.btn_Insert.Click += new System.EventHandler(this.btn_Insert_Click);
+            this.btn_Insert.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Insert_MouseDown);
+            this.btn_Insert.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Insert_MouseUp);
             // 
             // btn_Decide
             // 
             this.btn_Decide.BackgroundImage = global::FinalProject_Profile.Properties.Resources.확정;
             this.btn_Decide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Decide.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Decide.Location = new System.Drawing.Point(1737, 4);
+            this.btn_Decide.Location = new System.Drawing.Point(1517, 4);
             this.btn_Decide.Name = "btn_Decide";
-            this.btn_Decide.Size = new System.Drawing.Size(91, 89);
+            this.btn_Decide.Size = new System.Drawing.Size(81, 88);
             this.btn_Decide.TabIndex = 8;
             this.btn_Decide.UseSelectable = true;
-            this.btn_Decide.Click += new System.EventHandler(this.metroButton1_Click);
+            this.btn_Decide.Click += new System.EventHandler(this.btn_Decide_Click);
             this.btn_Decide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Decide_MouseDown);
             this.btn_Decide.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Decide_MouseUp);
             // 
@@ -234,7 +243,7 @@
             this.lbl_ORDER_TYPE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_ORDER_TYPE.AutoSize = true;
             this.lbl_ORDER_TYPE.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_ORDER_TYPE.Location = new System.Drawing.Point(1300, 36);
+            this.lbl_ORDER_TYPE.Location = new System.Drawing.Point(1130, 35);
             this.lbl_ORDER_TYPE.Name = "lbl_ORDER_TYPE";
             this.lbl_ORDER_TYPE.Size = new System.Drawing.Size(84, 25);
             this.lbl_ORDER_TYPE.TabIndex = 3;
@@ -250,7 +259,7 @@
             "전체",
             "계획",
             "주문"});
-            this.cbo_ORDER_TYPE.Location = new System.Drawing.Point(1420, 34);
+            this.cbo_ORDER_TYPE.Location = new System.Drawing.Point(1233, 33);
             this.cbo_ORDER_TYPE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbo_ORDER_TYPE.Name = "cbo_ORDER_TYPE";
             this.cbo_ORDER_TYPE.Size = new System.Drawing.Size(100, 29);
@@ -262,7 +271,7 @@
             this.lbl_TEAM.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_TEAM.AutoSize = true;
             this.lbl_TEAM.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lbl_TEAM.Location = new System.Drawing.Point(33, 36);
+            this.lbl_TEAM.Location = new System.Drawing.Point(24, 35);
             this.lbl_TEAM.Name = "lbl_TEAM";
             this.lbl_TEAM.Size = new System.Drawing.Size(66, 25);
             this.lbl_TEAM.TabIndex = 3;
@@ -277,7 +286,7 @@
             this.cbo_TEAM.Items.AddRange(new object[] {
             "전체",
             "카매트생산팀"});
-            this.cbo_TEAM.Location = new System.Drawing.Point(154, 34);
+            this.cbo_TEAM.Location = new System.Drawing.Point(126, 33);
             this.cbo_TEAM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbo_TEAM.Name = "cbo_TEAM";
             this.cbo_TEAM.Size = new System.Drawing.Size(129, 29);
@@ -329,7 +338,7 @@
             this.grd_Result.EnableHeadersVisualStyles = false;
             this.grd_Result.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grd_Result.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grd_Result.Location = new System.Drawing.Point(1, 103);
+            this.grd_Result.Location = new System.Drawing.Point(1, 102);
             this.grd_Result.Margin = new System.Windows.Forms.Padding(0);
             this.grd_Result.MultiSelect = false;
             this.grd_Result.Name = "grd_Result";
@@ -349,7 +358,7 @@
             this.grd_Result.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.grd_Result.RowTemplate.Height = 27;
             this.grd_Result.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grd_Result.Size = new System.Drawing.Size(1838, 615);
+            this.grd_Result.Size = new System.Drawing.Size(1608, 615);
             this.grd_Result.TabIndex = 5;
             this.grd_Result.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.grd_Result_CellFormatting);
             // 
@@ -439,7 +448,7 @@
             this.tableLayoutPanel2.Controls.Add(this.grd_Result, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(18, 60);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(223, 2);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
@@ -455,8 +464,110 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1840, 896);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1610, 888);
             this.tableLayoutPanel2.TabIndex = 12;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.99324F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 88.00676F));
+            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel44, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel2, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(20, 60);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94.11765F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1836, 892);
+            this.tableLayoutPanel4.TabIndex = 15;
+            // 
+            // tableLayoutPanel44
+            // 
+            this.tableLayoutPanel44.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel44.ColumnCount = 1;
+            this.tableLayoutPanel44.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel44.Controls.Add(this.tile_SAPOrder, 0, 0);
+            this.tableLayoutPanel44.Controls.Add(this.tile_Defect, 0, 4);
+            this.tableLayoutPanel44.Controls.Add(this.tile_Inspection, 0, 3);
+            this.tableLayoutPanel44.Controls.Add(this.tile_Working, 0, 2);
+            this.tableLayoutPanel44.Controls.Add(this.tile_WorkPlan, 0, 1);
+            this.tableLayoutPanel44.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel44.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel44.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel44.Name = "tableLayoutPanel44";
+            this.tableLayoutPanel44.RowCount = 5;
+            this.tableLayoutPanel44.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel44.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel44.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel44.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel44.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel44.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel44.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel44.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel44.Size = new System.Drawing.Size(220, 892);
+            this.tableLayoutPanel44.TabIndex = 5;
+            // 
+            // tile_SAPOrder
+            // 
+            this.tile_SAPOrder.ActiveControl = null;
+            this.tile_SAPOrder.Location = new System.Drawing.Point(4, 4);
+            this.tile_SAPOrder.Name = "tile_SAPOrder";
+            this.tile_SAPOrder.Size = new System.Drawing.Size(212, 171);
+            this.tile_SAPOrder.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tile_SAPOrder.TabIndex = 6;
+            this.tile_SAPOrder.Text = "생산계획접수";
+            this.tile_SAPOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tile_SAPOrder.UseSelectable = true;
+            // 
+            // tile_Defect
+            // 
+            this.tile_Defect.ActiveControl = null;
+            this.tile_Defect.Location = new System.Drawing.Point(4, 716);
+            this.tile_Defect.Name = "tile_Defect";
+            this.tile_Defect.Size = new System.Drawing.Size(212, 171);
+            this.tile_Defect.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tile_Defect.TabIndex = 4;
+            this.tile_Defect.Text = "불량";
+            this.tile_Defect.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tile_Defect.UseSelectable = true;
+            // 
+            // tile_Inspection
+            // 
+            this.tile_Inspection.ActiveControl = null;
+            this.tile_Inspection.Location = new System.Drawing.Point(4, 538);
+            this.tile_Inspection.Name = "tile_Inspection";
+            this.tile_Inspection.Size = new System.Drawing.Size(212, 171);
+            this.tile_Inspection.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tile_Inspection.TabIndex = 3;
+            this.tile_Inspection.Text = "검사성적서";
+            this.tile_Inspection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tile_Inspection.UseSelectable = true;
+            // 
+            // tile_Working
+            // 
+            this.tile_Working.ActiveControl = null;
+            this.tile_Working.Location = new System.Drawing.Point(4, 360);
+            this.tile_Working.Name = "tile_Working";
+            this.tile_Working.Size = new System.Drawing.Size(212, 171);
+            this.tile_Working.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tile_Working.TabIndex = 2;
+            this.tile_Working.Text = "작업진행";
+            this.tile_Working.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tile_Working.UseSelectable = true;
+            // 
+            // tile_WorkPlan
+            // 
+            this.tile_WorkPlan.ActiveControl = null;
+            this.tile_WorkPlan.Location = new System.Drawing.Point(4, 182);
+            this.tile_WorkPlan.Name = "tile_WorkPlan";
+            this.tile_WorkPlan.Size = new System.Drawing.Size(212, 171);
+            this.tile_WorkPlan.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tile_WorkPlan.TabIndex = 0;
+            this.tile_WorkPlan.Text = "작업계획";
+            this.tile_WorkPlan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tile_WorkPlan.UseSelectable = true;
             // 
             // SAPOrder
             // 
@@ -464,10 +575,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1876, 972);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.tableLayoutPanel4);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SAPOrder";
-            this.Padding = new System.Windows.Forms.Padding(18, 60, 18, 16);
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "생산계획접수";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
@@ -476,6 +586,8 @@
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd_Result)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel44.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -509,6 +621,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel44;
+        private MetroFramework.Controls.MetroTile tile_SAPOrder;
+        private MetroFramework.Controls.MetroTile tile_Defect;
+        private MetroFramework.Controls.MetroTile tile_Inspection;
+        private MetroFramework.Controls.MetroTile tile_Working;
+        private MetroFramework.Controls.MetroTile tile_WorkPlan;
     }
 }
 

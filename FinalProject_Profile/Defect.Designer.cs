@@ -141,11 +141,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tile_WorkPlan = new MetroFramework.Controls.MetroTile();
-            this.tile_Working = new MetroFramework.Controls.MetroTile();
-            this.tile_Inspection = new MetroFramework.Controls.MetroTile();
-            this.tile_Defect = new MetroFramework.Controls.MetroTile();
             this.tile_SAPOrder = new MetroFramework.Controls.MetroTile();
+            this.tile_Defect = new MetroFramework.Controls.MetroTile();
+            this.tile_Inspection = new MetroFramework.Controls.MetroTile();
+            this.tile_Working = new MetroFramework.Controls.MetroTile();
+            this.tile_WorkPlan = new MetroFramework.Controls.MetroTile();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -1778,31 +1778,29 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(220, 892);
             this.tableLayoutPanel5.TabIndex = 5;
             // 
-            // tile_WorkPlan
+            // tile_SAPOrder
             // 
-            this.tile_WorkPlan.ActiveControl = null;
-            this.tile_WorkPlan.Location = new System.Drawing.Point(4, 182);
-            this.tile_WorkPlan.Name = "tile_WorkPlan";
-            this.tile_WorkPlan.Size = new System.Drawing.Size(212, 171);
-            this.tile_WorkPlan.Style = MetroFramework.MetroColorStyle.Teal;
-            this.tile_WorkPlan.TabIndex = 0;
-            this.tile_WorkPlan.Text = "작업계획";
-            this.tile_WorkPlan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tile_WorkPlan.UseSelectable = true;
-            this.tile_WorkPlan.Click += new System.EventHandler(this.tile_WorkPlan_Click);
+            this.tile_SAPOrder.ActiveControl = null;
+            this.tile_SAPOrder.Location = new System.Drawing.Point(4, 4);
+            this.tile_SAPOrder.Name = "tile_SAPOrder";
+            this.tile_SAPOrder.Size = new System.Drawing.Size(212, 171);
+            this.tile_SAPOrder.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tile_SAPOrder.TabIndex = 6;
+            this.tile_SAPOrder.Text = "생산계획접수";
+            this.tile_SAPOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tile_SAPOrder.UseSelectable = true;
             // 
-            // tile_Working
+            // tile_Defect
             // 
-            this.tile_Working.ActiveControl = null;
-            this.tile_Working.Location = new System.Drawing.Point(4, 360);
-            this.tile_Working.Name = "tile_Working";
-            this.tile_Working.Size = new System.Drawing.Size(212, 171);
-            this.tile_Working.Style = MetroFramework.MetroColorStyle.Teal;
-            this.tile_Working.TabIndex = 2;
-            this.tile_Working.Text = "작업진행";
-            this.tile_Working.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tile_Working.UseSelectable = true;
-            this.tile_Working.Click += new System.EventHandler(this.tile_Working_Click);
+            this.tile_Defect.ActiveControl = null;
+            this.tile_Defect.Location = new System.Drawing.Point(4, 716);
+            this.tile_Defect.Name = "tile_Defect";
+            this.tile_Defect.Size = new System.Drawing.Size(212, 171);
+            this.tile_Defect.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tile_Defect.TabIndex = 4;
+            this.tile_Defect.Text = "불량";
+            this.tile_Defect.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tile_Defect.UseSelectable = true;
             // 
             // tile_Inspection
             // 
@@ -1817,29 +1815,31 @@
             this.tile_Inspection.UseSelectable = true;
             this.tile_Inspection.Click += new System.EventHandler(this.tile_Inspection_Click);
             // 
-            // tile_Defect
+            // tile_Working
             // 
-            this.tile_Defect.ActiveControl = null;
-            this.tile_Defect.Location = new System.Drawing.Point(4, 716);
-            this.tile_Defect.Name = "tile_Defect";
-            this.tile_Defect.Size = new System.Drawing.Size(212, 171);
-            this.tile_Defect.Style = MetroFramework.MetroColorStyle.Teal;
-            this.tile_Defect.TabIndex = 4;
-            this.tile_Defect.Text = "불량";
-            this.tile_Defect.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tile_Defect.UseSelectable = true;
+            this.tile_Working.ActiveControl = null;
+            this.tile_Working.Location = new System.Drawing.Point(4, 360);
+            this.tile_Working.Name = "tile_Working";
+            this.tile_Working.Size = new System.Drawing.Size(212, 171);
+            this.tile_Working.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tile_Working.TabIndex = 2;
+            this.tile_Working.Text = "작업진행";
+            this.tile_Working.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tile_Working.UseSelectable = true;
+            this.tile_Working.Click += new System.EventHandler(this.tile_Working_Click);
             // 
-            // tile_SAPOrder
+            // tile_WorkPlan
             // 
-            this.tile_SAPOrder.ActiveControl = null;
-            this.tile_SAPOrder.Location = new System.Drawing.Point(4, 4);
-            this.tile_SAPOrder.Name = "tile_SAPOrder";
-            this.tile_SAPOrder.Size = new System.Drawing.Size(212, 171);
-            this.tile_SAPOrder.Style = MetroFramework.MetroColorStyle.Teal;
-            this.tile_SAPOrder.TabIndex = 6;
-            this.tile_SAPOrder.Text = "생산계획접수";
-            this.tile_SAPOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tile_SAPOrder.UseSelectable = true;
+            this.tile_WorkPlan.ActiveControl = null;
+            this.tile_WorkPlan.Location = new System.Drawing.Point(4, 182);
+            this.tile_WorkPlan.Name = "tile_WorkPlan";
+            this.tile_WorkPlan.Size = new System.Drawing.Size(212, 171);
+            this.tile_WorkPlan.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tile_WorkPlan.TabIndex = 0;
+            this.tile_WorkPlan.Text = "작업계획";
+            this.tile_WorkPlan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tile_WorkPlan.UseSelectable = true;
+            this.tile_WorkPlan.Click += new System.EventHandler(this.tile_WorkPlan_Click);
             // 
             // Defect
             // 
