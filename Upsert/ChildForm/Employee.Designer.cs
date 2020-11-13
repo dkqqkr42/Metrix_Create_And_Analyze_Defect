@@ -33,20 +33,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lbl_DataUpsert = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_DataLookUp = new System.Windows.Forms.Label();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.txt_SeachVal = new MetroFramework.Controls.MetroTextBox();
-            this.ckb_DelFlag = new MetroFramework.Controls.MetroCheckBox();
-            this.grd_Result = new MetroFramework.Controls.MetroGrid();
-            this.txt_SeachName = new MetroFramework.Controls.MetroLabel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txt_DEPT_NEW = new System.Windows.Forms.TextBox();
             this.lbl_DEPT_NEW = new MetroFramework.Controls.MetroLabel();
             this.lbl_SA_SABUN = new MetroFramework.Controls.MetroLabel();
             this.txt_SA_SABUN = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_DataUpsert = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_DataLookUp = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.txt_SeachName = new MetroFramework.Controls.MetroLabel();
+            this.txt_SeachVal = new MetroFramework.Controls.MetroTextBox();
+            this.ckb_DelFlag = new MetroFramework.Controls.MetroCheckBox();
+            this.grd_Result = new MetroFramework.Controls.MetroGrid();
             this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,11 +70,11 @@
             this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd_Result)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -101,6 +101,64 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1836, 692);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.txt_DEPT_NEW, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_DEPT_NEW, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_SA_SABUN, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txt_SA_SABUN, 0, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(1, 180);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1834, 68);
+            this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // txt_DEPT_NEW
+            // 
+            this.txt_DEPT_NEW.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_DEPT_NEW.Location = new System.Drawing.Point(939, 33);
+            this.txt_DEPT_NEW.Name = "txt_DEPT_NEW";
+            this.txt_DEPT_NEW.Size = new System.Drawing.Size(871, 21);
+            this.txt_DEPT_NEW.TabIndex = 1;
+            this.txt_DEPT_NEW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_WC_CODE_KeyPress);
+            // 
+            // lbl_DEPT_NEW
+            // 
+            this.lbl_DEPT_NEW.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_DEPT_NEW.AutoSize = true;
+            this.lbl_DEPT_NEW.Location = new System.Drawing.Point(1347, 1);
+            this.lbl_DEPT_NEW.Name = "lbl_DEPT_NEW";
+            this.lbl_DEPT_NEW.Size = new System.Drawing.Size(55, 19);
+            this.lbl_DEPT_NEW.TabIndex = 2;
+            this.lbl_DEPT_NEW.Text = "새 부서";
+            // 
+            // lbl_SA_SABUN
+            // 
+            this.lbl_SA_SABUN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_SA_SABUN.AutoSize = true;
+            this.lbl_SA_SABUN.Location = new System.Drawing.Point(426, 1);
+            this.lbl_SA_SABUN.Name = "lbl_SA_SABUN";
+            this.lbl_SA_SABUN.Size = new System.Drawing.Size(65, 19);
+            this.lbl_SA_SABUN.TabIndex = 1;
+            this.lbl_SA_SABUN.Text = "사원번호";
+            // 
+            // txt_SA_SABUN
+            // 
+            this.txt_SA_SABUN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_SA_SABUN.Location = new System.Drawing.Point(17, 33);
+            this.txt_SA_SABUN.Name = "txt_SA_SABUN";
+            this.txt_SA_SABUN.Size = new System.Drawing.Size(883, 21);
+            this.txt_SA_SABUN.TabIndex = 0;
             // 
             // panel2
             // 
@@ -166,6 +224,16 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1834, 68);
             this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // txt_SeachName
+            // 
+            this.txt_SeachName.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_SeachName.AutoSize = true;
+            this.txt_SeachName.Location = new System.Drawing.Point(42, 24);
+            this.txt_SeachName.Name = "txt_SeachName";
+            this.txt_SeachName.Size = new System.Drawing.Size(65, 19);
+            this.txt_SeachName.TabIndex = 3;
+            this.txt_SeachName.Text = "사원번호";
             // 
             // txt_SeachVal
             // 
@@ -289,75 +357,8 @@
             this.grd_Result.Size = new System.Drawing.Size(1834, 428);
             this.grd_Result.TabIndex = 3;
             this.grd_Result.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_Data_CellDoubleClick);
+            this.grd_Result.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.grd_Result_CellFormatting);
             this.grd_Result.KeyUp += new System.Windows.Forms.KeyEventHandler(this.grd_Data_KeyUp);
-            // 
-            // txt_SeachName
-            // 
-            this.txt_SeachName.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txt_SeachName.AutoSize = true;
-            this.txt_SeachName.Location = new System.Drawing.Point(42, 24);
-            this.txt_SeachName.Name = "txt_SeachName";
-            this.txt_SeachName.Size = new System.Drawing.Size(65, 19);
-            this.txt_SeachName.TabIndex = 3;
-            this.txt_SeachName.Text = "사원번호";
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.txt_DEPT_NEW, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lbl_DEPT_NEW, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lbl_SA_SABUN, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txt_SA_SABUN, 0, 1);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(1, 180);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1834, 68);
-            this.tableLayoutPanel2.TabIndex = 2;
-            // 
-            // txt_DEPT_NEW
-            // 
-            this.txt_DEPT_NEW.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_DEPT_NEW.Location = new System.Drawing.Point(939, 33);
-            this.txt_DEPT_NEW.Name = "txt_DEPT_NEW";
-            this.txt_DEPT_NEW.Size = new System.Drawing.Size(871, 21);
-            this.txt_DEPT_NEW.TabIndex = 1;
-            this.txt_DEPT_NEW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_WC_CODE_KeyPress);
-            // 
-            // lbl_DEPT_NEW
-            // 
-            this.lbl_DEPT_NEW.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_DEPT_NEW.AutoSize = true;
-            this.lbl_DEPT_NEW.Location = new System.Drawing.Point(1347, 1);
-            this.lbl_DEPT_NEW.Name = "lbl_DEPT_NEW";
-            this.lbl_DEPT_NEW.Size = new System.Drawing.Size(55, 19);
-            this.lbl_DEPT_NEW.TabIndex = 2;
-            this.lbl_DEPT_NEW.Text = "새 부서";
-            // 
-            // lbl_SA_SABUN
-            // 
-            this.lbl_SA_SABUN.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_SA_SABUN.AutoSize = true;
-            this.lbl_SA_SABUN.Location = new System.Drawing.Point(426, 1);
-            this.lbl_SA_SABUN.Name = "lbl_SA_SABUN";
-            this.lbl_SA_SABUN.Size = new System.Drawing.Size(65, 19);
-            this.lbl_SA_SABUN.TabIndex = 1;
-            this.lbl_SA_SABUN.Text = "사원번호";
-            // 
-            // txt_SA_SABUN
-            // 
-            this.txt_SA_SABUN.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_SA_SABUN.Location = new System.Drawing.Point(17, 33);
-            this.txt_SA_SABUN.Name = "txt_SA_SABUN";
-            this.txt_SA_SABUN.Size = new System.Drawing.Size(883, 21);
-            this.txt_SA_SABUN.TabIndex = 0;
             // 
             // Column30
             // 
@@ -525,6 +526,8 @@
             this.Text = "사원";
             this.Load += new System.EventHandler(this.Child_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -532,8 +535,6 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd_Result)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }

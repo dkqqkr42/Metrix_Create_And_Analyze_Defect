@@ -33,6 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.txt_SeachName = new MetroFramework.Controls.MetroLabel();
+            this.txt_SeachVal = new MetroFramework.Controls.MetroTextBox();
+            this.ckb_DelFlag = new MetroFramework.Controls.MetroCheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_DataUpsert = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -67,16 +71,12 @@
             this.txt_FACTOR_CODE = new MetroFramework.Controls.MetroTextBox();
             this.lbl_PLANT_CODE = new MetroFramework.Controls.MetroLabel();
             this.txt_PLANT_CODE = new MetroFramework.Controls.MetroTextBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.txt_SeachName = new MetroFramework.Controls.MetroLabel();
-            this.txt_SeachVal = new MetroFramework.Controls.MetroTextBox();
-            this.ckb_DelFlag = new MetroFramework.Controls.MetroCheckBox();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd_Result)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -102,6 +102,79 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1836, 692);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Controls.Add(this.txt_SeachName, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txt_SeachVal, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.ckb_DelFlag, 2, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(1, 56);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1834, 68);
+            this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // txt_SeachName
+            // 
+            this.txt_SeachName.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_SeachName.AutoSize = true;
+            this.txt_SeachName.Location = new System.Drawing.Point(42, 24);
+            this.txt_SeachName.Name = "txt_SeachName";
+            this.txt_SeachName.Size = new System.Drawing.Size(65, 19);
+            this.txt_SeachName.TabIndex = 3;
+            this.txt_SeachName.Text = "공장코드";
+            // 
+            // txt_SeachVal
+            // 
+            this.txt_SeachVal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            // 
+            // 
+            // 
+            this.txt_SeachVal.CustomButton.Image = null;
+            this.txt_SeachVal.CustomButton.Location = new System.Drawing.Point(362, 1);
+            this.txt_SeachVal.CustomButton.Name = "";
+            this.txt_SeachVal.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_SeachVal.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_SeachVal.CustomButton.TabIndex = 1;
+            this.txt_SeachVal.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_SeachVal.CustomButton.UseSelectable = true;
+            this.txt_SeachVal.CustomButton.Visible = false;
+            this.txt_SeachVal.Lines = new string[0];
+            this.txt_SeachVal.Location = new System.Drawing.Point(147, 22);
+            this.txt_SeachVal.MaxLength = 32767;
+            this.txt_SeachVal.Name = "txt_SeachVal";
+            this.txt_SeachVal.PasswordChar = '\0';
+            this.txt_SeachVal.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_SeachVal.SelectedText = "";
+            this.txt_SeachVal.SelectionLength = 0;
+            this.txt_SeachVal.SelectionStart = 0;
+            this.txt_SeachVal.ShortcutsEnabled = true;
+            this.txt_SeachVal.Size = new System.Drawing.Size(384, 23);
+            this.txt_SeachVal.TabIndex = 0;
+            this.txt_SeachVal.UseSelectable = true;
+            this.txt_SeachVal.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_SeachVal.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // ckb_DelFlag
+            // 
+            this.ckb_DelFlag.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ckb_DelFlag.AutoSize = true;
+            this.ckb_DelFlag.FontSize = MetroFramework.MetroCheckBoxSize.Medium;
+            this.ckb_DelFlag.Location = new System.Drawing.Point(571, 24);
+            this.ckb_DelFlag.Name = "ckb_DelFlag";
+            this.ckb_DelFlag.Size = new System.Drawing.Size(53, 19);
+            this.ckb_DelFlag.Style = MetroFramework.MetroColorStyle.Green;
+            this.ckb_DelFlag.TabIndex = 1;
+            this.ckb_DelFlag.Text = "전체";
+            this.ckb_DelFlag.UseSelectable = true;
             // 
             // panel2
             // 
@@ -215,6 +288,7 @@
             this.grd_Result.Size = new System.Drawing.Size(1834, 428);
             this.grd_Result.TabIndex = 3;
             this.grd_Result.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_Data_CellDoubleClick);
+            this.grd_Result.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.grd_Result_CellFormatting);
             this.grd_Result.KeyUp += new System.Windows.Forms.KeyEventHandler(this.grd_Data_KeyUp);
             // 
             // Column6
@@ -691,79 +765,6 @@
             this.txt_PLANT_CODE.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_PLANT_CODE.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Controls.Add(this.txt_SeachName, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.txt_SeachVal, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.ckb_DelFlag, 2, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(1, 56);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1834, 68);
-            this.tableLayoutPanel3.TabIndex = 1;
-            // 
-            // txt_SeachName
-            // 
-            this.txt_SeachName.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txt_SeachName.AutoSize = true;
-            this.txt_SeachName.Location = new System.Drawing.Point(42, 24);
-            this.txt_SeachName.Name = "txt_SeachName";
-            this.txt_SeachName.Size = new System.Drawing.Size(65, 19);
-            this.txt_SeachName.TabIndex = 3;
-            this.txt_SeachName.Text = "공장코드";
-            // 
-            // txt_SeachVal
-            // 
-            this.txt_SeachVal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            // 
-            // 
-            // 
-            this.txt_SeachVal.CustomButton.Image = null;
-            this.txt_SeachVal.CustomButton.Location = new System.Drawing.Point(362, 1);
-            this.txt_SeachVal.CustomButton.Name = "";
-            this.txt_SeachVal.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txt_SeachVal.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txt_SeachVal.CustomButton.TabIndex = 1;
-            this.txt_SeachVal.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txt_SeachVal.CustomButton.UseSelectable = true;
-            this.txt_SeachVal.CustomButton.Visible = false;
-            this.txt_SeachVal.Lines = new string[0];
-            this.txt_SeachVal.Location = new System.Drawing.Point(147, 22);
-            this.txt_SeachVal.MaxLength = 32767;
-            this.txt_SeachVal.Name = "txt_SeachVal";
-            this.txt_SeachVal.PasswordChar = '\0';
-            this.txt_SeachVal.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_SeachVal.SelectedText = "";
-            this.txt_SeachVal.SelectionLength = 0;
-            this.txt_SeachVal.SelectionStart = 0;
-            this.txt_SeachVal.ShortcutsEnabled = true;
-            this.txt_SeachVal.Size = new System.Drawing.Size(384, 23);
-            this.txt_SeachVal.TabIndex = 0;
-            this.txt_SeachVal.UseSelectable = true;
-            this.txt_SeachVal.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txt_SeachVal.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // ckb_DelFlag
-            // 
-            this.ckb_DelFlag.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ckb_DelFlag.AutoSize = true;
-            this.ckb_DelFlag.FontSize = MetroFramework.MetroCheckBoxSize.Medium;
-            this.ckb_DelFlag.Location = new System.Drawing.Point(571, 24);
-            this.ckb_DelFlag.Name = "ckb_DelFlag";
-            this.ckb_DelFlag.Size = new System.Drawing.Size(53, 19);
-            this.ckb_DelFlag.Style = MetroFramework.MetroColorStyle.Green;
-            this.ckb_DelFlag.TabIndex = 1;
-            this.ckb_DelFlag.Text = "전체";
-            this.ckb_DelFlag.UseSelectable = true;
-            // 
             // DownTimeDTL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -774,6 +775,8 @@
             this.Text = "공부동상세";
             this.Load += new System.EventHandler(this.Child_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -781,8 +784,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.grd_Result)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }

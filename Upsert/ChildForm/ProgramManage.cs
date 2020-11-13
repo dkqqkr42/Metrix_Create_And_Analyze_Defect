@@ -176,5 +176,18 @@ namespace Upsert
             MessageBox.Show("이 테이블의 데이터는 삭제할 수 없습니다.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return false;
         }
+
+        private void grd_Result_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex >= 0 && e.RowIndex >= 0 &&
+            grd_Result.Rows[e.RowIndex].Cells[e.ColumnIndex].Selected)
+            {
+                e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Bold);
+            }
+            else
+            {
+                e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Regular);
+            }
+        }
     }
 }
