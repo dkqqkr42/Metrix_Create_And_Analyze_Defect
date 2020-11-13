@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tile_Defect = new MetroFramework.Controls.MetroTile();
@@ -108,6 +108,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.Confirmation1_button = new MetroFramework.Controls.MetroButton();
+            this.tile_SAPOrder = new MetroFramework.Controls.MetroTile();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -153,29 +154,30 @@
             this.tableLayoutPanel5.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.tile_Defect, 0, 3);
-            this.tableLayoutPanel5.Controls.Add(this.tile_Inspection, 0, 2);
-            this.tableLayoutPanel5.Controls.Add(this.tile_Working, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.tile_WorkPlan, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.tile_SAPOrder, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.tile_Defect, 0, 4);
+            this.tableLayoutPanel5.Controls.Add(this.tile_Inspection, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.tile_Working, 0, 2);
+            this.tableLayoutPanel5.Controls.Add(this.tile_WorkPlan, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 4;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
+            this.tableLayoutPanel5.RowCount = 5;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.00049F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0005F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0005F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.9985F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(220, 892);
             this.tableLayoutPanel5.TabIndex = 5;
             // 
             // tile_Defect
             // 
             this.tile_Defect.ActiveControl = null;
-            this.tile_Defect.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tile_Defect.Location = new System.Drawing.Point(4, 670);
+            this.tile_Defect.Location = new System.Drawing.Point(4, 716);
             this.tile_Defect.Name = "tile_Defect";
-            this.tile_Defect.Size = new System.Drawing.Size(212, 218);
+            this.tile_Defect.Size = new System.Drawing.Size(212, 172);
             this.tile_Defect.Style = MetroFramework.MetroColorStyle.Teal;
             this.tile_Defect.TabIndex = 4;
             this.tile_Defect.Text = "불량";
@@ -186,10 +188,9 @@
             // tile_Inspection
             // 
             this.tile_Inspection.ActiveControl = null;
-            this.tile_Inspection.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tile_Inspection.Location = new System.Drawing.Point(4, 448);
+            this.tile_Inspection.Location = new System.Drawing.Point(4, 538);
             this.tile_Inspection.Name = "tile_Inspection";
-            this.tile_Inspection.Size = new System.Drawing.Size(212, 215);
+            this.tile_Inspection.Size = new System.Drawing.Size(212, 171);
             this.tile_Inspection.Style = MetroFramework.MetroColorStyle.Teal;
             this.tile_Inspection.TabIndex = 3;
             this.tile_Inspection.Text = "검사성적서";
@@ -199,10 +200,9 @@
             // tile_Working
             // 
             this.tile_Working.ActiveControl = null;
-            this.tile_Working.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tile_Working.Location = new System.Drawing.Point(4, 226);
+            this.tile_Working.Location = new System.Drawing.Point(4, 360);
             this.tile_Working.Name = "tile_Working";
-            this.tile_Working.Size = new System.Drawing.Size(212, 215);
+            this.tile_Working.Size = new System.Drawing.Size(212, 171);
             this.tile_Working.Style = MetroFramework.MetroColorStyle.Teal;
             this.tile_Working.TabIndex = 2;
             this.tile_Working.Text = "작업진행";
@@ -213,10 +213,9 @@
             // tile_WorkPlan
             // 
             this.tile_WorkPlan.ActiveControl = null;
-            this.tile_WorkPlan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tile_WorkPlan.Location = new System.Drawing.Point(4, 4);
+            this.tile_WorkPlan.Location = new System.Drawing.Point(4, 182);
             this.tile_WorkPlan.Name = "tile_WorkPlan";
-            this.tile_WorkPlan.Size = new System.Drawing.Size(212, 215);
+            this.tile_WorkPlan.Size = new System.Drawing.Size(212, 171);
             this.tile_WorkPlan.Style = MetroFramework.MetroColorStyle.Teal;
             this.tile_WorkPlan.TabIndex = 0;
             this.tile_WorkPlan.Text = "작업계획";
@@ -374,14 +373,14 @@
             // dataGridView2
             // 
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6,
@@ -414,14 +413,14 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -1303,6 +1302,19 @@
             this.Confirmation1_button.UseSelectable = true;
             this.Confirmation1_button.Click += new System.EventHandler(this.Confirmation1_button_Click);
             // 
+            // tile_SAPOrder
+            // 
+            this.tile_SAPOrder.ActiveControl = null;
+            this.tile_SAPOrder.Location = new System.Drawing.Point(4, 4);
+            this.tile_SAPOrder.Name = "tile_SAPOrder";
+            this.tile_SAPOrder.Size = new System.Drawing.Size(212, 171);
+            this.tile_SAPOrder.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tile_SAPOrder.TabIndex = 6;
+            this.tile_SAPOrder.Text = "생산계획접수";
+            this.tile_SAPOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tile_SAPOrder.UseSelectable = true;
+            this.tile_SAPOrder.Click += new System.EventHandler(this.tile_SAPOrder_Click);
+            // 
             // Inspection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -1432,5 +1444,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private MetroFramework.Controls.MetroTile tile_Defect;
+        private MetroFramework.Controls.MetroTile tile_SAPOrder;
     }
 }

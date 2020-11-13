@@ -1781,6 +1781,7 @@
             // tile_SAPOrder
             // 
             this.tile_SAPOrder.ActiveControl = null;
+            this.tile_SAPOrder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tile_SAPOrder.Location = new System.Drawing.Point(4, 4);
             this.tile_SAPOrder.Name = "tile_SAPOrder";
             this.tile_SAPOrder.Size = new System.Drawing.Size(212, 171);
@@ -1789,13 +1790,15 @@
             this.tile_SAPOrder.Text = "생산계획접수";
             this.tile_SAPOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.tile_SAPOrder.UseSelectable = true;
+            this.tile_SAPOrder.Click += new System.EventHandler(this.tile_SAPOrder_Click);
             // 
             // tile_Defect
             // 
             this.tile_Defect.ActiveControl = null;
+            this.tile_Defect.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tile_Defect.Location = new System.Drawing.Point(4, 716);
             this.tile_Defect.Name = "tile_Defect";
-            this.tile_Defect.Size = new System.Drawing.Size(212, 171);
+            this.tile_Defect.Size = new System.Drawing.Size(212, 172);
             this.tile_Defect.Style = MetroFramework.MetroColorStyle.Teal;
             this.tile_Defect.TabIndex = 4;
             this.tile_Defect.Text = "불량";
@@ -1805,6 +1808,7 @@
             // tile_Inspection
             // 
             this.tile_Inspection.ActiveControl = null;
+            this.tile_Inspection.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tile_Inspection.Location = new System.Drawing.Point(4, 538);
             this.tile_Inspection.Name = "tile_Inspection";
             this.tile_Inspection.Size = new System.Drawing.Size(212, 171);
@@ -1818,6 +1822,7 @@
             // tile_Working
             // 
             this.tile_Working.ActiveControl = null;
+            this.tile_Working.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tile_Working.Location = new System.Drawing.Point(4, 360);
             this.tile_Working.Name = "tile_Working";
             this.tile_Working.Size = new System.Drawing.Size(212, 171);
@@ -1831,6 +1836,7 @@
             // tile_WorkPlan
             // 
             this.tile_WorkPlan.ActiveControl = null;
+            this.tile_WorkPlan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tile_WorkPlan.Location = new System.Drawing.Point(4, 182);
             this.tile_WorkPlan.Name = "tile_WorkPlan";
             this.tile_WorkPlan.Size = new System.Drawing.Size(212, 171);

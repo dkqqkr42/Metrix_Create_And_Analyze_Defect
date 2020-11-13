@@ -58,5 +58,10 @@ namespace FinalProject_Profile
         {
             main.CalIInspection();
         }
+
+        private void tile_SAPOrder_Click(object sender, EventArgs e)
+        {
+            main.CallSAPOrder();
+        }
     }
 }
