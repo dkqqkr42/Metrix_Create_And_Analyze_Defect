@@ -18,10 +18,17 @@ namespace FinalProject_Profile
     public partial class Inspection : MetroForm
     {
         protected const string connectionString = "DATA SOURCE=220.69.249.228:1521/xe;PASSWORD=1234;PERSIST SECURITY INFO=True;USER ID=MAT_MGR";
+        Main main;
 
         public Inspection()
         {
             InitializeComponent();
+        }
+
+        public Inspection(Main mainForm)
+        {
+            InitializeComponent();
+            main = mainForm;
         }
 
         protected override CreateParams CreateParams
@@ -168,6 +175,21 @@ namespace FinalProject_Profile
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
             FillGrid();
+        }
+
+        private void tile_WorkPlan_Click(object sender, EventArgs e)
+        {
+            main.CallWorkPlan();
+        }
+
+        private void tile_Working_Click(object sender, EventArgs e)
+        {
+            main.CallWorking();
+        }
+
+        private void tile_Defect_Click(object sender, EventArgs e)
+        {
+            main.CallDefect();
         }
     }
 }

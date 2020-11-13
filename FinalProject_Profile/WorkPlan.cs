@@ -123,5 +123,20 @@ namespace FinalProject_Profile
         {
             
         }
+
+        private void tile_Working_Click(object sender, EventArgs e)
+        {
+            main.CallWorking();
+        }
+
+        private void tile_Inspection_Click(object sender, EventArgs e)
+        {
+            main.CalIInspection();
+        }
+
+        private void tile_Defect_Click(object sender, EventArgs e)
+        {
+            main.CallDefect();
+        }
     }
 }

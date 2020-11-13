@@ -21,7 +21,7 @@ namespace FinalProject_Profile
         private SAPOrder mChildForm2 = null;
         private Working mChildForm4 = null;
         private Inspection mChildForm5 = null;
-        private Child7 mChildForm7 = null;
+        private Defect mChildForm7 = null;
         private Child9 mChildForm9 = null;
 
         public Main()
@@ -161,17 +161,22 @@ namespace FinalProject_Profile
 
         private void form7ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            CallDefect();
+        }
+
+        public void CallDefect()
+        {
             if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
                 if (this.ActiveMdiChild != mChildForm7)  // 열려있는 자식폼이 Form3 가 아니면
                 {
                     ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
                 }
-                mChildForm7 = ShowOrActiveForm(mChildForm7, typeof(Child7)) as Child7;
+                mChildForm7 = ShowOrActiveForm(mChildForm7, typeof(Defect)) as Defect;
             }
             else
             {
-                mChildForm7 = ShowOrActiveForm(mChildForm7, typeof(Child7)) as Child7;
+                mChildForm7 = ShowOrActiveForm(mChildForm7, typeof(Defect)) as Defect;
             }
         }
 

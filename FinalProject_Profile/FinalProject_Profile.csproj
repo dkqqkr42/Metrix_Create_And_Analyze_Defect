@@ -118,11 +118,11 @@
     <Compile Include="Child8.Designer.cs">
       <DependentUpon>Child8.cs</DependentUpon>
     </Compile>
-    <Compile Include="Child7.cs">
+    <Compile Include="Defect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Child7.Designer.cs">
-      <DependentUpon>Child7.cs</DependentUpon>
+    <Compile Include="Defect.Designer.cs">
+      <DependentUpon>Defect.cs</DependentUpon>
     </Compile>
     <Compile Include="Child9.cs">
       <SubType>Form</SubType>
@@ -174,8 +174,8 @@
     <EmbeddedResource Include="Child8.resx">
       <DependentUpon>Child8.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Child7.resx">
-      <DependentUpon>Child7.cs</DependentUpon>
+    <EmbeddedResource Include="Defect.resx">
+      <DependentUpon>Defect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Child9.resx">
       <DependentUpon>Child9.cs</DependentUpon>

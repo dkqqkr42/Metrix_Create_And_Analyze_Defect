@@ -11,11 +11,17 @@ using MetroFramework.Forms;
 
 namespace FinalProject_Profile
 {
-    public partial class Child7 : MetroForm
+    public partial class Defect : MetroForm
     {
-        public Child7()
+        Main main;
+        public Defect()
         {
             InitializeComponent();
+        }
+        public Defect(Main mainForm)
+        {
+            InitializeComponent();
+            main = mainForm;
         }
 
         private void tableLayoutPanel6_Paint(object sender, PaintEventArgs e)
@@ -36,6 +42,21 @@ namespace FinalProject_Profile
                 cp.ExStyle |= 0x02000000;
                 return cp;
             }
+        }
+
+        private void tile_WorkPlan_Click(object sender, EventArgs e)
+        {
+            main.CallWorkPlan();
+        }
+
+        private void tile_Working_Click(object sender, EventArgs e)
+        {
+            main.CallWorking();
+        }
+
+        private void tile_Inspection_Click(object sender, EventArgs e)
+        {
+            main.CalIInspection();
         }
     }
 }

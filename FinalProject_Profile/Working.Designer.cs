@@ -105,12 +105,11 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.tile_Inspection = new MetroFramework.Controls.MetroTile();
             this.tile_Working = new MetroFramework.Controls.MetroTile();
-            this.tile_Reservation = new MetroFramework.Controls.MetroTile();
             this.tile_WorkPlan = new MetroFramework.Controls.MetroTile();
             this.label30 = new System.Windows.Forms.Label();
+            this.tile_Defect = new MetroFramework.Controls.MetroTile();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -138,12 +137,12 @@
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(18, 60);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(20, 60);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94.11765F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1840, 896);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1836, 892);
             this.tableLayoutPanel4.TabIndex = 5;
             // 
             // tableLayoutPanel1
@@ -160,7 +159,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1620, 896);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1616, 892);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // tableLayoutPanel2
@@ -175,7 +174,7 @@
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 174F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1612, 174);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1608, 173);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel14
@@ -190,7 +189,7 @@
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(1606, 168);
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(1602, 167);
             this.tableLayoutPanel14.TabIndex = 0;
             // 
             // tableLayoutPanel21
@@ -222,7 +221,7 @@
             this.tableLayoutPanel21.RowCount = 2;
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.08955F));
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 67.91045F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(1380, 168);
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(1376, 167);
             this.tableLayoutPanel21.TabIndex = 1;
             // 
             // lbl_GUBUN
@@ -231,7 +230,7 @@
             this.lbl_GUBUN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lbl_GUBUN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_GUBUN.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_GUBUN.Location = new System.Drawing.Point(1291, 57);
+            this.lbl_GUBUN.Location = new System.Drawing.Point(1287, 56);
             this.lbl_GUBUN.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_GUBUN.Name = "lbl_GUBUN";
             this.lbl_GUBUN.Size = new System.Drawing.Size(86, 108);
@@ -245,10 +244,10 @@
             this.lbl_WORK_GBN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lbl_WORK_GBN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_WORK_GBN.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_WORK_GBN.Location = new System.Drawing.Point(1110, 57);
+            this.lbl_WORK_GBN.Location = new System.Drawing.Point(1107, 56);
             this.lbl_WORK_GBN.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_WORK_GBN.Name = "lbl_WORK_GBN";
-            this.lbl_WORK_GBN.Size = new System.Drawing.Size(178, 108);
+            this.lbl_WORK_GBN.Size = new System.Drawing.Size(177, 108);
             this.lbl_WORK_GBN.TabIndex = 14;
             this.lbl_WORK_GBN.Text = "기술테스트";
             this.lbl_WORK_GBN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -259,7 +258,7 @@
             this.lbl_Top_PCS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lbl_Top_PCS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Top_PCS.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_Top_PCS.Location = new System.Drawing.Point(884, 57);
+            this.lbl_Top_PCS.Location = new System.Drawing.Point(881, 56);
             this.lbl_Top_PCS.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Top_PCS.Name = "lbl_Top_PCS";
             this.lbl_Top_PCS.Size = new System.Drawing.Size(223, 108);
@@ -273,7 +272,7 @@
             this.lbl_ORDER_M.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lbl_ORDER_M.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_ORDER_M.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_ORDER_M.Location = new System.Drawing.Point(658, 57);
+            this.lbl_ORDER_M.Location = new System.Drawing.Point(655, 56);
             this.lbl_ORDER_M.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_ORDER_M.Name = "lbl_ORDER_M";
             this.lbl_ORDER_M.Size = new System.Drawing.Size(223, 108);
@@ -287,10 +286,10 @@
             this.lbl_PROD_UNIT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lbl_PROD_UNIT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_PROD_UNIT.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_PROD_UNIT.Location = new System.Drawing.Point(562, 57);
+            this.lbl_PROD_UNIT.Location = new System.Drawing.Point(560, 56);
             this.lbl_PROD_UNIT.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_PROD_UNIT.Name = "lbl_PROD_UNIT";
-            this.lbl_PROD_UNIT.Size = new System.Drawing.Size(93, 108);
+            this.lbl_PROD_UNIT.Size = new System.Drawing.Size(92, 108);
             this.lbl_PROD_UNIT.TabIndex = 11;
             this.lbl_PROD_UNIT.Text = "BOX";
             this.lbl_PROD_UNIT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -301,10 +300,10 @@
             this.label49.BackColor = System.Drawing.Color.SteelBlue;
             this.label49.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label49.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label49.Location = new System.Drawing.Point(1291, 3);
+            this.label49.Location = new System.Drawing.Point(1287, 3);
             this.label49.Margin = new System.Windows.Forms.Padding(0);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(86, 51);
+            this.label49.Size = new System.Drawing.Size(86, 50);
             this.label49.TabIndex = 10;
             this.label49.Text = "시장";
             this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -315,10 +314,10 @@
             this.label48.BackColor = System.Drawing.Color.SteelBlue;
             this.label48.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label48.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label48.Location = new System.Drawing.Point(1110, 3);
+            this.label48.Location = new System.Drawing.Point(1107, 3);
             this.label48.Margin = new System.Windows.Forms.Padding(0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(178, 51);
+            this.label48.Size = new System.Drawing.Size(177, 50);
             this.label48.TabIndex = 9;
             this.label48.Text = "구분";
             this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -329,10 +328,10 @@
             this.label47.BackColor = System.Drawing.Color.SteelBlue;
             this.label47.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label47.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label47.Location = new System.Drawing.Point(884, 3);
+            this.label47.Location = new System.Drawing.Point(881, 3);
             this.label47.Margin = new System.Windows.Forms.Padding(0);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(223, 51);
+            this.label47.Size = new System.Drawing.Size(223, 50);
             this.label47.TabIndex = 8;
             this.label47.Text = "생산량";
             this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -343,10 +342,10 @@
             this.label46.BackColor = System.Drawing.Color.SteelBlue;
             this.label46.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label46.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label46.Location = new System.Drawing.Point(658, 3);
+            this.label46.Location = new System.Drawing.Point(655, 3);
             this.label46.Margin = new System.Windows.Forms.Padding(0);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(223, 51);
+            this.label46.Size = new System.Drawing.Size(223, 50);
             this.label46.TabIndex = 7;
             this.label46.Text = "계획량";
             this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -357,10 +356,10 @@
             this.label45.BackColor = System.Drawing.Color.SteelBlue;
             this.label45.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label45.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label45.Location = new System.Drawing.Point(562, 3);
+            this.label45.Location = new System.Drawing.Point(560, 3);
             this.label45.Margin = new System.Windows.Forms.Padding(0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(93, 51);
+            this.label45.Size = new System.Drawing.Size(92, 50);
             this.label45.TabIndex = 6;
             this.label45.Text = "단위";
             this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -372,13 +371,13 @@
             this.tableLayoutPanel22.Controls.Add(this.lbl_PROD_NAME, 0, 1);
             this.tableLayoutPanel22.Controls.Add(this.tableLayoutPanel23, 0, 0);
             this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel22.Location = new System.Drawing.Point(3, 57);
+            this.tableLayoutPanel22.Location = new System.Drawing.Point(3, 56);
             this.tableLayoutPanel22.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel22.Name = "tableLayoutPanel22";
             this.tableLayoutPanel22.RowCount = 2;
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel22.Size = new System.Drawing.Size(556, 108);
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(554, 108);
             this.tableLayoutPanel22.TabIndex = 0;
             // 
             // lbl_PROD_NAME
@@ -390,7 +389,7 @@
             this.lbl_PROD_NAME.Location = new System.Drawing.Point(0, 54);
             this.lbl_PROD_NAME.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_PROD_NAME.Name = "lbl_PROD_NAME";
-            this.lbl_PROD_NAME.Size = new System.Drawing.Size(556, 54);
+            this.lbl_PROD_NAME.Size = new System.Drawing.Size(554, 54);
             this.lbl_PROD_NAME.TabIndex = 3;
             this.lbl_PROD_NAME.Text = "DT파인우드/DFW5715/3.0T/180X920/거친우드";
             this.lbl_PROD_NAME.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -408,7 +407,7 @@
             this.tableLayoutPanel23.Name = "tableLayoutPanel23";
             this.tableLayoutPanel23.RowCount = 1;
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel23.Size = new System.Drawing.Size(556, 54);
+            this.tableLayoutPanel23.Size = new System.Drawing.Size(554, 54);
             this.tableLayoutPanel23.TabIndex = 0;
             // 
             // lbl_ORDER_NO
@@ -417,10 +416,10 @@
             this.lbl_ORDER_NO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.lbl_ORDER_NO.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_ORDER_NO.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_ORDER_NO.Location = new System.Drawing.Point(278, 0);
+            this.lbl_ORDER_NO.Location = new System.Drawing.Point(277, 0);
             this.lbl_ORDER_NO.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_ORDER_NO.Name = "lbl_ORDER_NO";
-            this.lbl_ORDER_NO.Size = new System.Drawing.Size(278, 54);
+            this.lbl_ORDER_NO.Size = new System.Drawing.Size(277, 54);
             this.lbl_ORDER_NO.TabIndex = 3;
             this.lbl_ORDER_NO.Text = "0006017288 - 9999";
             this.lbl_ORDER_NO.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -434,7 +433,7 @@
             this.lbl_PROD_CODE.Location = new System.Drawing.Point(0, 0);
             this.lbl_PROD_CODE.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_PROD_CODE.Name = "lbl_PROD_CODE";
-            this.lbl_PROD_CODE.Size = new System.Drawing.Size(278, 54);
+            this.lbl_PROD_CODE.Size = new System.Drawing.Size(277, 54);
             this.lbl_PROD_CODE.TabIndex = 2;
             this.lbl_PROD_CODE.Text = "C050SH-03";
             this.lbl_PROD_CODE.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -448,7 +447,7 @@
             this.label41.Location = new System.Drawing.Point(3, 3);
             this.label41.Margin = new System.Windows.Forms.Padding(0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(556, 51);
+            this.label41.Size = new System.Drawing.Size(554, 50);
             this.label41.TabIndex = 1;
             this.label41.Text = "제품 내역";
             this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -457,9 +456,9 @@
             // 
             this.btn_InspectionStart.BackgroundImage = global::FinalProject_Profile.Properties.Resources.검사시작;
             this.btn_InspectionStart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_InspectionStart.Location = new System.Drawing.Point(1383, 3);
+            this.btn_InspectionStart.Location = new System.Drawing.Point(1379, 3);
             this.btn_InspectionStart.Name = "btn_InspectionStart";
-            this.btn_InspectionStart.Size = new System.Drawing.Size(220, 162);
+            this.btn_InspectionStart.Size = new System.Drawing.Size(220, 161);
             this.btn_InspectionStart.TabIndex = 2;
             this.btn_InspectionStart.UseSelectable = true;
             this.btn_InspectionStart.Click += new System.EventHandler(this.btn_InspectionStart_Click);
@@ -472,12 +471,12 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 87.77916F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel6, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(1, 180);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(1, 179);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1618, 715);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1614, 712);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // tableLayoutPanel6
@@ -494,7 +493,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.45377F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.11806F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1612, 709);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1608, 706);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // tableLayoutPanel7
@@ -517,7 +516,7 @@
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.89474F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.10526F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1612, 194);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1608, 194);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // tableLayoutPanel13
@@ -528,12 +527,12 @@
             this.tableLayoutPanel13.Controls.Add(this.label16, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.lbl_Punching, 0, 0);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(960, 76);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(958, 76);
             this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 1;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(649, 115);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(647, 115);
             this.tableLayoutPanel13.TabIndex = 15;
             // 
             // label16
@@ -543,10 +542,10 @@
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.label16.ForeColor = System.Drawing.Color.Yellow;
-            this.label16.Location = new System.Drawing.Point(359, 0);
+            this.label16.Location = new System.Drawing.Point(358, 0);
             this.label16.Margin = new System.Windows.Forms.Padding(0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(290, 115);
+            this.label16.Size = new System.Drawing.Size(289, 115);
             this.label16.TabIndex = 13;
             this.label16.Text = "회";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -561,7 +560,7 @@
             this.lbl_Punching.Location = new System.Drawing.Point(0, 0);
             this.lbl_Punching.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Punching.Name = "lbl_Punching";
-            this.lbl_Punching.Size = new System.Drawing.Size(359, 115);
+            this.lbl_Punching.Size = new System.Drawing.Size(358, 115);
             this.lbl_Punching.TabIndex = 12;
             this.lbl_Punching.Text = "10,000";
             this.lbl_Punching.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -575,7 +574,7 @@
             this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(647, 70);
+            this.label1.Size = new System.Drawing.Size(646, 70);
             this.label1.TabIndex = 2;
             this.label1.Text = "총 생산량";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -586,10 +585,10 @@
             this.label2.BackColor = System.Drawing.Color.SteelBlue;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label2.Location = new System.Drawing.Point(653, 3);
+            this.label2.Location = new System.Drawing.Point(652, 3);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(304, 70);
+            this.label2.Size = new System.Drawing.Size(303, 70);
             this.label2.TabIndex = 3;
             this.label2.Text = "구 분";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -600,10 +599,10 @@
             this.label3.BackColor = System.Drawing.Color.SteelBlue;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label3.Location = new System.Drawing.Point(960, 3);
+            this.label3.Location = new System.Drawing.Point(958, 3);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(649, 70);
+            this.label3.Size = new System.Drawing.Size(647, 70);
             this.label3.TabIndex = 4;
             this.label3.Text = "A조 생산량";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -614,10 +613,10 @@
             this.label14.BackColor = System.Drawing.Color.YellowGreen;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label14.Location = new System.Drawing.Point(653, 76);
+            this.label14.Location = new System.Drawing.Point(652, 76);
             this.label14.Margin = new System.Windows.Forms.Padding(0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(304, 115);
+            this.label14.Size = new System.Drawing.Size(303, 115);
             this.label14.TabIndex = 13;
             this.label14.Text = "펀 칭 수";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -635,7 +634,7 @@
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 1;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(647, 115);
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(646, 115);
             this.tableLayoutPanel12.TabIndex = 14;
             // 
             // lbl_Punching3
@@ -645,7 +644,7 @@
             this.lbl_Punching3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Punching3.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_Punching3.ForeColor = System.Drawing.Color.Yellow;
-            this.lbl_Punching3.Location = new System.Drawing.Point(358, 0);
+            this.lbl_Punching3.Location = new System.Drawing.Point(357, 0);
             this.lbl_Punching3.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Punching3.Name = "lbl_Punching3";
             this.lbl_Punching3.Size = new System.Drawing.Size(289, 115);
@@ -663,7 +662,7 @@
             this.lbl_Punching2.Location = new System.Drawing.Point(0, 0);
             this.lbl_Punching2.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Punching2.Name = "lbl_Punching2";
-            this.lbl_Punching2.Size = new System.Drawing.Size(358, 115);
+            this.lbl_Punching2.Size = new System.Drawing.Size(357, 115);
             this.lbl_Punching2.TabIndex = 12;
             this.lbl_Punching2.Text = "10,000";
             this.lbl_Punching2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -708,7 +707,7 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.4024F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.2988F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.2988F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(1612, 277);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(1608, 276);
             this.tableLayoutPanel8.TabIndex = 1;
             // 
             // label32
@@ -717,10 +716,10 @@
             this.label32.BackColor = System.Drawing.Color.YellowGreen;
             this.label32.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label32.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label32.Location = new System.Drawing.Point(653, 166);
+            this.label32.Location = new System.Drawing.Point(651, 166);
             this.label32.Margin = new System.Windows.Forms.Padding(0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(303, 108);
+            this.label32.Size = new System.Drawing.Size(303, 107);
             this.label32.TabIndex = 26;
             this.label32.Text = "양 품 량";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -735,7 +734,7 @@
             this.lbl_Good_PCS2.Location = new System.Drawing.Point(3, 166);
             this.lbl_Good_PCS2.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Good_PCS2.Name = "lbl_Good_PCS2";
-            this.lbl_Good_PCS2.Size = new System.Drawing.Size(228, 108);
+            this.lbl_Good_PCS2.Size = new System.Drawing.Size(227, 107);
             this.lbl_Good_PCS2.TabIndex = 19;
             this.lbl_Good_PCS2.Text = "200,000";
             this.lbl_Good_PCS2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -749,7 +748,7 @@
             this.label4.Location = new System.Drawing.Point(3, 3);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(228, 51);
+            this.label4.Size = new System.Drawing.Size(227, 51);
             this.label4.TabIndex = 4;
             this.label4.Text = "PCS";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -760,10 +759,10 @@
             this.label5.BackColor = System.Drawing.Color.SteelBlue;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label5.Location = new System.Drawing.Point(234, 3);
+            this.label5.Location = new System.Drawing.Point(233, 3);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(228, 51);
+            this.label5.Size = new System.Drawing.Size(227, 51);
             this.label5.TabIndex = 5;
             this.label5.Text = "BOX";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -774,7 +773,7 @@
             this.label6.BackColor = System.Drawing.Color.SteelBlue;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label6.Location = new System.Drawing.Point(465, 3);
+            this.label6.Location = new System.Drawing.Point(463, 3);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(185, 51);
@@ -788,7 +787,7 @@
             this.label7.BackColor = System.Drawing.Color.SteelBlue;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label7.Location = new System.Drawing.Point(653, 3);
+            this.label7.Location = new System.Drawing.Point(651, 3);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(303, 51);
@@ -802,7 +801,7 @@
             this.label8.BackColor = System.Drawing.Color.SteelBlue;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label8.Location = new System.Drawing.Point(959, 3);
+            this.label8.Location = new System.Drawing.Point(957, 3);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(185, 51);
@@ -816,10 +815,10 @@
             this.label9.BackColor = System.Drawing.Color.SteelBlue;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label9.Location = new System.Drawing.Point(1147, 3);
+            this.label9.Location = new System.Drawing.Point(1145, 3);
             this.label9.Margin = new System.Windows.Forms.Padding(0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(228, 51);
+            this.label9.Size = new System.Drawing.Size(227, 51);
             this.label9.TabIndex = 9;
             this.label9.Text = "BOX";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -830,10 +829,10 @@
             this.label10.BackColor = System.Drawing.Color.SteelBlue;
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label10.Location = new System.Drawing.Point(1378, 3);
+            this.label10.Location = new System.Drawing.Point(1375, 3);
             this.label10.Margin = new System.Windows.Forms.Padding(0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(231, 51);
+            this.label10.Size = new System.Drawing.Size(230, 51);
             this.label10.TabIndex = 10;
             this.label10.Text = "파렛트";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -845,10 +844,10 @@
             this.lbl_Total_BOX2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Total_BOX2.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_Total_BOX2.ForeColor = System.Drawing.Color.Yellow;
-            this.lbl_Total_BOX2.Location = new System.Drawing.Point(234, 57);
+            this.lbl_Total_BOX2.Location = new System.Drawing.Point(233, 57);
             this.lbl_Total_BOX2.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Total_BOX2.Name = "lbl_Total_BOX2";
-            this.lbl_Total_BOX2.Size = new System.Drawing.Size(228, 106);
+            this.lbl_Total_BOX2.Size = new System.Drawing.Size(227, 106);
             this.lbl_Total_BOX2.TabIndex = 13;
             this.lbl_Total_BOX2.Text = "200.0";
             this.lbl_Total_BOX2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -860,10 +859,10 @@
             this.lbl_Good_BOX2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Good_BOX2.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_Good_BOX2.ForeColor = System.Drawing.Color.Yellow;
-            this.lbl_Good_BOX2.Location = new System.Drawing.Point(234, 166);
+            this.lbl_Good_BOX2.Location = new System.Drawing.Point(233, 166);
             this.lbl_Good_BOX2.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Good_BOX2.Name = "lbl_Good_BOX2";
-            this.lbl_Good_BOX2.Size = new System.Drawing.Size(228, 108);
+            this.lbl_Good_BOX2.Size = new System.Drawing.Size(227, 107);
             this.lbl_Good_BOX2.TabIndex = 14;
             this.lbl_Good_BOX2.Text = "92,200.0";
             this.lbl_Good_BOX2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -878,7 +877,7 @@
             this.lbl_Total_PCS2.Location = new System.Drawing.Point(3, 57);
             this.lbl_Total_PCS2.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Total_PCS2.Name = "lbl_Total_PCS2";
-            this.lbl_Total_PCS2.Size = new System.Drawing.Size(228, 106);
+            this.lbl_Total_PCS2.Size = new System.Drawing.Size(227, 106);
             this.lbl_Total_PCS2.TabIndex = 17;
             this.lbl_Total_PCS2.Text = "20,000";
             this.lbl_Total_PCS2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -890,10 +889,10 @@
             this.lbl_Good_PLT2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Good_PLT2.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_Good_PLT2.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Good_PLT2.Location = new System.Drawing.Point(465, 166);
+            this.lbl_Good_PLT2.Location = new System.Drawing.Point(463, 166);
             this.lbl_Good_PLT2.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Good_PLT2.Name = "lbl_Good_PLT2";
-            this.lbl_Good_PLT2.Size = new System.Drawing.Size(185, 108);
+            this.lbl_Good_PLT2.Size = new System.Drawing.Size(185, 107);
             this.lbl_Good_PLT2.TabIndex = 20;
             this.lbl_Good_PLT2.Text = "915.0";
             this.lbl_Good_PLT2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -905,10 +904,10 @@
             this.lbl_Total_BOX.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Total_BOX.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_Total_BOX.ForeColor = System.Drawing.Color.Yellow;
-            this.lbl_Total_BOX.Location = new System.Drawing.Point(1147, 57);
+            this.lbl_Total_BOX.Location = new System.Drawing.Point(1145, 57);
             this.lbl_Total_BOX.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Total_BOX.Name = "lbl_Total_BOX";
-            this.lbl_Total_BOX.Size = new System.Drawing.Size(228, 106);
+            this.lbl_Total_BOX.Size = new System.Drawing.Size(227, 106);
             this.lbl_Total_BOX.TabIndex = 15;
             this.lbl_Total_BOX.Text = "200.0";
             this.lbl_Total_BOX.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -920,10 +919,10 @@
             this.lbl_Good_BOX.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Good_BOX.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_Good_BOX.ForeColor = System.Drawing.Color.Yellow;
-            this.lbl_Good_BOX.Location = new System.Drawing.Point(1147, 166);
+            this.lbl_Good_BOX.Location = new System.Drawing.Point(1145, 166);
             this.lbl_Good_BOX.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Good_BOX.Name = "lbl_Good_BOX";
-            this.lbl_Good_BOX.Size = new System.Drawing.Size(228, 108);
+            this.lbl_Good_BOX.Size = new System.Drawing.Size(227, 107);
             this.lbl_Good_BOX.TabIndex = 16;
             this.lbl_Good_BOX.Text = "92,200.0";
             this.lbl_Good_BOX.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -935,7 +934,7 @@
             this.lbl_Total_PLT2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Total_PLT2.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_Total_PLT2.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Total_PLT2.Location = new System.Drawing.Point(465, 57);
+            this.lbl_Total_PLT2.Location = new System.Drawing.Point(463, 57);
             this.lbl_Total_PLT2.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Total_PLT2.Name = "lbl_Total_PLT2";
             this.lbl_Total_PLT2.Size = new System.Drawing.Size(185, 106);
@@ -950,7 +949,7 @@
             this.lbl_Total_PCS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Total_PCS.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_Total_PCS.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Total_PCS.Location = new System.Drawing.Point(959, 57);
+            this.lbl_Total_PCS.Location = new System.Drawing.Point(957, 57);
             this.lbl_Total_PCS.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Total_PCS.Name = "lbl_Total_PCS";
             this.lbl_Total_PCS.Size = new System.Drawing.Size(185, 106);
@@ -965,10 +964,10 @@
             this.lbl_Good_PCS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Good_PCS.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_Good_PCS.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Good_PCS.Location = new System.Drawing.Point(959, 166);
+            this.lbl_Good_PCS.Location = new System.Drawing.Point(957, 166);
             this.lbl_Good_PCS.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Good_PCS.Name = "lbl_Good_PCS";
-            this.lbl_Good_PCS.Size = new System.Drawing.Size(185, 108);
+            this.lbl_Good_PCS.Size = new System.Drawing.Size(185, 107);
             this.lbl_Good_PCS.TabIndex = 22;
             this.lbl_Good_PCS.Text = "120,000";
             this.lbl_Good_PCS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -980,10 +979,10 @@
             this.lbl_Total_PLT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Total_PLT.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_Total_PLT.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Total_PLT.Location = new System.Drawing.Point(1378, 57);
+            this.lbl_Total_PLT.Location = new System.Drawing.Point(1375, 57);
             this.lbl_Total_PLT.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Total_PLT.Name = "lbl_Total_PLT";
-            this.lbl_Total_PLT.Size = new System.Drawing.Size(231, 106);
+            this.lbl_Total_PLT.Size = new System.Drawing.Size(230, 106);
             this.lbl_Total_PLT.TabIndex = 23;
             this.lbl_Total_PLT.Text = "910.0";
             this.lbl_Total_PLT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -995,10 +994,10 @@
             this.lbl_Good_PLT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_Good_PLT.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_Good_PLT.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Good_PLT.Location = new System.Drawing.Point(1378, 166);
+            this.lbl_Good_PLT.Location = new System.Drawing.Point(1375, 166);
             this.lbl_Good_PLT.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Good_PLT.Name = "lbl_Good_PLT";
-            this.lbl_Good_PLT.Size = new System.Drawing.Size(231, 108);
+            this.lbl_Good_PLT.Size = new System.Drawing.Size(230, 107);
             this.lbl_Good_PLT.TabIndex = 24;
             this.lbl_Good_PLT.Text = "915.0";
             this.lbl_Good_PLT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1009,7 +1008,7 @@
             this.label31.BackColor = System.Drawing.Color.YellowGreen;
             this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label31.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label31.Location = new System.Drawing.Point(653, 57);
+            this.label31.Location = new System.Drawing.Point(651, 57);
             this.label31.Margin = new System.Windows.Forms.Padding(0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(303, 106);
@@ -1024,12 +1023,12 @@
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel10, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel11, 0, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 474);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 473);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.45415F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.54585F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(1606, 232);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(1602, 230);
             this.tableLayoutPanel9.TabIndex = 2;
             // 
             // tableLayoutPanel10
@@ -1046,7 +1045,7 @@
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(1606, 56);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1602, 56);
             this.tableLayoutPanel10.TabIndex = 0;
             // 
             // label12
@@ -1055,10 +1054,10 @@
             this.label12.BackColor = System.Drawing.Color.SteelBlue;
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label12.Location = new System.Drawing.Point(1076, 3);
+            this.label12.Location = new System.Drawing.Point(1074, 3);
             this.label12.Margin = new System.Windows.Forms.Padding(0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(527, 50);
+            this.label12.Size = new System.Drawing.Size(525, 50);
             this.label12.TabIndex = 5;
             this.label12.Text = "작업조 및 검사원";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1072,7 +1071,7 @@
             this.label11.Location = new System.Drawing.Point(3, 3);
             this.label11.Margin = new System.Windows.Forms.Padding(0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(1070, 50);
+            this.label11.Size = new System.Drawing.Size(1068, 50);
             this.label11.TabIndex = 4;
             this.label11.Text = "박스포장 및 바코드발행 정보";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1109,7 +1108,7 @@
             this.tableLayoutPanel11.RowCount = 2;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(1606, 176);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(1602, 174);
             this.tableLayoutPanel11.TabIndex = 1;
             // 
             // label60
@@ -1119,10 +1118,10 @@
             this.label60.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label60.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.label60.ForeColor = System.Drawing.Color.Black;
-            this.label60.Location = new System.Drawing.Point(1376, 89);
+            this.label60.Location = new System.Drawing.Point(1375, 88);
             this.label60.Margin = new System.Windows.Forms.Padding(0);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(227, 84);
+            this.label60.Size = new System.Drawing.Size(224, 83);
             this.label60.TabIndex = 40;
             this.label60.Text = "신주용";
             this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1134,10 +1133,10 @@
             this.label59.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label59.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.label59.ForeColor = System.Drawing.Color.Black;
-            this.label59.Location = new System.Drawing.Point(1073, 89);
+            this.label59.Location = new System.Drawing.Point(1073, 88);
             this.label59.Margin = new System.Windows.Forms.Padding(0);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(300, 84);
+            this.label59.Size = new System.Drawing.Size(299, 83);
             this.label59.TabIndex = 39;
             this.label59.Text = "A조 조재호";
             this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1149,10 +1148,10 @@
             this.label58.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label58.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.label58.ForeColor = System.Drawing.Color.Black;
-            this.label58.Location = new System.Drawing.Point(859, 89);
+            this.label58.Location = new System.Drawing.Point(859, 88);
             this.label58.Margin = new System.Windows.Forms.Padding(0);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(211, 84);
+            this.label58.Size = new System.Drawing.Size(211, 83);
             this.label58.TabIndex = 38;
             this.label58.Text = "자동";
             this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1164,10 +1163,10 @@
             this.label57.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label57.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.label57.ForeColor = System.Drawing.Color.Black;
-            this.label57.Location = new System.Drawing.Point(645, 89);
+            this.label57.Location = new System.Drawing.Point(645, 88);
             this.label57.Margin = new System.Windows.Forms.Padding(0);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(211, 84);
+            this.label57.Size = new System.Drawing.Size(211, 83);
             this.label57.TabIndex = 37;
             this.label57.Text = "G1";
             this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1179,10 +1178,10 @@
             this.lbl_PLT_BOX.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_PLT_BOX.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_PLT_BOX.ForeColor = System.Drawing.Color.Black;
-            this.lbl_PLT_BOX.Location = new System.Drawing.Point(431, 89);
+            this.lbl_PLT_BOX.Location = new System.Drawing.Point(431, 88);
             this.lbl_PLT_BOX.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_PLT_BOX.Name = "lbl_PLT_BOX";
-            this.lbl_PLT_BOX.Size = new System.Drawing.Size(211, 84);
+            this.lbl_PLT_BOX.Size = new System.Drawing.Size(211, 83);
             this.lbl_PLT_BOX.TabIndex = 36;
             this.lbl_PLT_BOX.Text = "50";
             this.lbl_PLT_BOX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1194,10 +1193,10 @@
             this.lbl_BOX_PCS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_BOX_PCS.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_BOX_PCS.ForeColor = System.Drawing.Color.Black;
-            this.lbl_BOX_PCS.Location = new System.Drawing.Point(217, 89);
+            this.lbl_BOX_PCS.Location = new System.Drawing.Point(217, 88);
             this.lbl_BOX_PCS.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_BOX_PCS.Name = "lbl_BOX_PCS";
-            this.lbl_BOX_PCS.Size = new System.Drawing.Size(211, 84);
+            this.lbl_BOX_PCS.Size = new System.Drawing.Size(211, 83);
             this.lbl_BOX_PCS.TabIndex = 35;
             this.lbl_BOX_PCS.Text = "16";
             this.lbl_BOX_PCS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1209,10 +1208,10 @@
             this.lbl_CUT_PCS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_CUT_PCS.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_CUT_PCS.ForeColor = System.Drawing.Color.Black;
-            this.lbl_CUT_PCS.Location = new System.Drawing.Point(3, 89);
+            this.lbl_CUT_PCS.Location = new System.Drawing.Point(3, 88);
             this.lbl_CUT_PCS.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_CUT_PCS.Name = "lbl_CUT_PCS";
-            this.lbl_CUT_PCS.Size = new System.Drawing.Size(211, 84);
+            this.lbl_CUT_PCS.Size = new System.Drawing.Size(211, 83);
             this.lbl_CUT_PCS.TabIndex = 34;
             this.lbl_CUT_PCS.Text = "4";
             this.lbl_CUT_PCS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1223,10 +1222,10 @@
             this.label39.BackColor = System.Drawing.Color.YellowGreen;
             this.label39.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label39.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label39.Location = new System.Drawing.Point(1376, 3);
+            this.label39.Location = new System.Drawing.Point(1375, 3);
             this.label39.Margin = new System.Windows.Forms.Padding(0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(227, 83);
+            this.label39.Size = new System.Drawing.Size(224, 82);
             this.label39.TabIndex = 33;
             this.label39.Text = "검사원";
             this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1240,9 +1239,9 @@
             this.label38.Location = new System.Drawing.Point(1073, 3);
             this.label38.Margin = new System.Windows.Forms.Padding(0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(300, 83);
+            this.label38.Size = new System.Drawing.Size(299, 82);
             this.label38.TabIndex = 32;
-            this.label38.Text = "작 업 조";
+            this.label38.Text = "결함";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label37
@@ -1254,7 +1253,7 @@
             this.label37.Location = new System.Drawing.Point(859, 3);
             this.label37.Margin = new System.Windows.Forms.Padding(0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(211, 83);
+            this.label37.Size = new System.Drawing.Size(211, 82);
             this.label37.TabIndex = 31;
             this.label37.Text = "바코드 발행\r\n방식";
             this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1268,7 +1267,7 @@
             this.label36.Location = new System.Drawing.Point(645, 3);
             this.label36.Margin = new System.Windows.Forms.Padding(0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(211, 83);
+            this.label36.Size = new System.Drawing.Size(211, 82);
             this.label36.TabIndex = 30;
             this.label36.Text = "LOT 구분";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1282,7 +1281,7 @@
             this.label35.Location = new System.Drawing.Point(431, 3);
             this.label35.Margin = new System.Windows.Forms.Padding(0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(211, 83);
+            this.label35.Size = new System.Drawing.Size(211, 82);
             this.label35.TabIndex = 29;
             this.label35.Text = "박스 / 파렛트";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1296,7 +1295,7 @@
             this.label34.Location = new System.Drawing.Point(217, 3);
             this.label34.Margin = new System.Windows.Forms.Padding(0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(211, 83);
+            this.label34.Size = new System.Drawing.Size(211, 82);
             this.label34.TabIndex = 28;
             this.label34.Text = "매수 / 박스";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1310,7 +1309,7 @@
             this.label33.Location = new System.Drawing.Point(3, 3);
             this.label33.Margin = new System.Windows.Forms.Padding(0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(211, 83);
+            this.label33.Size = new System.Drawing.Size(211, 82);
             this.label33.TabIndex = 27;
             this.label33.Text = "매수 / 1회재단";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1320,75 +1319,48 @@
             this.tableLayoutPanel5.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.metroTile5, 0, 4);
-            this.tableLayoutPanel5.Controls.Add(this.tile_Inspection, 0, 3);
-            this.tableLayoutPanel5.Controls.Add(this.tile_Working, 0, 2);
-            this.tableLayoutPanel5.Controls.Add(this.tile_Reservation, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.tile_Defect, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.tile_Inspection, 0, 2);
+            this.tableLayoutPanel5.Controls.Add(this.tile_Working, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.tile_WorkPlan, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 5;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(220, 896);
+            this.tableLayoutPanel5.RowCount = 4;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(220, 892);
             this.tableLayoutPanel5.TabIndex = 5;
-            // 
-            // metroTile5
-            // 
-            this.metroTile5.ActiveControl = null;
-            this.metroTile5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile5.Location = new System.Drawing.Point(4, 720);
-            this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(212, 172);
-            this.metroTile5.Style = MetroFramework.MetroColorStyle.Teal;
-            this.metroTile5.TabIndex = 4;
-            this.metroTile5.Text = "작업설정";
-            this.metroTile5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile5.UseSelectable = true;
             // 
             // tile_Inspection
             // 
             this.tile_Inspection.ActiveControl = null;
             this.tile_Inspection.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tile_Inspection.Location = new System.Drawing.Point(4, 541);
+            this.tile_Inspection.Location = new System.Drawing.Point(4, 448);
             this.tile_Inspection.Name = "tile_Inspection";
-            this.tile_Inspection.Size = new System.Drawing.Size(212, 172);
+            this.tile_Inspection.Size = new System.Drawing.Size(212, 215);
             this.tile_Inspection.Style = MetroFramework.MetroColorStyle.Teal;
             this.tile_Inspection.TabIndex = 3;
             this.tile_Inspection.Text = "검사성적서";
             this.tile_Inspection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.tile_Inspection.UseSelectable = true;
+            this.tile_Inspection.Click += new System.EventHandler(this.tile_Inspection_Click);
             // 
             // tile_Working
             // 
             this.tile_Working.ActiveControl = null;
             this.tile_Working.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tile_Working.Location = new System.Drawing.Point(4, 362);
+            this.tile_Working.Location = new System.Drawing.Point(4, 226);
             this.tile_Working.Name = "tile_Working";
-            this.tile_Working.Size = new System.Drawing.Size(212, 172);
+            this.tile_Working.Size = new System.Drawing.Size(212, 215);
             this.tile_Working.Style = MetroFramework.MetroColorStyle.Teal;
             this.tile_Working.TabIndex = 2;
             this.tile_Working.Text = "작업진행";
             this.tile_Working.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.tile_Working.UseSelectable = true;
-            // 
-            // tile_Reservation
-            // 
-            this.tile_Reservation.ActiveControl = null;
-            this.tile_Reservation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tile_Reservation.Location = new System.Drawing.Point(4, 183);
-            this.tile_Reservation.Name = "tile_Reservation";
-            this.tile_Reservation.Size = new System.Drawing.Size(212, 172);
-            this.tile_Reservation.Style = MetroFramework.MetroColorStyle.Teal;
-            this.tile_Reservation.TabIndex = 1;
-            this.tile_Reservation.Text = "작업예약";
-            this.tile_Reservation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tile_Reservation.UseSelectable = true;
             // 
             // tile_WorkPlan
             // 
@@ -1396,12 +1368,13 @@
             this.tile_WorkPlan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tile_WorkPlan.Location = new System.Drawing.Point(4, 4);
             this.tile_WorkPlan.Name = "tile_WorkPlan";
-            this.tile_WorkPlan.Size = new System.Drawing.Size(212, 172);
+            this.tile_WorkPlan.Size = new System.Drawing.Size(212, 215);
             this.tile_WorkPlan.Style = MetroFramework.MetroColorStyle.Teal;
             this.tile_WorkPlan.TabIndex = 0;
             this.tile_WorkPlan.Text = "작업계획";
             this.tile_WorkPlan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.tile_WorkPlan.UseSelectable = true;
+            this.tile_WorkPlan.Click += new System.EventHandler(this.tile_WorkPlan_Click);
             // 
             // label30
             // 
@@ -1414,6 +1387,20 @@
             this.label30.Text = "작업진행";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tile_Defect
+            // 
+            this.tile_Defect.ActiveControl = null;
+            this.tile_Defect.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tile_Defect.Location = new System.Drawing.Point(4, 670);
+            this.tile_Defect.Name = "tile_Defect";
+            this.tile_Defect.Size = new System.Drawing.Size(212, 218);
+            this.tile_Defect.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tile_Defect.TabIndex = 4;
+            this.tile_Defect.Text = "불량";
+            this.tile_Defect.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tile_Defect.UseSelectable = true;
+            this.tile_Defect.Click += new System.EventHandler(this.tile_Defect_Click);
+            // 
             // Working
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -1422,7 +1409,6 @@
             this.Controls.Add(this.label30);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Name = "Working";
-            this.Padding = new System.Windows.Forms.Padding(18, 60, 18, 16);
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "작업진행";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
@@ -1463,10 +1449,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private MetroFramework.Controls.MetroTile metroTile5;
         private MetroFramework.Controls.MetroTile tile_Inspection;
         private MetroFramework.Controls.MetroTile tile_Working;
-        private MetroFramework.Controls.MetroTile tile_Reservation;
         private MetroFramework.Controls.MetroTile tile_WorkPlan;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
@@ -1542,5 +1526,6 @@
         private System.Windows.Forms.Label lbl_PROD_CODE;
         private System.Windows.Forms.Label label41;
         private MetroFramework.Controls.MetroButton btn_InspectionStart;
+        private MetroFramework.Controls.MetroTile tile_Defect;
     }
 }

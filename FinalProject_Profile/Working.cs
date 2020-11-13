@@ -16,6 +16,7 @@ namespace FinalProject_Profile
 {
     public partial class Working : MetroForm
     {
+
         int box_pcs, plt_box, cut_pcs;
         string prod_code, order_no, job_no, prod_name, prod_unit, order_m, work_gbn, gubun, wc_code;
         int good_qty = 0, good_box = 0, good_plt = 0;
@@ -25,11 +26,38 @@ namespace FinalProject_Profile
         bool btn_flag = true;
         int _good_qty = 0, _bad_qty = 0;
 
+        private void tile_WorkPlan_Click(object sender, EventArgs e)
+        {
+            main.CallWorkPlan();
+        }
+
+        private void tile_Inspection_Click(object sender, EventArgs e)
+        {
+            main.CalIInspection();
+        }
+
+        private void tile_Defect_Click(object sender, EventArgs e)
+        {
+            main.CallDefect();
+        }
+
+        Main main;
+
         System.Timers.Timer timer = new System.Timers.Timer
         {
             Interval = 1000,
             AutoReset = false
         };
+        public Working()
+        {
+            InitializeComponent();
+        }
+
+        public Working(Main mainForm)
+        {
+            InitializeComponent();
+            main = mainForm;
+        }
 
         private void btn_InspectionStart_Click(object sender, EventArgs e)
         {           
@@ -56,10 +84,6 @@ namespace FinalProject_Profile
         }
 
         protected const string connectionString = "DATA SOURCE=220.69.249.228:1521/xe;PASSWORD=1234;PERSIST SECURITY INFO=True;USER ID=MAT_MGR";
-        public Working()
-        {
-            InitializeComponent();
-        }
         protected override CreateParams CreateParams
         {
             get
