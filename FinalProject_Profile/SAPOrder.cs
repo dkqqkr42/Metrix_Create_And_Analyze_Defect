@@ -202,39 +202,39 @@ namespace FinalProject_Profile
            
         }
 
-        private void metroButton2_Click(object sender, EventArgs e)  // 입력버튼 누를 경우 실행
+        private void btn_Insert_Click(object sender, EventArgs e)  // 입력버튼 누를 경우 실행
         {
             InputPopup_SAPOrder inputPopup_SAPOrder = new InputPopup_SAPOrder();
             inputPopup_SAPOrder.Show();
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)  // 확정버튼 누를 경우 실행
+        private void btn_Decide_Click(object sender, EventArgs e)  // 확정버튼 누를 경우 실행
         {
             PlanInsert plantinsert = new PlanInsert();
             plantinsert.ShowDialog();
         }
 
-        private void metroButton3_Click(object sender, EventArgs e)  // 조회버튼 누를 경우 실행
+        private void btn_Select_Click(object sender, EventArgs e)  // 조회버튼 누를 경우 실행
         {
             SelectItem();
         }
 
-        private void metroButton3_MouseUp(object sender, MouseEventArgs e)
+        private void btn_Select_MouseUp(object sender, MouseEventArgs e)
         {
             btn_Select.BackgroundImage = FinalProject_Profile.Properties.Resources.조회;
         }
 
-        private void metroButton3_MouseDown(object sender, MouseEventArgs e)
+        private void btn_Select_MouseDown(object sender, MouseEventArgs e)
         {
             btn_Select.BackgroundImage = FinalProject_Profile.Properties.Resources.조회클릭;
         }
 
-        private void metroButton2_MouseUp(object sender, MouseEventArgs e)
+        private void btn_Insert_MouseUp(object sender, MouseEventArgs e)
         {
             btn_Insert.BackgroundImage = FinalProject_Profile.Properties.Resources.입력;
         }
 
-        private void metroButton2_MouseDown(object sender, MouseEventArgs e)
+        private void btn_Insert_MouseDown(object sender, MouseEventArgs e)
         {
             btn_Insert.BackgroundImage = FinalProject_Profile.Properties.Resources.입력클릭;
         }
