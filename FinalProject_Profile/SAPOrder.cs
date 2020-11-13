@@ -274,5 +274,30 @@ namespace FinalProject_Profile
             }
                 
         }
+
+        private void tile_SAPOrder_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tile_WorkPlan_Click(object sender, EventArgs e)
+        {
+            main.CallWorkPlan();
+        }
+
+        private void tile_Working_Click(object sender, EventArgs e)
+        {
+            main.CallWorking();
+        }
+
+        private void tile_Inspection_Click(object sender, EventArgs e)
+        {
+            main.CallInspection();
+        }
+
+        private void tile_Defect_Click(object sender, EventArgs e)
+        {
+            main.CallDefect();
+        }
     }
 }

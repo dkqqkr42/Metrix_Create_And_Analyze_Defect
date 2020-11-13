@@ -30,15 +30,6 @@ namespace FinalProject_Profile
             this.FormBorderStyle = FormBorderStyle.None;
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-            metroContextMenu1.Show(metroButton1, 0, metroButton1.Height);
-        }
-
-        private void metroButton2_Click(object sender, EventArgs e)
-        {
-            metroContextMenu2.Show(metroButton2, 0, metroButton2.Height);
-        }
 
         private Form ShowOrActiveForm(Form form, Type t)
         {
@@ -140,10 +131,10 @@ namespace FinalProject_Profile
 
         private void form5ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CalIInspection();
+            CallInspection();
         }
 
-        public void CalIInspection()
+        public void CallInspection()
         {
             if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
@@ -194,6 +185,11 @@ namespace FinalProject_Profile
             {
                 mChildForm9 = ShowOrActiveForm(mChildForm9, typeof(Child9)) as Child9;
             }
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            CallSAPOrder();
         }
     }
 }

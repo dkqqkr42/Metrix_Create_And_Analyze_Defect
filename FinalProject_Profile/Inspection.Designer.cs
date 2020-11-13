@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tile_SAPOrder = new MetroFramework.Controls.MetroTile();
             this.tile_Defect = new MetroFramework.Controls.MetroTile();
             this.tile_Inspection = new MetroFramework.Controls.MetroTile();
             this.tile_Working = new MetroFramework.Controls.MetroTile();
@@ -108,7 +109,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.Confirmation1_button = new MetroFramework.Controls.MetroButton();
-            this.tile_SAPOrder = new MetroFramework.Controls.MetroTile();
+            this.label39 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -172,9 +173,24 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(220, 892);
             this.tableLayoutPanel5.TabIndex = 5;
             // 
+            // tile_SAPOrder
+            // 
+            this.tile_SAPOrder.ActiveControl = null;
+            this.tile_SAPOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tile_SAPOrder.Location = new System.Drawing.Point(4, 4);
+            this.tile_SAPOrder.Name = "tile_SAPOrder";
+            this.tile_SAPOrder.Size = new System.Drawing.Size(212, 171);
+            this.tile_SAPOrder.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tile_SAPOrder.TabIndex = 6;
+            this.tile_SAPOrder.Text = "생산계획접수";
+            this.tile_SAPOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tile_SAPOrder.UseSelectable = true;
+            this.tile_SAPOrder.Click += new System.EventHandler(this.tile_SAPOrder_Click);
+            // 
             // tile_Defect
             // 
             this.tile_Defect.ActiveControl = null;
+            this.tile_Defect.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tile_Defect.Location = new System.Drawing.Point(4, 716);
             this.tile_Defect.Name = "tile_Defect";
             this.tile_Defect.Size = new System.Drawing.Size(212, 172);
@@ -188,6 +204,7 @@
             // tile_Inspection
             // 
             this.tile_Inspection.ActiveControl = null;
+            this.tile_Inspection.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tile_Inspection.Location = new System.Drawing.Point(4, 538);
             this.tile_Inspection.Name = "tile_Inspection";
             this.tile_Inspection.Size = new System.Drawing.Size(212, 171);
@@ -200,6 +217,7 @@
             // tile_Working
             // 
             this.tile_Working.ActiveControl = null;
+            this.tile_Working.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tile_Working.Location = new System.Drawing.Point(4, 360);
             this.tile_Working.Name = "tile_Working";
             this.tile_Working.Size = new System.Drawing.Size(212, 171);
@@ -213,6 +231,7 @@
             // tile_WorkPlan
             // 
             this.tile_WorkPlan.ActiveControl = null;
+            this.tile_WorkPlan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tile_WorkPlan.Location = new System.Drawing.Point(4, 182);
             this.tile_WorkPlan.Name = "tile_WorkPlan";
             this.tile_WorkPlan.Size = new System.Drawing.Size(212, 171);
@@ -1302,24 +1321,23 @@
             this.Confirmation1_button.UseSelectable = true;
             this.Confirmation1_button.Click += new System.EventHandler(this.Confirmation1_button_Click);
             // 
-            // tile_SAPOrder
+            // label39
             // 
-            this.tile_SAPOrder.ActiveControl = null;
-            this.tile_SAPOrder.Location = new System.Drawing.Point(4, 4);
-            this.tile_SAPOrder.Name = "tile_SAPOrder";
-            this.tile_SAPOrder.Size = new System.Drawing.Size(212, 171);
-            this.tile_SAPOrder.Style = MetroFramework.MetroColorStyle.Teal;
-            this.tile_SAPOrder.TabIndex = 6;
-            this.tile_SAPOrder.Text = "생산계획접수";
-            this.tile_SAPOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tile_SAPOrder.UseSelectable = true;
-            this.tile_SAPOrder.Click += new System.EventHandler(this.tile_SAPOrder_Click);
+            this.label39.BackColor = System.Drawing.Color.PowderBlue;
+            this.label39.Font = new System.Drawing.Font("Segoe UI", 19F);
+            this.label39.Location = new System.Drawing.Point(848, 8);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(192, 48);
+            this.label39.TabIndex = 15;
+            this.label39.Text = "검사성적서";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Inspection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1876, 972);
+            this.Controls.Add(this.label39);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Name = "Inspection";
             this.Style = MetroFramework.MetroColorStyle.Teal;
@@ -1445,5 +1463,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private MetroFramework.Controls.MetroTile tile_Defect;
         private MetroFramework.Controls.MetroTile tile_SAPOrder;
+        private System.Windows.Forms.Label label39;
     }
 }

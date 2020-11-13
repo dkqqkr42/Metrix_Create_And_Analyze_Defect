@@ -56,7 +56,7 @@ namespace FinalProject_Profile
 
         private void tile_Inspection_Click(object sender, EventArgs e)
         {
-            main.CalIInspection();
+            main.CallInspection();
         }
 
         private void tile_SAPOrder_Click(object sender, EventArgs e)

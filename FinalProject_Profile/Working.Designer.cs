@@ -105,12 +105,12 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tile_SAPOrder = new MetroFramework.Controls.MetroTile();
             this.tile_Defect = new MetroFramework.Controls.MetroTile();
             this.tile_Inspection = new MetroFramework.Controls.MetroTile();
             this.tile_Working = new MetroFramework.Controls.MetroTile();
             this.tile_WorkPlan = new MetroFramework.Controls.MetroTile();
             this.label30 = new System.Windows.Forms.Label();
-            this.tile_SAPOrder = new MetroFramework.Controls.MetroTile();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -1338,6 +1338,20 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(220, 892);
             this.tableLayoutPanel5.TabIndex = 5;
             // 
+            // tile_SAPOrder
+            // 
+            this.tile_SAPOrder.ActiveControl = null;
+            this.tile_SAPOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tile_SAPOrder.Location = new System.Drawing.Point(4, 4);
+            this.tile_SAPOrder.Name = "tile_SAPOrder";
+            this.tile_SAPOrder.Size = new System.Drawing.Size(212, 171);
+            this.tile_SAPOrder.Style = MetroFramework.MetroColorStyle.Teal;
+            this.tile_SAPOrder.TabIndex = 16;
+            this.tile_SAPOrder.Text = "생산계획접수";
+            this.tile_SAPOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tile_SAPOrder.UseSelectable = true;
+            this.tile_SAPOrder.Click += new System.EventHandler(this.tile_SAPOrder_Click);
+            // 
             // tile_Defect
             // 
             this.tile_Defect.ActiveControl = null;
@@ -1397,26 +1411,12 @@
             // 
             this.label30.BackColor = System.Drawing.Color.PowderBlue;
             this.label30.Font = new System.Drawing.Font("Segoe UI", 19F);
-            this.label30.Location = new System.Drawing.Point(840, 8);
+            this.label30.Location = new System.Drawing.Point(848, 8);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(192, 48);
             this.label30.TabIndex = 15;
             this.label30.Text = "작업진행";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tile_SAPOrder
-            // 
-            this.tile_SAPOrder.ActiveControl = null;
-            this.tile_SAPOrder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tile_SAPOrder.Location = new System.Drawing.Point(4, 4);
-            this.tile_SAPOrder.Name = "tile_SAPOrder";
-            this.tile_SAPOrder.Size = new System.Drawing.Size(212, 171);
-            this.tile_SAPOrder.Style = MetroFramework.MetroColorStyle.Teal;
-            this.tile_SAPOrder.TabIndex = 16;
-            this.tile_SAPOrder.Text = "생산계획접수";
-            this.tile_SAPOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tile_SAPOrder.UseSelectable = true;
-            this.tile_SAPOrder.Click += new System.EventHandler(this.tile_SAPOrder_Click);
             // 
             // Working
             // 
