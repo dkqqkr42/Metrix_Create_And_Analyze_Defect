@@ -23,6 +23,7 @@ namespace FinalProject_Profile
         private Inspection mChildForm5 = null;
         private Defect mChildForm7 = null;
         private Child9 mChildForm9 = null;
+        private StartingMenu mchildForm10 = null;
 
         public Main()
         {
@@ -186,9 +187,26 @@ namespace FinalProject_Profile
             }
         }
 
+        public void CallStartingMenu()
+        {
+            if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
+            {
+                if (this.ActiveMdiChild != mchildForm10)  // 열려있는 자식폼이 Form2 가 아니면
+                {
+                    ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
+                }
+                mchildForm10 = ShowOrActiveForm(mchildForm10, typeof(StartingMenu)) as StartingMenu;
+            }
+            else
+            {
+                mchildForm10 = ShowOrActiveForm(mchildForm10, typeof(StartingMenu)) as StartingMenu;
+            }
+        }
+
         private void Main_Load(object sender, EventArgs e)
         {
-            CallSAPOrder();
+            //CallSAPOrder();
+            CallStartingMenu();
         }
     }
 }

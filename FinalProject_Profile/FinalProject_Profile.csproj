@@ -33,9 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BusinessRefinery.Barcode.Win, Version=3.0.1.0, Culture=neutral, PublicKeyToken=da688c970d7a1421, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\BusinessRefinery.Barcode.DotNET.Ultimate.Evaluation\DLLs\Net40\BusinessRefinery.Barcode.Win.dll</HintPath>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="BusinessRefinery.Barcode.Win">
+      <HintPath>..\..\..\..\Desktop\최종프로젝트\바코드\BusinessRefinery.Barcode.DotNET.Ultimate.Evaluation\DLLs\Net40\BusinessRefinery.Barcode.Win.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
@@ -49,8 +57,11 @@
     <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
       <HintPath>..\packages\Oracle.ManagedDataAccess.19.9.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,6 +71,8 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PlanInsert.cs">
@@ -79,6 +92,12 @@
     </Compile>
     <Compile Include="SAPOrder.Designer.cs">
       <DependentUpon>SAPOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartingMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartingMenu.Designer.cs">
+      <DependentUpon>StartingMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Working.cs">
       <SubType>Form</SubType>
@@ -157,6 +176,9 @@
     <EmbeddedResource Include="SAPOrder.resx">
       <DependentUpon>SAPOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StartingMenu.resx">
+      <DependentUpon>StartingMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Working.resx">
       <DependentUpon>Working.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +238,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\dba_img3.png" />
+    <None Include="Resources\dba_img.png" />
+    <None Include="Resources\dba mes img.png" />
+    <None Include="Resources\DBA_img.bmp" />
     <None Include="Resources\검사시작클릭.jpg" />
     <None Include="Resources\검사시작.jpg" />
     <None Include="Resources\확정클릭.jpg" />
