@@ -424,10 +424,11 @@ namespace FinalProject_Profile
 
                         //작업 순위에서 삭제 후 작업 순위 랭크 -1 후 Plan에 완료처리 하는 쿼리
                         ChangePlan();
+                        MessageBox.Show("작업이 완료되었습니다. 불량 요인을 등록해 주세요.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //불량등록
+                        InsertDefect();
                         //다음 데이터 조회
                         SelectItem();
-
-                        MessageBox.Show("작업이 완료되었습니다.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         timer.Stop();
 
@@ -441,6 +442,29 @@ namespace FinalProject_Profile
                 timer.Enabled = false;
             }
             
+        }
+
+        private void InsertDefect()
+        {
+            Dictionary<string, string> result = new Dictionary<string, string>();
+
+            result.Add("PROD_CODE", prod_code);
+            result.Add("ORDER_NO", order_no);
+            result.Add("JOB_NO", job_no);
+            result.Add("PROD_NAME", prod_name);
+            result.Add("PROD_UNIT", prod_unit);
+            result.Add("ORDER_M", order_m);
+            result.Add("WORK_GBN", work_gbn);
+            result.Add("GUBUN", gubun);
+            result.Add("WC_CODE", wc_code);
+            result.Add("TOTAL_QTY", total_qty.ToString());
+            result.Add("GOOD_QTY", good_qty.ToString());
+            result.Add("BAD_QTY", bad_qty.ToString());
+            result.Add("BOX_PCS", box_pcs.ToString());
+            result.Add("PLT_BOX", plt_box.ToString());
+
+            Defect defect = new Defect(result);
+            defect.Show();
         }
 
         public void ChangePlan()

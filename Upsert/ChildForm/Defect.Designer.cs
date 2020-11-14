@@ -527,7 +527,7 @@
             this.lbl_FACTOR_NAME.Name = "lbl_FACTOR_NAME";
             this.lbl_FACTOR_NAME.Size = new System.Drawing.Size(51, 19);
             this.lbl_FACTOR_NAME.TabIndex = 3;
-            this.lbl_FACTOR_NAME.Text = "작업명";
+            this.lbl_FACTOR_NAME.Text = "불량명";
             // 
             // lbl_FACTOR_CODE
             // 
@@ -537,7 +537,7 @@
             this.lbl_FACTOR_CODE.Name = "lbl_FACTOR_CODE";
             this.lbl_FACTOR_CODE.Size = new System.Drawing.Size(65, 19);
             this.lbl_FACTOR_CODE.TabIndex = 2;
-            this.lbl_FACTOR_CODE.Text = "작업코드";
+            this.lbl_FACTOR_CODE.Text = "불량코드";
             // 
             // lbl_WC_CODE
             // 
@@ -720,7 +720,7 @@
             this.ClientSize = new System.Drawing.Size(1876, 772);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Defect";
-            this.Text = "결함";
+            this.Text = "불량";
             this.Load += new System.EventHandler(this.Child_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
