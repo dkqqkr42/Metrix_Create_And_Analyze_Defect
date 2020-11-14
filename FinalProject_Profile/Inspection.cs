@@ -120,8 +120,6 @@ namespace FinalProject_Profile
 
                 cmd.Parameters.Add("IN_DATE", dateTimePicker2.Value.ToString("yyyyMMdd"));
 
-                OracleDataReader reader = cmd.ExecuteReader();
-
                 OracleDataAdapter adapter = new OracleDataAdapter(cmd);
 
                 DataSet ds = new DataSet();
@@ -221,6 +219,11 @@ namespace FinalProject_Profile
             {
                 e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Regular);
             }
+        }
+
+        private void Inspection_Activated(object sender, EventArgs e)
+        {
+            FillGrid();
         }
     }
 }

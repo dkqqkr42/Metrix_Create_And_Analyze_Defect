@@ -57,16 +57,16 @@ namespace Upsert
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "select trim(plant_code), trim(wc_code), trim(factor_code), factor_name, trim(del_flag), insert_date, insert_user, update_date from tbl_defect where trim(WC_CODE) like '%' || :SeachVal || '%' and DEL_FLAG = 'A'"
+                    CommandText = "select trim(plant_code), trim(wc_code), trim(factor_code), factor_name, trim(del_flag), insert_date, insert_user, update_date from tbl_defect where trim(WC_CODE) like '%' || :SeachVal || '%' and DEL_FLAG = 'A' order by factor_code"
                 };
                 if (txt_SeachVal.Text.Equals("") && ckb_DelFlag.Checked)
-                    cmd.CommandText = "select trim(plant_code), trim(wc_code), trim(factor_code), factor_name, trim(del_flag), insert_date, insert_user, update_date from tbl_defect";
+                    cmd.CommandText = "select trim(plant_code), trim(wc_code), trim(factor_code), factor_name, trim(del_flag), insert_date, insert_user, update_date from tbl_defect order by factor_code";
 
                 else if (txt_SeachVal.Text.Equals("") && !ckb_DelFlag.Checked)
-                    cmd.CommandText = "select trim(plant_code), trim(wc_code), trim(factor_code), factor_name, trim(del_flag), insert_date, insert_user, update_date from tbl_defect where DEL_FLAG = 'A'";
+                    cmd.CommandText = "select trim(plant_code), trim(wc_code), trim(factor_code), factor_name, trim(del_flag), insert_date, insert_user, update_date from tbl_defect where DEL_FLAG = 'A' order by factor_code";
 
                 else if (!txt_SeachVal.Text.Equals("") && ckb_DelFlag.Checked)
-                    cmd.CommandText = "select trim(plant_code), trim(wc_code), trim(factor_code), factor_name, trim(del_flag), insert_date, insert_user, update_date from tbl_defect where trim(WC_CODE) like '%' || :SeachVal || '%'";
+                    cmd.CommandText = "select trim(plant_code), trim(wc_code), trim(factor_code), factor_name, trim(del_flag), insert_date, insert_user, update_date from tbl_defect where trim(WC_CODE) like '%' || :SeachVal || '%' order by factor_code";
 
                 cmd.Parameters.Add("SeachVal", txt_SeachVal.Text);
 
@@ -213,6 +213,19 @@ namespace Upsert
             finally
             {
                 connection.Close();
+            }
+        }
+
+        private void grd_Result_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex >= 0 && e.RowIndex >= 0 &&
+            grd_Result.Rows[e.RowIndex].Cells[e.ColumnIndex].Selected)
+            {
+                e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Bold);
+            }
+            else
+            {
+                e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Regular);
             }
         }
     }

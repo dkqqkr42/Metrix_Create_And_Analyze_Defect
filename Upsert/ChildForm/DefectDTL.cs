@@ -27,7 +27,6 @@ namespace Upsert
 
         private void Child_Load(object sender, EventArgs e)
         {
-            txt_SeachVal.CharacterCasing = CharacterCasing.Upper;
         }
 
         /// <summary>
@@ -57,18 +56,39 @@ namespace Upsert
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "select PLANT_CODE, trim(FACTOR_CODE), FACTOR_NAME, trim(DEL_FLAG), INSERT_USER, INSERT_DATE, UPDATE_USER, UPDATE_DATE from tbl_defectdtl where trim(FACTOR_CODE) like '%' || :SeachVal || '%' and DEL_FLAG = 'A'"
+                    CommandText = "select PLANT_CODE, trim(FACTOR_CODE), FACTOR_NAME, trim(DEL_FLAG), INSERT_USER, INSERT_DATE, UPDATE_USER, UPDATE_DATE from tbl_defectdtl where trim(FACTOR_CODE) like '%' || :SeachVal || '%' and DEL_FLAG = 'A' order by factor_code"
                 };
-                if (txt_SeachVal.Text.Equals("") && ckb_DelFlag.Checked)
-                    cmd.CommandText = "select PLANT_CODE, trim(FACTOR_CODE), FACTOR_NAME, trim(DEL_FLAG), INSERT_USER, INSERT_DATE, UPDATE_USER, UPDATE_DATE from tbl_defectdtl";
+                if (cbo_SeachVal.Text.Equals("전체") && ckb_DelFlag.Checked)
+                    cmd.CommandText = "select PLANT_CODE, trim(FACTOR_CODE), FACTOR_NAME, trim(DEL_FLAG), INSERT_USER, INSERT_DATE, UPDATE_USER, UPDATE_DATE from tbl_defectdtl order by factor_code";
 
-                else if (txt_SeachVal.Text.Equals("") && !ckb_DelFlag.Checked)
-                    cmd.CommandText = "select PLANT_CODE, trim(FACTOR_CODE), FACTOR_NAME, trim(DEL_FLAG), INSERT_USER, INSERT_DATE, UPDATE_USER, UPDATE_DATE from tbl_defectdtl where DEL_FLAG = 'A'";
+                else if (cbo_SeachVal.Text.Equals("전체") && !ckb_DelFlag.Checked)
+                    cmd.CommandText = "select PLANT_CODE, trim(FACTOR_CODE), FACTOR_NAME, trim(DEL_FLAG), INSERT_USER, INSERT_DATE, UPDATE_USER, UPDATE_DATE from tbl_defectdtl where DEL_FLAG = 'A' order by factor_code";
 
-                else if (!txt_SeachVal.Text.Equals("") && ckb_DelFlag.Checked)
-                    cmd.CommandText = "select PLANT_CODE, trim(FACTOR_CODE), FACTOR_NAME, trim(DEL_FLAG), INSERT_USER, INSERT_DATE, UPDATE_USER, UPDATE_DATE from tbl_defectdtl where trim(FACTOR_CODE) like '%' || :SeachVal || '%'";
+                else if (!cbo_SeachVal.Text.Equals("전체") && ckb_DelFlag.Checked)
+                    cmd.CommandText = "select PLANT_CODE, trim(FACTOR_CODE), FACTOR_NAME, trim(DEL_FLAG), INSERT_USER, INSERT_DATE, UPDATE_USER, UPDATE_DATE from tbl_defectdtl where trim(FACTOR_CODE) like '%' || :SeachVal || '%' order by factor_code";
+                string seachVal = "";
+                switch (cbo_SeachVal.SelectedIndex)
+                {
+                    case 0: 
+                        seachVal = "";
+                        break;
+                    case 1:
+                        seachVal = "A";
+                        break;
+                    case 2:
+                        seachVal = "B";
+                        break;
+                    case 3:
+                        seachVal = "C";
+                        break;
+                    case 4:
+                        seachVal = "D";
+                        break;
 
-                cmd.Parameters.Add("SeachVal", txt_SeachVal.Text);
+                }
+
+
+                cmd.Parameters.Add("SeachVal", seachVal);
 
                 
                 /*OracleDataAdapter adapter = new OracleDataAdapter(cmd);
@@ -213,6 +233,19 @@ namespace Upsert
             finally
             {
                 connection.Close();
+            }
+        }
+
+        private void grd_Result_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex >= 0 && e.RowIndex >= 0 &&
+            grd_Result.Rows[e.RowIndex].Cells[e.ColumnIndex].Selected)
+            {
+                e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Bold);
+            }
+            else
+            {
+                e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Regular);
             }
         }
     }

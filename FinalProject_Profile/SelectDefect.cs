@@ -11,9 +11,9 @@ using MetroFramework.Forms;
 
 namespace FinalProject_Profile
 {
-    public partial class Child8 : MetroForm
+    public partial class SelectDefect : MetroForm
     {
-        public Child8()
+        public SelectDefect()
         {
             InitializeComponent();
         }

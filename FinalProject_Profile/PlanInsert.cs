@@ -212,8 +212,8 @@ namespace FinalProject_Profile
             string in_Order_No = "0";
             try
             {
-                int rowIndex = dataGridView1.CurrentRow.Index;
-                in_Order_No = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
+                int rowIndex = dataGridView2.CurrentRow.Index;
+                in_Order_No = dataGridView2.Rows[rowIndex].Cells[5].Value.ToString();
                 connection = new OracleConnection
                 {
                     ConnectionString = connectionString

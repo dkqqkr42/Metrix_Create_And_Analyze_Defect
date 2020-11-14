@@ -39,26 +39,23 @@ namespace Upsert
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.controlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SelectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workCenterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.programManageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.workerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.downTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.defectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inspectorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.dEPTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.teamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.commonCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.dowinTimeDTLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.defectDTLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.downTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dowinTimeDTLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.workerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dEPTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inspectorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.teamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.commonCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.slocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.plantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -77,36 +74,12 @@ namespace Upsert
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.controlToolStripMenuItem,
             this.formToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(20, 60);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1880, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // controlToolStripMenuItem
-            // 
-            this.controlToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.SelectToolStripMenuItem,
-            this.SaveToolStripMenuItem});
-            this.controlToolStripMenuItem.Name = "controlToolStripMenuItem";
-            this.controlToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.controlToolStripMenuItem.Text = "Control";
-            // 
-            // SelectToolStripMenuItem
-            // 
-            this.SelectToolStripMenuItem.Name = "SelectToolStripMenuItem";
-            this.SelectToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
-            this.SelectToolStripMenuItem.Text = "조회";
-            this.SelectToolStripMenuItem.Click += new System.EventHandler(this.SelectToolStripMenuItem_Click);
-            // 
-            // SaveToolStripMenuItem
-            // 
-            this.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem";
-            this.SaveToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
-            this.SaveToolStripMenuItem.Text = "저장";
-            this.SaveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
             // formToolStripMenuItem
             // 
@@ -116,140 +89,140 @@ namespace Upsert
             this.employeeToolStripMenuItem,
             this.programManageToolStripMenuItem,
             this.toolStripSeparator1,
-            this.workerToolStripMenuItem,
-            this.downTimeToolStripMenuItem,
             this.defectToolStripMenuItem,
-            this.inspectorToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.dEPTToolStripMenuItem,
-            this.teamToolStripMenuItem,
-            this.commonCodeToolStripMenuItem,
-            this.toolStripSeparator3,
-            this.dowinTimeDTLToolStripMenuItem,
             this.defectDTLToolStripMenuItem,
+            this.downTimeToolStripMenuItem,
+            this.dowinTimeDTLToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.workerToolStripMenuItem,
+            this.dEPTToolStripMenuItem,
+            this.inspectorToolStripMenuItem,
+            this.teamToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.commonCodeToolStripMenuItem,
             this.slocationToolStripMenuItem,
             this.plantToolStripMenuItem});
             this.formToolStripMenuItem.Name = "formToolStripMenuItem";
-            this.formToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.formToolStripMenuItem.Text = "Form";
+            this.formToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.formToolStripMenuItem.Text = "기준정보";
             // 
             // workCenterToolStripMenuItem
             // 
             this.workCenterToolStripMenuItem.Name = "workCenterToolStripMenuItem";
-            this.workCenterToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.workCenterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.workCenterToolStripMenuItem.Text = "작업센터";
             this.workCenterToolStripMenuItem.Click += new System.EventHandler(this.workCenterToolStripMenuItem_Click);
             // 
             // productMasterToolStripMenuItem
             // 
             this.productMasterToolStripMenuItem.Name = "productMasterToolStripMenuItem";
-            this.productMasterToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.productMasterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.productMasterToolStripMenuItem.Text = "제품마스터";
             this.productMasterToolStripMenuItem.Click += new System.EventHandler(this.productMasterToolStripMenuItem_Click);
             // 
             // employeeToolStripMenuItem
             // 
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.employeeToolStripMenuItem.Text = "사원";
             this.employeeToolStripMenuItem.Click += new System.EventHandler(this.employeeToolStripMenuItem_Click);
             // 
             // programManageToolStripMenuItem
             // 
             this.programManageToolStripMenuItem.Name = "programManageToolStripMenuItem";
-            this.programManageToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.programManageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.programManageToolStripMenuItem.Text = "프로그램관리";
             this.programManageToolStripMenuItem.Click += new System.EventHandler(this.programManageToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
-            // 
-            // workerToolStripMenuItem
-            // 
-            this.workerToolStripMenuItem.Name = "workerToolStripMenuItem";
-            this.workerToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.workerToolStripMenuItem.Text = "근무조";
-            this.workerToolStripMenuItem.Click += new System.EventHandler(this.workerToolStripMenuItem_Click);
-            // 
-            // downTimeToolStripMenuItem
-            // 
-            this.downTimeToolStripMenuItem.Name = "downTimeToolStripMenuItem";
-            this.downTimeToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.downTimeToolStripMenuItem.Text = "공부동";
-            this.downTimeToolStripMenuItem.Click += new System.EventHandler(this.downTimeToolStripMenuItem_Click);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // defectToolStripMenuItem
             // 
             this.defectToolStripMenuItem.Name = "defectToolStripMenuItem";
-            this.defectToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.defectToolStripMenuItem.Text = "결함";
+            this.defectToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.defectToolStripMenuItem.Text = "불량";
             this.defectToolStripMenuItem.Click += new System.EventHandler(this.defectToolStripMenuItem_Click);
-            // 
-            // inspectorToolStripMenuItem
-            // 
-            this.inspectorToolStripMenuItem.Name = "inspectorToolStripMenuItem";
-            this.inspectorToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.inspectorToolStripMenuItem.Text = "검사원";
-            this.inspectorToolStripMenuItem.Click += new System.EventHandler(this.inspectorToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(143, 6);
-            // 
-            // dEPTToolStripMenuItem
-            // 
-            this.dEPTToolStripMenuItem.Name = "dEPTToolStripMenuItem";
-            this.dEPTToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.dEPTToolStripMenuItem.Text = "부서";
-            this.dEPTToolStripMenuItem.Click += new System.EventHandler(this.dEPTToolStripMenuItem_Click);
-            // 
-            // teamToolStripMenuItem
-            // 
-            this.teamToolStripMenuItem.Name = "teamToolStripMenuItem";
-            this.teamToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.teamToolStripMenuItem.Text = "팀";
-            this.teamToolStripMenuItem.Click += new System.EventHandler(this.teamToolStripMenuItem_Click);
-            // 
-            // commonCodeToolStripMenuItem
-            // 
-            this.commonCodeToolStripMenuItem.Name = "commonCodeToolStripMenuItem";
-            this.commonCodeToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.commonCodeToolStripMenuItem.Text = "공통코드";
-            this.commonCodeToolStripMenuItem.Click += new System.EventHandler(this.commonCodeToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(143, 6);
-            // 
-            // dowinTimeDTLToolStripMenuItem
-            // 
-            this.dowinTimeDTLToolStripMenuItem.Name = "dowinTimeDTLToolStripMenuItem";
-            this.dowinTimeDTLToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.dowinTimeDTLToolStripMenuItem.Text = "공부동상세";
-            this.dowinTimeDTLToolStripMenuItem.Click += new System.EventHandler(this.dowinTimeDTLToolStripMenuItem_Click);
             // 
             // defectDTLToolStripMenuItem
             // 
             this.defectDTLToolStripMenuItem.Name = "defectDTLToolStripMenuItem";
-            this.defectDTLToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.defectDTLToolStripMenuItem.Text = "결함상세";
+            this.defectDTLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.defectDTLToolStripMenuItem.Text = "불량상세";
             this.defectDTLToolStripMenuItem.Click += new System.EventHandler(this.defectDTLToolStripMenuItem_Click);
+            // 
+            // downTimeToolStripMenuItem
+            // 
+            this.downTimeToolStripMenuItem.Name = "downTimeToolStripMenuItem";
+            this.downTimeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.downTimeToolStripMenuItem.Text = "공부동";
+            this.downTimeToolStripMenuItem.Click += new System.EventHandler(this.downTimeToolStripMenuItem_Click);
+            // 
+            // dowinTimeDTLToolStripMenuItem
+            // 
+            this.dowinTimeDTLToolStripMenuItem.Name = "dowinTimeDTLToolStripMenuItem";
+            this.dowinTimeDTLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dowinTimeDTLToolStripMenuItem.Text = "공부동상세";
+            this.dowinTimeDTLToolStripMenuItem.Click += new System.EventHandler(this.dowinTimeDTLToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            // 
+            // workerToolStripMenuItem
+            // 
+            this.workerToolStripMenuItem.Name = "workerToolStripMenuItem";
+            this.workerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.workerToolStripMenuItem.Text = "근무조";
+            this.workerToolStripMenuItem.Click += new System.EventHandler(this.workerToolStripMenuItem_Click);
+            // 
+            // dEPTToolStripMenuItem
+            // 
+            this.dEPTToolStripMenuItem.Name = "dEPTToolStripMenuItem";
+            this.dEPTToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dEPTToolStripMenuItem.Text = "부서";
+            this.dEPTToolStripMenuItem.Click += new System.EventHandler(this.dEPTToolStripMenuItem_Click);
+            // 
+            // inspectorToolStripMenuItem
+            // 
+            this.inspectorToolStripMenuItem.Name = "inspectorToolStripMenuItem";
+            this.inspectorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inspectorToolStripMenuItem.Text = "검사원";
+            this.inspectorToolStripMenuItem.Click += new System.EventHandler(this.inspectorToolStripMenuItem_Click);
+            // 
+            // teamToolStripMenuItem
+            // 
+            this.teamToolStripMenuItem.Name = "teamToolStripMenuItem";
+            this.teamToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.teamToolStripMenuItem.Text = "팀";
+            this.teamToolStripMenuItem.Click += new System.EventHandler(this.teamToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
+            // 
+            // commonCodeToolStripMenuItem
+            // 
+            this.commonCodeToolStripMenuItem.Name = "commonCodeToolStripMenuItem";
+            this.commonCodeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.commonCodeToolStripMenuItem.Text = "공통코드";
+            this.commonCodeToolStripMenuItem.Click += new System.EventHandler(this.commonCodeToolStripMenuItem_Click);
             // 
             // slocationToolStripMenuItem
             // 
             this.slocationToolStripMenuItem.Name = "slocationToolStripMenuItem";
-            this.slocationToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.slocationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.slocationToolStripMenuItem.Text = "저장위치";
             this.slocationToolStripMenuItem.Click += new System.EventHandler(this.slocationToolStripMenuItem_Click);
             // 
             // plantToolStripMenuItem
             // 
             this.plantToolStripMenuItem.Name = "plantToolStripMenuItem";
-            this.plantToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.plantToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.plantToolStripMenuItem.Text = "공장";
             this.plantToolStripMenuItem.Click += new System.EventHandler(this.plantToolStripMenuItem_Click);
             // 
@@ -392,9 +365,6 @@ namespace Upsert
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem controlToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem SelectToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem SaveToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btn_Select;
         private System.Windows.Forms.Button btn_Save;
