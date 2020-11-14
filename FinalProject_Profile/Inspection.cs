@@ -222,6 +222,11 @@ namespace FinalProject_Profile
                 e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Regular);
             }
         }
+
+        private void Inspection_Activated(object sender, EventArgs e)
+        {
+            FillGrid();
+        }
     }
 }
 

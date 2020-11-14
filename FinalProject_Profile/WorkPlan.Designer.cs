@@ -52,9 +52,9 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.grd_Result = new MetroFramework.Controls.MetroGrid();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.metroTile9 = new MetroFramework.Controls.MetroTile();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.metroTile7 = new MetroFramework.Controls.MetroTile();
+            this.metroTile9 = new MetroFramework.Controls.MetroTile();
             this.metroTile8 = new MetroFramework.Controls.MetroTile();
             this.label1 = new System.Windows.Forms.Label();
             this.metroContextMenu1.SuspendLayout();
@@ -273,7 +273,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 812F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1608, 813);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
@@ -355,21 +355,6 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(111, 805);
             this.tableLayoutPanel6.TabIndex = 22;
             // 
-            // metroTile9
-            // 
-            this.metroTile9.ActiveControl = null;
-            this.metroTile9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.metroTile9.Location = new System.Drawing.Point(0, 694);
-            this.metroTile9.Margin = new System.Windows.Forms.Padding(0);
-            this.metroTile9.Name = "metroTile9";
-            this.metroTile9.Size = new System.Drawing.Size(111, 111);
-            this.metroTile9.Style = MetroFramework.MetroColorStyle.Teal;
-            this.metroTile9.TabIndex = 28;
-            this.metroTile9.Text = "▼";
-            this.metroTile9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile9.UseSelectable = true;
-            this.metroTile9.Click += new System.EventHandler(this.metroTile9_Click);
-            // 
             // metroTile6
             // 
             this.metroTile6.ActiveControl = null;
@@ -399,6 +384,21 @@
             this.metroTile7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile7.UseSelectable = true;
             this.metroTile7.Click += new System.EventHandler(this.metroTile7_Click);
+            // 
+            // metroTile9
+            // 
+            this.metroTile9.ActiveControl = null;
+            this.metroTile9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.metroTile9.Location = new System.Drawing.Point(0, 694);
+            this.metroTile9.Margin = new System.Windows.Forms.Padding(0);
+            this.metroTile9.Name = "metroTile9";
+            this.metroTile9.Size = new System.Drawing.Size(111, 111);
+            this.metroTile9.Style = MetroFramework.MetroColorStyle.Teal;
+            this.metroTile9.TabIndex = 28;
+            this.metroTile9.Text = "▼";
+            this.metroTile9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile9.UseSelectable = true;
+            this.metroTile9.Click += new System.EventHandler(this.metroTile9_Click);
             // 
             // metroTile8
             // 
@@ -439,6 +439,7 @@
             this.Text = "작업계획";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.TransparencyKey = System.Drawing.Color.Empty;
+            this.Activated += new System.EventHandler(this.WorkPlan_Activated);
             this.Load += new System.EventHandler(this.Form2_Load);
             this.metroContextMenu1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);

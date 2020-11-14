@@ -189,5 +189,10 @@ namespace FinalProject_Profile
             grd_Result.ClearSelection();
             grd_Result.Rows[grd_Result.Rows.Count - 1].Cells[colIndex].Selected = true;
         }
+
+        private void WorkPlan_Activated(object sender, EventArgs e)
+        {
+            FillGrid();
+        }
     }
 }

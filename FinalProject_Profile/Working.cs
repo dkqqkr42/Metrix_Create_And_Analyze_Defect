@@ -50,7 +50,7 @@ namespace FinalProject_Profile
 
         System.Timers.Timer timer = new System.Timers.Timer
         {
-            Interval = 1000,
+            Interval = 5000,
             AutoReset = false
         };
         public Working()

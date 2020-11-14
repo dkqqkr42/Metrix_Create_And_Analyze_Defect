@@ -35,7 +35,6 @@ namespace FinalProject_Profile
         {
             if (form == null)
             {
-                //todo 파라미터 넘겨서 해보기
                 form = (Form)Activator.CreateInstance(t, this);
                 form.MdiParent = this;
                 form.StartPosition = FormStartPosition.CenterParent;
@@ -49,7 +48,7 @@ namespace FinalProject_Profile
             {
                 if (form.IsDisposed)
                 {
-                    form = (Form)Activator.CreateInstance(t, this);
+                    //form = (Form)Activator.CreateInstance(t, this);
                     form.MdiParent = this;
                     form.StartPosition = FormStartPosition.CenterParent;
                     //form.WindowState = FormWindowState.Minimized;
@@ -77,7 +76,7 @@ namespace FinalProject_Profile
             {
                 if (this.ActiveMdiChild != mChildForm1)  // 열려있는 자식폼이 Form1 이 아니면
                 {
-                    ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
+                    //ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
                 }
                 mChildForm1 = ShowOrActiveForm(mChildForm1, typeof(WorkPlan)) as WorkPlan;
             }
@@ -98,7 +97,7 @@ namespace FinalProject_Profile
             {
                 if (this.ActiveMdiChild != mChildForm2)  // 열려있는 자식폼이 Form2 가 아니면
                 {
-                    ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
+                    //ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
                 }
                 mChildForm2 = ShowOrActiveForm(mChildForm2, typeof(SAPOrder)) as SAPOrder;
             }
@@ -119,7 +118,7 @@ namespace FinalProject_Profile
             {
                 if (this.ActiveMdiChild != mChildForm4)  // 열려있는 자식폼이 Form3 가 아니면
                 {
-                    ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
+                    //ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
                 }
                 mChildForm4 = ShowOrActiveForm(mChildForm4, typeof(Working)) as Working;
             }
@@ -140,7 +139,7 @@ namespace FinalProject_Profile
             {
                 if (this.ActiveMdiChild != mChildForm5)  // 열려있는 자식폼이 Form3 가 아니면
                 {
-                    ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
+                    //ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
                 }
                 mChildForm5 = ShowOrActiveForm(mChildForm5, typeof(Inspection)) as Inspection;
             }
@@ -161,7 +160,7 @@ namespace FinalProject_Profile
             {
                 if (this.ActiveMdiChild != mChildForm7)  // 열려있는 자식폼이 Form3 가 아니면
                 {
-                    ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
+                    //ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
                 }
                 mChildForm7 = ShowOrActiveForm(mChildForm7, typeof(Defect)) as Defect;
             }
@@ -177,7 +176,7 @@ namespace FinalProject_Profile
             {
                 if (this.ActiveMdiChild != mChildForm9)  // 열려있는 자식폼이 Form3 가 아니면
                 {
-                    ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
+                    //ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
                 }
                 mChildForm9 = ShowOrActiveForm(mChildForm9, typeof(Child9)) as Child9;
             }
