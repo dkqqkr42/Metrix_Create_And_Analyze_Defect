@@ -99,5 +99,10 @@ namespace FinalProject_Profile
         {
             FillGrid();
         }
+
+        private void InspectionDTL_Activated(object sender, EventArgs e)
+        {
+            FillGrid();
+        }
     }
 }
