@@ -38,7 +38,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_DATE = new System.Windows.Forms.DateTimePicker();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
@@ -46,7 +46,6 @@
             this.metroTile8 = new MetroFramework.Controls.MetroTile();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.metroTile7 = new MetroFramework.Controls.MetroTile();
-            this.label1 = new System.Windows.Forms.Label();
             this.grd_Result = new MetroFramework.Controls.MetroGrid();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +61,7 @@
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -112,7 +112,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12F));
             this.tableLayoutPanel2.Controls.Add(this.metroButton3, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.metroButton2, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.dateTimePicker2, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.dtp_DATE, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.metroButton1, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(1, 1);
@@ -146,15 +146,15 @@
             this.metroButton2.Text = "바코드발행";
             this.metroButton2.UseSelectable = true;
             // 
-            // dateTimePicker2
+            // dtp_DATE
             // 
-            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dateTimePicker2.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(3, 45);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(1166, 39);
-            this.dateTimePicker2.TabIndex = 22;
+            this.dtp_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtp_DATE.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtp_DATE.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dtp_DATE.Location = new System.Drawing.Point(3, 45);
+            this.dtp_DATE.Name = "dtp_DATE";
+            this.dtp_DATE.Size = new System.Drawing.Size(1166, 39);
+            this.dtp_DATE.TabIndex = 22;
             // 
             // metroButton1
             // 
@@ -255,17 +255,6 @@
             this.metroTile7.Text = "▲";
             this.metroTile7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile7.UseSelectable = true;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.PowderBlue;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 19F);
-            this.label1.Location = new System.Drawing.Point(848, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 48);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "상세조회";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // grd_Result
             // 
@@ -437,6 +426,17 @@
             this.Column14.ReadOnly = true;
             this.Column14.Width = 71;
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.PowderBlue;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 19F);
+            this.label1.Location = new System.Drawing.Point(848, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(192, 48);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "상세조회";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // InspectionDTL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -448,6 +448,8 @@
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "상세조회";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            this.Activated += new System.EventHandler(this.InspectionDTL_Activated);
+            this.Load += new System.EventHandler(this.InspectionDTL_Load);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -465,7 +467,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private MetroFramework.Controls.MetroButton metroButton3;
         private MetroFramework.Controls.MetroButton metroButton2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtp_DATE;
         private MetroFramework.Controls.MetroButton metroButton1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
