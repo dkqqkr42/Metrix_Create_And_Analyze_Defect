@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using Oracle.ManagedDataAccess.Client;
+using BusinessRefinery.Barcode;
 
 namespace FinalProject_Profile
 {
@@ -95,7 +96,7 @@ namespace FinalProject_Profile
                        " AND(C.ROLL_NO = D.ROLL_NO(+) AND C.S_SEQ = D.S_SEQ(+))" +
                        " AND C.PROD_DATE = :IN_DATE" +
                        " AND A.PLANT_CODE = '2020'" +
-                       " AND C.JOB_NO = '"+ job_no +"'" +
+                    //   " AND C.JOB_NO = '"+ job_no +"'" +
                        " ORDER BY C.START_TIME";
 
                 connection = new OracleConnection
@@ -167,6 +168,7 @@ namespace FinalProject_Profile
 
         private void btn_Barcode_Click(object sender, EventArgs e)  // 바코드 발행 버튼 눌렀을 때 실행
         {
+            // SCAN_FLAG 값을 N -> Y 로 변경
             OracleConnection connection = null;
             try
             {
@@ -187,6 +189,11 @@ namespace FinalProject_Profile
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("바코드를 발행하였습니다.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+
+
+
+
+
             }
             catch (Exception ex)
             {
@@ -196,6 +203,17 @@ namespace FinalProject_Profile
             {
                 connection.Close();
             }
+
+            // 바코드 생성
+            QRCode barcode = new QRCode();
+            string url = "20201114";
+            barcode.Code = url;
+            barcode.ModuleSize = 6.0f;  // 바코드의 크기
+            barcode.Resolution = 300;   // 바코드의 해상도
+            barcode.drawBarcode2ImageFile("barcode.png");
+            // barcode.Format = ImageFormat.Gif;
+            // barcode.drawBarcode2ImageFile("c:/qr-code-csharp.gif");  // 저장위치, 파일이름
+
         }
     }
 }
