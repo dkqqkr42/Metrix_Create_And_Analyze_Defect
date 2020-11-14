@@ -1463,7 +1463,7 @@
             this.ClientSize = new System.Drawing.Size(914, 725);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "InputPopup_Employee";
-            this.Text = "InputPopup_Employee";
+            this.Text = "사원";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
