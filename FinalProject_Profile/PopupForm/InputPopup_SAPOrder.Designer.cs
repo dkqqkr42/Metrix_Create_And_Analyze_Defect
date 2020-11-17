@@ -1177,7 +1177,7 @@
             // 
             // btn_Close
             // 
-            this.btn_Close.BackgroundImage = global::FinalProject_Profile.Properties.Resources.닫기;
+            this.btn_Close.BackgroundImage = global::FinalProject_Profile.Properties.Resources.닫기임시;
             this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Close.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Close.FontSize = MetroFramework.MetroButtonSize.Tall;

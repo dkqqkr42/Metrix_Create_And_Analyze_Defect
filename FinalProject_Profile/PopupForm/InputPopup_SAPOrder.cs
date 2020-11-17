@@ -117,12 +117,12 @@ namespace FinalProject_Profile.PopupForm
 
         private void btn_Close_MouseUp(object sender, MouseEventArgs e)
         {
-            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기;
+            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기임시;
         }
 
         private void btn_Close_MouseDown(object sender, MouseEventArgs e)
         {
-            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기클릭;
+            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기클릭임시;
         }
 
         private void btn_Close_Click(object sender, EventArgs e)

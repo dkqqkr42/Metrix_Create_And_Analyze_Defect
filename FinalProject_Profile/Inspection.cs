@@ -53,7 +53,10 @@ namespace FinalProject_Profile
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            InspectionDTL child6 = new InspectionDTL();
+            int rowIndex = grd_Result.CurrentRow.Index;
+            string in_Roll_No = grd_Result.Rows[rowIndex].Cells[7].Value.ToString();
+            string in_Job_No = grd_Result.Rows[rowIndex].Cells[4].Value.ToString();
+            InspectionDTL child6 = new InspectionDTL(in_Roll_No, in_Job_No);
             child6.Show();
         }
 
