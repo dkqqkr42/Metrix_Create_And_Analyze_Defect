@@ -27,7 +27,12 @@ namespace FinalProject_Profile
         public StartingMenu()
         {
             InitializeComponent();
-            
+            //this.FormClosed += Form_Closing;
+        }
+
+        public void Form_Closing(object sender, FormClosedEventArgs e)
+        {
+           
         }
 
         private void pieChart1_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
@@ -48,8 +53,10 @@ namespace FinalProject_Profile
         private void StartingMenu_Load(object sender, EventArgs e)
         {
 
+
             panel2.BackgroundImage = Properties.Resources.dba_img3;
 
+            //**************** 1st 모델 생산현황 차트 ******************
             cartesianChart1.Series = new SeriesCollection
             {
                 new ColumnSeries
@@ -83,6 +90,8 @@ namespace FinalProject_Profile
             Func<ChartPoint, string> labelPoint = chartPoint =>
                 string.Format("{0} ({1:P})", chartPoint.Y, chartPoint.Participation);
 
+
+            //**************** 2nd 계획 대비 진척 차트 ******************
             pieChart1.Series = new SeriesCollection
             {
                 new PieSeries
@@ -118,7 +127,7 @@ namespace FinalProject_Profile
 
             pieChart1.LegendLocation = LegendLocation.Bottom;
 
-            //**************** 3rd ******************
+            //**************** 3rd 모델별 불량 차트 ******************
             cartesianChart2.Series = new SeriesCollection
             {
                 new StackedColumnSeries
@@ -158,6 +167,22 @@ namespace FinalProject_Profile
                 LabelFormatter = value => value + " Mill"
             });
 
+        }
+
+        private void StartingMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void StartingMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            main.CallSAPOrder();
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            main.CallSAPOrder();
         }
     }
 }

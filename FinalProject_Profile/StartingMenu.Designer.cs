@@ -132,6 +132,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.metroLabel1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(200, 366);
@@ -156,6 +157,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 416);
             this.panel2.TabIndex = 0;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
             // 
             // panel3
             // 
@@ -266,6 +268,8 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "StartingMenu";
             this.Text = "StartingMenu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StartingMenu_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StartingMenu_FormClosed);
             this.Load += new System.EventHandler(this.StartingMenu_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

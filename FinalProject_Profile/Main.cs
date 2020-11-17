@@ -191,7 +191,7 @@ namespace FinalProject_Profile
         {
             if (ActiveMdiChild != null)  // 자식폼이 열려 있으면
             {
-                if (this.ActiveMdiChild != mchildForm10)  // 열려있는 자식폼이 Form2 가 아니면
+                if (this.ActiveMdiChild != mchildForm10)  // 열려있는 자식폼이 Form10 이 아니면
                 {
                     ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
                 }
