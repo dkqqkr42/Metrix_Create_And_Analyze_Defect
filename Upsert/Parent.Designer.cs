@@ -42,21 +42,14 @@ namespace Upsert
             this.formToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workCenterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.programManageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.defectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.defectDTLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.downTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dowinTimeDTLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.workerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dEPTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inspectorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.teamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.commonCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.slocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.plantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Select = new System.Windows.Forms.Button();
@@ -86,21 +79,14 @@ namespace Upsert
             this.formToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.workCenterToolStripMenuItem,
             this.productMasterToolStripMenuItem,
-            this.employeeToolStripMenuItem,
-            this.programManageToolStripMenuItem,
             this.toolStripSeparator1,
             this.defectToolStripMenuItem,
             this.defectDTLToolStripMenuItem,
-            this.downTimeToolStripMenuItem,
-            this.dowinTimeDTLToolStripMenuItem,
             this.toolStripSeparator2,
             this.workerToolStripMenuItem,
             this.dEPTToolStripMenuItem,
             this.inspectorToolStripMenuItem,
             this.teamToolStripMenuItem,
-            this.toolStripSeparator3,
-            this.commonCodeToolStripMenuItem,
-            this.slocationToolStripMenuItem,
             this.plantToolStripMenuItem});
             this.formToolStripMenuItem.Name = "formToolStripMenuItem";
             this.formToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
@@ -117,22 +103,8 @@ namespace Upsert
             // 
             this.productMasterToolStripMenuItem.Name = "productMasterToolStripMenuItem";
             this.productMasterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.productMasterToolStripMenuItem.Text = "제품마스터";
+            this.productMasterToolStripMenuItem.Text = "제품정보";
             this.productMasterToolStripMenuItem.Click += new System.EventHandler(this.productMasterToolStripMenuItem_Click);
-            // 
-            // employeeToolStripMenuItem
-            // 
-            this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.employeeToolStripMenuItem.Text = "사원";
-            this.employeeToolStripMenuItem.Click += new System.EventHandler(this.employeeToolStripMenuItem_Click);
-            // 
-            // programManageToolStripMenuItem
-            // 
-            this.programManageToolStripMenuItem.Name = "programManageToolStripMenuItem";
-            this.programManageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.programManageToolStripMenuItem.Text = "프로그램관리";
-            this.programManageToolStripMenuItem.Click += new System.EventHandler(this.programManageToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -152,20 +124,6 @@ namespace Upsert
             this.defectDTLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.defectDTLToolStripMenuItem.Text = "불량상세";
             this.defectDTLToolStripMenuItem.Click += new System.EventHandler(this.defectDTLToolStripMenuItem_Click);
-            // 
-            // downTimeToolStripMenuItem
-            // 
-            this.downTimeToolStripMenuItem.Name = "downTimeToolStripMenuItem";
-            this.downTimeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.downTimeToolStripMenuItem.Text = "공부동";
-            this.downTimeToolStripMenuItem.Click += new System.EventHandler(this.downTimeToolStripMenuItem_Click);
-            // 
-            // dowinTimeDTLToolStripMenuItem
-            // 
-            this.dowinTimeDTLToolStripMenuItem.Name = "dowinTimeDTLToolStripMenuItem";
-            this.dowinTimeDTLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.dowinTimeDTLToolStripMenuItem.Text = "공부동상세";
-            this.dowinTimeDTLToolStripMenuItem.Click += new System.EventHandler(this.dowinTimeDTLToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -199,25 +157,6 @@ namespace Upsert
             this.teamToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.teamToolStripMenuItem.Text = "팀";
             this.teamToolStripMenuItem.Click += new System.EventHandler(this.teamToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
-            // 
-            // commonCodeToolStripMenuItem
-            // 
-            this.commonCodeToolStripMenuItem.Name = "commonCodeToolStripMenuItem";
-            this.commonCodeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.commonCodeToolStripMenuItem.Text = "공통코드";
-            this.commonCodeToolStripMenuItem.Click += new System.EventHandler(this.commonCodeToolStripMenuItem_Click);
-            // 
-            // slocationToolStripMenuItem
-            // 
-            this.slocationToolStripMenuItem.Name = "slocationToolStripMenuItem";
-            this.slocationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.slocationToolStripMenuItem.Text = "저장위치";
-            this.slocationToolStripMenuItem.Click += new System.EventHandler(this.slocationToolStripMenuItem_Click);
             // 
             // plantToolStripMenuItem
             // 
@@ -373,24 +312,17 @@ namespace Upsert
         private System.Windows.Forms.Label lbl_MessageText;
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.ToolStripMenuItem formToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem programManageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productMasterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem employeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem workerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem downTimeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem defectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inspectorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dEPTToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem teamToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem commonCodeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dowinTimeDTLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem defectDTLToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem slocationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem plantToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem workCenterToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }
 

@@ -42,7 +42,7 @@ namespace Upsert
                 form.MdiParent = this;
                 form.StartPosition = FormStartPosition.CenterParent;
                 //form.WindowState = FormWindowState.Minimized;
-                //form.Dock = DockStyle.Fill;
+                form.Dock = DockStyle.Fill;
                 //form.WindowState = FormWindowState.Maximized;
                 form.Show();
                 //form.WindowState = FormWindowState.Normal;
@@ -55,7 +55,7 @@ namespace Upsert
                     form.MdiParent = this;
                     form.StartPosition = FormStartPosition.CenterParent;
                     //form.WindowState = FormWindowState.Minimized;
-                    //form.Dock = DockStyle.Fill;
+                    form.Dock = DockStyle.Fill;
                     //form.WindowState = FormWindowState.Maximized;
                     form.Show();
                     //form.WindowState = FormWindowState.Normal;
