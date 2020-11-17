@@ -63,6 +63,26 @@ namespace FinalProject_Profile.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap dba_img {
+            get {
+                object obj = ResourceManager.GetObject("dba_img", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap dba_img3 {
+            get {
+                object obj = ResourceManager.GetObject("dba_img3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap 검사시작 {
             get {
                 object obj = ResourceManager.GetObject("검사시작", resourceCulture);

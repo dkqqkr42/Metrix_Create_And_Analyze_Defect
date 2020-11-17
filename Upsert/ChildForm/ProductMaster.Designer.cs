@@ -645,7 +645,7 @@
             this.ClientSize = new System.Drawing.Size(1876, 772);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ProductMaster";
-            this.Text = "제품마스터";
+            this.Text = "제품정보";
             this.Load += new System.EventHandler(this.ProductMaster_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

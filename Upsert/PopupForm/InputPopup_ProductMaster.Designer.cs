@@ -1468,7 +1468,7 @@
             this.ClientSize = new System.Drawing.Size(914, 725);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "InputPopup_ProductMaster";
-            this.Text = "제품마스터";
+            this.Text = "제품정보";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();

@@ -23,7 +23,7 @@ namespace FinalProject_Profile
         int total_qty = 0, total_box = 0, total_plt = 0;
         int now_seq = 1, plt_seq = 1,punching = 0;
         int bad_qty = 0;
-        bool btn_flag = true;
+        int btn_flag = 0;
         int _good_qty = 0, _bad_qty = 0;
 
         private void tile_WorkPlan_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace FinalProject_Profile
 
         System.Timers.Timer timer = new System.Timers.Timer
         {
-            Interval = 5000,
+            Interval = 500,
             AutoReset = false
         };
         public Working()
@@ -66,20 +66,30 @@ namespace FinalProject_Profile
 
         private void btn_InspectionStart_Click(object sender, EventArgs e)
         {           
-            if (btn_flag == true)
+            if (btn_flag == 0)
             {
                 //멈추는 이미지로 바꾸기
                 timer.Start();
-                btn_flag = false;
+                btn_flag = 1;
             }
                 
-            else if (btn_flag == false)
+            else if (btn_flag == 1)
             {
                 //시작 이미지로 바꾸기
                 timer.Stop();
-                btn_flag = true;
-            }
+                btn_flag = 0;
                 
+            }
+            else if (btn_flag == 2)
+            {
+                //작업 순위에서 삭제 후 작업 순위 랭크 -1 후 Plan에 완료처리 하는 쿼리
+                ChangePlan();
+                //불량등록
+                InsertDefect();
+                //다음 데이터 조회
+                SelectItem();
+                btn_flag = 0;
+            }
         }
 
         private void Working2_Load(object sender, EventArgs e)
@@ -421,14 +431,14 @@ namespace FinalProject_Profile
                     if (Int32.Parse(order_m) <= total_qty)
                     {
                         timer.Enabled = false;
-
-                        //작업 순위에서 삭제 후 작업 순위 랭크 -1 후 Plan에 완료처리 하는 쿼리
-                        ChangePlan();
                         MessageBox.Show("작업이 완료되었습니다. 불량 요인을 등록해 주세요.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //작업 순위에서 삭제 후 작업 순위 랭크 -1 후 Plan에 완료처리 하는 쿼리
+                        /*ChangePlan();
                         //불량등록
                         InsertDefect();
                         //다음 데이터 조회
-                        SelectItem();
+                        SelectItem();*/
+                        btn_flag = 2;
 
                         timer.Stop();
 
@@ -462,6 +472,8 @@ namespace FinalProject_Profile
             result.Add("BAD_QTY", bad_qty.ToString());
             result.Add("BOX_PCS", box_pcs.ToString());
             result.Add("PLT_BOX", plt_box.ToString());
+            result.Add("ROLL_NO", DateTime.Now.ToString("yyyyMMdd") + wc_code + now_seq.ToString("000"));
+            result.Add("U_SEQ", plt_seq.ToString());
 
             Defect defect = new Defect(result);
             defect.Show();

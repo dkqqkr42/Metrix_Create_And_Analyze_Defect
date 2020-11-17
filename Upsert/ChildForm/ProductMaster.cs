@@ -259,7 +259,6 @@ namespace Upsert
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                //todo productmaster
                 popup = new InputPopup_ProductMaster(txt_PROD_CODE.Text, txt_PLANT_CODE.Text, txt_MRP_MGR.Text);
                 popup.FormSendEvent += new InputPopup_ProductMaster.FormSendDataHandler(DieaseUpdateEventMethod);
                 popup.ShowDialog();

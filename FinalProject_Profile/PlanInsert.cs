@@ -57,7 +57,6 @@ namespace FinalProject_Profile
                 cmd.Parameters.Add("ARG_MRP1", "F63");
                 cmd.Parameters.Add("ARG_MRP2", "F63");
                 //cmd.Parameters.Add("ARG_WC", "AT01");
-                //todo 날짜
                 cmd.Parameters.Add("ARG_O_DATE", "20201001");
                 cmd.Parameters.Add("ARG_E_DATE", DateTime.Now.ToString("yyyyMMdd"));
 
@@ -178,12 +177,12 @@ namespace FinalProject_Profile
                     ConnectionString = connectionString
                 };
                 connection.Open();
-
+                //todo 내가 확정 누른 orderno만 나오도록
                 OracleCommand cmd = new OracleCommand
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "Select * From TBL_PRODUCTPLAN"
+                    CommandText = "Select * From TBL_PRODUCTPLAN WHERE ORDER_NO"
                 };
 
                 OracleDataReader reader = cmd.ExecuteReader();
