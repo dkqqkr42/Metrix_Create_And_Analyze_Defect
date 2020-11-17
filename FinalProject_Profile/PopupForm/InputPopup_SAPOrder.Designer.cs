@@ -1076,7 +1076,8 @@
             this.txt_PLAN_QTY.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txt_PLAN_QTY.CustomButton.UseSelectable = true;
             this.txt_PLAN_QTY.CustomButton.Visible = false;
-            this.txt_PLAN_QTY.Lines = new string[0];
+            this.txt_PLAN_QTY.Lines = new string[] {
+        "0"};
             this.txt_PLAN_QTY.Location = new System.Drawing.Point(148, 473);
             this.txt_PLAN_QTY.MaxLength = 32767;
             this.txt_PLAN_QTY.Name = "txt_PLAN_QTY";
@@ -1088,6 +1089,7 @@
             this.txt_PLAN_QTY.ShortcutsEnabled = true;
             this.txt_PLAN_QTY.Size = new System.Drawing.Size(137, 23);
             this.txt_PLAN_QTY.TabIndex = 26;
+            this.txt_PLAN_QTY.Text = "0";
             this.txt_PLAN_QTY.UseSelectable = true;
             this.txt_PLAN_QTY.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txt_PLAN_QTY.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

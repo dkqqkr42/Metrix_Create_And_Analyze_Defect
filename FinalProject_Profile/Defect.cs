@@ -27,6 +27,56 @@ namespace FinalProject_Profile
 
         int left_bad_qty = 0, left_bad_box = 0, left_bad_plt = 0;
 
+        private void label5_Click(object sender, EventArgs e)
+        {
+            if (left_bad_qty != 0)
+            {
+                if (MessageBox.Show("불량등록이 완료되지 않았습니다. 나가시겠습니까?", "Defect", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+                    this.Close();
+            }
+            else
+                this.Close();
+            
+        }
+
+        private void Defect_Activated(object sender, EventArgs e)
+        {
+            OracleConnection connection = null;
+            try
+            {
+                connection = new OracleConnection
+                {
+                    ConnectionString = connectionString
+                };
+                connection.Open();
+
+                OracleCommand cmd = new OracleCommand
+                {
+                    CommandType = CommandType.Text,
+                    Connection = connection,
+                    CommandText = "SELECT B_SEQ 불량번호, FACTOR_CODE 불량코드, BAD_QTY 불량량 from TBL_WCDEFECT WHERE ROLL_NO = :IN_ROLL_NO ORDER BY B_SEQ"
+                };
+
+                cmd.Parameters.Add("IN_ROLL_NO", roll_no);
+
+                OracleDataAdapter adapter = new OracleDataAdapter(cmd);
+
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                grd_Result.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
         int r_bad_qty = 0, r_bad_box = 0;
         int i_bad_qty = 0, i_bad_box = 0;
         int p_qty = 0, b_seq = 0;
@@ -83,6 +133,8 @@ namespace FinalProject_Profile
             left_bad_box = left_bad_qty / box_pcs;
 
             i_bad_box = i_bad_qty / box_pcs;
+
+            r_bad_box = r_bad_qty / box_pcs;
         }
 
         public void UpdateControl()
@@ -113,7 +165,7 @@ namespace FinalProject_Profile
             lbl_Left_Bad_BOX.Text = left_bad_box.ToString();
             lbl_Left_Bad_PLT.Text = left_bad_plt.ToString();
 
-            lbl_Registered_Bad_QTY.Text = r_bad_box.ToString();
+            lbl_Registered_Bad_QTY.Text = r_bad_qty.ToString();
             lbl_Registered_Bad_BOX.Text = r_bad_box.ToString();
         }
 
@@ -209,6 +261,12 @@ namespace FinalProject_Profile
                 cmd.Parameters.Add("IN_WC_CODE", wc_code);
 
                 cmd.ExecuteNonQuery();
+
+                r_bad_qty += i_bad_qty;
+                i_bad_qty = 0;
+
+                UpdateData();
+                UpdateControl();
 
                 b_seq++;
             }
