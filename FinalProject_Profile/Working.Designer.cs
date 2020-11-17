@@ -1245,7 +1245,7 @@
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(300, 85);
             this.label38.TabIndex = 32;
-            this.label38.Text = "결함";
+            this.label38.Text = "작업자";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label37
@@ -1432,6 +1432,7 @@
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "작업진행";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            this.Activated += new System.EventHandler(this.Working_Activated);
             this.Load += new System.EventHandler(this.Working2_Load);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -68,10 +68,10 @@
             this.tableLayoutPanel29 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel32 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel33 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_Total_BOX2 = new System.Windows.Forms.Label();
+            this.lbl_i_Bad_BOX = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.tableLayoutPanel34 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_Total_QTY2 = new System.Windows.Forms.Label();
+            this.lbl_i_Bad_QTY = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.tableLayoutPanel27 = new System.Windows.Forms.TableLayoutPanel();
@@ -92,12 +92,11 @@
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_10PCS = new System.Windows.Forms.Label();
+            this.lbl_1PCS = new System.Windows.Forms.Label();
+            this.lbl_1BOX = new System.Windows.Forms.Label();
+            this.lbl_ALL = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
@@ -137,6 +136,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -478,14 +478,14 @@
             // dataGridView2
             // 
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6,
@@ -765,7 +765,7 @@
             this.tableLayoutPanel33.ColumnCount = 2;
             this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.14141F));
             this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.85859F));
-            this.tableLayoutPanel33.Controls.Add(this.lbl_Total_BOX2, 0, 0);
+            this.tableLayoutPanel33.Controls.Add(this.lbl_i_Bad_BOX, 0, 0);
             this.tableLayoutPanel33.Controls.Add(this.label30, 1, 0);
             this.tableLayoutPanel33.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel33.Location = new System.Drawing.Point(3, 64);
@@ -775,18 +775,18 @@
             this.tableLayoutPanel33.Size = new System.Drawing.Size(449, 55);
             this.tableLayoutPanel33.TabIndex = 1;
             // 
-            // lbl_Total_BOX2
+            // lbl_i_Bad_BOX
             // 
-            this.lbl_Total_BOX2.AutoSize = true;
-            this.lbl_Total_BOX2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Total_BOX2.Font = new System.Drawing.Font("굴림", 13F, System.Drawing.FontStyle.Bold);
-            this.lbl_Total_BOX2.Location = new System.Drawing.Point(0, 0);
-            this.lbl_Total_BOX2.Margin = new System.Windows.Forms.Padding(0);
-            this.lbl_Total_BOX2.Name = "lbl_Total_BOX2";
-            this.lbl_Total_BOX2.Size = new System.Drawing.Size(287, 55);
-            this.lbl_Total_BOX2.TabIndex = 0;
-            this.lbl_Total_BOX2.Text = "0";
-            this.lbl_Total_BOX2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_i_Bad_BOX.AutoSize = true;
+            this.lbl_i_Bad_BOX.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_i_Bad_BOX.Font = new System.Drawing.Font("굴림", 13F, System.Drawing.FontStyle.Bold);
+            this.lbl_i_Bad_BOX.Location = new System.Drawing.Point(0, 0);
+            this.lbl_i_Bad_BOX.Margin = new System.Windows.Forms.Padding(0);
+            this.lbl_i_Bad_BOX.Name = "lbl_i_Bad_BOX";
+            this.lbl_i_Bad_BOX.Size = new System.Drawing.Size(287, 55);
+            this.lbl_i_Bad_BOX.TabIndex = 0;
+            this.lbl_i_Bad_BOX.Text = "0";
+            this.lbl_i_Bad_BOX.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label30
             // 
@@ -806,7 +806,7 @@
             this.tableLayoutPanel34.ColumnCount = 2;
             this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.14141F));
             this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.85859F));
-            this.tableLayoutPanel34.Controls.Add(this.lbl_Total_QTY2, 0, 0);
+            this.tableLayoutPanel34.Controls.Add(this.lbl_i_Bad_QTY, 0, 0);
             this.tableLayoutPanel34.Controls.Add(this.label37, 1, 0);
             this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel34.Location = new System.Drawing.Point(3, 3);
@@ -816,18 +816,18 @@
             this.tableLayoutPanel34.Size = new System.Drawing.Size(449, 55);
             this.tableLayoutPanel34.TabIndex = 0;
             // 
-            // lbl_Total_QTY2
+            // lbl_i_Bad_QTY
             // 
-            this.lbl_Total_QTY2.AutoSize = true;
-            this.lbl_Total_QTY2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_Total_QTY2.Font = new System.Drawing.Font("굴림", 13F, System.Drawing.FontStyle.Bold);
-            this.lbl_Total_QTY2.Location = new System.Drawing.Point(0, 0);
-            this.lbl_Total_QTY2.Margin = new System.Windows.Forms.Padding(0);
-            this.lbl_Total_QTY2.Name = "lbl_Total_QTY2";
-            this.lbl_Total_QTY2.Size = new System.Drawing.Size(287, 55);
-            this.lbl_Total_QTY2.TabIndex = 0;
-            this.lbl_Total_QTY2.Text = "0";
-            this.lbl_Total_QTY2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_i_Bad_QTY.AutoSize = true;
+            this.lbl_i_Bad_QTY.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_i_Bad_QTY.Font = new System.Drawing.Font("굴림", 13F, System.Drawing.FontStyle.Bold);
+            this.lbl_i_Bad_QTY.Location = new System.Drawing.Point(0, 0);
+            this.lbl_i_Bad_QTY.Margin = new System.Windows.Forms.Padding(0);
+            this.lbl_i_Bad_QTY.Name = "lbl_i_Bad_QTY";
+            this.lbl_i_Bad_QTY.Size = new System.Drawing.Size(287, 55);
+            this.lbl_i_Bad_QTY.TabIndex = 0;
+            this.lbl_i_Bad_QTY.Text = "0";
+            this.lbl_i_Bad_QTY.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label37
             // 
@@ -853,7 +853,7 @@
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(461, 50);
             this.label38.TabIndex = 1;
-            this.label38.Text = "보유잔량";
+            this.label38.Text = "등록할 불량";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel27
@@ -981,7 +981,7 @@
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(449, 50);
             this.label35.TabIndex = 1;
-            this.label35.Text = "불량량";
+            this.label35.Text = "총 불량량";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel9
@@ -1114,12 +1114,12 @@
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel7.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.lbl_10PCS, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.lbl_1PCS, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.lbl_1BOX, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.lbl_ALL, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.label8, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.metroButton1, 5, 0);
+            this.tableLayoutPanel7.Controls.Add(this.button1, 5, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(1, 1);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
@@ -1129,66 +1129,69 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(1373, 131);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
-            // label4
+            // lbl_10PCS
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Khaki;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("굴림", 14F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(660, 3);
-            this.label4.Margin = new System.Windows.Forms.Padding(2);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(214, 125);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "10 PCS";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_10PCS.AutoSize = true;
+            this.lbl_10PCS.BackColor = System.Drawing.Color.Khaki;
+            this.lbl_10PCS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_10PCS.Font = new System.Drawing.Font("굴림", 14F, System.Drawing.FontStyle.Bold);
+            this.lbl_10PCS.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_10PCS.Location = new System.Drawing.Point(660, 3);
+            this.lbl_10PCS.Margin = new System.Windows.Forms.Padding(2);
+            this.lbl_10PCS.Name = "lbl_10PCS";
+            this.lbl_10PCS.Size = new System.Drawing.Size(214, 125);
+            this.lbl_10PCS.TabIndex = 6;
+            this.lbl_10PCS.Text = "10 PCS";
+            this.lbl_10PCS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_10PCS.Click += new System.EventHandler(this.lbl_10PCS_Click);
             // 
-            // label3
+            // lbl_1PCS
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Khaki;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("굴림", 14F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(879, 3);
-            this.label3.Margin = new System.Windows.Forms.Padding(2);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(214, 125);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "1 PCS";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_1PCS.AutoSize = true;
+            this.lbl_1PCS.BackColor = System.Drawing.Color.Khaki;
+            this.lbl_1PCS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_1PCS.Font = new System.Drawing.Font("굴림", 14F, System.Drawing.FontStyle.Bold);
+            this.lbl_1PCS.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_1PCS.Location = new System.Drawing.Point(879, 3);
+            this.lbl_1PCS.Margin = new System.Windows.Forms.Padding(2);
+            this.lbl_1PCS.Name = "lbl_1PCS";
+            this.lbl_1PCS.Size = new System.Drawing.Size(214, 125);
+            this.lbl_1PCS.TabIndex = 5;
+            this.lbl_1PCS.Text = "1 PCS";
+            this.lbl_1PCS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_1PCS.Click += new System.EventHandler(this.lbl_1PCS_Click);
             // 
-            // label2
+            // lbl_1BOX
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Khaki;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("굴림", 14F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(441, 3);
-            this.label2.Margin = new System.Windows.Forms.Padding(2);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(214, 125);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "1 BOX";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_1BOX.AutoSize = true;
+            this.lbl_1BOX.BackColor = System.Drawing.Color.Khaki;
+            this.lbl_1BOX.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_1BOX.Font = new System.Drawing.Font("굴림", 14F, System.Drawing.FontStyle.Bold);
+            this.lbl_1BOX.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_1BOX.Location = new System.Drawing.Point(441, 3);
+            this.lbl_1BOX.Margin = new System.Windows.Forms.Padding(2);
+            this.lbl_1BOX.Name = "lbl_1BOX";
+            this.lbl_1BOX.Size = new System.Drawing.Size(214, 125);
+            this.lbl_1BOX.TabIndex = 4;
+            this.lbl_1BOX.Text = "1 BOX";
+            this.lbl_1BOX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_1BOX.Click += new System.EventHandler(this.lbl_1BOX_Click);
             // 
-            // label1
+            // lbl_ALL
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Khaki;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("굴림", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(3, 3);
-            this.label1.Margin = new System.Windows.Forms.Padding(2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 125);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "전체";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lbl_ALL.AutoSize = true;
+            this.lbl_ALL.BackColor = System.Drawing.Color.Khaki;
+            this.lbl_ALL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_ALL.Font = new System.Drawing.Font("굴림", 14F, System.Drawing.FontStyle.Bold);
+            this.lbl_ALL.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_ALL.Location = new System.Drawing.Point(3, 3);
+            this.lbl_ALL.Margin = new System.Windows.Forms.Padding(2);
+            this.lbl_ALL.Name = "lbl_ALL";
+            this.lbl_ALL.Size = new System.Drawing.Size(214, 125);
+            this.lbl_ALL.TabIndex = 3;
+            this.lbl_ALL.Text = "전체";
+            this.lbl_ALL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_ALL.Click += new System.EventHandler(this.lbl_ALL_Click);
             // 
             // label8
             // 
@@ -1204,17 +1207,6 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "1 파렛트";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton1.Location = new System.Drawing.Point(1099, 4);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(270, 123);
-            this.metroButton1.TabIndex = 7;
-            this.metroButton1.Text = "불량취소";
-            this.metroButton1.UseSelectable = true;
             // 
             // tableLayoutPanel8
             // 
@@ -1775,6 +1767,18 @@
             this.label49.Text = "불량";
             this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button1.Location = new System.Drawing.Point(1099, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(270, 123);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "초기화";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Defect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -1885,10 +1889,10 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel29;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel32;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel33;
-        private System.Windows.Forms.Label lbl_Total_BOX2;
+        private System.Windows.Forms.Label lbl_i_Bad_BOX;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel34;
-        private System.Windows.Forms.Label lbl_Total_QTY2;
+        private System.Windows.Forms.Label lbl_i_Bad_QTY;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel27;
@@ -1909,12 +1913,11 @@
         private MetroFramework.Controls.MetroTile metroTile6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_10PCS;
+        private System.Windows.Forms.Label lbl_1PCS;
+        private System.Windows.Forms.Label lbl_1BOX;
+        private System.Windows.Forms.Label lbl_ALL;
         private System.Windows.Forms.Label label8;
-        private MetroFramework.Controls.MetroButton metroButton1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel23;
@@ -1968,5 +1971,6 @@
         private System.Windows.Forms.Label lbl_ORDER_NO;
         private System.Windows.Forms.Label lbl_PROD_CODE;
         private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Button button1;
     }
 }

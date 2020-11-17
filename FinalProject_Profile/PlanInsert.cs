@@ -15,6 +15,8 @@ namespace FinalProject_Profile
     public partial class PlanInsert : MetroForm
     {
         protected const string connectionString = "DATA SOURCE=220.69.249.228:1521/xe;PASSWORD=1234;PERSIST SECURITY INFO=True;USER ID=MAT_MGR";
+        IList<string> order_no = new List<string>();
+        int seq = 0;
         public PlanInsert()
         {
             InitializeComponent();
@@ -31,6 +33,36 @@ namespace FinalProject_Profile
                 CreateParams cp = base.CreateParams;
                 cp.ExStyle |= 0x02000000;
                 return cp;
+            }
+        }
+
+        public void SetJOB_NOVal()
+        {
+            OracleConnection connection = null;
+            try
+            {
+                connection = new OracleConnection
+                {
+                    ConnectionString = connectionString
+                };
+                connection.Open();
+                OracleCommand cmd = new OracleCommand
+                {
+                    CommandType = CommandType.Text,
+                    Connection = connection,
+                    CommandText = "SELECT count(*) from tbl_productplan where job_date = to_char(sysdate,'yyyymmdd')"
+                };
+
+                seq = Int32.Parse(cmd.ExecuteScalar().ToString());
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
@@ -95,6 +127,15 @@ namespace FinalProject_Profile
                 {
                     dataGridView1.DataSource = dt;
                 }
+
+                order_no.Clear();
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    order_no.Add(dt.Rows[i]["ORDER_NO"].ToString());
+                }
+
+                SetJOB_NOVal();
+
                 return dt;
 
             }
@@ -132,7 +173,7 @@ namespace FinalProject_Profile
                         CommandText = "PRODUCTPLAN_UPSERT"
                     };
                     
-                    cmd.Parameters.Add("LS_JOB_NO", dt.Rows[i]["WC_CODE"].ToString() + DateTime.Now.ToString("yyyyMMdd") + (i+1).ToString("000"));
+                    cmd.Parameters.Add("LS_JOB_NO", dt.Rows[i]["WC_CODE"].ToString() + DateTime.Now.ToString("yyyyMMdd") + (seq+1).ToString("000"));
                     cmd.Parameters.Add("LS_PROD_CODE", dt.Rows[i]["PROD_CODE"].ToString());
                     cmd.Parameters.Add("LS_SA_SABUN", "DBA");
                     cmd.Parameters.Add("LS_PLANT_CODE", dt.Rows[i]["PLANT_CODE"].ToString());
@@ -152,6 +193,8 @@ namespace FinalProject_Profile
                     cmd.Parameters.Add("LS_CUSTNAME", dt.Rows[i]["CUST_NAME"].ToString());
 
                     cmd.ExecuteNonQuery();
+
+                    seq++;
                 }
 
                 
@@ -177,13 +220,14 @@ namespace FinalProject_Profile
                     ConnectionString = connectionString
                 };
                 connection.Open();
-                //todo 내가 확정 누른 orderno만 나오도록
                 OracleCommand cmd = new OracleCommand
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "Select * From TBL_PRODUCTPLAN WHERE ORDER_NO"
+                    CommandText = "Select order_no, proc_status From TBL_PRODUCTPLAN"
                 };
+
+                string in_order_no = string.Join(",", order_no);
 
                 OracleDataReader reader = cmd.ExecuteReader();
 
@@ -211,8 +255,8 @@ namespace FinalProject_Profile
             string in_Order_No = "0";
             try
             {
-                int rowIndex = dataGridView2.CurrentRow.Index;
-                in_Order_No = dataGridView2.Rows[rowIndex].Cells[5].Value.ToString();
+                int rowIndex = dataGridView1.CurrentRow.Index;
+                in_Order_No = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
                 connection = new OracleConnection
                 {
                     ConnectionString = connectionString

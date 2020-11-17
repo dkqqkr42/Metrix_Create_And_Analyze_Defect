@@ -11,9 +11,9 @@ using MetroFramework.Forms;
 
 namespace FinalProject_Profile
 {
-    public partial class Child9 : MetroForm
+    public partial class _SelectDefect : MetroForm
     {
-        public Child9()
+        public _SelectDefect()
         {
             InitializeComponent();
         }
@@ -25,6 +25,11 @@ namespace FinalProject_Profile
                 cp.ExStyle |= 0x02000000;
                 return cp;
             }
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
