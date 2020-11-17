@@ -205,8 +205,8 @@ namespace FinalProject_Profile
 
         private void Main_Load(object sender, EventArgs e)
         {
-            CallSAPOrder();
-            //CallStartingMenu();
+            //CallSAPOrder();
+            CallStartingMenu();
         }
     }
 }
