@@ -255,14 +255,14 @@ namespace FinalProject_Profile
             string in_Order_No = "0";
             try
             {
-                int rowIndex = grd_Result.CurrentRow.Index;
-                in_Order_No = grd_Result.Rows[rowIndex].Cells[1].Value.ToString();
                 connection = new OracleConnection
                 {
                     ConnectionString = connectionString
                 };
                 connection.Open();
-
+                int rowIndex = grd_Result.CurrentRow.Index;
+                in_Order_No = grd_Result.Rows[rowIndex].Cells[1].Value.ToString();
+                
                 OracleCommand cmd = new OracleCommand
                 {
                     CommandType = CommandType.Text,
@@ -290,6 +290,21 @@ namespace FinalProject_Profile
             {
                 connection.Close();
             }
+        }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_Close_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기클릭임시;
+        }
+
+        private void btn_Close_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기임시;
         }
     }
 }

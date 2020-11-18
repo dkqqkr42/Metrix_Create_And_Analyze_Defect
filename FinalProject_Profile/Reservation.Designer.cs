@@ -42,6 +42,7 @@
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
             this.label30 = new System.Windows.Forms.Label();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -89,6 +90,7 @@
             this.tableLayoutPanel6.Controls.Add(this.metroTile6, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.metroTile7, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.metroButton2, 0, 4);
+            this.tableLayoutPanel6.Controls.Add(this.metroButton3, 0, 3);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(1669, 4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -100,6 +102,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.98071F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.40868F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.54172F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(159, 680);
             this.tableLayoutPanel6.TabIndex = 23;
             // 
@@ -230,7 +233,7 @@
             this.metroGrid2.RowHeadersVisible = false;
             this.metroGrid2.RowHeadersWidth = 51;
             this.metroGrid2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.metroGrid2.RowTemplate.Height = 27;
+            this.metroGrid2.RowTemplate.Height = 35;
             this.metroGrid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGrid2.Size = new System.Drawing.Size(1664, 686);
             this.metroGrid2.TabIndex = 6;
@@ -248,11 +251,24 @@
             this.label30.Text = "작업예약";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // metroButton3
+            // 
+            this.metroButton3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroButton3.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton3.Location = new System.Drawing.Point(3, 295);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(153, 89);
+            this.metroButton3.TabIndex = 32;
+            this.metroButton3.Text = "확인";
+            this.metroButton3.UseSelectable = true;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
+            // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1876, 772);
+            this.ControlBox = false;
             this.Controls.Add(this.label30);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -284,5 +300,6 @@
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton metroButton2;
         private System.Windows.Forms.Label label30;
+        private MetroFramework.Controls.MetroButton metroButton3;
     }
 }

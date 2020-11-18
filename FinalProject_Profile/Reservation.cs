@@ -466,6 +466,11 @@ namespace FinalProject_Profile
                 metroGrid2.Rows[metroGrid2.Rows.Count - 1].Cells[colIndex].Selected = true;   // metroGrid2.Rows[] 항목에다 metroGrid2.Rows.Count 값을 넣어주면 행 마지막으로 감.
             }
         }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 /*

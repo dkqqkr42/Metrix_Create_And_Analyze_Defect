@@ -203,7 +203,7 @@
             this.grd_Result.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.grd_Result.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.grd_Result.RowTemplate.Height = 23;
+            this.grd_Result.RowTemplate.Height = 35;
             this.grd_Result.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grd_Result.Size = new System.Drawing.Size(1830, 755);
             this.grd_Result.TabIndex = 28;
