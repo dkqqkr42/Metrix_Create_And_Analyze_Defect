@@ -114,12 +114,38 @@ namespace FinalProject_Profile
 
         private void btn_InspectionStart_MouseUp(object sender, MouseEventArgs e)
         {
-            btn_InspectionStart.BackgroundImage = FinalProject_Profile.Properties.Resources.작업시작;
+            if (btn_flag == 0)
+            {
+                btn_InspectionStart.BackgroundImage = FinalProject_Profile.Properties.Resources.작업시작;
+            }
+
+            else if (btn_flag == 1)
+            {
+                btn_InspectionStart.BackgroundImage = FinalProject_Profile.Properties.Resources.작업중지;
+            }
+            else if (btn_flag == 2)
+            {
+                btn_InspectionStart.BackgroundImage = FinalProject_Profile.Properties.Resources.불량등록;
+            }
+            
         }
 
         private void btn_InspectionStart_MouseDown(object sender, MouseEventArgs e)
         {
-            btn_InspectionStart.BackgroundImage = FinalProject_Profile.Properties.Resources.작업시작클릭;
+            if (btn_flag == 0)
+            {
+                btn_InspectionStart.BackgroundImage = FinalProject_Profile.Properties.Resources.작업시작클릭;
+            }
+
+            else if (btn_flag == 1)
+            {
+                btn_InspectionStart.BackgroundImage = FinalProject_Profile.Properties.Resources.작업중지클릭;
+            }
+            else if (btn_flag == 2)
+            {
+                btn_InspectionStart.BackgroundImage = FinalProject_Profile.Properties.Resources.불량등록클릭;
+            }
+            
         }
 
         public void SelectItem()
@@ -439,6 +465,7 @@ namespace FinalProject_Profile
                         btn_flag = 2;
 
                         //불량등록 이미지로 바꾸기
+                        btn_InspectionStart.BackgroundImage = FinalProject_Profile.Properties.Resources.불량등록;
 
                         timer.Stop();
 

@@ -173,6 +173,26 @@ namespace FinalProject_Profile.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap 불량등록 {
+            get {
+                object obj = ResourceManager.GetObject("불량등록", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 불량등록클릭 {
+            get {
+                object obj = ResourceManager.GetObject("불량등록클릭", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap 생산계획접수 {
             get {
                 object obj = ResourceManager.GetObject("생산계획접수", resourceCulture);
@@ -246,6 +266,26 @@ namespace FinalProject_Profile.Properties {
         internal static System.Drawing.Bitmap 작업시작클릭 {
             get {
                 object obj = ResourceManager.GetObject("작업시작클릭", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 작업중지 {
+            get {
+                object obj = ResourceManager.GetObject("작업중지", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 작업중지클릭 {
+            get {
+                object obj = ResourceManager.GetObject("작업중지클릭", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
