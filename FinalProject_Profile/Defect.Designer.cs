@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -89,14 +89,7 @@
             this.metroTile8 = new MetroFramework.Controls.MetroTile();
             this.metroTile7 = new MetroFramework.Controls.MetroTile();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
-            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_10PCS = new System.Windows.Forms.Label();
-            this.lbl_1PCS = new System.Windows.Forms.Label();
-            this.lbl_1BOX = new System.Windows.Forms.Label();
-            this.lbl_ALL = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
@@ -122,7 +115,6 @@
             this.lbl_Good_QTY = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
@@ -136,6 +128,13 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.metroButton4 = new MetroFramework.Controls.MetroButton();
+            this.metroButton5 = new MetroFramework.Controls.MetroButton();
+            this.metroButton6 = new MetroFramework.Controls.MetroButton();
+            this.metroButton7 = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -477,30 +476,30 @@
             this.grd_Result.AllowUserToAddRows = false;
             this.grd_Result.AllowUserToDeleteRows = false;
             this.grd_Result.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.grd_Result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.grd_Result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.grd_Result.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grd_Result.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grd_Result.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grd_Result.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grd_Result.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grd_Result.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grd_Result.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.grd_Result.ColumnHeadersHeight = 50;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grd_Result.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grd_Result.DefaultCellStyle = dataGridViewCellStyle13;
             this.grd_Result.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grd_Result.EnableHeadersVisualStyles = false;
             this.grd_Result.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -511,18 +510,18 @@
             this.grd_Result.Name = "grd_Result";
             this.grd_Result.ReadOnly = true;
             this.grd_Result.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grd_Result.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grd_Result.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.grd_Result.RowHeadersVisible = false;
             this.grd_Result.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grd_Result.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.grd_Result.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.grd_Result.RowTemplate.Height = 23;
             this.grd_Result.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grd_Result.Size = new System.Drawing.Size(387, 699);
@@ -963,13 +962,13 @@
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.43101F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.94261F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.02442F));
+            this.tableLayoutPanel9.Controls.Add(this.metroButton7, 6, 0);
             this.tableLayoutPanel9.Controls.Add(this.metroTile13, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.metroTile11, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.metroTile9, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.metroTile8, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.metroTile7, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.metroTile6, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.label6, 6, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(1, 362);
             this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(0);
@@ -983,7 +982,7 @@
             // 
             this.metroTile13.ActiveControl = null;
             this.metroTile13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile13.Location = new System.Drawing.Point(581, 3);
+            this.metroTile13.Location = new System.Drawing.Point(775, 3);
             this.metroTile13.Name = "metroTile13";
             this.metroTile13.Size = new System.Drawing.Size(188, 146);
             this.metroTile13.Style = MetroFramework.MetroColorStyle.Teal;
@@ -996,9 +995,9 @@
             // 
             this.metroTile11.ActiveControl = null;
             this.metroTile11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile11.Location = new System.Drawing.Point(775, 3);
+            this.metroTile11.Location = new System.Drawing.Point(969, 3);
             this.metroTile11.Name = "metroTile11";
-            this.metroTile11.Size = new System.Drawing.Size(188, 146);
+            this.metroTile11.Size = new System.Drawing.Size(181, 146);
             this.metroTile11.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroTile11.TabIndex = 32;
             this.metroTile11.Text = "▼";
@@ -1009,9 +1008,9 @@
             // 
             this.metroTile9.ActiveControl = null;
             this.metroTile9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile9.Location = new System.Drawing.Point(969, 3);
+            this.metroTile9.Location = new System.Drawing.Point(581, 3);
             this.metroTile9.Name = "metroTile9";
-            this.metroTile9.Size = new System.Drawing.Size(181, 146);
+            this.metroTile9.Size = new System.Drawing.Size(188, 146);
             this.metroTile9.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroTile9.TabIndex = 31;
             this.metroTile9.Text = "▲";
@@ -1022,9 +1021,9 @@
             // 
             this.metroTile8.ActiveControl = null;
             this.metroTile8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile8.Location = new System.Drawing.Point(3, 3);
+            this.metroTile8.Location = new System.Drawing.Point(190, 3);
             this.metroTile8.Name = "metroTile8";
-            this.metroTile8.Size = new System.Drawing.Size(181, 146);
+            this.metroTile8.Size = new System.Drawing.Size(188, 146);
             this.metroTile8.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroTile8.TabIndex = 30;
             this.metroTile8.Text = "▼";
@@ -1035,9 +1034,9 @@
             // 
             this.metroTile7.ActiveControl = null;
             this.metroTile7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile7.Location = new System.Drawing.Point(190, 3);
+            this.metroTile7.Location = new System.Drawing.Point(384, 3);
             this.metroTile7.Name = "metroTile7";
-            this.metroTile7.Size = new System.Drawing.Size(188, 146);
+            this.metroTile7.Size = new System.Drawing.Size(191, 146);
             this.metroTile7.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroTile7.TabIndex = 29;
             this.metroTile7.Text = "▲";
@@ -1048,47 +1047,29 @@
             // 
             this.metroTile6.ActiveControl = null;
             this.metroTile6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile6.Location = new System.Drawing.Point(384, 3);
+            this.metroTile6.Location = new System.Drawing.Point(3, 3);
             this.metroTile6.Name = "metroTile6";
-            this.metroTile6.Size = new System.Drawing.Size(191, 146);
+            this.metroTile6.Size = new System.Drawing.Size(181, 146);
             this.metroTile6.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroTile6.TabIndex = 28;
             this.metroTile6.Text = "▼";
             this.metroTile6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile6.UseSelectable = true;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Khaki;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("굴림", 14F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(1155, 2);
-            this.label6.Margin = new System.Windows.Forms.Padding(2);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(288, 148);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "불량 등록";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel7.ColumnCount = 6;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
+            this.tableLayoutPanel7.ColumnCount = 5;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel7.Controls.Add(this.lbl_10PCS, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.lbl_1PCS, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.lbl_1BOX, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.lbl_ALL, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.label8, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.button1, 5, 0);
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel7.Controls.Add(this.metroButton5, 4, 0);
+            this.tableLayoutPanel7.Controls.Add(this.metroButton4, 3, 0);
+            this.tableLayoutPanel7.Controls.Add(this.metroButton3, 2, 0);
+            this.tableLayoutPanel7.Controls.Add(this.metroButton2, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.metroButton1, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(1, 1);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
@@ -1098,97 +1079,6 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(1445, 131);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
-            // lbl_10PCS
-            // 
-            this.lbl_10PCS.AutoSize = true;
-            this.lbl_10PCS.BackColor = System.Drawing.Color.Khaki;
-            this.lbl_10PCS.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_10PCS.Font = new System.Drawing.Font("굴림", 14F, System.Drawing.FontStyle.Bold);
-            this.lbl_10PCS.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_10PCS.Location = new System.Drawing.Point(696, 3);
-            this.lbl_10PCS.Margin = new System.Windows.Forms.Padding(2);
-            this.lbl_10PCS.Name = "lbl_10PCS";
-            this.lbl_10PCS.Size = new System.Drawing.Size(226, 125);
-            this.lbl_10PCS.TabIndex = 6;
-            this.lbl_10PCS.Text = "10 PCS";
-            this.lbl_10PCS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_10PCS.Click += new System.EventHandler(this.lbl_10PCS_Click);
-            // 
-            // lbl_1PCS
-            // 
-            this.lbl_1PCS.AutoSize = true;
-            this.lbl_1PCS.BackColor = System.Drawing.Color.Khaki;
-            this.lbl_1PCS.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_1PCS.Font = new System.Drawing.Font("굴림", 14F, System.Drawing.FontStyle.Bold);
-            this.lbl_1PCS.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_1PCS.Location = new System.Drawing.Point(927, 3);
-            this.lbl_1PCS.Margin = new System.Windows.Forms.Padding(2);
-            this.lbl_1PCS.Name = "lbl_1PCS";
-            this.lbl_1PCS.Size = new System.Drawing.Size(226, 125);
-            this.lbl_1PCS.TabIndex = 5;
-            this.lbl_1PCS.Text = "1 PCS";
-            this.lbl_1PCS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_1PCS.Click += new System.EventHandler(this.lbl_1PCS_Click);
-            // 
-            // lbl_1BOX
-            // 
-            this.lbl_1BOX.AutoSize = true;
-            this.lbl_1BOX.BackColor = System.Drawing.Color.Khaki;
-            this.lbl_1BOX.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_1BOX.Font = new System.Drawing.Font("굴림", 14F, System.Drawing.FontStyle.Bold);
-            this.lbl_1BOX.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_1BOX.Location = new System.Drawing.Point(465, 3);
-            this.lbl_1BOX.Margin = new System.Windows.Forms.Padding(2);
-            this.lbl_1BOX.Name = "lbl_1BOX";
-            this.lbl_1BOX.Size = new System.Drawing.Size(226, 125);
-            this.lbl_1BOX.TabIndex = 4;
-            this.lbl_1BOX.Text = "1 BOX";
-            this.lbl_1BOX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_1BOX.Click += new System.EventHandler(this.lbl_1BOX_Click);
-            // 
-            // lbl_ALL
-            // 
-            this.lbl_ALL.AutoSize = true;
-            this.lbl_ALL.BackColor = System.Drawing.Color.Khaki;
-            this.lbl_ALL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_ALL.Font = new System.Drawing.Font("굴림", 14F, System.Drawing.FontStyle.Bold);
-            this.lbl_ALL.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_ALL.Location = new System.Drawing.Point(3, 3);
-            this.lbl_ALL.Margin = new System.Windows.Forms.Padding(2);
-            this.lbl_ALL.Name = "lbl_ALL";
-            this.lbl_ALL.Size = new System.Drawing.Size(226, 125);
-            this.lbl_ALL.TabIndex = 3;
-            this.lbl_ALL.Text = "전체";
-            this.lbl_ALL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_ALL.Click += new System.EventHandler(this.lbl_ALL_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Khaki;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("굴림", 14F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(234, 3);
-            this.label8.Margin = new System.Windows.Forms.Padding(2);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(226, 125);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "1 파렛트";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(1159, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(282, 123);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "초기화";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
@@ -1197,9 +1087,9 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.10623F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.49573F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.90232F));
+            this.tableLayoutPanel8.Controls.Add(this.metroButton6, 3, 0);
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel22, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel16, 1, 0);
-            this.tableLayoutPanel8.Controls.Add(this.label5, 3, 0);
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel11, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(1, 133);
@@ -1551,22 +1441,6 @@
             this.label21.Text = "양품량";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Khaki;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("굴림", 14F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(1157, 3);
-            this.label5.Margin = new System.Windows.Forms.Padding(2);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(285, 222);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "확인";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
             // tableLayoutPanel11
             // 
             this.tableLayoutPanel11.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
@@ -1749,6 +1623,90 @@
             this.label49.Text = "불량";
             this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton1.Location = new System.Drawing.Point(4, 4);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(281, 123);
+            this.metroButton1.TabIndex = 16;
+            this.metroButton1.Text = "전체";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.lbl_ALL_Click);
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton2.Location = new System.Drawing.Point(292, 4);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(281, 123);
+            this.metroButton2.TabIndex = 17;
+            this.metroButton2.Text = "1BOX";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.lbl_1BOX_Click);
+            // 
+            // metroButton3
+            // 
+            this.metroButton3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroButton3.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton3.Location = new System.Drawing.Point(580, 4);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(281, 123);
+            this.metroButton3.TabIndex = 18;
+            this.metroButton3.Text = "10PCS";
+            this.metroButton3.UseSelectable = true;
+            this.metroButton3.Click += new System.EventHandler(this.lbl_10PCS_Click);
+            // 
+            // metroButton4
+            // 
+            this.metroButton4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroButton4.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton4.Location = new System.Drawing.Point(868, 4);
+            this.metroButton4.Name = "metroButton4";
+            this.metroButton4.Size = new System.Drawing.Size(281, 123);
+            this.metroButton4.TabIndex = 19;
+            this.metroButton4.Text = "1PCS";
+            this.metroButton4.UseSelectable = true;
+            this.metroButton4.Click += new System.EventHandler(this.lbl_1PCS_Click);
+            // 
+            // metroButton5
+            // 
+            this.metroButton5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroButton5.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton5.Location = new System.Drawing.Point(1156, 4);
+            this.metroButton5.Name = "metroButton5";
+            this.metroButton5.Size = new System.Drawing.Size(285, 123);
+            this.metroButton5.TabIndex = 20;
+            this.metroButton5.Text = "갯수초기화";
+            this.metroButton5.UseSelectable = true;
+            this.metroButton5.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // metroButton6
+            // 
+            this.metroButton6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroButton6.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton6.Location = new System.Drawing.Point(1158, 4);
+            this.metroButton6.Name = "metroButton6";
+            this.metroButton6.Size = new System.Drawing.Size(283, 220);
+            this.metroButton6.TabIndex = 17;
+            this.metroButton6.Text = "확인";
+            this.metroButton6.UseSelectable = true;
+            this.metroButton6.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // metroButton7
+            // 
+            this.metroButton7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroButton7.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton7.Location = new System.Drawing.Point(1156, 3);
+            this.metroButton7.Name = "metroButton7";
+            this.metroButton7.Size = new System.Drawing.Size(286, 146);
+            this.metroButton7.TabIndex = 18;
+            this.metroButton7.Text = "불량등록";
+            this.metroButton7.UseSelectable = true;
+            this.metroButton7.Click += new System.EventHandler(this.label6_Click);
+            // 
             // Defect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -1797,11 +1755,8 @@
             this.tableLayoutPanel31.ResumeLayout(false);
             this.tableLayoutPanel31.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel9.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
-            this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
-            this.tableLayoutPanel8.PerformLayout();
             this.tableLayoutPanel22.ResumeLayout(false);
             this.tableLayoutPanel22.PerformLayout();
             this.tableLayoutPanel23.ResumeLayout(false);
@@ -1876,13 +1831,7 @@
         private MetroFramework.Controls.MetroTile metroTile8;
         private MetroFramework.Controls.MetroTile metroTile7;
         private MetroFramework.Controls.MetroTile metroTile6;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.Label lbl_10PCS;
-        private System.Windows.Forms.Label lbl_1PCS;
-        private System.Windows.Forms.Label lbl_1BOX;
-        private System.Windows.Forms.Label lbl_ALL;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel23;
@@ -1908,7 +1857,6 @@
         private System.Windows.Forms.Label lbl_Good_QTY;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
@@ -1936,7 +1884,13 @@
         private System.Windows.Forms.Label lbl_ORDER_NO;
         private System.Windows.Forms.Label lbl_PROD_CODE;
         private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Button button1;
         private MetroFramework.Controls.MetroGrid grd_Result;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton metroButton7;
+        private MetroFramework.Controls.MetroButton metroButton5;
+        private MetroFramework.Controls.MetroButton metroButton4;
+        private MetroFramework.Controls.MetroButton metroButton3;
+        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton metroButton6;
     }
 }
