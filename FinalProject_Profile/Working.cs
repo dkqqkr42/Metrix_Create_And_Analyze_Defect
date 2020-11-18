@@ -115,12 +115,12 @@ namespace FinalProject_Profile
 
         private void btn_InspectionStart_MouseUp(object sender, MouseEventArgs e)
         {
-            btn_InspectionStart.BackgroundImage = FinalProject_Profile.Properties.Resources.검사시작;
+            btn_InspectionStart.BackgroundImage = FinalProject_Profile.Properties.Resources.작업시작;
         }
 
         private void btn_InspectionStart_MouseDown(object sender, MouseEventArgs e)
         {
-            btn_InspectionStart.BackgroundImage = FinalProject_Profile.Properties.Resources.검사시작클릭;
+            btn_InspectionStart.BackgroundImage = FinalProject_Profile.Properties.Resources.작업시작클릭;
         }
 
         public void SelectItem()
@@ -436,13 +436,10 @@ namespace FinalProject_Profile
                     {
                         timer.Enabled = false;
                         MessageBox.Show("작업이 완료되었습니다. 불량 요인을 등록해 주세요.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //작업 순위에서 삭제 후 작업 순위 랭크 -1 후 Plan에 완료처리 하는 쿼리
-                        /*ChangePlan();
-                        //불량등록
-                        InsertDefect();
-                        //다음 데이터 조회
-                        SelectItem();*/
+                        
                         btn_flag = 2;
+
+                        //불량등록 이미지로 바꾸기
 
                         timer.Stop();
 

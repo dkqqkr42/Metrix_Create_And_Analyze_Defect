@@ -250,6 +250,29 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\작업시작클릭.jpg" />
+    <None Include="Resources\적업시작클릭.jpg" />
+    <None Include="Resources\작업시작.jpg" />
+    <None Include="Resources\차트클릭.jpg" />
+    <None Include="Resources\차트.jpg" />
+    <None Include="Resources\작업진행클릭1.jpg" />
+    <None Include="Resources\작업진행1.jpg" />
+    <None Include="Resources\작업계획클릭1.jpg" />
+    <None Include="Resources\작업계획1.jpg" />
+    <None Include="Resources\생산계획접수클릭1.jpg" />
+    <None Include="Resources\생산계획접수1.jpg" />
+    <None Include="Resources\검사성적서클릭1.jpg" />
+    <None Include="Resources\검사성적서1.jpg" />
+    <None Include="Resources\작업진행클릭.jpg" />
+    <None Include="Resources\작업진행.jpg" />
+    <None Include="Resources\작업계획클릭.jpg" />
+    <None Include="Resources\작업계획.jpg" />
+    <None Include="Resources\생산계획접수클릭.jpg" />
+    <None Include="Resources\생산계획접수.jpg" />
+    <None Include="Resources\불량클릭.jpg" />
+    <None Include="Resources\불량.jpg" />
+    <None Include="Resources\검사성적서클릭.jpg" />
+    <None Include="Resources\검사성적서.jpg" />
     <None Include="Resources\닫기클릭임시.jpg" />
     <None Include="Resources\닫기임시.jpg" />
     <None Include="Resources\검사시작클릭.jpg" />
