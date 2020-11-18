@@ -102,7 +102,7 @@ namespace FinalProject_Profile
                        " AND(C.ROLL_NO = D.ROLL_NO(+) AND C.S_SEQ = D.S_SEQ(+))" +
                        " AND C.PROD_DATE = :IN_DATE" +
                        " AND A.PLANT_CODE = '2020'" +
-                   //  " AND E.ROLL_NO    = '"+ roll_no +"'" +
+                       " AND E.ROLL_NO    = '"+ roll_no +"'" +
                        " AND C.JOB_NO = '"+ job_no +"'" +
                        " ORDER BY C.START_TIME";
 
@@ -175,41 +175,98 @@ namespace FinalProject_Profile
 
         private void btn_Barcode_Click(object sender, EventArgs e)  // 바코드 발행 버튼 눌렀을 때 실행
         {
-            // SCAN_FLAG 값을 N -> Y 로 변경.. 아직 미완성
+            OracleConnection connection = null;
 
-
-
-            // 바코드 생성
             int rowIndex = grd_Result.CurrentRow.Index;
             string in_Prod_Code = grd_Result.Rows[rowIndex].Cells[0].Value.ToString();
             string in_U_Seq = grd_Result.Rows[rowIndex].Cells[2].Value.ToString();
             string in_Tuip_Qty = grd_Result.Rows[rowIndex].Cells[11].Value.ToString();
+            string in_Roll_No = grd_Result.Rows[rowIndex].Cells[8].Value.ToString();
+            string in_Scan_Flag = grd_Result.Rows[rowIndex].Cells[28].Value.ToString();
 
-            try
+            if (in_Scan_Flag == "N")
             {
+                try
+                {
+                    // 바코드 생성
+                    BarcodeWriter barcodeWriter = new BarcodeWriter();
+
+                    barcodeWriter.Format = BarcodeFormat.QR_CODE;
+
+                    barcodeWriter.Options.Width = 500;
+                    barcodeWriter.Options.Height = 500;
+
+                    string strQRCode = $"{dtp_DATE.Value.ToString("yyMMdd")}{in_Prod_Code}{in_U_Seq}{in_Tuip_Qty}";
+
+                    string deskPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+                    barcodeWriter.Write(strQRCode).Save(deskPath + @"\BARCODE\" + strQRCode + ".jpg", ImageFormat.Jpeg);
+
+                    MessageBox.Show("바코드를 발행하였습니다.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                    // SCAN_FLAG 값을 N -> Y 로 변경
+                    connection = new OracleConnection
+                    {
+                        ConnectionString = connectionString
+                    };
+                    connection.Open();
+
+                    OracleCommand cmd = new OracleCommand
+                    {
+                        CommandType = CommandType.Text,
+                        Connection = connection,
+                        CommandText = "UPDATE TBL_PRODRSLT_DTL SET SCAN_FLAG = 'Y', SCAN_DATE = SYSDATE WHERE ROLL_NO = :IN_ROLL_NO AND U_SEQ = :IN_U_SEQ"
+                    };
+
+                    cmd.Parameters.Add("IN_ROLL_NO", in_Roll_No);
+                    cmd.Parameters.Add("IN_U_SEQ", Int32.Parse(in_U_Seq));
+
+                    cmd.ExecuteNonQuery();
+
+                    FillGrid();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+
+            else
+            {
+                try
+                {
+                    MessageBox.Show("바코드가 이미 발행되었습니다.", "경고", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
                 
-                BarcodeWriter barcodeWriter = new BarcodeWriter();
-
-                barcodeWriter.Format = BarcodeFormat.QR_CODE;
-
-                string strQRCode = $"{in_Prod_Code}{in_U_Seq}{in_Tuip_Qty}";
-
-                string deskPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-                barcodeWriter.Write(strQRCode).Save(deskPath + @"\BARCODE\"+ strQRCode +".jpg", ImageFormat.Jpeg);
-
-                MessageBox.Show("바코드를 발행하였습니다.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
 
         }
 
         private void grd_Result_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            // BarcodePopup_InspectionDTL.show();
+            int rowIndex = grd_Result.CurrentRow.Index;
+            string in_Date = dtp_DATE.Value.ToString("yyMMdd");
+            string in_Prod_Code = grd_Result.Rows[rowIndex].Cells[0].Value.ToString();
+            string in_U_Seq = grd_Result.Rows[rowIndex].Cells[2].Value.ToString();
+            string in_Tuip_Qty = grd_Result.Rows[rowIndex].Cells[11].Value.ToString();
+            string in_Scan_Flag = grd_Result.Rows[rowIndex].Cells[28].Value.ToString();
+
+            BarcodePopup_InspectionDTL barcodePopup_InspectionDTL = new BarcodePopup_InspectionDTL(in_Date, in_Prod_Code, in_U_Seq, in_Tuip_Qty);
+            if(in_Scan_Flag == "Y")
+            {
+                barcodePopup_InspectionDTL.ShowDialog();
+            }
+            else
+                MessageBox.Show("바코드가 발행되지 않았습니다.", "경고", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
