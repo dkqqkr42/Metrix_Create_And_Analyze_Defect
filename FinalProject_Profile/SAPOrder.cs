@@ -275,29 +275,79 @@ namespace FinalProject_Profile
                 
         }
 
-        private void tile_SAPOrder_Click(object sender, EventArgs e)
+        private void btn_SAPOrder_Click(object sender, EventArgs e)
         {
             
         }
 
-        private void tile_WorkPlan_Click(object sender, EventArgs e)
+        private void btn_WorkPlan_Click(object sender, EventArgs e)
         {
             main.CallWorkPlan();
         }
 
-        private void tile_Working_Click(object sender, EventArgs e)
+        private void btn_Working_Click(object sender, EventArgs e)
         {
             main.CallWorking();
         }
 
-        private void tile_Inspection_Click(object sender, EventArgs e)
+        private void btn_Inspection_Click(object sender, EventArgs e)
         {
             main.CallInspection();
         }
 
-        private void tile_Defect_Click(object sender, EventArgs e)
+        private void btn_Defect_Click(object sender, EventArgs e)
         {
             main.CallStartingMenu();
+        }
+
+        private void btn_SAPOrder_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_SAPOrder.BackgroundImage = FinalProject_Profile.Properties.Resources.생산계획접수;
+        }
+
+        private void btn_SAPOrder_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_SAPOrder.BackgroundImage = FinalProject_Profile.Properties.Resources.생산계획접수클릭;
+        }
+
+        private void btn_WorkPlan_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_WorkPlan.BackgroundImage = FinalProject_Profile.Properties.Resources.작업계획;
+        }
+
+        private void btn_WorkPlan_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_WorkPlan.BackgroundImage = FinalProject_Profile.Properties.Resources.작업계획클릭;
+        }
+
+        private void btn_Working_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Working.BackgroundImage = FinalProject_Profile.Properties.Resources.작업진행;
+        }
+
+        private void btn_Working_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Working.BackgroundImage = FinalProject_Profile.Properties.Resources.작업진행클릭;
+        }
+
+        private void btn_Inspection_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Inspection.BackgroundImage = FinalProject_Profile.Properties.Resources.검사성적서;
+        }
+
+        private void btn_Inspection_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Inspection.BackgroundImage = FinalProject_Profile.Properties.Resources.검사성적서클릭;
+        }
+
+        private void btn_Defect_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Defect.BackgroundImage = FinalProject_Profile.Properties.Resources.차트;
+        }
+
+        private void btn_Defect_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Defect.BackgroundImage = FinalProject_Profile.Properties.Resources.차트클릭;
         }
     }
 }
