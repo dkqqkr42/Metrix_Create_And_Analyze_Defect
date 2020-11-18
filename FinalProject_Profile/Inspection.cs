@@ -280,6 +280,86 @@ namespace FinalProject_Profile
         {
             btn_Defect.BackgroundImage = FinalProject_Profile.Properties.Resources.차트클릭;
         }
+
+        private void grd_Result_CellStateChanged(object sender, DataGridViewCellStateChangedEventArgs e)
+        {
+            int rowIndex = grd_Result.CurrentRow.Index;
+            string in_Roll_No = grd_Result.Rows[rowIndex].Cells[7].Value.ToString();
+            OracleConnection connection = null;
+            try
+            {
+                connection = new OracleConnection
+                {
+                    ConnectionString = connectionString
+                };
+                connection.Open();
+
+                OracleCommand cmd = new OracleCommand
+                {
+                    CommandType = CommandType.Text,
+                    Connection = connection,
+                    CommandText = "SELECT B_SEQ 불량번호, FACTOR_CODE 불량코드, BAD_QTY 불량량 from TBL_WCDEFECT WHERE ROLL_NO = :IN_ROLL_NO ORDER BY B_SEQ"
+                };
+
+                cmd.Parameters.Add("IN_ROLL_NO", in_Roll_No);
+
+                OracleDataAdapter adapter = new OracleDataAdapter(cmd);
+
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                grd_Defect.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void grd_Result_SelectionChanged(object sender, EventArgs e)
+        {
+            int rowIndex = grd_Result.CurrentRow.Index;
+            string in_Roll_No = grd_Result.Rows[rowIndex].Cells[7].Value.ToString();
+            OracleConnection connection = null;
+            try
+            {
+                connection = new OracleConnection
+                {
+                    ConnectionString = connectionString
+                };
+                connection.Open();
+
+                OracleCommand cmd = new OracleCommand
+                {
+                    CommandType = CommandType.Text,
+                    Connection = connection,
+                    CommandText = "SELECT B_SEQ 불량번호, FACTOR_CODE 불량코드, BAD_QTY 불량량 from TBL_WCDEFECT WHERE ROLL_NO = :IN_ROLL_NO ORDER BY B_SEQ"
+                };
+
+                cmd.Parameters.Add("IN_ROLL_NO", in_Roll_No);
+
+                OracleDataAdapter adapter = new OracleDataAdapter(cmd);
+
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                grd_Defect.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }
 
