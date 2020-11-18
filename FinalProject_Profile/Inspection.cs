@@ -56,8 +56,9 @@ namespace FinalProject_Profile
             int rowIndex = grd_Result.CurrentRow.Index;
             string in_Roll_No = grd_Result.Rows[rowIndex].Cells[7].Value.ToString();
             string in_Job_No = grd_Result.Rows[rowIndex].Cells[4].Value.ToString();
+            DateTime dateTime = dateTimePicker2.Value;
 
-            InspectionDTL child6 = new InspectionDTL(in_Roll_No, in_Job_No);
+            InspectionDTL child6 = new InspectionDTL(in_Roll_No, in_Job_No, dateTime);
             child6.Show();
         }
 

@@ -24,16 +24,18 @@ namespace FinalProject_Profile
 
         string roll_no;
         string job_no;
+        DateTime dateTime;
         
         public InspectionDTL()
         {
             InitializeComponent();
         }
-        public InspectionDTL(string _roll_no, string _job_no)
+        public InspectionDTL(string _roll_no, string _job_no, DateTime _dateTime)
         {
             InitializeComponent();
             roll_no = _roll_no;
             job_no = _job_no;
+            dateTime = _dateTime;
         }
         protected override CreateParams CreateParams     // 폼 화면 빠른 로딩
         {
@@ -49,6 +51,7 @@ namespace FinalProject_Profile
         public void FillGrid()  // grd_Result에 값 채우기
         {
             string ct2;
+            dtp_DATE.Value = dateTime;
 
             OracleConnection connection = null;
             try
