@@ -171,6 +171,11 @@ namespace FinalProject_Profile
 
         private void label6_Click(object sender, EventArgs e)
         {
+            if(i_bad_qty == 0)
+            {
+                MessageBox.Show("등록할 불량 갯수를 선택해 주세요", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             SelectDefect selectDefect = new SelectDefect(this);
             selectDefect.Show();
         }
