@@ -87,9 +87,9 @@
             this.txt_INPUT_QTY = new MetroFramework.Controls.MetroTextBox();
             this.txt_WORK_TIME = new MetroFramework.Controls.MetroTextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label30 = new System.Windows.Forms.Label();
             this.btn_Close = new MetroFramework.Controls.MetroButton();
             this.btn_Save = new MetroFramework.Controls.MetroButton();
-            this.label30 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -1173,9 +1173,20 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(866, 107);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
+            // label30
+            // 
+            this.label30.BackColor = System.Drawing.Color.PowderBlue;
+            this.label30.Font = new System.Drawing.Font("Segoe UI", 19F);
+            this.label30.Location = new System.Drawing.Point(360, 8);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(192, 48);
+            this.label30.TabIndex = 16;
+            this.label30.Text = "생산계획접수";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btn_Close
             // 
-            this.btn_Close.BackgroundImage = global::FinalProject_Profile.Properties.Resources.닫기임시;
+            this.btn_Close.BackgroundImage = global::FinalProject_Profile.Properties.Resources.닫기1;
             this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Close.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Close.FontSize = MetroFramework.MetroButtonSize.Tall;
@@ -1190,7 +1201,7 @@
             // 
             // btn_Save
             // 
-            this.btn_Save.BackgroundImage = global::FinalProject_Profile.Properties.Resources.저장;
+            this.btn_Save.BackgroundImage = global::FinalProject_Profile.Properties.Resources.저장1;
             this.btn_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Save.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Save.FontSize = MetroFramework.MetroButtonSize.Tall;
@@ -1202,17 +1213,6 @@
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             this.btn_Save.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseDown);
             this.btn_Save.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseUp);
-            // 
-            // label30
-            // 
-            this.label30.BackColor = System.Drawing.Color.PowderBlue;
-            this.label30.Font = new System.Drawing.Font("Segoe UI", 19F);
-            this.label30.Location = new System.Drawing.Point(360, 8);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(192, 48);
-            this.label30.TabIndex = 16;
-            this.label30.Text = "생산계획접수";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // InputPopup_SAPOrder
             // 

@@ -40,6 +40,8 @@
             this.lbl_TEAM = new MetroFramework.Controls.MetroLabel();
             this.cbo_ORDER_TYPE = new MetroFramework.Controls.MetroComboBox();
             this.lbl_ORDER_TYPE = new MetroFramework.Controls.MetroLabel();
+            this.btn_Decide = new MetroFramework.Controls.MetroButton();
+            this.btn_Insert = new MetroFramework.Controls.MetroButton();
             this.lbl_WORKCENTER = new MetroFramework.Controls.MetroLabel();
             this.lbl_DATE = new MetroFramework.Controls.MetroLabel();
             this.cbo_WORKCENTER = new MetroFramework.Controls.MetroComboBox();
@@ -66,8 +68,6 @@
             this.btn_Working = new MetroFramework.Controls.MetroButton();
             this.btn_Inspection = new MetroFramework.Controls.MetroButton();
             this.btn_Defect = new MetroFramework.Controls.MetroButton();
-            this.btn_Decide = new MetroFramework.Controls.MetroButton();
-            this.btn_Insert = new MetroFramework.Controls.MetroButton();
             this.btn_Select = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd_Result)).BeginInit();
@@ -181,6 +181,34 @@
             this.lbl_ORDER_TYPE.TabIndex = 3;
             this.lbl_ORDER_TYPE.Text = "주문구분";
             this.lbl_ORDER_TYPE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_Decide
+            // 
+            this.btn_Decide.BackgroundImage = global::FinalProject_Profile.Properties.Resources.확정;
+            this.btn_Decide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Decide.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Decide.Location = new System.Drawing.Point(1501, 3);
+            this.btn_Decide.Name = "btn_Decide";
+            this.btn_Decide.Size = new System.Drawing.Size(98, 90);
+            this.btn_Decide.TabIndex = 8;
+            this.btn_Decide.UseSelectable = true;
+            this.btn_Decide.Click += new System.EventHandler(this.btn_Decide_Click);
+            this.btn_Decide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Decide_MouseDown);
+            this.btn_Decide.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Decide_MouseUp);
+            // 
+            // btn_Insert
+            // 
+            this.btn_Insert.BackgroundImage = global::FinalProject_Profile.Properties.Resources.입력1;
+            this.btn_Insert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Insert.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Insert.Location = new System.Drawing.Point(1404, 3);
+            this.btn_Insert.Name = "btn_Insert";
+            this.btn_Insert.Size = new System.Drawing.Size(91, 90);
+            this.btn_Insert.TabIndex = 7;
+            this.btn_Insert.UseSelectable = true;
+            this.btn_Insert.Click += new System.EventHandler(this.btn_Insert_Click);
+            this.btn_Insert.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Insert_MouseDown);
+            this.btn_Insert.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Insert_MouseUp);
             // 
             // lbl_WORKCENTER
             // 
@@ -537,37 +565,9 @@
             this.btn_Defect.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseDown);
             this.btn_Defect.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseUp);
             // 
-            // btn_Decide
-            // 
-            this.btn_Decide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Decide.BackgroundImage")));
-            this.btn_Decide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Decide.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Decide.Location = new System.Drawing.Point(1501, 3);
-            this.btn_Decide.Name = "btn_Decide";
-            this.btn_Decide.Size = new System.Drawing.Size(98, 90);
-            this.btn_Decide.TabIndex = 8;
-            this.btn_Decide.UseSelectable = true;
-            this.btn_Decide.Click += new System.EventHandler(this.btn_Decide_Click);
-            this.btn_Decide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Decide_MouseDown);
-            this.btn_Decide.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Decide_MouseUp);
-            // 
-            // btn_Insert
-            // 
-            this.btn_Insert.BackgroundImage = global::FinalProject_Profile.Properties.Resources.입력1;
-            this.btn_Insert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Insert.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Insert.Location = new System.Drawing.Point(1404, 3);
-            this.btn_Insert.Name = "btn_Insert";
-            this.btn_Insert.Size = new System.Drawing.Size(91, 90);
-            this.btn_Insert.TabIndex = 7;
-            this.btn_Insert.UseSelectable = true;
-            this.btn_Insert.Click += new System.EventHandler(this.btn_Insert_Click);
-            this.btn_Insert.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Insert_MouseDown);
-            this.btn_Insert.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Insert_MouseUp);
-            // 
             // btn_Select
             // 
-            this.btn_Select.BackgroundImage = global::FinalProject_Profile.Properties.Resources.조회1;
+            this.btn_Select.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Select.BackgroundImage")));
             this.btn_Select.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Select.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Select.Location = new System.Drawing.Point(1307, 3);

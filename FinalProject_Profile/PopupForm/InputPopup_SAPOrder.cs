@@ -107,22 +107,22 @@ namespace FinalProject_Profile.PopupForm
 
         private void btn_Save_MouseUp(object sender, MouseEventArgs e)
         {
-            btn_Save.BackgroundImage = FinalProject_Profile.Properties.Resources.저장;
+            btn_Save.BackgroundImage = FinalProject_Profile.Properties.Resources.저장1;
         }
 
         private void btn_Save_MouseDown(object sender, MouseEventArgs e)
         {
-            btn_Save.BackgroundImage = FinalProject_Profile.Properties.Resources.저장클릭;
+            btn_Save.BackgroundImage = FinalProject_Profile.Properties.Resources.저장클릭1;
         }
 
         private void btn_Close_MouseUp(object sender, MouseEventArgs e)
         {
-            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기임시;
+            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기1;
         }
 
         private void btn_Close_MouseDown(object sender, MouseEventArgs e)
         {
-            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기클릭임시;
+            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기클릭1;
         }
 
         private void btn_Close_Click(object sender, EventArgs e)
