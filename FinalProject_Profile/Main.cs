@@ -22,7 +22,7 @@ namespace FinalProject_Profile
         private Working mChildForm4 = null;
         private Inspection mChildForm5 = null;
         private Defect mChildForm7 = null;
-        private Child9 mChildForm9 = null;
+        private SelectDefect mChildForm9 = null;
         private StartingMenu mchildForm10 = null;
 
         public Main()
@@ -179,11 +179,11 @@ namespace FinalProject_Profile
                 {
                     //ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
                 }
-                mChildForm9 = ShowOrActiveForm(mChildForm9, typeof(Child9)) as Child9;
+                mChildForm9 = ShowOrActiveForm(mChildForm9, typeof(SelectDefect)) as SelectDefect;
             }
             else
             {
-                mChildForm9 = ShowOrActiveForm(mChildForm9, typeof(Child9)) as Child9;
+                mChildForm9 = ShowOrActiveForm(mChildForm9, typeof(SelectDefect)) as SelectDefect;
             }
         }
 

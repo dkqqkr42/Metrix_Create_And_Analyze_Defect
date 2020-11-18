@@ -205,7 +205,7 @@ namespace FinalProject_Profile
         private void btn_Insert_Click(object sender, EventArgs e)  // 입력버튼 누를 경우 실행
         {
             InputPopup_SAPOrder inputPopup_SAPOrder = new InputPopup_SAPOrder();
-            inputPopup_SAPOrder.Show();
+            inputPopup_SAPOrder.ShowDialog();
         }
 
         private void btn_Decide_Click(object sender, EventArgs e)  // 확정버튼 누를 경우 실행

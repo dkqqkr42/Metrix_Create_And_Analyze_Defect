@@ -144,11 +144,11 @@
     <Compile Include="InspectionDTL.Designer.cs">
       <DependentUpon>InspectionDTL.cs</DependentUpon>
     </Compile>
-    <Compile Include="SelectDefect.cs">
+    <Compile Include="_SelectDefect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectDefect.Designer.cs">
-      <DependentUpon>SelectDefect.cs</DependentUpon>
+    <Compile Include="_SelectDefect.Designer.cs">
+      <DependentUpon>_SelectDefect.cs</DependentUpon>
     </Compile>
     <Compile Include="Defect.cs">
       <SubType>Form</SubType>
@@ -156,11 +156,11 @@
     <Compile Include="Defect.Designer.cs">
       <DependentUpon>Defect.cs</DependentUpon>
     </Compile>
-    <Compile Include="Child9.cs">
+    <Compile Include="SelectDefect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Child9.Designer.cs">
-      <DependentUpon>Child9.cs</DependentUpon>
+    <Compile Include="SelectDefect.Designer.cs">
+      <DependentUpon>SelectDefect.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -209,14 +209,14 @@
     <EmbeddedResource Include="InspectionDTL.resx">
       <DependentUpon>InspectionDTL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelectDefect.resx">
-      <DependentUpon>SelectDefect.cs</DependentUpon>
+    <EmbeddedResource Include="_SelectDefect.resx">
+      <DependentUpon>_SelectDefect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Defect.resx">
       <DependentUpon>Defect.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Child9.resx">
-      <DependentUpon>Child9.cs</DependentUpon>
+    <EmbeddedResource Include="SelectDefect.resx">
+      <DependentUpon>SelectDefect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

@@ -48,6 +48,11 @@ namespace FinalProject_Profile
 
         Main main;
 
+        private void Working_Activated(object sender, EventArgs e)
+        {
+            SelectItem();
+        }
+
         System.Timers.Timer timer = new System.Timers.Timer
         {
             Interval = 500,
@@ -95,7 +100,6 @@ namespace FinalProject_Profile
         private void Working2_Load(object sender, EventArgs e)
         {
             timer.Elapsed += new ElapsedEventHandler(timer_Elapsed);
-            SelectItem();
         }
 
         protected const string connectionString = "DATA SOURCE=220.69.249.228:1521/xe;PASSWORD=1234;PERSIST SECURITY INFO=True;USER ID=MAT_MGR";
