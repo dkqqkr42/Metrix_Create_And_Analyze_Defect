@@ -192,7 +192,7 @@ namespace FinalProject_Profile
 
         private void btn_Defect_Click(object sender, EventArgs e)
         {
-            main.CallDefect();
+            main.CallStartingMenu();
         }
 
         private void btn_SAPOrder_Click(object sender, EventArgs e)

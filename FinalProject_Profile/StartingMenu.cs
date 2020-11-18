@@ -22,7 +22,6 @@ namespace FinalProject_Profile
         protected const string connectionString = "DATA SOURCE=220.69.249.228:1521/xe;PASSWORD=1234;PERSIST SECURITY INFO=True;USER ID=MAT_MGR";
         List<PlanData> planList = new List<PlanData>();
         List<DefectData> defectList = new List<DefectData>();
-        Dictionary<string, string> dic = new Dictionary<string, string>();
         public StartingMenu(Main mainForm)
         {
             InitializeComponent();
@@ -31,7 +30,6 @@ namespace FinalProject_Profile
         public StartingMenu()
         {
             InitializeComponent();
-            //this.FormClosed += Form_Closing;
         }
 
         public void SelectData()
@@ -49,7 +47,7 @@ namespace FinalProject_Profile
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "SELECT trim(A.PROD_CODE), nvl(sum(B.ORDER_M),0), nvl(sum(C.INSU_QTY),0) FROM tbl_productmaster A ,(select * from TBL_PRODUCTPLAN WHERE JOB_DATE = '20201118') B, TBL_PRODRSLT C where A.PROD_CODE = B.PROD_CODE(+) AND B.JOB_NO = C.JOB_NO(+) GROUP BY A.PROD_CODE, B.PROD_CODE ORDER BY A.PROD_CODE"
+                    CommandText = "SELECT trim(A.PROD_CODE), nvl(sum(B.ORDER_M),0), nvl(sum(C.INSU_QTY),0) FROM tbl_productmaster A ,(select * from TBL_PRODUCTPLAN WHERE JOB_DATE = '20201118') B, TBL_PRODRSLT C where A.PROD_CODE = B.PROD_CODE(+) AND B.JOB_NO = C.JOB_NO(+) AND B.PROC_STATUS NOT IN('D') GROUP BY A.PROD_CODE, B.PROD_CODE ORDER BY A.PROD_CODE"
                 };
 
                 OracleDataReader reader = cmd.ExecuteReader();
@@ -332,8 +330,13 @@ namespace FinalProject_Profile
 
         private void panel2_Click(object sender, EventArgs e)
         {
-            this.Close();
             main.CallSAPOrder();
+            this.Close();
+        }
+
+        private void StartingMenu_Activated(object sender, EventArgs e)
+        {
+
         }
     }
     public class PlanData

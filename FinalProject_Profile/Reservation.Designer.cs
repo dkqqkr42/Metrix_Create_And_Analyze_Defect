@@ -41,6 +41,7 @@
             this.metroTile7 = new MetroFramework.Controls.MetroTile();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
+            this.label30 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -236,11 +237,23 @@
             this.metroGrid2.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.metroGrid2_CellFormatting);
             this.metroGrid2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.metroGrid2_KeyDown);
             // 
+            // label30
+            // 
+            this.label30.BackColor = System.Drawing.Color.PowderBlue;
+            this.label30.Font = new System.Drawing.Font("Segoe UI", 19F);
+            this.label30.Location = new System.Drawing.Point(848, 8);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(192, 48);
+            this.label30.TabIndex = 16;
+            this.label30.Text = "작업예약";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1876, 772);
+            this.Controls.Add(this.label30);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Reservation";
@@ -270,5 +283,6 @@
         private MetroFramework.Controls.MetroTile metroTile9;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton metroButton2;
+        private System.Windows.Forms.Label label30;
     }
 }

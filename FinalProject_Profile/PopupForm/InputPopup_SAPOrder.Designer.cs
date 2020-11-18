@@ -89,6 +89,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Close = new MetroFramework.Controls.MetroButton();
             this.btn_Save = new MetroFramework.Controls.MetroButton();
+            this.label30 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -1202,14 +1203,27 @@
             this.btn_Save.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseDown);
             this.btn_Save.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Save_MouseUp);
             // 
+            // label30
+            // 
+            this.label30.BackColor = System.Drawing.Color.PowderBlue;
+            this.label30.Font = new System.Drawing.Font("Segoe UI", 19F);
+            this.label30.Location = new System.Drawing.Point(360, 8);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(192, 48);
+            this.label30.TabIndex = 16;
+            this.label30.Text = "생산계획접수";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // InputPopup_SAPOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 725);
+            this.Controls.Add(this.label30);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "InputPopup_SAPOrder";
             this.Text = "생산계획접수";
+            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
@@ -1281,5 +1295,6 @@
         private System.Windows.Forms.ComboBox cbo_DISTRB_CHL;
         private System.Windows.Forms.ComboBox cbo_ORDER_TYPE;
         private System.Windows.Forms.ComboBox cbo_COMPLETE_FLAG;
+        private System.Windows.Forms.Label label30;
     }
 }

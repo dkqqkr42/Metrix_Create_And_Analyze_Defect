@@ -56,6 +56,7 @@
             this.metroButton7 = new MetroFramework.Controls.MetroButton();
             this.metroButton6 = new MetroFramework.Controls.MetroButton();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
+            this.label30 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -439,11 +440,23 @@
             this.metroButton5.UseSelectable = true;
             this.metroButton5.Click += new System.EventHandler(this.metroButton5_Click);
             // 
+            // label30
+            // 
+            this.label30.BackColor = System.Drawing.Color.PowderBlue;
+            this.label30.Font = new System.Drawing.Font("Segoe UI", 19F);
+            this.label30.Location = new System.Drawing.Point(355, 7);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(192, 48);
+            this.label30.TabIndex = 16;
+            this.label30.Text = "불량";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // SelectDefect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 600);
+            this.Controls.Add(this.label30);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Name = "SelectDefect";
             this.Style = MetroFramework.MetroColorStyle.Teal;
@@ -486,5 +499,6 @@
         private MetroFramework.Controls.MetroButton metroButton9;
         private MetroFramework.Controls.MetroButton metroButton8;
         private MetroFramework.Controls.MetroButton metroButton7;
+        private System.Windows.Forms.Label label30;
     }
 }

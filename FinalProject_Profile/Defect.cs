@@ -15,7 +15,7 @@ namespace FinalProject_Profile
     public partial class Defect : MetroForm
     {
         protected const string connectionString = "DATA SOURCE=220.69.249.228:1521/xe;PASSWORD=1234;PERSIST SECURITY INFO=True;USER ID=MAT_MGR";
-        Main main;
+        Working working;
         Dictionary<string, string> result;
 
         int box_pcs, plt_box;
@@ -37,6 +37,11 @@ namespace FinalProject_Profile
             else
                 this.Close();
             
+        }
+
+        private void Defect_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            working.SelectItem();
         }
 
         private void Defect_Activated(object sender, EventArgs e)
@@ -85,15 +90,13 @@ namespace FinalProject_Profile
         {
             InitializeComponent();
         }
-        public Defect(Main mainForm)
-        {
-            InitializeComponent();
-            main = mainForm;
-        }
 
-        public Defect(Dictionary<string, string> _result)
+        public Defect(Dictionary<string, string> _result, Working _working)
         {
             InitializeComponent();
+
+            working = _working;
+
             result = _result;
 
             prod_code = result["PROD_CODE"];

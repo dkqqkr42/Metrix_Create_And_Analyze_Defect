@@ -38,7 +38,7 @@ namespace FinalProject_Profile
 
         private void tile_Defect_Click(object sender, EventArgs e)
         {
-            main.CallDefect();
+            main.CallStartingMenu();
         }
 
         private void tile_SAPOrder_Click(object sender, EventArgs e)
@@ -92,7 +92,6 @@ namespace FinalProject_Profile
                 //불량등록
                 InsertDefect();
                 //다음 데이터 조회
-                SelectItem();
                 btn_flag = 0;
             }
         }
@@ -476,7 +475,7 @@ namespace FinalProject_Profile
             result.Add("ROLL_NO", DateTime.Now.ToString("yyyyMMdd") + wc_code + now_seq.ToString("000"));
             result.Add("U_SEQ", plt_seq.ToString());
 
-            Defect defect = new Defect(result);
+            Defect defect = new Defect(result, this);
             defect.Show();
         }
 

@@ -297,7 +297,7 @@ namespace FinalProject_Profile
 
         private void tile_Defect_Click(object sender, EventArgs e)
         {
-            main.CallDefect();
+            main.CallStartingMenu();
         }
     }
 }

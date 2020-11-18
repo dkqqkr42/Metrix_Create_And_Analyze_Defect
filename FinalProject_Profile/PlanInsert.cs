@@ -123,9 +123,9 @@ namespace FinalProject_Profile
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
                 DataTable dt = ds.Tables[0];
-                if(dataGridView1.DataSource == null)
+                if(grd_Result.DataSource == null)
                 {
-                    dataGridView1.DataSource = dt;
+                    grd_Result.DataSource = dt;
                 }
 
                 order_no.Clear();
@@ -236,7 +236,7 @@ namespace FinalProject_Profile
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
                 DataTable dt = ds.Tables[0];
-                dataGridView2.DataSource = dt;
+                grd_Result2.DataSource = dt;
 
             }
             catch (Exception ex)
@@ -255,8 +255,8 @@ namespace FinalProject_Profile
             string in_Order_No = "0";
             try
             {
-                int rowIndex = dataGridView1.CurrentRow.Index;
-                in_Order_No = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
+                int rowIndex = grd_Result.CurrentRow.Index;
+                in_Order_No = grd_Result.Rows[rowIndex].Cells[1].Value.ToString();
                 connection = new OracleConnection
                 {
                     ConnectionString = connectionString

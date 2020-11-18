@@ -49,7 +49,7 @@ namespace FinalProject_Profile
             {
                 if (form.IsDisposed)
                 {
-                    //form = (Form)Activator.CreateInstance(t, this);
+                    form = (Form)Activator.CreateInstance(t, this);
                     form.MdiParent = this;
                     form.StartPosition = FormStartPosition.CenterParent;
                     //form.WindowState = FormWindowState.Minimized;
@@ -193,7 +193,7 @@ namespace FinalProject_Profile
             {
                 if (this.ActiveMdiChild != mchildForm10)  // 열려있는 자식폼이 Form10 이 아니면
                 {
-                    ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
+                    //ActiveMdiChild.Close(); // 현재 활성화된 창을 닫아라
                 }
                 mchildForm10 = ShowOrActiveForm(mchildForm10, typeof(StartingMenu)) as StartingMenu;
             }
