@@ -121,6 +121,9 @@
   <data name="조회클릭" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\조회클릭.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="작업시작클릭" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\작업시작클릭.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="생산계획접수클릭" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\생산계획접수클릭1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,7 +205,16 @@
   <data name="검사성적서" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\검사성적서1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="작업시작클릭" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\작업시작클릭.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="불량등록" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\불량등록.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="불량등록클릭" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\불량등록클릭.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="작업중지" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\작업중지.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="작업중지클릭" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\작업중지클릭.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -49,6 +49,7 @@
             this.lbl_ORDER_NO = new System.Windows.Forms.Label();
             this.lbl_PROD_CODE = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
+            this.btn_InspectionStart = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -110,7 +111,6 @@
             this.tile_Working = new MetroFramework.Controls.MetroTile();
             this.tile_WorkPlan = new MetroFramework.Controls.MetroTile();
             this.label30 = new System.Windows.Forms.Label();
-            this.btn_InspectionStart = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -453,6 +453,21 @@
             this.label41.TabIndex = 1;
             this.label41.Text = "제품 내역";
             this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_InspectionStart
+            // 
+            this.btn_InspectionStart.BackgroundImage = global::FinalProject_Profile.Properties.Resources.작업시작;
+            this.btn_InspectionStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_InspectionStart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_InspectionStart.Location = new System.Drawing.Point(1381, 0);
+            this.btn_InspectionStart.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_InspectionStart.Name = "btn_InspectionStart";
+            this.btn_InspectionStart.Size = new System.Drawing.Size(227, 173);
+            this.btn_InspectionStart.TabIndex = 2;
+            this.btn_InspectionStart.UseSelectable = true;
+            this.btn_InspectionStart.Click += new System.EventHandler(this.btn_InspectionStart_Click);
+            this.btn_InspectionStart.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_InspectionStart_MouseDown);
+            this.btn_InspectionStart.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_InspectionStart_MouseUp);
             // 
             // tableLayoutPanel3
             // 
@@ -1406,21 +1421,6 @@
             this.label30.TabIndex = 15;
             this.label30.Text = "작업진행";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_InspectionStart
-            // 
-            this.btn_InspectionStart.BackgroundImage = global::FinalProject_Profile.Properties.Resources.작업시작;
-            this.btn_InspectionStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_InspectionStart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_InspectionStart.Location = new System.Drawing.Point(1381, 0);
-            this.btn_InspectionStart.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_InspectionStart.Name = "btn_InspectionStart";
-            this.btn_InspectionStart.Size = new System.Drawing.Size(227, 173);
-            this.btn_InspectionStart.TabIndex = 2;
-            this.btn_InspectionStart.UseSelectable = true;
-            this.btn_InspectionStart.Click += new System.EventHandler(this.btn_InspectionStart_Click);
-            this.btn_InspectionStart.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_InspectionStart_MouseDown);
-            this.btn_InspectionStart.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_InspectionStart_MouseUp);
             // 
             // Working
             // 
