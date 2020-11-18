@@ -199,7 +199,7 @@ namespace FinalProject_Profile
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            SelectItem();
         }
 
         private void btn_Insert_Click(object sender, EventArgs e)  // 입력버튼 누를 경우 실행
@@ -221,22 +221,22 @@ namespace FinalProject_Profile
 
         private void btn_Select_MouseUp(object sender, MouseEventArgs e)
         {
-            btn_Select.BackgroundImage = FinalProject_Profile.Properties.Resources.조회;
+            btn_Select.BackgroundImage = FinalProject_Profile.Properties.Resources.조회1;
         }
 
         private void btn_Select_MouseDown(object sender, MouseEventArgs e)
         {
-            btn_Select.BackgroundImage = FinalProject_Profile.Properties.Resources.조회클릭;
+            btn_Select.BackgroundImage = FinalProject_Profile.Properties.Resources.조회클릭1;
         }
 
         private void btn_Insert_MouseUp(object sender, MouseEventArgs e)
         {
-            btn_Insert.BackgroundImage = FinalProject_Profile.Properties.Resources.입력;
+            btn_Insert.BackgroundImage = FinalProject_Profile.Properties.Resources.입력1;
         }
 
         private void btn_Insert_MouseDown(object sender, MouseEventArgs e)
         {
-            btn_Insert.BackgroundImage = FinalProject_Profile.Properties.Resources.입력클릭;
+            btn_Insert.BackgroundImage = FinalProject_Profile.Properties.Resources.입력클릭1;
         }
 
         private void btn_Decide_MouseUp(object sender, MouseEventArgs e)
