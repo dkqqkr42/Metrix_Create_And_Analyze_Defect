@@ -107,7 +107,7 @@ namespace FinalProject_Profile
                        " AND A.PLANT_CODE = '2020'" +
                        " AND E.ROLL_NO    = '"+ roll_no +"'" +
                        " AND C.JOB_NO = '"+ job_no +"'" +
-                       " ORDER BY C.START_TIME";
+                       " ORDER BY E.U_SEQ";
 
                 connection = new OracleConnection
                 {
