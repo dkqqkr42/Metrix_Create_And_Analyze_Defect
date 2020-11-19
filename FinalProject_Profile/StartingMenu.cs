@@ -47,7 +47,7 @@ namespace FinalProject_Profile
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "SELECT trim(A.PROD_CODE), nvl(sum(B.ORDER_M),0), nvl(sum(C.INSU_QTY),0) FROM tbl_productmaster A ,(select * from TBL_PRODUCTPLAN WHERE JOB_DATE = '20201118') B, TBL_PRODRSLT C where A.PROD_CODE = B.PROD_CODE(+) AND B.JOB_NO = C.JOB_NO(+) AND B.PROC_STATUS NOT IN('D') GROUP BY A.PROD_CODE, B.PROD_CODE ORDER BY A.PROD_CODE"
+                    CommandText = "SELECT trim(A.PROD_CODE), nvl(sum(B.ORDER_M),0), nvl(sum(C.INSU_QTY),0) FROM tbl_productmaster A ,(select * from TBL_PRODUCTPLAN WHERE JOB_DATE = to_char(sysdate,'yyyymmdd')) B, TBL_PRODRSLT C where A.PROD_CODE = B.PROD_CODE(+) AND B.JOB_NO = C.JOB_NO(+) AND B.PROC_STATUS NOT IN('D') GROUP BY A.PROD_CODE, B.PROD_CODE ORDER BY A.PROD_CODE"
                 };
 
                 OracleDataReader reader = cmd.ExecuteReader();
@@ -67,7 +67,7 @@ namespace FinalProject_Profile
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "SELECT trim(A.PROD_CODE) 제품코드, nvl(sum(D.BAD_QTY),0) 불량량 FROM tbl_productmaster A ,(select * from TBL_PRODUCTPLAN WHERE JOB_DATE = '20201118') B, TBL_PRODRSLT C, TBL_WCDEFECT D where A.PROD_CODE = B.PROD_CODE(+) AND B.JOB_NO = C.JOB_NO AND C.ROLL_NO = D.ROLL_NO(+) GROUP BY A.PROD_CODE ORDER BY A.PROD_CODE"
+                    CommandText = "SELECT trim(A.PROD_CODE) 제품코드, nvl(sum(D.BAD_QTY),0) 불량량 FROM tbl_productmaster A ,(select * from TBL_PRODUCTPLAN WHERE JOB_DATE = to_char(sysdate,'yyyymmdd')) B, TBL_PRODRSLT C, TBL_WCDEFECT D where A.PROD_CODE = B.PROD_CODE(+) AND B.JOB_NO = C.JOB_NO AND C.ROLL_NO = D.ROLL_NO(+) GROUP BY A.PROD_CODE ORDER BY A.PROD_CODE"
                 };
 
                 reader = cmd.ExecuteReader();
