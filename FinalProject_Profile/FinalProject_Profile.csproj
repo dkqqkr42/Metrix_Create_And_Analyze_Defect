@@ -250,6 +250,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\확정클릭22.jpg" />
+    <None Include="Resources\확정22.jpg" />
+    <None Include="Resources\조회클릭22.jpg" />
+    <None Include="Resources\조회22.jpg" />
+    <None Include="Resources\입력클릭22.jpg" />
+    <None Include="Resources\입력22.jpg" />
+    <None Include="Resources\불러오기클릭1.jpg" />
+    <None Include="Resources\불러오기1.jpg" />
+    <None Include="Resources\예약취소클릭2.jpg" />
+    <None Include="Resources\예약취소3.jpg" />
+    <None Include="Resources\순위확정클릭1.jpg" />
+    <None Include="Resources\순위확정1.jpg" />
+    <None Include="Resources\닫기클릭22.jpg" />
+    <None Include="Resources\닫기22.jpg" />
+    <None Include="Resources\확정클릭21.jpg" />
+    <None Include="Resources\확정21.jpg" />
+    <None Include="Resources\조회클릭21.jpg" />
+    <None Include="Resources\조회21.jpg" />
+    <None Include="Resources\입력클릭21.jpg" />
+    <None Include="Resources\입력21.jpg" />
+    <None Include="Resources\불러오기클릭.jpg" />
+    <None Include="Resources\불러오기.jpg" />
     <None Include="Resources\예약취소클릭1.jpg" />
     <None Include="Resources\예약취소1.jpg" />
     <None Include="Resources\닫기클릭21.jpg" />
