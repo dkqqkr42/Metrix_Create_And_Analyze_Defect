@@ -82,15 +82,13 @@
             this.lbl_Bad_QTY = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.metroButton7 = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.metroButton5 = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.btn_Initialization = new MetroFramework.Controls.MetroButton();
+            this.btn_1PCS = new MetroFramework.Controls.MetroButton();
+            this.btn_10PCS = new MetroFramework.Controls.MetroButton();
+            this.btn_1BOX = new MetroFramework.Controls.MetroButton();
+            this.btn_Whole = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.metroButton6 = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
@@ -127,8 +125,10 @@
             this.lbl_Total_QTY = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
             this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Defect_Registration = new MetroFramework.Controls.MetroButton();
+            this.btn_Close = new MetroFramework.Controls.MetroButton();
+            this.label49 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -945,18 +945,6 @@
             this.label35.Text = "총 불량량";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // metroButton7
-            // 
-            this.metroButton7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroButton7.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton7.Location = new System.Drawing.Point(3, 166);
-            this.metroButton7.Name = "metroButton7";
-            this.metroButton7.Size = new System.Drawing.Size(277, 158);
-            this.metroButton7.TabIndex = 18;
-            this.metroButton7.Text = "불량등록";
-            this.metroButton7.UseSelectable = true;
-            this.metroButton7.Click += new System.EventHandler(this.label6_Click);
-            // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
@@ -966,11 +954,11 @@
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel7.Controls.Add(this.metroButton5, 4, 0);
-            this.tableLayoutPanel7.Controls.Add(this.metroButton4, 3, 0);
-            this.tableLayoutPanel7.Controls.Add(this.metroButton3, 2, 0);
-            this.tableLayoutPanel7.Controls.Add(this.metroButton2, 1, 0);
-            this.tableLayoutPanel7.Controls.Add(this.metroButton1, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.btn_Initialization, 4, 0);
+            this.tableLayoutPanel7.Controls.Add(this.btn_1PCS, 3, 0);
+            this.tableLayoutPanel7.Controls.Add(this.btn_10PCS, 2, 0);
+            this.tableLayoutPanel7.Controls.Add(this.btn_1BOX, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.btn_Whole, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(1, 1);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
@@ -980,65 +968,85 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(1445, 125);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
-            // metroButton5
+            // btn_Initialization
             // 
-            this.metroButton5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroButton5.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton5.Location = new System.Drawing.Point(1156, 4);
-            this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(285, 117);
-            this.metroButton5.TabIndex = 20;
-            this.metroButton5.Text = "갯수초기화";
-            this.metroButton5.UseSelectable = true;
-            this.metroButton5.Click += new System.EventHandler(this.button1_Click);
+            this.btn_Initialization.BackgroundImage = global::FinalProject_Profile.Properties.Resources.갯수초기화;
+            this.btn_Initialization.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Initialization.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Initialization.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btn_Initialization.Location = new System.Drawing.Point(1153, 1);
+            this.btn_Initialization.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Initialization.Name = "btn_Initialization";
+            this.btn_Initialization.Size = new System.Drawing.Size(291, 123);
+            this.btn_Initialization.TabIndex = 20;
+            this.btn_Initialization.UseSelectable = true;
+            this.btn_Initialization.Click += new System.EventHandler(this.button1_Click);
+            this.btn_Initialization.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Initialization_MouseDown);
+            this.btn_Initialization.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Initialization_MouseUp);
             // 
-            // metroButton4
+            // btn_1PCS
             // 
-            this.metroButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroButton4.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton4.Location = new System.Drawing.Point(868, 4);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(281, 117);
-            this.metroButton4.TabIndex = 19;
-            this.metroButton4.Text = "1PCS";
-            this.metroButton4.UseSelectable = true;
-            this.metroButton4.Click += new System.EventHandler(this.lbl_1PCS_Click);
+            this.btn_1PCS.BackgroundImage = global::FinalProject_Profile.Properties.Resources.한PCS;
+            this.btn_1PCS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_1PCS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_1PCS.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btn_1PCS.Location = new System.Drawing.Point(865, 1);
+            this.btn_1PCS.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_1PCS.Name = "btn_1PCS";
+            this.btn_1PCS.Size = new System.Drawing.Size(287, 123);
+            this.btn_1PCS.TabIndex = 19;
+            this.btn_1PCS.UseSelectable = true;
+            this.btn_1PCS.Click += new System.EventHandler(this.lbl_1PCS_Click);
+            this.btn_1PCS.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_1PCS_MouseDown);
+            this.btn_1PCS.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_1PCS_MouseUp);
             // 
-            // metroButton3
+            // btn_10PCS
             // 
-            this.metroButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroButton3.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton3.Location = new System.Drawing.Point(580, 4);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(281, 117);
-            this.metroButton3.TabIndex = 18;
-            this.metroButton3.Text = "10PCS";
-            this.metroButton3.UseSelectable = true;
-            this.metroButton3.Click += new System.EventHandler(this.lbl_10PCS_Click);
+            this.btn_10PCS.BackgroundImage = global::FinalProject_Profile.Properties.Resources.열PCS;
+            this.btn_10PCS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_10PCS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_10PCS.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btn_10PCS.Location = new System.Drawing.Point(577, 1);
+            this.btn_10PCS.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_10PCS.Name = "btn_10PCS";
+            this.btn_10PCS.Size = new System.Drawing.Size(287, 123);
+            this.btn_10PCS.TabIndex = 18;
+            this.btn_10PCS.UseSelectable = true;
+            this.btn_10PCS.Click += new System.EventHandler(this.lbl_10PCS_Click);
+            this.btn_10PCS.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_10PCS_MouseDown);
+            this.btn_10PCS.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_10PCS_MouseUp);
             // 
-            // metroButton2
+            // btn_1BOX
             // 
-            this.metroButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton2.Location = new System.Drawing.Point(292, 4);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(281, 117);
-            this.metroButton2.TabIndex = 17;
-            this.metroButton2.Text = "1BOX";
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.Click += new System.EventHandler(this.lbl_1BOX_Click);
+            this.btn_1BOX.BackgroundImage = global::FinalProject_Profile.Properties.Resources.한BOX;
+            this.btn_1BOX.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_1BOX.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_1BOX.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btn_1BOX.Location = new System.Drawing.Point(289, 1);
+            this.btn_1BOX.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_1BOX.Name = "btn_1BOX";
+            this.btn_1BOX.Size = new System.Drawing.Size(287, 123);
+            this.btn_1BOX.TabIndex = 17;
+            this.btn_1BOX.UseSelectable = true;
+            this.btn_1BOX.Click += new System.EventHandler(this.lbl_1BOX_Click);
+            this.btn_1BOX.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_1BOX_MouseDown);
+            this.btn_1BOX.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_1BOX_MouseUp);
             // 
-            // metroButton1
+            // btn_Whole
             // 
-            this.metroButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton1.Location = new System.Drawing.Point(4, 4);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(281, 117);
-            this.metroButton1.TabIndex = 16;
-            this.metroButton1.Text = "전체";
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.lbl_ALL_Click);
+            this.btn_Whole.BackgroundImage = global::FinalProject_Profile.Properties.Resources.전체;
+            this.btn_Whole.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Whole.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Whole.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btn_Whole.Location = new System.Drawing.Point(1, 1);
+            this.btn_Whole.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Whole.Name = "btn_Whole";
+            this.btn_Whole.Size = new System.Drawing.Size(287, 123);
+            this.btn_Whole.TabIndex = 16;
+            this.btn_Whole.UseSelectable = true;
+            this.btn_Whole.Click += new System.EventHandler(this.lbl_ALL_Click);
+            this.btn_Whole.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Whole_MouseDown);
+            this.btn_Whole.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Whole_MouseUp);
             // 
             // tableLayoutPanel8
             // 
@@ -1046,8 +1054,8 @@
             this.tableLayoutPanel8.ColumnCount = 4;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.37681F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.10623F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.49573F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.90232F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.45429F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.22161F));
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel22, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel16, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel11, 0, 0);
@@ -1061,18 +1069,6 @@
             this.tableLayoutPanel8.Size = new System.Drawing.Size(1445, 335);
             this.tableLayoutPanel8.TabIndex = 1;
             // 
-            // metroButton6
-            // 
-            this.metroButton6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroButton6.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton6.Location = new System.Drawing.Point(3, 3);
-            this.metroButton6.Name = "metroButton6";
-            this.metroButton6.Size = new System.Drawing.Size(277, 157);
-            this.metroButton6.TabIndex = 17;
-            this.metroButton6.Text = "확인";
-            this.metroButton6.UseSelectable = true;
-            this.metroButton6.Click += new System.EventHandler(this.label5_Click);
-            // 
             // tableLayoutPanel22
             // 
             this.tableLayoutPanel22.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
@@ -1081,13 +1077,13 @@
             this.tableLayoutPanel22.Controls.Add(this.tableLayoutPanel23, 0, 1);
             this.tableLayoutPanel22.Controls.Add(this.label28, 0, 0);
             this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel22.Location = new System.Drawing.Point(773, 1);
+            this.tableLayoutPanel22.Location = new System.Drawing.Point(771, 1);
             this.tableLayoutPanel22.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel22.Name = "tableLayoutPanel22";
             this.tableLayoutPanel22.RowCount = 2;
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.46154F));
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.53846F));
-            this.tableLayoutPanel22.Size = new System.Drawing.Size(381, 333);
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(380, 333);
             this.tableLayoutPanel22.TabIndex = 10;
             // 
             // tableLayoutPanel23
@@ -1104,7 +1100,7 @@
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel23.Size = new System.Drawing.Size(373, 231);
+            this.tableLayoutPanel23.Size = new System.Drawing.Size(372, 231);
             this.tableLayoutPanel23.TabIndex = 0;
             // 
             // tableLayoutPanel24
@@ -1119,7 +1115,7 @@
             this.tableLayoutPanel24.Name = "tableLayoutPanel24";
             this.tableLayoutPanel24.RowCount = 1;
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel24.Size = new System.Drawing.Size(367, 71);
+            this.tableLayoutPanel24.Size = new System.Drawing.Size(366, 71);
             this.tableLayoutPanel24.TabIndex = 2;
             // 
             // lbl_Left_Bad_PLT
@@ -1130,7 +1126,7 @@
             this.lbl_Left_Bad_PLT.Location = new System.Drawing.Point(0, 0);
             this.lbl_Left_Bad_PLT.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Left_Bad_PLT.Name = "lbl_Left_Bad_PLT";
-            this.lbl_Left_Bad_PLT.Size = new System.Drawing.Size(235, 71);
+            this.lbl_Left_Bad_PLT.Size = new System.Drawing.Size(234, 71);
             this.lbl_Left_Bad_PLT.TabIndex = 0;
             this.lbl_Left_Bad_PLT.Text = "0";
             this.lbl_Left_Bad_PLT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1140,7 +1136,7 @@
             this.label23.AutoSize = true;
             this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label23.Location = new System.Drawing.Point(235, 0);
+            this.label23.Location = new System.Drawing.Point(234, 0);
             this.label23.Margin = new System.Windows.Forms.Padding(0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(132, 71);
@@ -1160,7 +1156,7 @@
             this.tableLayoutPanel25.Name = "tableLayoutPanel25";
             this.tableLayoutPanel25.RowCount = 1;
             this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel25.Size = new System.Drawing.Size(367, 71);
+            this.tableLayoutPanel25.Size = new System.Drawing.Size(366, 71);
             this.tableLayoutPanel25.TabIndex = 1;
             // 
             // lbl_Left_Bad_BOX
@@ -1171,7 +1167,7 @@
             this.lbl_Left_Bad_BOX.Location = new System.Drawing.Point(0, 0);
             this.lbl_Left_Bad_BOX.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Left_Bad_BOX.Name = "lbl_Left_Bad_BOX";
-            this.lbl_Left_Bad_BOX.Size = new System.Drawing.Size(235, 71);
+            this.lbl_Left_Bad_BOX.Size = new System.Drawing.Size(234, 71);
             this.lbl_Left_Bad_BOX.TabIndex = 0;
             this.lbl_Left_Bad_BOX.Text = "0";
             this.lbl_Left_Bad_BOX.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1181,7 +1177,7 @@
             this.label25.AutoSize = true;
             this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label25.Location = new System.Drawing.Point(235, 0);
+            this.label25.Location = new System.Drawing.Point(234, 0);
             this.label25.Margin = new System.Windows.Forms.Padding(0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(132, 71);
@@ -1201,7 +1197,7 @@
             this.tableLayoutPanel26.Name = "tableLayoutPanel26";
             this.tableLayoutPanel26.RowCount = 1;
             this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel26.Size = new System.Drawing.Size(367, 71);
+            this.tableLayoutPanel26.Size = new System.Drawing.Size(366, 71);
             this.tableLayoutPanel26.TabIndex = 0;
             // 
             // lbl_Left_Bad_QTY
@@ -1212,7 +1208,7 @@
             this.lbl_Left_Bad_QTY.Location = new System.Drawing.Point(0, 0);
             this.lbl_Left_Bad_QTY.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Left_Bad_QTY.Name = "lbl_Left_Bad_QTY";
-            this.lbl_Left_Bad_QTY.Size = new System.Drawing.Size(235, 71);
+            this.lbl_Left_Bad_QTY.Size = new System.Drawing.Size(234, 71);
             this.lbl_Left_Bad_QTY.TabIndex = 0;
             this.lbl_Left_Bad_QTY.Text = "0";
             this.lbl_Left_Bad_QTY.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1222,7 +1218,7 @@
             this.label27.AutoSize = true;
             this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label27.Location = new System.Drawing.Point(235, 0);
+            this.label27.Location = new System.Drawing.Point(234, 0);
             this.label27.Margin = new System.Windows.Forms.Padding(0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(132, 71);
@@ -1239,7 +1235,7 @@
             this.label28.Location = new System.Drawing.Point(1, 1);
             this.label28.Margin = new System.Windows.Forms.Padding(0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(379, 93);
+            this.label28.Size = new System.Drawing.Size(378, 93);
             this.label28.TabIndex = 1;
             this.label28.Text = "미등록 불량";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1251,13 +1247,13 @@
             this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel17, 0, 1);
             this.tableLayoutPanel16.Controls.Add(this.label21, 0, 0);
             this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(382, 1);
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(381, 1);
             this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 2;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.46154F));
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.53846F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(390, 333);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(389, 333);
             this.tableLayoutPanel16.TabIndex = 9;
             // 
             // tableLayoutPanel17
@@ -1274,7 +1270,7 @@
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(384, 233);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(383, 233);
             this.tableLayoutPanel17.TabIndex = 0;
             // 
             // tableLayoutPanel18
@@ -1289,7 +1285,7 @@
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 1;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(378, 73);
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(377, 73);
             this.tableLayoutPanel18.TabIndex = 2;
             // 
             // lbl_Good_PLT
@@ -1300,7 +1296,7 @@
             this.lbl_Good_PLT.Location = new System.Drawing.Point(0, 0);
             this.lbl_Good_PLT.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Good_PLT.Name = "lbl_Good_PLT";
-            this.lbl_Good_PLT.Size = new System.Drawing.Size(242, 73);
+            this.lbl_Good_PLT.Size = new System.Drawing.Size(241, 73);
             this.lbl_Good_PLT.TabIndex = 0;
             this.lbl_Good_PLT.Text = "0";
             this.lbl_Good_PLT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1310,7 +1306,7 @@
             this.label16.AutoSize = true;
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label16.Location = new System.Drawing.Point(242, 0);
+            this.label16.Location = new System.Drawing.Point(241, 0);
             this.label16.Margin = new System.Windows.Forms.Padding(0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(136, 73);
@@ -1330,7 +1326,7 @@
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 1;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(378, 71);
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(377, 71);
             this.tableLayoutPanel19.TabIndex = 1;
             // 
             // lbl_Good_BOX
@@ -1341,7 +1337,7 @@
             this.lbl_Good_BOX.Location = new System.Drawing.Point(0, 0);
             this.lbl_Good_BOX.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Good_BOX.Name = "lbl_Good_BOX";
-            this.lbl_Good_BOX.Size = new System.Drawing.Size(242, 71);
+            this.lbl_Good_BOX.Size = new System.Drawing.Size(241, 71);
             this.lbl_Good_BOX.TabIndex = 0;
             this.lbl_Good_BOX.Text = "0";
             this.lbl_Good_BOX.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1351,7 +1347,7 @@
             this.label18.AutoSize = true;
             this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label18.Location = new System.Drawing.Point(242, 0);
+            this.label18.Location = new System.Drawing.Point(241, 0);
             this.label18.Margin = new System.Windows.Forms.Padding(0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(136, 71);
@@ -1371,7 +1367,7 @@
             this.tableLayoutPanel21.Name = "tableLayoutPanel21";
             this.tableLayoutPanel21.RowCount = 1;
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(378, 71);
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(377, 71);
             this.tableLayoutPanel21.TabIndex = 0;
             // 
             // lbl_Good_QTY
@@ -1382,7 +1378,7 @@
             this.lbl_Good_QTY.Location = new System.Drawing.Point(0, 0);
             this.lbl_Good_QTY.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Good_QTY.Name = "lbl_Good_QTY";
-            this.lbl_Good_QTY.Size = new System.Drawing.Size(242, 71);
+            this.lbl_Good_QTY.Size = new System.Drawing.Size(241, 71);
             this.lbl_Good_QTY.TabIndex = 0;
             this.lbl_Good_QTY.Text = "0";
             this.lbl_Good_QTY.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1392,7 +1388,7 @@
             this.label20.AutoSize = true;
             this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label20.Location = new System.Drawing.Point(242, 0);
+            this.label20.Location = new System.Drawing.Point(241, 0);
             this.label20.Margin = new System.Windows.Forms.Padding(0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(136, 71);
@@ -1409,7 +1405,7 @@
             this.label21.Location = new System.Drawing.Point(0, 0);
             this.label21.Margin = new System.Windows.Forms.Padding(0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(390, 94);
+            this.label21.Size = new System.Drawing.Size(389, 94);
             this.label21.TabIndex = 1;
             this.label21.Text = "양품량";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1428,7 +1424,7 @@
             this.tableLayoutPanel11.RowCount = 2;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.46154F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.53846F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(380, 333);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(379, 333);
             this.tableLayoutPanel11.TabIndex = 8;
             // 
             // tableLayoutPanel12
@@ -1445,7 +1441,7 @@
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(372, 231);
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(371, 231);
             this.tableLayoutPanel12.TabIndex = 0;
             // 
             // tableLayoutPanel15
@@ -1460,7 +1456,7 @@
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(366, 71);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(365, 71);
             this.tableLayoutPanel15.TabIndex = 2;
             // 
             // lbl_Total_PLT
@@ -1484,7 +1480,7 @@
             this.label14.Location = new System.Drawing.Point(234, 0);
             this.label14.Margin = new System.Windows.Forms.Padding(0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(132, 71);
+            this.label14.Size = new System.Drawing.Size(131, 71);
             this.label14.TabIndex = 1;
             this.label14.Text = "파렛트";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1501,7 +1497,7 @@
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(366, 71);
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(365, 71);
             this.tableLayoutPanel14.TabIndex = 1;
             // 
             // lbl_Total_BOX
@@ -1525,7 +1521,7 @@
             this.label12.Location = new System.Drawing.Point(234, 0);
             this.label12.Margin = new System.Windows.Forms.Padding(0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(132, 71);
+            this.label12.Size = new System.Drawing.Size(131, 71);
             this.label12.TabIndex = 1;
             this.label12.Text = "BOX";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1542,7 +1538,7 @@
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 1;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(366, 71);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(365, 71);
             this.tableLayoutPanel13.TabIndex = 0;
             // 
             // lbl_Total_QTY
@@ -1566,7 +1562,7 @@
             this.label10.Location = new System.Drawing.Point(234, 0);
             this.label10.Margin = new System.Windows.Forms.Padding(0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(132, 71);
+            this.label10.Size = new System.Drawing.Size(131, 71);
             this.label10.TabIndex = 1;
             this.label10.Text = "PCS";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1580,10 +1576,59 @@
             this.label7.Location = new System.Drawing.Point(1, 1);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(378, 93);
+            this.label7.Size = new System.Drawing.Size(377, 93);
             this.label7.TabIndex = 1;
             this.label7.Text = "생산량";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel20
+            // 
+            this.tableLayoutPanel20.ColumnCount = 1;
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel20.Controls.Add(this.btn_Defect_Registration, 0, 1);
+            this.tableLayoutPanel20.Controls.Add(this.btn_Close, 0, 0);
+            this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel20.Location = new System.Drawing.Point(1152, 1);
+            this.tableLayoutPanel20.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel20.Name = "tableLayoutPanel20";
+            this.tableLayoutPanel20.RowCount = 2;
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel20.Size = new System.Drawing.Size(292, 333);
+            this.tableLayoutPanel20.TabIndex = 11;
+            // 
+            // btn_Defect_Registration
+            // 
+            this.btn_Defect_Registration.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Defect_Registration.BackgroundImage = global::FinalProject_Profile.Properties.Resources.불량등록2;
+            this.btn_Defect_Registration.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Defect_Registration.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btn_Defect_Registration.Location = new System.Drawing.Point(3, 168);
+            this.btn_Defect_Registration.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Defect_Registration.Name = "btn_Defect_Registration";
+            this.btn_Defect_Registration.Size = new System.Drawing.Size(286, 163);
+            this.btn_Defect_Registration.TabIndex = 18;
+            this.btn_Defect_Registration.UseSelectable = true;
+            this.btn_Defect_Registration.Click += new System.EventHandler(this.label6_Click);
+            this.btn_Defect_Registration.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_Registration_MouseDown);
+            this.btn_Defect_Registration.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_Registration_MouseUp);
+            // 
+            // btn_Close
+            // 
+            this.btn_Close.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Close.BackgroundImage = global::FinalProject_Profile.Properties.Resources.닫기3;
+            this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Close.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btn_Close.Location = new System.Drawing.Point(3, 1);
+            this.btn_Close.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(286, 163);
+            this.btn_Close.TabIndex = 17;
+            this.btn_Close.UseSelectable = true;
+            this.btn_Close.Click += new System.EventHandler(this.label5_Click);
+            this.btn_Close.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Close_MouseDown);
+            this.btn_Close.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Close_MouseUp);
             // 
             // label49
             // 
@@ -1595,21 +1640,6 @@
             this.label49.TabIndex = 15;
             this.label49.Text = "불량";
             this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel20
-            // 
-            this.tableLayoutPanel20.ColumnCount = 1;
-            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel20.Controls.Add(this.metroButton7, 0, 1);
-            this.tableLayoutPanel20.Controls.Add(this.metroButton6, 0, 0);
-            this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel20.Location = new System.Drawing.Point(1158, 4);
-            this.tableLayoutPanel20.Name = "tableLayoutPanel20";
-            this.tableLayoutPanel20.RowCount = 2;
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel20.Size = new System.Drawing.Size(283, 327);
-            this.tableLayoutPanel20.TabIndex = 11;
             // 
             // Defect
             // 
@@ -1782,13 +1812,13 @@
         private System.Windows.Forms.Label lbl_PROD_CODE;
         private System.Windows.Forms.Label label55;
         private MetroFramework.Controls.MetroGrid grd_Result;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton7;
-        private MetroFramework.Controls.MetroButton metroButton5;
-        private MetroFramework.Controls.MetroButton metroButton4;
-        private MetroFramework.Controls.MetroButton metroButton3;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton metroButton6;
+        private MetroFramework.Controls.MetroButton btn_Whole;
+        private MetroFramework.Controls.MetroButton btn_Defect_Registration;
+        private MetroFramework.Controls.MetroButton btn_Initialization;
+        private MetroFramework.Controls.MetroButton btn_1PCS;
+        private MetroFramework.Controls.MetroButton btn_10PCS;
+        private MetroFramework.Controls.MetroButton btn_1BOX;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
+        private MetroFramework.Controls.MetroButton btn_Close;
     }
 }

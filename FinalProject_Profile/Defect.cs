@@ -44,6 +44,76 @@ namespace FinalProject_Profile
             working.SelectItem();
         }
 
+        private void btn_Whole_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Whole.BackgroundImage = FinalProject_Profile.Properties.Resources.전체;
+        }
+
+        private void btn_Whole_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Whole.BackgroundImage = FinalProject_Profile.Properties.Resources.전체클릭;
+        }
+
+        private void btn_1BOX_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_1BOX.BackgroundImage = FinalProject_Profile.Properties.Resources.한BOX;
+        }
+
+        private void btn_1BOX_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_1BOX.BackgroundImage = FinalProject_Profile.Properties.Resources.한BOX클릭;
+        }
+
+        private void btn_10PCS_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_10PCS.BackgroundImage = FinalProject_Profile.Properties.Resources.열PCS;
+        }
+
+        private void btn_10PCS_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_10PCS.BackgroundImage = FinalProject_Profile.Properties.Resources.열PCS클릭;
+        }
+
+        private void btn_1PCS_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_1PCS.BackgroundImage = FinalProject_Profile.Properties.Resources.한PCS;
+        }
+
+        private void btn_1PCS_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_1PCS.BackgroundImage = FinalProject_Profile.Properties.Resources.한PCS클릭;
+        }
+
+        private void btn_Initialization_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Initialization.BackgroundImage = FinalProject_Profile.Properties.Resources.갯수초기화;
+        }
+
+        private void btn_Initialization_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Initialization.BackgroundImage = FinalProject_Profile.Properties.Resources.갯수초기화클릭;
+        }
+
+        private void btn_Close_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기3;
+        }
+
+        private void btn_Close_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기클릭3;
+        }
+
+        private void btn_Defect_Registration_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Defect_Registration.BackgroundImage = FinalProject_Profile.Properties.Resources.불량등록2;
+        }
+
+        private void btn_Defect_Registration_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Defect_Registration.BackgroundImage = FinalProject_Profile.Properties.Resources.불량등록클릭2;
+        }
+
         private void Defect_Activated(object sender, EventArgs e)
         {
             OracleConnection connection = null;

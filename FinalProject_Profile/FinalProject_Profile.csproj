@@ -250,6 +250,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\한PCS클릭.jpg" />
+    <None Include="Resources\한PCS.jpg" />
+    <None Include="Resources\한BOX클릭.jpg" />
+    <None Include="Resources\한BOX.jpg" />
+    <None Include="Resources\열PCS클릭.jpg" />
+    <None Include="Resources\열PCS.jpg" />
+    <None Include="Resources\불량등록클릭2.jpg" />
+    <None Include="Resources\불량등록2.jpg" />
+    <None Include="Resources\닫기클릭3.jpg" />
+    <None Include="Resources\닫기3.jpg" />
+    <None Include="Resources\전체클릭.jpg" />
+    <None Include="Resources\전체.jpg" />
+    <None Include="Resources\갯수초기화클릭.jpg" />
+    <None Include="Resources\갯수초기화.jpg" />
+    <None Include="Resources\10PCS클릭.jpg" />
+    <None Include="Resources\10PCS.jpg" />
+    <None Include="Resources\1PCS클릭.jpg" />
+    <None Include="Resources\1PCS.jpg" />
+    <None Include="Resources\1BOX클릭.jpg" />
+    <None Include="Resources\1BOX.jpg" />
     <None Include="Resources\확정클릭22.jpg" />
     <None Include="Resources\확정22.jpg" />
     <None Include="Resources\조회클릭22.jpg" />
