@@ -360,6 +360,16 @@ namespace FinalProject_Profile
                 connection.Close();
             }
         }
+
+        private void btn_Select_Detail_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Select_Detail.BackgroundImage = FinalProject_Profile.Properties.Resources.상세조회;
+        }
+
+        private void btn_Select_Detail_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Select_Detail.BackgroundImage = FinalProject_Profile.Properties.Resources.상세조회클릭;
+        }
     }
 }
 

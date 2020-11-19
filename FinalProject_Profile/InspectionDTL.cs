@@ -271,5 +271,25 @@ namespace FinalProject_Profile
             else
                 MessageBox.Show("바코드가 발행되지 않았습니다.", "경고", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btn_Barcode_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Barcode.BackgroundImage = FinalProject_Profile.Properties.Resources.바코드발행;
+        }
+
+        private void btn_Barcode_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Barcode.BackgroundImage = FinalProject_Profile.Properties.Resources.바코드발행클릭;
+        }
+
+        private void btn_Close_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기4;
+        }
+
+        private void btn_Close_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기클릭4;
+        }
     }
 }
