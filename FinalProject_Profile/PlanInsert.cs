@@ -210,7 +210,7 @@ namespace FinalProject_Profile
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        /*private void button3_Click(object sender, EventArgs e)
         {
             OracleConnection connection = null;
             try
@@ -247,7 +247,7 @@ namespace FinalProject_Profile
             {
                 connection.Close();
             }
-        }
+        }*/
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -299,12 +299,33 @@ namespace FinalProject_Profile
 
         private void btn_Close_MouseDown(object sender, MouseEventArgs e)
         {
-            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기클릭임시;
+            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기클릭2;
         }
 
         private void btn_Close_MouseUp(object sender, MouseEventArgs e)
         {
-            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기임시;
+            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기2;
+        }
+
+        private void btn_Insert_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Insert.BackgroundImage = FinalProject_Profile.Properties.Resources.입력2;
+        }
+
+        private void btn_Insert_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Insert.BackgroundImage = FinalProject_Profile.Properties.Resources.입력클릭2;
+        }
+
+
+        private void btn_Decide_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Decide.BackgroundImage = FinalProject_Profile.Properties.Resources.확정2;
+        }
+
+        private void btn_Decide_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Decide.BackgroundImage = FinalProject_Profile.Properties.Resources.확정클릭2;
         }
     }
 }

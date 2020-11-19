@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reservation));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reservation));
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
-            this.label30 = new System.Windows.Forms.Label();
-            this.btn_Reservation_Cancellation = new MetroFramework.Controls.MetroButton();
             this.btn_Ranking_Confirmation = new MetroFramework.Controls.MetroButton();
+            this.btn_Reservation_Cancellation = new MetroFramework.Controls.MetroButton();
             this.btn_Close = new MetroFramework.Controls.MetroButton();
             this.btn_Top = new MetroFramework.Controls.MetroButton();
             this.btn_Middle_Top = new MetroFramework.Controls.MetroButton();
             this.btn_Middle_Bottom = new MetroFramework.Controls.MetroButton();
             this.btn_Bottom = new MetroFramework.Controls.MetroButton();
+            this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
+            this.label30 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -106,70 +106,21 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(91, 680);
             this.tableLayoutPanel6.TabIndex = 23;
             // 
-            // metroGrid2
+            // btn_Ranking_Confirmation
             // 
-            this.metroGrid2.AllowUserToAddRows = false;
-            this.metroGrid2.AllowUserToResizeRows = false;
-            this.metroGrid2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.metroGrid2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.metroGrid2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.metroGrid2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.metroGrid2.ColumnHeadersHeight = 50;
-            this.metroGrid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.metroGrid2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroGrid2.EnableHeadersVisualStyles = false;
-            this.metroGrid2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.metroGrid2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid2.Location = new System.Drawing.Point(1, 1);
-            this.metroGrid2.Margin = new System.Windows.Forms.Padding(0);
-            this.metroGrid2.Name = "metroGrid2";
-            this.metroGrid2.ReadOnly = true;
-            this.metroGrid2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid2.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.metroGrid2.RowHeadersVisible = false;
-            this.metroGrid2.RowHeadersWidth = 51;
-            this.metroGrid2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.metroGrid2.RowTemplate.Height = 35;
-            this.metroGrid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid2.Size = new System.Drawing.Size(1732, 686);
-            this.metroGrid2.TabIndex = 6;
-            this.metroGrid2.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.metroGrid2_CellFormatting);
-            this.metroGrid2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.metroGrid2_KeyDown);
-            // 
-            // label30
-            // 
-            this.label30.BackColor = System.Drawing.Color.PowderBlue;
-            this.label30.Font = new System.Drawing.Font("Segoe UI", 19F);
-            this.label30.Location = new System.Drawing.Point(848, 8);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(192, 48);
-            this.label30.TabIndex = 16;
-            this.label30.Text = "작업예약";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Ranking_Confirmation.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Ranking_Confirmation.BackgroundImage")));
+            this.btn_Ranking_Confirmation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Ranking_Confirmation.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_Ranking_Confirmation.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btn_Ranking_Confirmation.Location = new System.Drawing.Point(0, 205);
+            this.btn_Ranking_Confirmation.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Ranking_Confirmation.Name = "btn_Ranking_Confirmation";
+            this.btn_Ranking_Confirmation.Size = new System.Drawing.Size(91, 90);
+            this.btn_Ranking_Confirmation.TabIndex = 7;
+            this.btn_Ranking_Confirmation.UseSelectable = true;
+            this.btn_Ranking_Confirmation.Click += new System.EventHandler(this.metroButton1_Click);
+            this.btn_Ranking_Confirmation.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Ranking_Confirmation_MouseDown);
+            this.btn_Ranking_Confirmation.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Ranking_Confirmation_MouseUp);
             // 
             // btn_Reservation_Cancellation
             // 
@@ -187,26 +138,10 @@
             this.btn_Reservation_Cancellation.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Reservation_Cancellation_MouseDown);
             this.btn_Reservation_Cancellation.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Reservation_Cancellation_MouseUp);
             // 
-            // btn_Ranking_Confirmation
-            // 
-            this.btn_Ranking_Confirmation.BackgroundImage = global::FinalProject_Profile.Properties.Resources.순위확정;
-            this.btn_Ranking_Confirmation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Ranking_Confirmation.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_Ranking_Confirmation.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btn_Ranking_Confirmation.Location = new System.Drawing.Point(0, 205);
-            this.btn_Ranking_Confirmation.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Ranking_Confirmation.Name = "btn_Ranking_Confirmation";
-            this.btn_Ranking_Confirmation.Size = new System.Drawing.Size(91, 90);
-            this.btn_Ranking_Confirmation.TabIndex = 7;
-            this.btn_Ranking_Confirmation.UseSelectable = true;
-            this.btn_Ranking_Confirmation.Click += new System.EventHandler(this.metroButton1_Click);
-            this.btn_Ranking_Confirmation.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Ranking_Confirmation_MouseDown);
-            this.btn_Ranking_Confirmation.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Ranking_Confirmation_MouseUp);
-            // 
             // btn_Close
             // 
             this.btn_Close.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Close.BackgroundImage")));
+            this.btn_Close.BackgroundImage = global::FinalProject_Profile.Properties.Resources.닫기2;
             this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Close.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btn_Close.Location = new System.Drawing.Point(0, 299);
@@ -274,6 +209,71 @@
             this.btn_Bottom.Click += new System.EventHandler(this.metroTile8_Click);
             this.btn_Bottom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Bottom_MouseDown);
             this.btn_Bottom.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Bottom_MouseUp);
+            // 
+            // metroGrid2
+            // 
+            this.metroGrid2.AllowUserToAddRows = false;
+            this.metroGrid2.AllowUserToResizeRows = false;
+            this.metroGrid2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.metroGrid2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.metroGrid2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.metroGrid2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.metroGrid2.ColumnHeadersHeight = 50;
+            this.metroGrid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.metroGrid2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroGrid2.EnableHeadersVisualStyles = false;
+            this.metroGrid2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.metroGrid2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid2.Location = new System.Drawing.Point(1, 1);
+            this.metroGrid2.Margin = new System.Windows.Forms.Padding(0);
+            this.metroGrid2.Name = "metroGrid2";
+            this.metroGrid2.ReadOnly = true;
+            this.metroGrid2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid2.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.metroGrid2.RowHeadersVisible = false;
+            this.metroGrid2.RowHeadersWidth = 51;
+            this.metroGrid2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.metroGrid2.RowTemplate.Height = 35;
+            this.metroGrid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.metroGrid2.Size = new System.Drawing.Size(1732, 686);
+            this.metroGrid2.TabIndex = 6;
+            this.metroGrid2.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.metroGrid2_CellFormatting);
+            this.metroGrid2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.metroGrid2_KeyDown);
+            // 
+            // label30
+            // 
+            this.label30.BackColor = System.Drawing.Color.PowderBlue;
+            this.label30.Font = new System.Drawing.Font("Segoe UI", 19F);
+            this.label30.Location = new System.Drawing.Point(848, 8);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(192, 48);
+            this.label30.TabIndex = 16;
+            this.label30.Text = "작업예약";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Reservation
             // 
