@@ -105,12 +105,12 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label30 = new System.Windows.Forms.Label();
             this.btn_SAPOrder = new MetroFramework.Controls.MetroButton();
             this.btn_WorkPlan = new MetroFramework.Controls.MetroButton();
             this.btn_Working = new MetroFramework.Controls.MetroButton();
             this.btn_Inspection = new MetroFramework.Controls.MetroButton();
             this.btn_Defect = new MetroFramework.Controls.MetroButton();
+            this.label30 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -1342,25 +1342,15 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(220, 892);
             this.tableLayoutPanel5.TabIndex = 5;
             // 
-            // label30
-            // 
-            this.label30.BackColor = System.Drawing.Color.PowderBlue;
-            this.label30.Font = new System.Drawing.Font("Segoe UI", 19F);
-            this.label30.Location = new System.Drawing.Point(848, 8);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(192, 48);
-            this.label30.TabIndex = 15;
-            this.label30.Text = "작업진행";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btn_SAPOrder
             // 
             this.btn_SAPOrder.BackgroundImage = global::FinalProject_Profile.Properties.Resources.생산계획접수;
             this.btn_SAPOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_SAPOrder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_SAPOrder.Location = new System.Drawing.Point(4, 4);
+            this.btn_SAPOrder.Location = new System.Drawing.Point(1, 1);
+            this.btn_SAPOrder.Margin = new System.Windows.Forms.Padding(0);
             this.btn_SAPOrder.Name = "btn_SAPOrder";
-            this.btn_SAPOrder.Size = new System.Drawing.Size(212, 171);
+            this.btn_SAPOrder.Size = new System.Drawing.Size(218, 177);
             this.btn_SAPOrder.TabIndex = 5;
             this.btn_SAPOrder.UseSelectable = true;
             this.btn_SAPOrder.Click += new System.EventHandler(this.btn_SAPOrder_Click);
@@ -1372,9 +1362,10 @@
             this.btn_WorkPlan.BackgroundImage = global::FinalProject_Profile.Properties.Resources.작업계획;
             this.btn_WorkPlan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_WorkPlan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_WorkPlan.Location = new System.Drawing.Point(4, 182);
+            this.btn_WorkPlan.Location = new System.Drawing.Point(1, 179);
+            this.btn_WorkPlan.Margin = new System.Windows.Forms.Padding(0);
             this.btn_WorkPlan.Name = "btn_WorkPlan";
-            this.btn_WorkPlan.Size = new System.Drawing.Size(212, 171);
+            this.btn_WorkPlan.Size = new System.Drawing.Size(218, 177);
             this.btn_WorkPlan.TabIndex = 6;
             this.btn_WorkPlan.UseSelectable = true;
             this.btn_WorkPlan.Click += new System.EventHandler(this.btn_WorkPlan_Click);
@@ -1386,9 +1377,10 @@
             this.btn_Working.BackgroundImage = global::FinalProject_Profile.Properties.Resources.작업진행;
             this.btn_Working.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Working.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Working.Location = new System.Drawing.Point(4, 360);
+            this.btn_Working.Location = new System.Drawing.Point(1, 357);
+            this.btn_Working.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Working.Name = "btn_Working";
-            this.btn_Working.Size = new System.Drawing.Size(212, 171);
+            this.btn_Working.Size = new System.Drawing.Size(218, 177);
             this.btn_Working.TabIndex = 7;
             this.btn_Working.UseSelectable = true;
             this.btn_Working.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Working_MouseDown);
@@ -1399,9 +1391,10 @@
             this.btn_Inspection.BackgroundImage = global::FinalProject_Profile.Properties.Resources.검사성적서;
             this.btn_Inspection.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Inspection.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Inspection.Location = new System.Drawing.Point(4, 538);
+            this.btn_Inspection.Location = new System.Drawing.Point(1, 535);
+            this.btn_Inspection.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Inspection.Name = "btn_Inspection";
-            this.btn_Inspection.Size = new System.Drawing.Size(212, 171);
+            this.btn_Inspection.Size = new System.Drawing.Size(218, 177);
             this.btn_Inspection.TabIndex = 8;
             this.btn_Inspection.UseSelectable = true;
             this.btn_Inspection.Click += new System.EventHandler(this.btn_Inspection_Click);
@@ -1413,14 +1406,26 @@
             this.btn_Defect.BackgroundImage = global::FinalProject_Profile.Properties.Resources.차트;
             this.btn_Defect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Defect.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Defect.Location = new System.Drawing.Point(4, 716);
+            this.btn_Defect.Location = new System.Drawing.Point(1, 713);
+            this.btn_Defect.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Defect.Name = "btn_Defect";
-            this.btn_Defect.Size = new System.Drawing.Size(212, 172);
+            this.btn_Defect.Size = new System.Drawing.Size(218, 178);
             this.btn_Defect.TabIndex = 9;
             this.btn_Defect.UseSelectable = true;
             this.btn_Defect.Click += new System.EventHandler(this.btn_Defect_Click);
             this.btn_Defect.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseDown);
             this.btn_Defect.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseUp);
+            // 
+            // label30
+            // 
+            this.label30.BackColor = System.Drawing.Color.PowderBlue;
+            this.label30.Font = new System.Drawing.Font("Segoe UI", 19F);
+            this.label30.Location = new System.Drawing.Point(848, 8);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(192, 48);
+            this.label30.TabIndex = 15;
+            this.label30.Text = "작업진행";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Working
             // 

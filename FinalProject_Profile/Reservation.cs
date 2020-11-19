@@ -471,6 +471,76 @@ namespace FinalProject_Profile
         {
             this.Close();
         }
+
+        private void btn_Top_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Top.BackgroundImage = FinalProject_Profile.Properties.Resources.위끝2;
+        }
+
+        private void btn_Top_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Top.BackgroundImage = FinalProject_Profile.Properties.Resources.위끝클릭2;
+        }
+
+        private void btn_Middle_Top_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Middle_Top.BackgroundImage = FinalProject_Profile.Properties.Resources.위2;
+        }
+
+        private void btn_Middle_Top_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Middle_Top.BackgroundImage = FinalProject_Profile.Properties.Resources.위클릭2;
+        }
+
+        private void btn_Bottom_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Bottom.BackgroundImage = FinalProject_Profile.Properties.Resources.아래끝2;
+        }
+
+        private void btn_Bottom_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Bottom.BackgroundImage = FinalProject_Profile.Properties.Resources.아래끝클릭2;
+        }
+
+        private void btn_Middle_Bottom_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Middle_Bottom.BackgroundImage = FinalProject_Profile.Properties.Resources.아래2;
+        }
+
+        private void btn_Middle_Bottom_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Middle_Bottom.BackgroundImage = FinalProject_Profile.Properties.Resources.아래클릭2;
+        }
+
+        private void btn_Ranking_Confirmation_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Ranking_Confirmation.BackgroundImage = FinalProject_Profile.Properties.Resources.순위확정;
+        }
+
+        private void btn_Ranking_Confirmation_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Ranking_Confirmation.BackgroundImage = FinalProject_Profile.Properties.Resources.순위확정클릭;
+        }
+
+        private void btn_Close_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기2;
+        }
+
+        private void btn_Close_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기클릭2;
+        }
+
+        private void btn_Reservation_Cancellation_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Reservation_Cancellation.BackgroundImage = FinalProject_Profile.Properties.Resources.예약취소;
+        }
+
+        private void btn_Reservation_Cancellation_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Reservation_Cancellation.BackgroundImage = FinalProject_Profile.Properties.Resources.예약취소클릭;
+        }
     }
 }
 /*

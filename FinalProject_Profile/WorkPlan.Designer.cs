@@ -40,23 +40,23 @@
             this.fffToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.grd_Result = new MetroFramework.Controls.MetroGrid();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_Middle_Top = new MetroFramework.Controls.MetroButton();
+            this.btn_Middle_Bottom = new MetroFramework.Controls.MetroButton();
+            this.btn_Bottom = new MetroFramework.Controls.MetroButton();
             this.btn_SAPOrder = new MetroFramework.Controls.MetroButton();
             this.btn_WorkPlan = new MetroFramework.Controls.MetroButton();
             this.btn_Working = new MetroFramework.Controls.MetroButton();
             this.btn_Inspection = new MetroFramework.Controls.MetroButton();
             this.btn_Defect = new MetroFramework.Controls.MetroButton();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.btn_plan = new MetroFramework.Controls.MetroButton();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.grd_Result = new MetroFramework.Controls.MetroGrid();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.metroTile6 = new MetroFramework.Controls.MetroTile();
-            this.metroTile7 = new MetroFramework.Controls.MetroTile();
-            this.metroTile9 = new MetroFramework.Controls.MetroTile();
-            this.metroTile8 = new MetroFramework.Controls.MetroTile();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btn_Top = new MetroFramework.Controls.MetroButton();
             this.metroContextMenu1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -134,75 +134,6 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(220, 892);
             this.tableLayoutPanel5.TabIndex = 5;
             // 
-            // btn_SAPOrder
-            // 
-            this.btn_SAPOrder.BackgroundImage = global::FinalProject_Profile.Properties.Resources.생산계획접수;
-            this.btn_SAPOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_SAPOrder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_SAPOrder.Location = new System.Drawing.Point(4, 4);
-            this.btn_SAPOrder.Name = "btn_SAPOrder";
-            this.btn_SAPOrder.Size = new System.Drawing.Size(212, 171);
-            this.btn_SAPOrder.TabIndex = 5;
-            this.btn_SAPOrder.UseSelectable = true;
-            this.btn_SAPOrder.Click += new System.EventHandler(this.btn_SAPOrder_Click);
-            this.btn_SAPOrder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_SAPOrder_MouseDown);
-            this.btn_SAPOrder.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_SAPOrder_MouseUp);
-            // 
-            // btn_WorkPlan
-            // 
-            this.btn_WorkPlan.BackgroundImage = global::FinalProject_Profile.Properties.Resources.작업계획;
-            this.btn_WorkPlan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_WorkPlan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_WorkPlan.Location = new System.Drawing.Point(4, 182);
-            this.btn_WorkPlan.Name = "btn_WorkPlan";
-            this.btn_WorkPlan.Size = new System.Drawing.Size(212, 171);
-            this.btn_WorkPlan.TabIndex = 6;
-            this.btn_WorkPlan.UseSelectable = true;
-            this.btn_WorkPlan.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_WorkPlan_MouseDown);
-            this.btn_WorkPlan.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_WorkPlan_MouseUp);
-            // 
-            // btn_Working
-            // 
-            this.btn_Working.BackgroundImage = global::FinalProject_Profile.Properties.Resources.작업진행;
-            this.btn_Working.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Working.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Working.Location = new System.Drawing.Point(4, 360);
-            this.btn_Working.Name = "btn_Working";
-            this.btn_Working.Size = new System.Drawing.Size(212, 171);
-            this.btn_Working.TabIndex = 7;
-            this.btn_Working.UseSelectable = true;
-            this.btn_Working.Click += new System.EventHandler(this.btn_Working_Click);
-            this.btn_Working.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Working_MouseDown);
-            this.btn_Working.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Working_MouseUp);
-            // 
-            // btn_Inspection
-            // 
-            this.btn_Inspection.BackgroundImage = global::FinalProject_Profile.Properties.Resources.검사성적서;
-            this.btn_Inspection.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Inspection.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Inspection.Location = new System.Drawing.Point(4, 538);
-            this.btn_Inspection.Name = "btn_Inspection";
-            this.btn_Inspection.Size = new System.Drawing.Size(212, 171);
-            this.btn_Inspection.TabIndex = 8;
-            this.btn_Inspection.UseSelectable = true;
-            this.btn_Inspection.Click += new System.EventHandler(this.btn_Inspection_Click);
-            this.btn_Inspection.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Inspection_MouseDown);
-            this.btn_Inspection.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Inspection_MouseUp);
-            // 
-            // btn_Defect
-            // 
-            this.btn_Defect.BackgroundImage = global::FinalProject_Profile.Properties.Resources.차트;
-            this.btn_Defect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Defect.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Defect.Location = new System.Drawing.Point(4, 716);
-            this.btn_Defect.Name = "btn_Defect";
-            this.btn_Defect.Size = new System.Drawing.Size(212, 172);
-            this.btn_Defect.TabIndex = 9;
-            this.btn_Defect.UseSelectable = true;
-            this.btn_Defect.Click += new System.EventHandler(this.btn_Defect_Click);
-            this.btn_Defect.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseDown);
-            this.btn_Defect.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseUp);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
@@ -214,8 +145,8 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(223, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.96045F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.03955F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1610, 886);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
@@ -223,7 +154,7 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
             this.tableLayoutPanel2.Controls.Add(this.dateTimePicker2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_plan, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -232,7 +163,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1608, 70);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1608, 96);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // dateTimePicker2
@@ -240,41 +171,28 @@
             this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePicker2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dateTimePicker2.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(7, 15);
+            this.dateTimePicker2.Location = new System.Drawing.Point(3, 28);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(1490, 39);
+            this.dateTimePicker2.Size = new System.Drawing.Size(1484, 39);
             this.dateTimePicker2.TabIndex = 18;
             this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
-            // 
-            // btn_plan
-            // 
-            this.btn_plan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_plan.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btn_plan.Location = new System.Drawing.Point(1505, 0);
-            this.btn_plan.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_plan.Name = "btn_plan";
-            this.btn_plan.Size = new System.Drawing.Size(103, 70);
-            this.btn_plan.TabIndex = 15;
-            this.btn_plan.Text = "작업예약";
-            this.btn_plan.UseSelectable = true;
-            this.btn_plan.Click += new System.EventHandler(this.btn_plan_Click);
             // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 92.73959F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.260406F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 94.77287F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.227131F));
             this.tableLayoutPanel3.Controls.Add(this.grd_Result, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel6, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(1, 72);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(1, 98);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 812F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1608, 813);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 786F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1608, 787);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // grd_Result
@@ -330,7 +248,7 @@
             this.grd_Result.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.grd_Result.RowTemplate.Height = 35;
             this.grd_Result.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grd_Result.Size = new System.Drawing.Size(1488, 811);
+            this.grd_Result.Size = new System.Drawing.Size(1521, 785);
             this.grd_Result.TabIndex = 23;
             this.grd_Result.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grd_Result_CellContentClick);
             this.grd_Result.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.grd_Result_CellFormatting);
@@ -339,81 +257,21 @@
             // 
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Controls.Add(this.metroTile6, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.metroTile7, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.metroTile9, 0, 4);
-            this.tableLayoutPanel6.Controls.Add(this.metroTile8, 0, 3);
+            this.tableLayoutPanel6.Controls.Add(this.btn_Top, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.btn_Middle_Top, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.btn_Middle_Bottom, 0, 3);
+            this.tableLayoutPanel6.Controls.Add(this.btn_Bottom, 0, 4);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(1493, 4);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(1526, 4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 5;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.39795F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.88318F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(111, 805);
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.68036F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.39795F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(78, 779);
             this.tableLayoutPanel6.TabIndex = 22;
-            // 
-            // metroTile6
-            // 
-            this.metroTile6.ActiveControl = null;
-            this.metroTile6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroTile6.Location = new System.Drawing.Point(0, 0);
-            this.metroTile6.Margin = new System.Windows.Forms.Padding(0);
-            this.metroTile6.Name = "metroTile6";
-            this.metroTile6.Size = new System.Drawing.Size(111, 111);
-            this.metroTile6.Style = MetroFramework.MetroColorStyle.Teal;
-            this.metroTile6.TabIndex = 25;
-            this.metroTile6.Text = "▲";
-            this.metroTile6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile6.UseSelectable = true;
-            this.metroTile6.Click += new System.EventHandler(this.metroTile6_Click);
-            // 
-            // metroTile7
-            // 
-            this.metroTile7.ActiveControl = null;
-            this.metroTile7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroTile7.Location = new System.Drawing.Point(0, 161);
-            this.metroTile7.Margin = new System.Windows.Forms.Padding(0);
-            this.metroTile7.Name = "metroTile7";
-            this.metroTile7.Size = new System.Drawing.Size(111, 111);
-            this.metroTile7.Style = MetroFramework.MetroColorStyle.Teal;
-            this.metroTile7.TabIndex = 26;
-            this.metroTile7.Text = "▲";
-            this.metroTile7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile7.UseSelectable = true;
-            this.metroTile7.Click += new System.EventHandler(this.metroTile7_Click);
-            // 
-            // metroTile9
-            // 
-            this.metroTile9.ActiveControl = null;
-            this.metroTile9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.metroTile9.Location = new System.Drawing.Point(0, 694);
-            this.metroTile9.Margin = new System.Windows.Forms.Padding(0);
-            this.metroTile9.Name = "metroTile9";
-            this.metroTile9.Size = new System.Drawing.Size(111, 111);
-            this.metroTile9.Style = MetroFramework.MetroColorStyle.Teal;
-            this.metroTile9.TabIndex = 28;
-            this.metroTile9.Text = "▼";
-            this.metroTile9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile9.UseSelectable = true;
-            this.metroTile9.Click += new System.EventHandler(this.metroTile9_Click);
-            // 
-            // metroTile8
-            // 
-            this.metroTile8.ActiveControl = null;
-            this.metroTile8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.metroTile8.Location = new System.Drawing.Point(0, 533);
-            this.metroTile8.Margin = new System.Windows.Forms.Padding(0);
-            this.metroTile8.Name = "metroTile8";
-            this.metroTile8.Size = new System.Drawing.Size(111, 111);
-            this.metroTile8.Style = MetroFramework.MetroColorStyle.Teal;
-            this.metroTile8.TabIndex = 27;
-            this.metroTile8.Text = "▼";
-            this.metroTile8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile8.UseSelectable = true;
-            this.metroTile8.Click += new System.EventHandler(this.metroTile8_Click);
             // 
             // label1
             // 
@@ -425,6 +283,156 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "작업계획";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_Middle_Top
+            // 
+            this.btn_Middle_Top.BackgroundImage = global::FinalProject_Profile.Properties.Resources.위;
+            this.btn_Middle_Top.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Middle_Top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Middle_Top.Location = new System.Drawing.Point(0, 80);
+            this.btn_Middle_Top.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Middle_Top.Name = "btn_Middle_Top";
+            this.btn_Middle_Top.Size = new System.Drawing.Size(78, 78);
+            this.btn_Middle_Top.TabIndex = 30;
+            this.btn_Middle_Top.UseSelectable = true;
+            this.btn_Middle_Top.Click += new System.EventHandler(this.metroTile7_Click);
+            this.btn_Middle_Top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Middle_Top_MouseDown);
+            this.btn_Middle_Top.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Middle_Top_MouseUp);
+            // 
+            // btn_Middle_Bottom
+            // 
+            this.btn_Middle_Bottom.BackgroundImage = global::FinalProject_Profile.Properties.Resources.아래;
+            this.btn_Middle_Bottom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Middle_Bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_Middle_Bottom.Location = new System.Drawing.Point(0, 619);
+            this.btn_Middle_Bottom.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Middle_Bottom.Name = "btn_Middle_Bottom";
+            this.btn_Middle_Bottom.Size = new System.Drawing.Size(78, 78);
+            this.btn_Middle_Bottom.TabIndex = 31;
+            this.btn_Middle_Bottom.UseSelectable = true;
+            this.btn_Middle_Bottom.Click += new System.EventHandler(this.metroTile8_Click);
+            this.btn_Middle_Bottom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Middle_Bottom_MouseDown);
+            this.btn_Middle_Bottom.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Middle_Bottom_MouseUp);
+            // 
+            // btn_Bottom
+            // 
+            this.btn_Bottom.BackgroundImage = global::FinalProject_Profile.Properties.Resources.아래끝;
+            this.btn_Bottom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_Bottom.Location = new System.Drawing.Point(0, 701);
+            this.btn_Bottom.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Bottom.Name = "btn_Bottom";
+            this.btn_Bottom.Size = new System.Drawing.Size(78, 78);
+            this.btn_Bottom.TabIndex = 32;
+            this.btn_Bottom.UseSelectable = true;
+            this.btn_Bottom.Click += new System.EventHandler(this.metroTile9_Click);
+            this.btn_Bottom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Bottom_MouseDown);
+            this.btn_Bottom.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Bottom_MouseUp);
+            // 
+            // btn_SAPOrder
+            // 
+            this.btn_SAPOrder.BackgroundImage = global::FinalProject_Profile.Properties.Resources.생산계획접수;
+            this.btn_SAPOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_SAPOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_SAPOrder.Location = new System.Drawing.Point(1, 1);
+            this.btn_SAPOrder.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_SAPOrder.Name = "btn_SAPOrder";
+            this.btn_SAPOrder.Size = new System.Drawing.Size(218, 177);
+            this.btn_SAPOrder.TabIndex = 5;
+            this.btn_SAPOrder.UseSelectable = true;
+            this.btn_SAPOrder.Click += new System.EventHandler(this.btn_SAPOrder_Click);
+            this.btn_SAPOrder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_SAPOrder_MouseDown);
+            this.btn_SAPOrder.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_SAPOrder_MouseUp);
+            // 
+            // btn_WorkPlan
+            // 
+            this.btn_WorkPlan.BackgroundImage = global::FinalProject_Profile.Properties.Resources.작업계획;
+            this.btn_WorkPlan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_WorkPlan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_WorkPlan.Location = new System.Drawing.Point(1, 179);
+            this.btn_WorkPlan.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_WorkPlan.Name = "btn_WorkPlan";
+            this.btn_WorkPlan.Size = new System.Drawing.Size(218, 177);
+            this.btn_WorkPlan.TabIndex = 6;
+            this.btn_WorkPlan.UseSelectable = true;
+            this.btn_WorkPlan.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_WorkPlan_MouseDown);
+            this.btn_WorkPlan.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_WorkPlan_MouseUp);
+            // 
+            // btn_Working
+            // 
+            this.btn_Working.BackgroundImage = global::FinalProject_Profile.Properties.Resources.작업진행;
+            this.btn_Working.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Working.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Working.Location = new System.Drawing.Point(1, 357);
+            this.btn_Working.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Working.Name = "btn_Working";
+            this.btn_Working.Size = new System.Drawing.Size(218, 177);
+            this.btn_Working.TabIndex = 7;
+            this.btn_Working.UseSelectable = true;
+            this.btn_Working.Click += new System.EventHandler(this.btn_Working_Click);
+            this.btn_Working.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Working_MouseDown);
+            this.btn_Working.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Working_MouseUp);
+            // 
+            // btn_Inspection
+            // 
+            this.btn_Inspection.BackgroundImage = global::FinalProject_Profile.Properties.Resources.검사성적서;
+            this.btn_Inspection.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Inspection.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Inspection.Location = new System.Drawing.Point(1, 535);
+            this.btn_Inspection.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Inspection.Name = "btn_Inspection";
+            this.btn_Inspection.Size = new System.Drawing.Size(218, 177);
+            this.btn_Inspection.TabIndex = 8;
+            this.btn_Inspection.UseSelectable = true;
+            this.btn_Inspection.Click += new System.EventHandler(this.btn_Inspection_Click);
+            this.btn_Inspection.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Inspection_MouseDown);
+            this.btn_Inspection.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Inspection_MouseUp);
+            // 
+            // btn_Defect
+            // 
+            this.btn_Defect.BackgroundImage = global::FinalProject_Profile.Properties.Resources.차트;
+            this.btn_Defect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Defect.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Defect.Location = new System.Drawing.Point(1, 713);
+            this.btn_Defect.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Defect.Name = "btn_Defect";
+            this.btn_Defect.Size = new System.Drawing.Size(218, 178);
+            this.btn_Defect.TabIndex = 9;
+            this.btn_Defect.UseSelectable = true;
+            this.btn_Defect.Click += new System.EventHandler(this.btn_Defect_Click);
+            this.btn_Defect.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseDown);
+            this.btn_Defect.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseUp);
+            // 
+            // btn_plan
+            // 
+            this.btn_plan.BackgroundImage = global::FinalProject_Profile.Properties.Resources.작업예약;
+            this.btn_plan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_plan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_plan.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btn_plan.Location = new System.Drawing.Point(1490, 0);
+            this.btn_plan.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_plan.Name = "btn_plan";
+            this.btn_plan.Size = new System.Drawing.Size(118, 96);
+            this.btn_plan.TabIndex = 15;
+            this.btn_plan.UseSelectable = true;
+            this.btn_plan.Click += new System.EventHandler(this.btn_plan_Click);
+            this.btn_plan.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_plan_MouseDown);
+            this.btn_plan.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_plan_MouseUp);
+            // 
+            // btn_Top
+            // 
+            this.btn_Top.BackgroundImage = global::FinalProject_Profile.Properties.Resources.위끝;
+            this.btn_Top.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Top.Location = new System.Drawing.Point(0, 0);
+            this.btn_Top.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Top.Name = "btn_Top";
+            this.btn_Top.Size = new System.Drawing.Size(78, 78);
+            this.btn_Top.TabIndex = 29;
+            this.btn_Top.UseSelectable = true;
+            this.btn_Top.Click += new System.EventHandler(this.metroTile6_Click);
+            this.btn_Top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Top_MouseDown);
+            this.btn_Top.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Top_MouseUp);
             // 
             // WorkPlan
             // 
@@ -467,10 +475,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private MetroFramework.Controls.MetroTile metroTile9;
-        private MetroFramework.Controls.MetroTile metroTile6;
-        private MetroFramework.Controls.MetroTile metroTile7;
-        private MetroFramework.Controls.MetroTile metroTile8;
         private MetroFramework.Controls.MetroGrid grd_Result;
         private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroButton btn_SAPOrder;
@@ -478,5 +482,9 @@
         private MetroFramework.Controls.MetroButton btn_Working;
         private MetroFramework.Controls.MetroButton btn_Inspection;
         private MetroFramework.Controls.MetroButton btn_Defect;
+        private MetroFramework.Controls.MetroButton btn_Top;
+        private MetroFramework.Controls.MetroButton btn_Middle_Top;
+        private MetroFramework.Controls.MetroButton btn_Middle_Bottom;
+        private MetroFramework.Controls.MetroButton btn_Bottom;
     }
 }

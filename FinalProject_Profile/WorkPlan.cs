@@ -244,5 +244,55 @@ namespace FinalProject_Profile
         {
             btn_Defect.BackgroundImage = FinalProject_Profile.Properties.Resources.차트클릭;
         }
+
+        private void btn_plan_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_plan.BackgroundImage = FinalProject_Profile.Properties.Resources.작업예약;
+        }
+
+        private void btn_plan_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_plan.BackgroundImage = FinalProject_Profile.Properties.Resources.작업예약클릭;
+        }
+
+        private void btn_Top_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Top.BackgroundImage = FinalProject_Profile.Properties.Resources.위끝;
+        }
+
+        private void btn_Top_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Top.BackgroundImage = FinalProject_Profile.Properties.Resources.위끝클릭;
+        }
+
+        private void btn_Middle_Top_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Middle_Top.BackgroundImage = FinalProject_Profile.Properties.Resources.위;
+        }
+
+        private void btn_Middle_Top_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Middle_Top.BackgroundImage = FinalProject_Profile.Properties.Resources.위클릭;
+        }
+
+        private void btn_Bottom_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Bottom.BackgroundImage = FinalProject_Profile.Properties.Resources.아래끝;
+        }
+
+        private void btn_Bottom_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Bottom.BackgroundImage = FinalProject_Profile.Properties.Resources.아래끝클릭;
+        }
+
+        private void btn_Middle_Bottom_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Middle_Bottom.BackgroundImage = FinalProject_Profile.Properties.Resources.아래;
+        }
+
+        private void btn_Middle_Bottom_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Middle_Bottom.BackgroundImage = FinalProject_Profile.Properties.Resources.아래클릭;
+        }
     }
 }

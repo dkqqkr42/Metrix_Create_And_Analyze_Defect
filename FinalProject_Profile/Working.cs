@@ -328,17 +328,6 @@ namespace FinalProject_Profile
 
                 UpdateData();
 
-                //현재 진행중인 작업을 생산진행중 으로 바꾸는 쿼리
-                cmd = new OracleCommand
-                {
-                    CommandType = CommandType.Text,
-                    Connection = connection,
-                    CommandText = "UPDATE TBL_PRODUCTPLAN SET PROC_STATUS = 'B' WHERE JOB_NO = :IN_JOB_NO"
-                };
-
-                cmd.Parameters.Add("IN_JOB_NO", job_no);
-
-                cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -497,6 +486,7 @@ namespace FinalProject_Profile
 
                     UpdateData();
                     InsertRSLT();
+                    UpdataProc_Status();
                     InsertRSLT_DTL();
 
                     if (total_qty % (box_pcs * plt_box) == 0)
@@ -529,6 +519,40 @@ namespace FinalProject_Profile
                 timer.Enabled = false;
             }
             
+        }
+
+        public void UpdataProc_Status()
+        {
+            OracleConnection connection = null;
+            try
+            {
+                connection = new OracleConnection
+                {
+                    ConnectionString = connectionString
+                };
+                connection.Open();
+
+                //현재 진행중인 작업을 생산진행중 으로 바꾸는 쿼리
+                OracleCommand cmd = new OracleCommand
+                {
+                    CommandType = CommandType.Text,
+                    Connection = connection,
+                    CommandText = "UPDATE TBL_PRODUCTPLAN SET PROC_STATUS = 'B' WHERE JOB_NO = :IN_JOB_NO"
+                };
+
+                cmd.Parameters.Add("IN_JOB_NO", job_no);
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
 
         private void InsertDefect()
