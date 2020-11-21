@@ -130,6 +130,7 @@ namespace FinalProject_Profile
                     LabelPoint = labelPoint
                 }
             };*/
+            pieChart1.Series.
 
             pieChart1.Series = new SeriesCollection();
 
@@ -151,6 +152,8 @@ namespace FinalProject_Profile
         public void ProgressChart()
         {
             //**************** 2st 계획 대비 진척 차트 ******************
+            cartesianChart1.Series.Clear();
+
             cartesianChart1.Series = new SeriesCollection
             {
                 new ColumnSeries
@@ -205,6 +208,8 @@ namespace FinalProject_Profile
         public void DefectChart()
         {
             //**************** 3rd 모델별 불량 차트 ******************
+            cartesianChart2.Series.Clear();
+
             cartesianChart2.Series = new SeriesCollection();
 
             //adding series updates and animates the chart
@@ -300,7 +305,7 @@ namespace FinalProject_Profile
         {
             panel2.BackgroundImage = Properties.Resources.dba_img3;
 
-            SelectData();
+/*            SelectData();
 
             ProgressChart();
 
@@ -308,7 +313,7 @@ namespace FinalProject_Profile
 
             DefectChart();
 
-            PlanGrid();
+            PlanGrid();*/
         }
 
         private void StartingMenu_FormClosing(object sender, FormClosingEventArgs e)
@@ -324,12 +329,20 @@ namespace FinalProject_Profile
         private void panel2_Click(object sender, EventArgs e)
         {
             main.CallSAPOrder();
-            this.Close();
+            //this.Close();
         }
 
         private void StartingMenu_Activated(object sender, EventArgs e)
         {
+            SelectData();
 
+            ProgressChart();
+
+            ProductionStatusChart();
+
+            DefectChart();
+
+            PlanGrid();
         }
     }
     public class PlanData
