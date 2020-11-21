@@ -11,6 +11,7 @@ using MetroFramework.Forms;
 using Oracle.ManagedDataAccess.Client;
 using LiveCharts;
 using LiveCharts.Wpf;
+//using System.Windows.Forms.DataVisualization.Charting;
 using LiveCharts.WinForms;
 
 
@@ -19,6 +20,9 @@ namespace FinalProject_Profile
     public partial class StartingMenu : MetroForm
     {
         Main main;
+        LiveCharts.WinForms.PieChart pieChart1;
+        LiveCharts.WinForms.CartesianChart cartesianChart1;
+        LiveCharts.WinForms.CartesianChart cartesianChart2;
         protected const string connectionString = "DATA SOURCE=220.69.249.228:1521/xe;PASSWORD=1234;PERSIST SECURITY INFO=True;USER ID=MAT_MGR";
         List<PlanData> planList = new List<PlanData>();
         List<DefectData> defectList = new List<DefectData>();
@@ -47,8 +51,11 @@ namespace FinalProject_Profile
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "SELECT trim(A.PROD_CODE), nvl(sum(B.ORDER_M),0), nvl(sum(C.INSU_QTY),0) FROM tbl_productmaster A ,(select * from TBL_PRODUCTPLAN WHERE JOB_DATE BETWEEN to_char(sysdate-7,'yyyymmdd') AND to_char(sysdate,'yyyymmdd') AND PROC_STATUS NOT IN('D')) B, TBL_PRODRSLT C where A.PROD_CODE = B.PROD_CODE(+) AND B.JOB_NO = C.JOB_NO(+) GROUP BY A.PROD_CODE, B.PROD_CODE ORDER BY A.PROD_CODE"
+                    CommandText = "SELECT trim(A.PROD_CODE), nvl(sum(B.ORDER_M),0), nvl(sum(C.INSU_QTY),0) FROM tbl_productmaster A ,(select * from TBL_PRODUCTPLAN WHERE JOB_DATE BETWEEN to_date(:START_DATE,'yyyymmdd') AND to_date(:END_DATE,'yyyymmdd') AND PROC_STATUS NOT IN('D')) B, TBL_PRODRSLT C where A.PROD_CODE = B.PROD_CODE(+) AND B.JOB_NO = C.JOB_NO(+) GROUP BY A.PROD_CODE, B.PROD_CODE ORDER BY A.PROD_CODE"
                 };
+
+                cmd.Parameters.Add("START_DATE", dtp_Date1.Value.ToString("yyyyMMdd"));
+                cmd.Parameters.Add("END_DATE", dtp_Date2.Value.ToString("yyyyMMdd"));
 
                 OracleDataReader reader = cmd.ExecuteReader();
 
@@ -58,8 +65,8 @@ namespace FinalProject_Profile
                     planList.Add(new PlanData
                     {
                         PROD_CODE = reader[0].ToString(),
-                        ORDER_M = double.Parse(reader[1].ToString()),
-                        INSU_QTY = double.Parse(reader[2].ToString())
+                        ORDER_M = Int32.Parse(reader[1].ToString()),
+                        INSU_QTY = Int32.Parse(reader[2].ToString())
                     });
                 }
 
@@ -67,8 +74,11 @@ namespace FinalProject_Profile
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "SELECT trim(A.PROD_CODE) 제품코드, nvl(sum(C.BAD_QTY),0) 불량량, nvl(sum(C.GOOD_QTY),0) 양품량 FROM tbl_productmaster A ,(select * from TBL_PRODUCTPLAN WHERE JOB_DATE BETWEEN to_char(sysdate-7,'yyyymmdd') AND to_char(sysdate,'yyyymmdd')) B, TBL_PRODRSLT C where A.PROD_CODE = B.PROD_CODE(+) AND B.JOB_NO = C.JOB_NO(+) GROUP BY A.PROD_CODE ORDER BY A.PROD_CODE"
+                    CommandText = "SELECT trim(A.PROD_CODE) 제품코드, nvl(sum(C.BAD_QTY),0) 불량량, nvl(sum(C.GOOD_QTY),0) 양품량 FROM tbl_productmaster A ,(select * from TBL_PRODUCTPLAN WHERE JOB_DATE BETWEEN to_date(:START_DATE,'yyyymmdd') AND to_date(:END_DATE,'yyyymmdd')) B, TBL_PRODRSLT C where A.PROD_CODE = B.PROD_CODE(+) AND B.JOB_NO = C.JOB_NO(+) GROUP BY A.PROD_CODE ORDER BY A.PROD_CODE"
                 };
+
+                cmd.Parameters.Add("START_DATE", dtp_Date1.Value.ToString("yyyyMMdd"));
+                cmd.Parameters.Add("END_DATE", dtp_Date2.Value.ToString("yyyyMMdd"));
 
                 reader = cmd.ExecuteReader();
 
@@ -77,8 +87,8 @@ namespace FinalProject_Profile
                     defectList.Add(new DefectData
                     {
                         PROD_CODE = reader[0].ToString(),
-                        BAD_QTY = double.Parse(reader[1].ToString()),
-                        GOOD_QTY = double.Parse(reader[2].ToString())
+                        BAD_QTY = Int32.Parse(reader[1].ToString()),
+                        GOOD_QTY = Int32.Parse(reader[2].ToString())
                     });
                 }
 
@@ -99,38 +109,15 @@ namespace FinalProject_Profile
             Func<ChartPoint, string> labelPoint = chartPoint =>
                 string.Format("{0} ({1:P})", chartPoint.Y, chartPoint.Participation);
 
-            /*pieChart1.Series = new SeriesCollection
-            {
-                new PieSeries
-                {
-                    Title = "Maria",
-                    Values = new ChartValues<double> {3},
-                    DataLabels = true,
-                    LabelPoint = labelPoint
-                },
-                new PieSeries
-                {
-                    Title = "Charles",
-                    Values = new ChartValues<double> {4},
-                    DataLabels = true,
-                    LabelPoint = labelPoint
-                },
-                new PieSeries
-                {
-                    Title = "Frida",
-                    Values = new ChartValues<double> {6},
-                    DataLabels = true,
-                    LabelPoint = labelPoint
-                },
-                new PieSeries
-                {
-                    Title = "Frederic",
-                    Values = new ChartValues<double> {2},
-                    DataLabels = true,
-                    LabelPoint = labelPoint
-                }
-            };*/
-            pieChart1.Series.
+            pieChart1 = new LiveCharts.WinForms.PieChart();
+            pieChart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            pieChart1.Location = new System.Drawing.Point(0, 0);
+            pieChart1.Name = "pieChart1";
+            pieChart1.Size = new System.Drawing.Size(608, 366);
+            pieChart1.TabIndex = 0;
+            pieChart1.Text = "pieChart1";
+
+            panel10.Controls.Add(pieChart1);
 
             pieChart1.Series = new SeriesCollection();
 
@@ -139,7 +126,7 @@ namespace FinalProject_Profile
                 pieChart1.Series.Add(new PieSeries
                 {
                     Title = item.PROD_CODE,
-                    Values = new ChartValues<double> { item.INSU_QTY },
+                    Values = new ChartValues<int> { item.INSU_QTY },
                     DataLabels = true,
                     LabelPoint = labelPoint
                 }
@@ -147,19 +134,36 @@ namespace FinalProject_Profile
             }
 
             pieChart1.LegendLocation = LegendLocation.Bottom;
+
+            foreach (var item in pieChart1.Series)
+            {
+                
+            }
+            
         }
 
         public void ProgressChart()
         {
             //**************** 2st 계획 대비 진척 차트 ******************
-            cartesianChart1.Series.Clear();
+
+            cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
+
+            cartesianChart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            cartesianChart1.Location = new System.Drawing.Point(0, 0);
+            cartesianChart1.Name = "cartesianChart1";
+            cartesianChart1.Size = new System.Drawing.Size(991, 366);
+            cartesianChart1.TabIndex = 1;
+            cartesianChart1.Text = "cartesianChart1";
+
+            panel3.Controls.Add(cartesianChart1);
+
 
             cartesianChart1.Series = new SeriesCollection
             {
                 new ColumnSeries
                 {
                     Title = "계획량",
-                    Values = new ChartValues<double>()
+                    Values = new ChartValues<int>()
                 }
             };
 
@@ -172,7 +176,7 @@ namespace FinalProject_Profile
             cartesianChart1.Series.Add(new ColumnSeries
             {
                 Title = "생산량",
-                Values = new ChartValues<double>()
+                Values = new ChartValues<int>()
             });
 
             //also adding values updates and animates the chart automatically
@@ -199,16 +203,28 @@ namespace FinalProject_Profile
             cartesianChart1.AxisY.Add(new Axis
             {
                 Title = "갯수",
-                LabelFormatter = value => value.ToString("N")
+                LabelFormatter = value => value.ToString("N0")
             });
 
             cartesianChart1.LegendLocation = LegendLocation.Right;
+
         }
 
         public void DefectChart()
         {
             //**************** 3rd 모델별 불량 차트 ******************
-            cartesianChart2.Series.Clear();
+            cartesianChart2 = new LiveCharts.WinForms.CartesianChart();
+
+            cartesianChart2.Dock = System.Windows.Forms.DockStyle.Fill;
+            cartesianChart2.Location = new System.Drawing.Point(0, 0);
+            cartesianChart2.Name = "cartesianChart2";
+            cartesianChart2.Size = new System.Drawing.Size(991, 366);
+            cartesianChart2.TabIndex = 2;
+            cartesianChart2.Text = "cartesianChart2";
+
+            panel12.Controls.Add(cartesianChart2);
+
+
 
             cartesianChart2.Series = new SeriesCollection();
 
@@ -216,7 +232,7 @@ namespace FinalProject_Profile
             cartesianChart2.Series.Add(new StackedColumnSeries
             {
                 Title = "양품량",
-                Values = new ChartValues<double>(),
+                Values = new ChartValues<int>(),
                 StackMode = StackMode.Values,
                 Fill = System.Windows.Media.Brushes.DarkBlue
             });
@@ -224,7 +240,7 @@ namespace FinalProject_Profile
             cartesianChart2.Series.Add(new StackedColumnSeries
             {
                 Title = "불량량",
-                Values = new ChartValues<double>(),
+                Values = new ChartValues<int>(),
                 StackMode = StackMode.Values,
                 Fill = System.Windows.Media.Brushes.Chocolate
             });
@@ -253,7 +269,7 @@ namespace FinalProject_Profile
             cartesianChart2.AxisY.Add(new Axis
             {
                 Title = "불량량",
-                LabelFormatter = value => value.ToString("N")
+                LabelFormatter = value => value.ToString("N0")
             });
 
             cartesianChart2.LegendLocation = LegendLocation.Right;
@@ -274,7 +290,7 @@ namespace FinalProject_Profile
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "SELECT TRIM(A.PROD_CODE) 제품코드, C.PROD_NAME 제품이름, A.ORDER_M 주문수량 FROM TBL_PRODUCTPLAN A, TBL_PRODRESERVE B, TBL_PRODUCTMASTER C WHERE A.JOB_NO = B.JOB_NO  AND A.PROD_CODE = C.PROD_CODE ORDER BY B.RESERVE_RANK"
+                    CommandText = "SELECT TRIM(A.PROD_CODE) 제품코드, C.PROD_NAME 제품이름, FUN_DATA_COMMAS(A.ORDER_M) 주문수량, A.JOB_DATE 생산예정일 FROM TBL_PRODUCTPLAN A, TBL_PRODRESERVE B, TBL_PRODUCTMASTER C WHERE A.JOB_NO = B.JOB_NO  AND A.PROD_CODE = C.PROD_CODE ORDER BY B.RESERVE_RANK"
                 };
 
                 OracleDataReader reader = cmd.ExecuteReader();
@@ -284,10 +300,8 @@ namespace FinalProject_Profile
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
                 DataTable dt = ds.Tables[0];
-                if (grd_Result.DataSource == null)
-                {
-                    grd_Result.DataSource = dt;
-                }
+
+                grd_Result.DataSource = dt;
 
             }
             catch (Exception ex)
@@ -304,16 +318,8 @@ namespace FinalProject_Profile
         private void StartingMenu_Load(object sender, EventArgs e)
         {
             panel2.BackgroundImage = Properties.Resources.dba_img3;
-
-/*            SelectData();
-
-            ProgressChart();
-
-            ProductionStatusChart();
-
-            DefectChart();
-
-            PlanGrid();*/
+            dtp_Date1.Value = DateTime.Now.AddDays(-7);
+            dtp_Date2.Value = DateTime.Now;
         }
 
         private void StartingMenu_FormClosing(object sender, FormClosingEventArgs e)
@@ -329,7 +335,7 @@ namespace FinalProject_Profile
         private void panel2_Click(object sender, EventArgs e)
         {
             main.CallSAPOrder();
-            //this.Close();
+            this.Close();
         }
 
         private void StartingMenu_Activated(object sender, EventArgs e)
@@ -344,19 +350,67 @@ namespace FinalProject_Profile
 
             PlanGrid();
         }
+
+        private void dtp_Date1_ValueChanged(object sender, EventArgs e)
+        {
+            /*this.Controls.Remove(cartesianChart1);
+            this.Controls.Remove(cartesianChart2);
+            this.Controls.Remove(pieChart1);*/
+            SelectData();
+
+            ProgressChart();
+
+            ProductionStatusChart();
+
+            DefectChart();
+
+            this.Invalidate();
+        }
+
+        private void dtp_Date2_ValueChanged(object sender, EventArgs e)
+        {
+            SelectData();
+
+            ProgressChart();
+
+            ProductionStatusChart();
+
+            DefectChart();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Remove(cartesianChart1);
+            panel12.Controls.Remove(cartesianChart2);
+            panel10.Controls.Remove(pieChart1);
+            panel6.Controls.Remove(grd_Result);
+            cartesianChart1.Dispose();
+            cartesianChart2.Dispose();
+            pieChart1.Dispose();
+            cartesianChart1.Visible = false;
+            cartesianChart2.Visible = false;
+            pieChart1.Visible = false;
+            grd_Result.Visible = false;
+            tableLayoutPanel1.Visible = false;
+
+            tableLayoutPanel1.Visible = true;
+            
+            this.Activate();
+        }
     }
     public class PlanData
     {
         public string PROD_CODE { get; set; }
-        public double ORDER_M { get; set; }
-        public double INSU_QTY { get; set; }
+        public int ORDER_M { get; set; }
+        public int INSU_QTY { get; set; }
         
     }
 
     public class DefectData
     {
         public string PROD_CODE { get; set; }
-        public double BAD_QTY { get; set; }
-        public double GOOD_QTY { get; set; }
+        public int BAD_QTY { get; set; }
+        public int GOOD_QTY { get; set; }
     }
 }
