@@ -15,6 +15,7 @@ namespace FinalProject_Profile.PopupForm
     public partial class InputPopup_SAPOrder : MetroForm
     {
         protected const string connectionString = "DATA SOURCE=220.69.249.228:1521/xe;PASSWORD=1234;PERSIST SECURITY INFO=True;USER ID=MAT_MGR";
+        int seq = 0;
 
         public InputPopup_SAPOrder()
         {
@@ -128,6 +129,38 @@ namespace FinalProject_Profile.PopupForm
         private void btn_Close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void InputPopup_SAPOrder_Load(object sender, EventArgs e)
+        {
+            OracleConnection connection = null;
+            try
+            {
+                connection = new OracleConnection
+                {
+                    ConnectionString = connectionString
+                };
+                connection.Open();
+                OracleCommand cmd = new OracleCommand
+                {
+                    CommandType = CommandType.Text,
+                    Connection = connection,
+                    CommandText = "SELECT COUNT(*) FROM TBL_SAPORDER WHERE ORDER_DATE = TO_CHAR(SYSDATE,'yyyymmdd')"
+                };
+
+                seq = Int32.Parse(cmd.ExecuteScalar().ToString());
+
+                txt_ORDER_NO.Text = DateTime.Now.ToString("yyyyMMdd") + seq.ToString("00");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 }

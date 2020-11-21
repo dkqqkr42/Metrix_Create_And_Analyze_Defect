@@ -129,7 +129,7 @@ namespace FinalProject_Profile
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "SELECT B_SEQ 불량번호, FACTOR_CODE 불량코드, BAD_QTY 불량량 from TBL_WCDEFECT WHERE ROLL_NO = :IN_ROLL_NO ORDER BY B_SEQ"
+                    CommandText = "SELECT A.B_SEQ 불량번호, B.FACTOR_NAME 불량명, A.BAD_QTY 불량량 from TBL_WCDEFECT A, TBL_DEFECTDTL B WHERE A.FACTOR_CODE = B.FACTOR_CODE AND ROLL_NO = :IN_ROLL_NO ORDER BY B_SEQ"
                 };
 
                 cmd.Parameters.Add("IN_ROLL_NO", roll_no);

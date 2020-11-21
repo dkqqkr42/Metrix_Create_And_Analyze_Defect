@@ -241,7 +241,7 @@ namespace FinalProject_Profile
                 }
                 else
                 {
-                    MessageBox.Show("예약된 작업이 없습니다.", "경고", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //MessageBox.Show("예약된 작업이 없습니다.", "경고", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
