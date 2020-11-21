@@ -47,7 +47,7 @@ namespace FinalProject_Profile
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "SELECT trim(A.PROD_CODE), nvl(sum(B.ORDER_M),0), nvl(sum(C.INSU_QTY),0) FROM tbl_productmaster A ,(select * from TBL_PRODUCTPLAN WHERE JOB_DATE = to_char(sysdate,'yyyymmdd')) B, TBL_PRODRSLT C where A.PROD_CODE = B.PROD_CODE(+) AND B.JOB_NO = C.JOB_NO(+) AND B.PROC_STATUS NOT IN('D') GROUP BY A.PROD_CODE, B.PROD_CODE ORDER BY A.PROD_CODE"
+                    CommandText = "SELECT trim(A.PROD_CODE), nvl(sum(B.ORDER_M),0), nvl(sum(C.INSU_QTY),0) FROM tbl_productmaster A ,(select * from TBL_PRODUCTPLAN WHERE JOB_DATE BETWEEN to_char(sysdate-7,'yyyymmdd') AND to_char(sysdate,'yyyymmdd') AND PROC_STATUS NOT IN('D')) B, TBL_PRODRSLT C where A.PROD_CODE = B.PROD_CODE(+) AND B.JOB_NO = C.JOB_NO(+) GROUP BY A.PROD_CODE, B.PROD_CODE ORDER BY A.PROD_CODE"
                 };
 
                 OracleDataReader reader = cmd.ExecuteReader();
@@ -67,7 +67,7 @@ namespace FinalProject_Profile
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "SELECT trim(A.PROD_CODE) 제품코드, nvl(sum(D.BAD_QTY),0) 불량량 FROM tbl_productmaster A ,(select * from TBL_PRODUCTPLAN WHERE JOB_DATE = to_char(sysdate,'yyyymmdd')) B, TBL_PRODRSLT C, TBL_WCDEFECT D where A.PROD_CODE = B.PROD_CODE(+) AND B.JOB_NO = C.JOB_NO AND C.ROLL_NO = D.ROLL_NO(+) GROUP BY A.PROD_CODE ORDER BY A.PROD_CODE"
+                    CommandText = "SELECT trim(A.PROD_CODE) 제품코드, nvl(sum(C.BAD_QTY),0) 불량량, nvl(sum(C.GOOD_QTY),0) 양품량 FROM tbl_productmaster A ,(select * from TBL_PRODUCTPLAN WHERE JOB_DATE BETWEEN to_char(sysdate-7,'yyyymmdd') AND to_char(sysdate,'yyyymmdd')) B, TBL_PRODRSLT C where A.PROD_CODE = B.PROD_CODE(+) AND B.JOB_NO = C.JOB_NO(+) GROUP BY A.PROD_CODE ORDER BY A.PROD_CODE"
                 };
 
                 reader = cmd.ExecuteReader();
@@ -77,7 +77,8 @@ namespace FinalProject_Profile
                     defectList.Add(new DefectData
                     {
                         PROD_CODE = reader[0].ToString(),
-                        BAD_QTY = double.Parse(reader[1].ToString())
+                        BAD_QTY = double.Parse(reader[1].ToString()),
+                        GOOD_QTY = double.Parse(reader[2].ToString())
                     });
                 }
 
@@ -222,27 +223,19 @@ namespace FinalProject_Profile
                 StackMode = StackMode.Values,
                 Fill = System.Windows.Media.Brushes.Chocolate
             });
-            List<double> good_qty = new List<double>();
-
-            for (int i = 0; i < planList.Count; i++)
-            {
-                good_qty.Add(planList[i].INSU_QTY - defectList[i].BAD_QTY);
-            }
-            foreach (var item in good_qty)
-            {
-                cartesianChart2.Series[0].Values.Add(item);
-            }
+            
 
             foreach (var item in defectList)
             {
+                cartesianChart2.Series[0].Values.Add(item.GOOD_QTY);
                 cartesianChart2.Series[1].Values.Add(item.BAD_QTY);
             }
 
             List<string> lables = new List<string>();
 
-            for (int i = 0; i < defectList.Count; i++)
+            for (int i = 0; i < planList.Count; i++)
             {
-                lables.Add(defectList[i].PROD_CODE);
+                lables.Add(planList[i].PROD_CODE);
             }
 
             cartesianChart2.AxisX.Add(new Axis
@@ -344,11 +337,13 @@ namespace FinalProject_Profile
         public string PROD_CODE { get; set; }
         public double ORDER_M { get; set; }
         public double INSU_QTY { get; set; }
+        
     }
 
     public class DefectData
     {
         public string PROD_CODE { get; set; }
         public double BAD_QTY { get; set; }
+        public double GOOD_QTY { get; set; }
     }
 }
