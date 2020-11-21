@@ -40,19 +40,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_SAPOrder = new MetroFramework.Controls.MetroButton();
-            this.btn_WorkPlan = new MetroFramework.Controls.MetroButton();
-            this.btn_Working = new MetroFramework.Controls.MetroButton();
-            this.btn_Inspection = new MetroFramework.Controls.MetroButton();
             this.btn_Defect = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.btn_Select_Detail = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.grd_Result = new MetroFramework.Controls.MetroGrid();
             this.grd_Defect = new MetroFramework.Controls.MetroGrid();
             this.label39 = new System.Windows.Forms.Label();
+            this.btn_SAPOrder = new MetroFramework.Controls.MetroButton();
+            this.btn_WorkPlan = new MetroFramework.Controls.MetroButton();
+            this.btn_Working = new MetroFramework.Controls.MetroButton();
+            this.btn_Inspection = new MetroFramework.Controls.MetroButton();
+            this.btn_Select_Detail = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -101,68 +101,9 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(220, 892);
             this.tableLayoutPanel5.TabIndex = 5;
             // 
-            // btn_SAPOrder
-            // 
-            this.btn_SAPOrder.BackgroundImage = global::FinalProject_Profile.Properties.Resources.생산계획접수;
-            this.btn_SAPOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_SAPOrder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_SAPOrder.Location = new System.Drawing.Point(1, 1);
-            this.btn_SAPOrder.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_SAPOrder.Name = "btn_SAPOrder";
-            this.btn_SAPOrder.Size = new System.Drawing.Size(218, 177);
-            this.btn_SAPOrder.TabIndex = 5;
-            this.btn_SAPOrder.UseSelectable = true;
-            this.btn_SAPOrder.Click += new System.EventHandler(this.btn_SAPOrder_Click);
-            this.btn_SAPOrder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_SAPOrder_MouseDown);
-            this.btn_SAPOrder.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_SAPOrder_MouseUp);
-            // 
-            // btn_WorkPlan
-            // 
-            this.btn_WorkPlan.BackgroundImage = global::FinalProject_Profile.Properties.Resources.작업계획;
-            this.btn_WorkPlan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_WorkPlan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_WorkPlan.Location = new System.Drawing.Point(1, 179);
-            this.btn_WorkPlan.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_WorkPlan.Name = "btn_WorkPlan";
-            this.btn_WorkPlan.Size = new System.Drawing.Size(218, 177);
-            this.btn_WorkPlan.TabIndex = 6;
-            this.btn_WorkPlan.UseSelectable = true;
-            this.btn_WorkPlan.Click += new System.EventHandler(this.btn_WorkPlan_Click);
-            this.btn_WorkPlan.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_WorkPlan_MouseDown);
-            this.btn_WorkPlan.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_WorkPlan_MouseUp);
-            // 
-            // btn_Working
-            // 
-            this.btn_Working.BackgroundImage = global::FinalProject_Profile.Properties.Resources.작업진행;
-            this.btn_Working.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Working.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Working.Location = new System.Drawing.Point(1, 357);
-            this.btn_Working.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Working.Name = "btn_Working";
-            this.btn_Working.Size = new System.Drawing.Size(218, 177);
-            this.btn_Working.TabIndex = 7;
-            this.btn_Working.UseSelectable = true;
-            this.btn_Working.Click += new System.EventHandler(this.btn_Working_Click);
-            this.btn_Working.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Working_MouseDown);
-            this.btn_Working.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Working_MouseUp);
-            // 
-            // btn_Inspection
-            // 
-            this.btn_Inspection.BackgroundImage = global::FinalProject_Profile.Properties.Resources.검사성적서;
-            this.btn_Inspection.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Inspection.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Inspection.Location = new System.Drawing.Point(1, 535);
-            this.btn_Inspection.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Inspection.Name = "btn_Inspection";
-            this.btn_Inspection.Size = new System.Drawing.Size(218, 177);
-            this.btn_Inspection.TabIndex = 8;
-            this.btn_Inspection.UseSelectable = true;
-            this.btn_Inspection.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Inspection_MouseDown);
-            this.btn_Inspection.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Inspection_MouseUp);
-            // 
             // btn_Defect
             // 
-            this.btn_Defect.BackgroundImage = global::FinalProject_Profile.Properties.Resources.차트;
+            this.btn_Defect.BackgroundImage = global::FinalProject_Profile.Properties.Resources.생산현황;
             this.btn_Defect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Defect.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Defect.Location = new System.Drawing.Point(1, 713);
@@ -221,22 +162,6 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(1409, 61);
             this.dateTimePicker2.TabIndex = 22;
             this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
-            // 
-            // btn_Select_Detail
-            // 
-            this.btn_Select_Detail.BackgroundImage = global::FinalProject_Profile.Properties.Resources.상세조회;
-            this.btn_Select_Detail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Select_Detail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Select_Detail.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.btn_Select_Detail.Location = new System.Drawing.Point(1499, 0);
-            this.btn_Select_Detail.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Select_Detail.Name = "btn_Select_Detail";
-            this.btn_Select_Detail.Size = new System.Drawing.Size(115, 102);
-            this.btn_Select_Detail.TabIndex = 23;
-            this.btn_Select_Detail.UseSelectable = true;
-            this.btn_Select_Detail.Click += new System.EventHandler(this.metroButton1_Click);
-            this.btn_Select_Detail.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Select_Detail_MouseDown);
-            this.btn_Select_Detail.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Select_Detail_MouseUp);
             // 
             // tableLayoutPanel3
             // 
@@ -382,6 +307,81 @@
             this.label39.TabIndex = 15;
             this.label39.Text = "검사성적서";
             this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_SAPOrder
+            // 
+            this.btn_SAPOrder.BackgroundImage = global::FinalProject_Profile.Properties.Resources.생산계획접수;
+            this.btn_SAPOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_SAPOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_SAPOrder.Location = new System.Drawing.Point(1, 1);
+            this.btn_SAPOrder.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_SAPOrder.Name = "btn_SAPOrder";
+            this.btn_SAPOrder.Size = new System.Drawing.Size(218, 177);
+            this.btn_SAPOrder.TabIndex = 5;
+            this.btn_SAPOrder.UseSelectable = true;
+            this.btn_SAPOrder.Click += new System.EventHandler(this.btn_SAPOrder_Click);
+            this.btn_SAPOrder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_SAPOrder_MouseDown);
+            this.btn_SAPOrder.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_SAPOrder_MouseUp);
+            // 
+            // btn_WorkPlan
+            // 
+            this.btn_WorkPlan.BackgroundImage = global::FinalProject_Profile.Properties.Resources.작업계획;
+            this.btn_WorkPlan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_WorkPlan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_WorkPlan.Location = new System.Drawing.Point(1, 179);
+            this.btn_WorkPlan.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_WorkPlan.Name = "btn_WorkPlan";
+            this.btn_WorkPlan.Size = new System.Drawing.Size(218, 177);
+            this.btn_WorkPlan.TabIndex = 6;
+            this.btn_WorkPlan.UseSelectable = true;
+            this.btn_WorkPlan.Click += new System.EventHandler(this.btn_WorkPlan_Click);
+            this.btn_WorkPlan.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_WorkPlan_MouseDown);
+            this.btn_WorkPlan.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_WorkPlan_MouseUp);
+            // 
+            // btn_Working
+            // 
+            this.btn_Working.BackgroundImage = global::FinalProject_Profile.Properties.Resources.작업진행;
+            this.btn_Working.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Working.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Working.Location = new System.Drawing.Point(1, 357);
+            this.btn_Working.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Working.Name = "btn_Working";
+            this.btn_Working.Size = new System.Drawing.Size(218, 177);
+            this.btn_Working.TabIndex = 7;
+            this.btn_Working.UseSelectable = true;
+            this.btn_Working.Click += new System.EventHandler(this.btn_Working_Click);
+            this.btn_Working.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Working_MouseDown);
+            this.btn_Working.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Working_MouseUp);
+            // 
+            // btn_Inspection
+            // 
+            this.btn_Inspection.BackgroundImage = global::FinalProject_Profile.Properties.Resources.검사성적서;
+            this.btn_Inspection.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Inspection.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Inspection.Location = new System.Drawing.Point(1, 535);
+            this.btn_Inspection.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Inspection.Name = "btn_Inspection";
+            this.btn_Inspection.Size = new System.Drawing.Size(218, 177);
+            this.btn_Inspection.TabIndex = 8;
+            this.btn_Inspection.UseSelectable = true;
+            this.btn_Inspection.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Inspection_MouseDown);
+            this.btn_Inspection.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Inspection_MouseUp);
+            // 
+            // btn_Select_Detail
+            // 
+            this.btn_Select_Detail.BackgroundImage = global::FinalProject_Profile.Properties.Resources.상세조회;
+            this.btn_Select_Detail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Select_Detail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Select_Detail.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btn_Select_Detail.Location = new System.Drawing.Point(1499, 0);
+            this.btn_Select_Detail.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Select_Detail.Name = "btn_Select_Detail";
+            this.btn_Select_Detail.Size = new System.Drawing.Size(115, 102);
+            this.btn_Select_Detail.TabIndex = 23;
+            this.btn_Select_Detail.UseSelectable = true;
+            this.btn_Select_Detail.Click += new System.EventHandler(this.metroButton1_Click);
+            this.btn_Select_Detail.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Select_Detail_MouseDown);
+            this.btn_Select_Detail.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Select_Detail_MouseUp);
             // 
             // Inspection
             // 

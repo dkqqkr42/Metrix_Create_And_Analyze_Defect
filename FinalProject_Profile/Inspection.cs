@@ -281,12 +281,12 @@ namespace FinalProject_Profile
 
         private void btn_Defect_MouseUp(object sender, MouseEventArgs e)
         {
-            btn_Defect.BackgroundImage = FinalProject_Profile.Properties.Resources.차트;
+            btn_Defect.BackgroundImage = FinalProject_Profile.Properties.Resources.생산현황;
         }
 
         private void btn_Defect_MouseDown(object sender, MouseEventArgs e)
         {
-            btn_Defect.BackgroundImage = FinalProject_Profile.Properties.Resources.차트클릭;
+            btn_Defect.BackgroundImage = FinalProject_Profile.Properties.Resources.생산현황클릭;
         }
 
         private void grd_Result_CellStateChanged(object sender, DataGridViewCellStateChangedEventArgs e)

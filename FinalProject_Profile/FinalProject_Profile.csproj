@@ -250,6 +250,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\닫기클릭5.jpg" />
+    <None Include="Resources\닫기5.jpg" />
+    <None Include="Resources\생산현황클릭.jpg" />
+    <None Include="Resources\생산현황.jpg" />
     <None Include="Resources\바코드발행클릭.jpg" />
     <None Include="Resources\바코드발행.jpg" />
     <None Include="Resources\닫기클릭4.jpg" />
