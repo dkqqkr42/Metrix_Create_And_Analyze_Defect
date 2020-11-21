@@ -279,7 +279,7 @@
             this.lbl_ORDER_M.Name = "lbl_ORDER_M";
             this.lbl_ORDER_M.Size = new System.Drawing.Size(224, 112);
             this.lbl_ORDER_M.TabIndex = 12;
-            this.lbl_ORDER_M.Text = "100,000";
+            this.lbl_ORDER_M.Text = "0";
             this.lbl_ORDER_M.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_PROD_UNIT
@@ -566,7 +566,7 @@
             this.lbl_Punching.Name = "lbl_Punching";
             this.lbl_Punching.Size = new System.Drawing.Size(358, 115);
             this.lbl_Punching.TabIndex = 12;
-            this.lbl_Punching.Text = "10,000";
+            this.lbl_Punching.Text = "0";
             this.lbl_Punching.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
@@ -668,7 +668,7 @@
             this.lbl_Punching2.Name = "lbl_Punching2";
             this.lbl_Punching2.Size = new System.Drawing.Size(357, 115);
             this.lbl_Punching2.TabIndex = 12;
-            this.lbl_Punching2.Text = "10,000";
+            this.lbl_Punching2.Text = "0";
             this.lbl_Punching2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tableLayoutPanel8
@@ -740,7 +740,7 @@
             this.lbl_Good_PCS2.Name = "lbl_Good_PCS2";
             this.lbl_Good_PCS2.Size = new System.Drawing.Size(227, 107);
             this.lbl_Good_PCS2.TabIndex = 19;
-            this.lbl_Good_PCS2.Text = "200,000";
+            this.lbl_Good_PCS2.Text = "0";
             this.lbl_Good_PCS2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
@@ -853,7 +853,7 @@
             this.lbl_Total_BOX2.Name = "lbl_Total_BOX2";
             this.lbl_Total_BOX2.Size = new System.Drawing.Size(227, 106);
             this.lbl_Total_BOX2.TabIndex = 13;
-            this.lbl_Total_BOX2.Text = "200.0";
+            this.lbl_Total_BOX2.Text = "0";
             this.lbl_Total_BOX2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Good_BOX2
@@ -868,7 +868,7 @@
             this.lbl_Good_BOX2.Name = "lbl_Good_BOX2";
             this.lbl_Good_BOX2.Size = new System.Drawing.Size(227, 107);
             this.lbl_Good_BOX2.TabIndex = 14;
-            this.lbl_Good_BOX2.Text = "92,200.0";
+            this.lbl_Good_BOX2.Text = "0";
             this.lbl_Good_BOX2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Total_PCS2
@@ -883,7 +883,7 @@
             this.lbl_Total_PCS2.Name = "lbl_Total_PCS2";
             this.lbl_Total_PCS2.Size = new System.Drawing.Size(227, 106);
             this.lbl_Total_PCS2.TabIndex = 17;
-            this.lbl_Total_PCS2.Text = "20,000";
+            this.lbl_Total_PCS2.Text = "0";
             this.lbl_Total_PCS2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Good_PLT2
@@ -898,7 +898,7 @@
             this.lbl_Good_PLT2.Name = "lbl_Good_PLT2";
             this.lbl_Good_PLT2.Size = new System.Drawing.Size(185, 107);
             this.lbl_Good_PLT2.TabIndex = 20;
-            this.lbl_Good_PLT2.Text = "915.0";
+            this.lbl_Good_PLT2.Text = "0";
             this.lbl_Good_PLT2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Total_BOX
@@ -913,7 +913,7 @@
             this.lbl_Total_BOX.Name = "lbl_Total_BOX";
             this.lbl_Total_BOX.Size = new System.Drawing.Size(227, 106);
             this.lbl_Total_BOX.TabIndex = 15;
-            this.lbl_Total_BOX.Text = "200.0";
+            this.lbl_Total_BOX.Text = "0";
             this.lbl_Total_BOX.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Good_BOX
@@ -928,7 +928,7 @@
             this.lbl_Good_BOX.Name = "lbl_Good_BOX";
             this.lbl_Good_BOX.Size = new System.Drawing.Size(227, 107);
             this.lbl_Good_BOX.TabIndex = 16;
-            this.lbl_Good_BOX.Text = "92,200.0";
+            this.lbl_Good_BOX.Text = "0";
             this.lbl_Good_BOX.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Total_PLT2
@@ -943,7 +943,7 @@
             this.lbl_Total_PLT2.Name = "lbl_Total_PLT2";
             this.lbl_Total_PLT2.Size = new System.Drawing.Size(185, 106);
             this.lbl_Total_PLT2.TabIndex = 18;
-            this.lbl_Total_PLT2.Text = "010.0";
+            this.lbl_Total_PLT2.Text = "0";
             this.lbl_Total_PLT2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Total_PCS
@@ -958,7 +958,7 @@
             this.lbl_Total_PCS.Name = "lbl_Total_PCS";
             this.lbl_Total_PCS.Size = new System.Drawing.Size(185, 106);
             this.lbl_Total_PCS.TabIndex = 21;
-            this.lbl_Total_PCS.Text = "120,000";
+            this.lbl_Total_PCS.Text = "0";
             this.lbl_Total_PCS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Good_PCS
@@ -973,7 +973,7 @@
             this.lbl_Good_PCS.Name = "lbl_Good_PCS";
             this.lbl_Good_PCS.Size = new System.Drawing.Size(185, 107);
             this.lbl_Good_PCS.TabIndex = 22;
-            this.lbl_Good_PCS.Text = "120,000";
+            this.lbl_Good_PCS.Text = "0";
             this.lbl_Good_PCS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Total_PLT
@@ -988,7 +988,7 @@
             this.lbl_Total_PLT.Name = "lbl_Total_PLT";
             this.lbl_Total_PLT.Size = new System.Drawing.Size(230, 106);
             this.lbl_Total_PLT.TabIndex = 23;
-            this.lbl_Total_PLT.Text = "910.0";
+            this.lbl_Total_PLT.Text = "0";
             this.lbl_Total_PLT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Good_PLT
@@ -1003,7 +1003,7 @@
             this.lbl_Good_PLT.Name = "lbl_Good_PLT";
             this.lbl_Good_PLT.Size = new System.Drawing.Size(230, 107);
             this.lbl_Good_PLT.TabIndex = 24;
-            this.lbl_Good_PLT.Text = "915.0";
+            this.lbl_Good_PLT.Text = "0";
             this.lbl_Good_PLT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label31
