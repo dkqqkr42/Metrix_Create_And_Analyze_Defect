@@ -163,6 +163,9 @@
   <data name="아래클릭" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\아래클릭1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="생산현황클릭" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\생산현황클릭.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="작업예약클릭" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\작업예약클릭.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -189,6 +192,9 @@
   </data>
   <data name="작업시작" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\작업시작.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="생산현황" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\생산현황.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="확정클릭" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\확정클릭6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,6 +238,9 @@
   <data name="입력클릭2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\입력클릭22.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="바코드발행" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\바코드발행.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="불러오기클릭" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\불러오기클릭1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -241,14 +250,14 @@
   <data name="조회클릭2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\조회클릭22.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="차트클릭" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\차트클릭.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="전체클릭" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\전체클릭.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="아래2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\아래2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="닫기클릭4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\닫기클릭4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="저장클릭" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\저장클릭.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -267,9 +276,6 @@
   </data>
   <data name="전체" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\전체.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="차트" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\차트.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="닫기클릭임시" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\닫기클릭임시.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -331,6 +337,9 @@
   <data name="위끝" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\위끝1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="바코드발행클릭" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\바코드발행클릭.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="위끝클릭" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\위끝클릭1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -351,6 +360,9 @@
   </data>
   <data name="한BOX클릭" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\한BOX클릭.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="닫기4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\닫기4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="작업예약" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\작업예약.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -385,16 +397,10 @@
   <data name="작업계획클릭" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\작업계획클릭1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="닫기4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\닫기4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="닫기5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\닫기5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="닫기클릭4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\닫기클릭4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="바코드발행" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\바코드발행.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="바코드발행클릭" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\바코드발행클릭.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="닫기클릭5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\닫기클릭5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

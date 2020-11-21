@@ -28,21 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.cbo_TEAM = new MetroFramework.Controls.MetroComboBox();
             this.lbl_TEAM = new MetroFramework.Controls.MetroLabel();
             this.cbo_ORDER_TYPE = new MetroFramework.Controls.MetroComboBox();
             this.lbl_ORDER_TYPE = new MetroFramework.Controls.MetroLabel();
-            this.btn_Decide = new MetroFramework.Controls.MetroButton();
-            this.btn_Insert = new MetroFramework.Controls.MetroButton();
             this.lbl_WORKCENTER = new MetroFramework.Controls.MetroLabel();
-            this.btn_Select = new MetroFramework.Controls.MetroButton();
             this.lbl_DATE = new MetroFramework.Controls.MetroLabel();
             this.cbo_WORKCENTER = new MetroFramework.Controls.MetroComboBox();
             this.lbl_what = new MetroFramework.Controls.MetroLabel();
@@ -63,11 +60,14 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel44 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Defect = new MetroFramework.Controls.MetroButton();
             this.btn_SAPOrder = new MetroFramework.Controls.MetroButton();
             this.btn_WorkPlan = new MetroFramework.Controls.MetroButton();
             this.btn_Working = new MetroFramework.Controls.MetroButton();
             this.btn_Inspection = new MetroFramework.Controls.MetroButton();
-            this.btn_Defect = new MetroFramework.Controls.MetroButton();
+            this.btn_Decide = new MetroFramework.Controls.MetroButton();
+            this.btn_Insert = new MetroFramework.Controls.MetroButton();
+            this.btn_Select = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd_Result)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -128,7 +128,6 @@
             // cbo_TEAM
             // 
             this.cbo_TEAM.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbo_TEAM.FontWeight = MetroFramework.MetroComboBoxWeight.Bold;
             this.cbo_TEAM.FormattingEnabled = true;
             this.cbo_TEAM.ItemHeight = 23;
             this.cbo_TEAM.Items.AddRange(new object[] {
@@ -157,7 +156,6 @@
             // cbo_ORDER_TYPE
             // 
             this.cbo_ORDER_TYPE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbo_ORDER_TYPE.FontWeight = MetroFramework.MetroComboBoxWeight.Bold;
             this.cbo_ORDER_TYPE.FormattingEnabled = true;
             this.cbo_ORDER_TYPE.ItemHeight = 23;
             this.cbo_ORDER_TYPE.Items.AddRange(new object[] {
@@ -183,36 +181,6 @@
             this.lbl_ORDER_TYPE.Text = "주문구분";
             this.lbl_ORDER_TYPE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_Decide
-            // 
-            this.btn_Decide.BackgroundImage = global::FinalProject_Profile.Properties.Resources.확정;
-            this.btn_Decide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Decide.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Decide.Location = new System.Drawing.Point(1499, 1);
-            this.btn_Decide.Margin = new System.Windows.Forms.Padding(1);
-            this.btn_Decide.Name = "btn_Decide";
-            this.btn_Decide.Size = new System.Drawing.Size(102, 94);
-            this.btn_Decide.TabIndex = 8;
-            this.btn_Decide.UseSelectable = true;
-            this.btn_Decide.Click += new System.EventHandler(this.btn_Decide_Click);
-            this.btn_Decide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Decide_MouseDown);
-            this.btn_Decide.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Decide_MouseUp);
-            // 
-            // btn_Insert
-            // 
-            this.btn_Insert.BackgroundImage = global::FinalProject_Profile.Properties.Resources.입력1;
-            this.btn_Insert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Insert.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Insert.Location = new System.Drawing.Point(1402, 1);
-            this.btn_Insert.Margin = new System.Windows.Forms.Padding(1);
-            this.btn_Insert.Name = "btn_Insert";
-            this.btn_Insert.Size = new System.Drawing.Size(95, 94);
-            this.btn_Insert.TabIndex = 7;
-            this.btn_Insert.UseSelectable = true;
-            this.btn_Insert.Click += new System.EventHandler(this.btn_Insert_Click);
-            this.btn_Insert.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Insert_MouseDown);
-            this.btn_Insert.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Insert_MouseUp);
-            // 
             // lbl_WORKCENTER
             // 
             this.lbl_WORKCENTER.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -224,21 +192,6 @@
             this.lbl_WORKCENTER.TabIndex = 3;
             this.lbl_WORKCENTER.Text = "W/C";
             this.lbl_WORKCENTER.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_Select
-            // 
-            this.btn_Select.BackgroundImage = global::FinalProject_Profile.Properties.Resources.조회1;
-            this.btn_Select.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Select.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Select.Location = new System.Drawing.Point(1305, 1);
-            this.btn_Select.Margin = new System.Windows.Forms.Padding(1);
-            this.btn_Select.Name = "btn_Select";
-            this.btn_Select.Size = new System.Drawing.Size(95, 94);
-            this.btn_Select.TabIndex = 6;
-            this.btn_Select.UseSelectable = true;
-            this.btn_Select.Click += new System.EventHandler(this.btn_Select_Click);
-            this.btn_Select.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Select_MouseDown);
-            this.btn_Select.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Select_MouseUp);
             // 
             // lbl_DATE
             // 
@@ -255,7 +208,6 @@
             // cbo_WORKCENTER
             // 
             this.cbo_WORKCENTER.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbo_WORKCENTER.FontWeight = MetroFramework.MetroComboBoxWeight.Bold;
             this.cbo_WORKCENTER.FormattingEnabled = true;
             this.cbo_WORKCENTER.ItemHeight = 23;
             this.cbo_WORKCENTER.Items.AddRange(new object[] {
@@ -282,7 +234,7 @@
             // dtp_INSERT_DATE_START
             // 
             this.dtp_INSERT_DATE_START.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtp_INSERT_DATE_START.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dtp_INSERT_DATE_START.Font = new System.Drawing.Font("굴림", 14F);
             this.dtp_INSERT_DATE_START.Location = new System.Drawing.Point(586, 33);
             this.dtp_INSERT_DATE_START.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtp_INSERT_DATE_START.Name = "dtp_INSERT_DATE_START";
@@ -292,7 +244,7 @@
             // dtp_INSERT_DATE_END
             // 
             this.dtp_INSERT_DATE_END.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtp_INSERT_DATE_END.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dtp_INSERT_DATE_END.Font = new System.Drawing.Font("굴림", 14F);
             this.dtp_INSERT_DATE_END.Location = new System.Drawing.Point(857, 33);
             this.dtp_INSERT_DATE_END.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtp_INSERT_DATE_END.Name = "dtp_INSERT_DATE_END";
@@ -304,21 +256,21 @@
             this.grd_Result.AllowUserToAddRows = false;
             this.grd_Result.AllowUserToDeleteRows = false;
             this.grd_Result.AllowUserToResizeRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.grd_Result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.grd_Result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grd_Result.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grd_Result.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grd_Result.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grd_Result.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grd_Result.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grd_Result.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grd_Result.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grd_Result.ColumnHeadersHeight = 50;
             this.grd_Result.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -332,14 +284,14 @@
             this.Column9,
             this.Column10,
             this.Column11});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grd_Result.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grd_Result.DefaultCellStyle = dataGridViewCellStyle3;
             this.grd_Result.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grd_Result.EnableHeadersVisualStyles = false;
             this.grd_Result.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -350,18 +302,18 @@
             this.grd_Result.Name = "grd_Result";
             this.grd_Result.ReadOnly = true;
             this.grd_Result.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grd_Result.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grd_Result.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grd_Result.RowHeadersVisible = false;
             this.grd_Result.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grd_Result.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.grd_Result.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.grd_Result.RowTemplate.Height = 35;
             this.grd_Result.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grd_Result.Size = new System.Drawing.Size(1608, 785);
@@ -515,6 +467,21 @@
             this.tableLayoutPanel44.Size = new System.Drawing.Size(220, 892);
             this.tableLayoutPanel44.TabIndex = 5;
             // 
+            // btn_Defect
+            // 
+            this.btn_Defect.BackgroundImage = global::FinalProject_Profile.Properties.Resources.생산현황;
+            this.btn_Defect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Defect.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Defect.Location = new System.Drawing.Point(1, 713);
+            this.btn_Defect.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Defect.Name = "btn_Defect";
+            this.btn_Defect.Size = new System.Drawing.Size(218, 178);
+            this.btn_Defect.TabIndex = 9;
+            this.btn_Defect.UseSelectable = true;
+            this.btn_Defect.Click += new System.EventHandler(this.btn_Defect_Click);
+            this.btn_Defect.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseDown);
+            this.btn_Defect.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseUp);
+            // 
             // btn_SAPOrder
             // 
             this.btn_SAPOrder.BackgroundImage = global::FinalProject_Profile.Properties.Resources.생산계획접수;
@@ -574,20 +541,50 @@
             this.btn_Inspection.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Inspection_MouseDown);
             this.btn_Inspection.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Inspection_MouseUp);
             // 
-            // btn_Defect
+            // btn_Decide
             // 
-            this.btn_Defect.BackgroundImage = global::FinalProject_Profile.Properties.Resources.차트;
-            this.btn_Defect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Defect.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Defect.Location = new System.Drawing.Point(1, 713);
-            this.btn_Defect.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Defect.Name = "btn_Defect";
-            this.btn_Defect.Size = new System.Drawing.Size(218, 178);
-            this.btn_Defect.TabIndex = 9;
-            this.btn_Defect.UseSelectable = true;
-            this.btn_Defect.Click += new System.EventHandler(this.btn_Defect_Click);
-            this.btn_Defect.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseDown);
-            this.btn_Defect.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseUp);
+            this.btn_Decide.BackgroundImage = global::FinalProject_Profile.Properties.Resources.확정;
+            this.btn_Decide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Decide.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Decide.Location = new System.Drawing.Point(1499, 1);
+            this.btn_Decide.Margin = new System.Windows.Forms.Padding(1);
+            this.btn_Decide.Name = "btn_Decide";
+            this.btn_Decide.Size = new System.Drawing.Size(102, 94);
+            this.btn_Decide.TabIndex = 8;
+            this.btn_Decide.UseSelectable = true;
+            this.btn_Decide.Click += new System.EventHandler(this.btn_Decide_Click);
+            this.btn_Decide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Decide_MouseDown);
+            this.btn_Decide.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Decide_MouseUp);
+            // 
+            // btn_Insert
+            // 
+            this.btn_Insert.BackgroundImage = global::FinalProject_Profile.Properties.Resources.입력1;
+            this.btn_Insert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Insert.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Insert.Location = new System.Drawing.Point(1402, 1);
+            this.btn_Insert.Margin = new System.Windows.Forms.Padding(1);
+            this.btn_Insert.Name = "btn_Insert";
+            this.btn_Insert.Size = new System.Drawing.Size(95, 94);
+            this.btn_Insert.TabIndex = 7;
+            this.btn_Insert.UseSelectable = true;
+            this.btn_Insert.Click += new System.EventHandler(this.btn_Insert_Click);
+            this.btn_Insert.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Insert_MouseDown);
+            this.btn_Insert.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Insert_MouseUp);
+            // 
+            // btn_Select
+            // 
+            this.btn_Select.BackgroundImage = global::FinalProject_Profile.Properties.Resources.조회1;
+            this.btn_Select.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Select.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Select.Location = new System.Drawing.Point(1305, 1);
+            this.btn_Select.Margin = new System.Windows.Forms.Padding(1);
+            this.btn_Select.Name = "btn_Select";
+            this.btn_Select.Size = new System.Drawing.Size(95, 94);
+            this.btn_Select.TabIndex = 6;
+            this.btn_Select.UseSelectable = true;
+            this.btn_Select.Click += new System.EventHandler(this.btn_Select_Click);
+            this.btn_Select.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Select_MouseDown);
+            this.btn_Select.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Select_MouseUp);
             // 
             // SAPOrder
             // 
