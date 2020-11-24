@@ -519,8 +519,24 @@ namespace FinalProject_Profile
         {
             try
             {
+
                 for (int i = 0; i < 5; i++)
                 {
+                    if (Int32.Parse(order_m) <= total_qty)
+                    {
+                        timer.Enabled = false;
+                        MessageBox.Show("작업이 완료되었습니다. 불량 요인을 등록해 주세요.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        btn_flag = 2;
+
+                        //불량등록 이미지로 바꾸기
+                        btn_InspectionStart.BackgroundImage = FinalProject_Profile.Properties.Resources.불량등록;
+
+                        timer.Stop();
+
+                        return;
+                    }
+
                     if (i == 4)
                     {
                         good_qty += cut_pcs - 1;
@@ -557,20 +573,7 @@ namespace FinalProject_Profile
 
                     timer.Enabled = true;
 
-                    if (Int32.Parse(order_m) <= total_qty)
-                    {
-                        timer.Enabled = false;
-                        MessageBox.Show("작업이 완료되었습니다. 불량 요인을 등록해 주세요.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
-                        btn_flag = 2;
-
-                        //불량등록 이미지로 바꾸기
-                        btn_InspectionStart.BackgroundImage = FinalProject_Profile.Properties.Resources.불량등록;
-
-                        timer.Stop();
-
-                        return;
-                    }
+                    
                         
                 }
             }
