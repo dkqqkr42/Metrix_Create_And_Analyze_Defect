@@ -348,6 +348,22 @@ namespace FinalProject_Profile
 
             PlanGrid();
         }
+
+        private void btn_Close_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기5;
+        }
+
+        private void btn_Close_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_Close.BackgroundImage = FinalProject_Profile.Properties.Resources.닫기클릭5;
+        }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            main.CallSAPOrder();
+            this.Close();
+        }
     }
     public class PlanData
     {

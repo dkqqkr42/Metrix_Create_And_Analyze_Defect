@@ -35,13 +35,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.cbo_TEAM = new MetroFramework.Controls.MetroComboBox();
             this.lbl_TEAM = new MetroFramework.Controls.MetroLabel();
-            this.cbo_ORDER_TYPE = new MetroFramework.Controls.MetroComboBox();
             this.lbl_ORDER_TYPE = new MetroFramework.Controls.MetroLabel();
+            this.btn_Decide = new MetroFramework.Controls.MetroButton();
+            this.btn_Insert = new MetroFramework.Controls.MetroButton();
             this.lbl_WORKCENTER = new MetroFramework.Controls.MetroLabel();
+            this.btn_Select = new MetroFramework.Controls.MetroButton();
             this.lbl_DATE = new MetroFramework.Controls.MetroLabel();
-            this.cbo_WORKCENTER = new MetroFramework.Controls.MetroComboBox();
             this.lbl_what = new MetroFramework.Controls.MetroLabel();
             this.dtp_INSERT_DATE_START = new System.Windows.Forms.DateTimePicker();
             this.dtp_INSERT_DATE_END = new System.Windows.Forms.DateTimePicker();
@@ -60,14 +60,14 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel44 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Defect = new MetroFramework.Controls.MetroButton();
             this.btn_SAPOrder = new MetroFramework.Controls.MetroButton();
             this.btn_WorkPlan = new MetroFramework.Controls.MetroButton();
             this.btn_Working = new MetroFramework.Controls.MetroButton();
             this.btn_Inspection = new MetroFramework.Controls.MetroButton();
-            this.btn_Decide = new MetroFramework.Controls.MetroButton();
-            this.btn_Insert = new MetroFramework.Controls.MetroButton();
-            this.btn_Select = new MetroFramework.Controls.MetroButton();
+            this.btn_Defect = new MetroFramework.Controls.MetroButton();
+            this.cbo_TEAM = new System.Windows.Forms.ComboBox();
+            this.cbo_WORKCENTER = new System.Windows.Forms.ComboBox();
+            this.cbo_ORDER_TYPE = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grd_Result)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -103,16 +103,16 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.069145F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.069145F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.069145F));
-            this.tableLayoutPanel3.Controls.Add(this.cbo_TEAM, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.lbl_TEAM, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.cbo_ORDER_TYPE, 9, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_TEAM, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.cbo_WORKCENTER, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.lbl_ORDER_TYPE, 8, 0);
+            this.tableLayoutPanel3.Controls.Add(this.cbo_TEAM, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.btn_Decide, 12, 0);
             this.tableLayoutPanel3.Controls.Add(this.btn_Insert, 11, 0);
             this.tableLayoutPanel3.Controls.Add(this.lbl_WORKCENTER, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.btn_Select, 10, 0);
             this.tableLayoutPanel3.Controls.Add(this.lbl_DATE, 4, 0);
-            this.tableLayoutPanel3.Controls.Add(this.cbo_WORKCENTER, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.lbl_what, 6, 0);
             this.tableLayoutPanel3.Controls.Add(this.dtp_INSERT_DATE_START, 5, 0);
             this.tableLayoutPanel3.Controls.Add(this.dtp_INSERT_DATE_END, 7, 0);
@@ -124,22 +124,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1602, 96);
             this.tableLayoutPanel3.TabIndex = 10;
-            // 
-            // cbo_TEAM
-            // 
-            this.cbo_TEAM.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbo_TEAM.FormattingEnabled = true;
-            this.cbo_TEAM.ItemHeight = 23;
-            this.cbo_TEAM.Items.AddRange(new object[] {
-            "전체",
-            "카매트생산팀"});
-            this.cbo_TEAM.Location = new System.Drawing.Point(99, 33);
-            this.cbo_TEAM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbo_TEAM.Name = "cbo_TEAM";
-            this.cbo_TEAM.Size = new System.Drawing.Size(129, 29);
-            this.cbo_TEAM.TabIndex = 1;
-            this.cbo_TEAM.UseSelectable = true;
-            this.cbo_TEAM.SelectedIndexChanged += new System.EventHandler(this.cbo_TEAM_SelectedIndexChanged);
             // 
             // lbl_TEAM
             // 
@@ -153,22 +137,6 @@
             this.lbl_TEAM.Text = "생산팀";
             this.lbl_TEAM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // cbo_ORDER_TYPE
-            // 
-            this.cbo_ORDER_TYPE.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbo_ORDER_TYPE.FormattingEnabled = true;
-            this.cbo_ORDER_TYPE.ItemHeight = 23;
-            this.cbo_ORDER_TYPE.Items.AddRange(new object[] {
-            "전체",
-            "계획",
-            "주문"});
-            this.cbo_ORDER_TYPE.Location = new System.Drawing.Point(1197, 33);
-            this.cbo_ORDER_TYPE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbo_ORDER_TYPE.Name = "cbo_ORDER_TYPE";
-            this.cbo_ORDER_TYPE.Size = new System.Drawing.Size(100, 29);
-            this.cbo_ORDER_TYPE.TabIndex = 5;
-            this.cbo_ORDER_TYPE.UseSelectable = true;
-            // 
             // lbl_ORDER_TYPE
             // 
             this.lbl_ORDER_TYPE.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -180,6 +148,36 @@
             this.lbl_ORDER_TYPE.TabIndex = 3;
             this.lbl_ORDER_TYPE.Text = "주문구분";
             this.lbl_ORDER_TYPE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_Decide
+            // 
+            this.btn_Decide.BackgroundImage = global::FinalProject_Profile.Properties.Resources.확정;
+            this.btn_Decide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Decide.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Decide.Location = new System.Drawing.Point(1499, 1);
+            this.btn_Decide.Margin = new System.Windows.Forms.Padding(1);
+            this.btn_Decide.Name = "btn_Decide";
+            this.btn_Decide.Size = new System.Drawing.Size(102, 94);
+            this.btn_Decide.TabIndex = 8;
+            this.btn_Decide.UseSelectable = true;
+            this.btn_Decide.Click += new System.EventHandler(this.btn_Decide_Click);
+            this.btn_Decide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Decide_MouseDown);
+            this.btn_Decide.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Decide_MouseUp);
+            // 
+            // btn_Insert
+            // 
+            this.btn_Insert.BackgroundImage = global::FinalProject_Profile.Properties.Resources.입력1;
+            this.btn_Insert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Insert.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Insert.Location = new System.Drawing.Point(1402, 1);
+            this.btn_Insert.Margin = new System.Windows.Forms.Padding(1);
+            this.btn_Insert.Name = "btn_Insert";
+            this.btn_Insert.Size = new System.Drawing.Size(95, 94);
+            this.btn_Insert.TabIndex = 7;
+            this.btn_Insert.UseSelectable = true;
+            this.btn_Insert.Click += new System.EventHandler(this.btn_Insert_Click);
+            this.btn_Insert.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Insert_MouseDown);
+            this.btn_Insert.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Insert_MouseUp);
             // 
             // lbl_WORKCENTER
             // 
@@ -193,6 +191,21 @@
             this.lbl_WORKCENTER.Text = "W/C";
             this.lbl_WORKCENTER.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btn_Select
+            // 
+            this.btn_Select.BackgroundImage = global::FinalProject_Profile.Properties.Resources.조회1;
+            this.btn_Select.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Select.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Select.Location = new System.Drawing.Point(1305, 1);
+            this.btn_Select.Margin = new System.Windows.Forms.Padding(1);
+            this.btn_Select.Name = "btn_Select";
+            this.btn_Select.Size = new System.Drawing.Size(95, 94);
+            this.btn_Select.TabIndex = 6;
+            this.btn_Select.UseSelectable = true;
+            this.btn_Select.Click += new System.EventHandler(this.btn_Select_Click);
+            this.btn_Select.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Select_MouseDown);
+            this.btn_Select.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Select_MouseUp);
+            // 
             // lbl_DATE
             // 
             this.lbl_DATE.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -204,22 +217,6 @@
             this.lbl_DATE.TabIndex = 3;
             this.lbl_DATE.Text = "추가일";
             this.lbl_DATE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cbo_WORKCENTER
-            // 
-            this.cbo_WORKCENTER.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbo_WORKCENTER.FormattingEnabled = true;
-            this.cbo_WORKCENTER.ItemHeight = 23;
-            this.cbo_WORKCENTER.Items.AddRange(new object[] {
-            "전체",
-            "1호카매트",
-            "2호카매트"});
-            this.cbo_WORKCENTER.Location = new System.Drawing.Point(343, 33);
-            this.cbo_WORKCENTER.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbo_WORKCENTER.Name = "cbo_WORKCENTER";
-            this.cbo_WORKCENTER.Size = new System.Drawing.Size(133, 29);
-            this.cbo_WORKCENTER.TabIndex = 2;
-            this.cbo_WORKCENTER.UseSelectable = true;
             // 
             // lbl_what
             // 
@@ -467,21 +464,6 @@
             this.tableLayoutPanel44.Size = new System.Drawing.Size(220, 892);
             this.tableLayoutPanel44.TabIndex = 5;
             // 
-            // btn_Defect
-            // 
-            this.btn_Defect.BackgroundImage = global::FinalProject_Profile.Properties.Resources.생산현황;
-            this.btn_Defect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Defect.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Defect.Location = new System.Drawing.Point(1, 713);
-            this.btn_Defect.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Defect.Name = "btn_Defect";
-            this.btn_Defect.Size = new System.Drawing.Size(218, 178);
-            this.btn_Defect.TabIndex = 9;
-            this.btn_Defect.UseSelectable = true;
-            this.btn_Defect.Click += new System.EventHandler(this.btn_Defect_Click);
-            this.btn_Defect.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseDown);
-            this.btn_Defect.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseUp);
-            // 
             // btn_SAPOrder
             // 
             this.btn_SAPOrder.BackgroundImage = global::FinalProject_Profile.Properties.Resources.생산계획접수;
@@ -541,50 +523,61 @@
             this.btn_Inspection.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Inspection_MouseDown);
             this.btn_Inspection.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Inspection_MouseUp);
             // 
-            // btn_Decide
+            // btn_Defect
             // 
-            this.btn_Decide.BackgroundImage = global::FinalProject_Profile.Properties.Resources.확정;
-            this.btn_Decide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Decide.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Decide.Location = new System.Drawing.Point(1499, 1);
-            this.btn_Decide.Margin = new System.Windows.Forms.Padding(1);
-            this.btn_Decide.Name = "btn_Decide";
-            this.btn_Decide.Size = new System.Drawing.Size(102, 94);
-            this.btn_Decide.TabIndex = 8;
-            this.btn_Decide.UseSelectable = true;
-            this.btn_Decide.Click += new System.EventHandler(this.btn_Decide_Click);
-            this.btn_Decide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Decide_MouseDown);
-            this.btn_Decide.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Decide_MouseUp);
+            this.btn_Defect.BackgroundImage = global::FinalProject_Profile.Properties.Resources.생산현황;
+            this.btn_Defect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Defect.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Defect.Location = new System.Drawing.Point(1, 713);
+            this.btn_Defect.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Defect.Name = "btn_Defect";
+            this.btn_Defect.Size = new System.Drawing.Size(218, 178);
+            this.btn_Defect.TabIndex = 9;
+            this.btn_Defect.UseSelectable = true;
+            this.btn_Defect.Click += new System.EventHandler(this.btn_Defect_Click);
+            this.btn_Defect.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseDown);
+            this.btn_Defect.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseUp);
             // 
-            // btn_Insert
+            // cbo_TEAM
             // 
-            this.btn_Insert.BackgroundImage = global::FinalProject_Profile.Properties.Resources.입력1;
-            this.btn_Insert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Insert.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Insert.Location = new System.Drawing.Point(1402, 1);
-            this.btn_Insert.Margin = new System.Windows.Forms.Padding(1);
-            this.btn_Insert.Name = "btn_Insert";
-            this.btn_Insert.Size = new System.Drawing.Size(95, 94);
-            this.btn_Insert.TabIndex = 7;
-            this.btn_Insert.UseSelectable = true;
-            this.btn_Insert.Click += new System.EventHandler(this.btn_Insert_Click);
-            this.btn_Insert.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Insert_MouseDown);
-            this.btn_Insert.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Insert_MouseUp);
+            this.cbo_TEAM.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_TEAM.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_TEAM.FormattingEnabled = true;
+            this.cbo_TEAM.Items.AddRange(new object[] {
+            "전체",
+            "카매트생산팀"});
+            this.cbo_TEAM.Location = new System.Drawing.Point(103, 34);
+            this.cbo_TEAM.Name = "cbo_TEAM";
+            this.cbo_TEAM.Size = new System.Drawing.Size(121, 27);
+            this.cbo_TEAM.TabIndex = 16;
             // 
-            // btn_Select
+            // cbo_WORKCENTER
             // 
-            this.btn_Select.BackgroundImage = global::FinalProject_Profile.Properties.Resources.조회1;
-            this.btn_Select.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Select.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Select.Location = new System.Drawing.Point(1305, 1);
-            this.btn_Select.Margin = new System.Windows.Forms.Padding(1);
-            this.btn_Select.Name = "btn_Select";
-            this.btn_Select.Size = new System.Drawing.Size(95, 94);
-            this.btn_Select.TabIndex = 6;
-            this.btn_Select.UseSelectable = true;
-            this.btn_Select.Click += new System.EventHandler(this.btn_Select_Click);
-            this.btn_Select.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Select_MouseDown);
-            this.btn_Select.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Select_MouseUp);
+            this.cbo_WORKCENTER.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_WORKCENTER.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_WORKCENTER.FormattingEnabled = true;
+            this.cbo_WORKCENTER.Items.AddRange(new object[] {
+            "전체",
+            "1호카매트",
+            "2호카매트"});
+            this.cbo_WORKCENTER.Location = new System.Drawing.Point(349, 35);
+            this.cbo_WORKCENTER.Name = "cbo_WORKCENTER";
+            this.cbo_WORKCENTER.Size = new System.Drawing.Size(121, 27);
+            this.cbo_WORKCENTER.TabIndex = 17;
+            // 
+            // cbo_ORDER_TYPE
+            // 
+            this.cbo_ORDER_TYPE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbo_ORDER_TYPE.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.cbo_ORDER_TYPE.FormattingEnabled = true;
+            this.cbo_ORDER_TYPE.Items.AddRange(new object[] {
+            "전체",
+            "계획",
+            "주문"});
+            this.cbo_ORDER_TYPE.Location = new System.Drawing.Point(1216, 35);
+            this.cbo_ORDER_TYPE.Name = "cbo_ORDER_TYPE";
+            this.cbo_ORDER_TYPE.Size = new System.Drawing.Size(61, 27);
+            this.cbo_ORDER_TYPE.TabIndex = 18;
             // 
             // SAPOrder
             // 
@@ -613,16 +606,13 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private MetroFramework.Controls.MetroComboBox cbo_TEAM;
         private MetroFramework.Controls.MetroLabel lbl_TEAM;
-        private MetroFramework.Controls.MetroComboBox cbo_ORDER_TYPE;
         private MetroFramework.Controls.MetroLabel lbl_ORDER_TYPE;
         private MetroFramework.Controls.MetroButton btn_Decide;
         private MetroFramework.Controls.MetroButton btn_Insert;
         private MetroFramework.Controls.MetroLabel lbl_WORKCENTER;
         private MetroFramework.Controls.MetroButton btn_Select;
         private MetroFramework.Controls.MetroLabel lbl_DATE;
-        private MetroFramework.Controls.MetroComboBox cbo_WORKCENTER;
         private MetroFramework.Controls.MetroLabel lbl_what;
         private System.Windows.Forms.DateTimePicker dtp_INSERT_DATE_START;
         private System.Windows.Forms.DateTimePicker dtp_INSERT_DATE_END;
@@ -646,6 +636,9 @@
         private MetroFramework.Controls.MetroButton btn_Working;
         private MetroFramework.Controls.MetroButton btn_Inspection;
         private MetroFramework.Controls.MetroButton btn_Defect;
+        private System.Windows.Forms.ComboBox cbo_TEAM;
+        private System.Windows.Forms.ComboBox cbo_WORKCENTER;
+        private System.Windows.Forms.ComboBox cbo_ORDER_TYPE;
     }
 }
 

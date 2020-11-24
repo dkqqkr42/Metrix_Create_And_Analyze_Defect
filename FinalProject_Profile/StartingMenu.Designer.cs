@@ -54,6 +54,7 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_Close = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -321,12 +322,25 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "label2";
             // 
+            // btn_Close
+            // 
+            this.btn_Close.BackgroundImage = global::FinalProject_Profile.Properties.Resources.닫기5;
+            this.btn_Close.Location = new System.Drawing.Point(1760, 16);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(97, 43);
+            this.btn_Close.TabIndex = 21;
+            this.btn_Close.UseSelectable = true;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+            this.btn_Close.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Close_MouseDown);
+            this.btn_Close.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Close_MouseUp);
+            // 
             // StartingMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1860, 933);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label30);
@@ -379,5 +393,6 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private MetroFramework.Controls.MetroButton btn_Close;
     }
 }
