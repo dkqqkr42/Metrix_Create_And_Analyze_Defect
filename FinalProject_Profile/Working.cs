@@ -125,32 +125,56 @@ namespace FinalProject_Profile
         {           
             if (btn_flag == 0)
             {
-                //멈추는 이미지로 바꾸기
-                byte[] datas = StringToByte("a\n"); // 줄바꿈 기호인 \n 은 끝에 꼭 들어가야 합니다.
-                mySerial.Write(datas, 0, datas.Length);
-                timer.Start();
-                btn_flag = 1;
+                try
+                {
+                    //멈추는 이미지로 바꾸기
+                    timer.Start();
+                    btn_flag = 1;
+                    byte[] datas = StringToByte("a\n"); // 줄바꿈 기호인 \n 은 끝에 꼭 들어가야 합니다.
+                    mySerial.Write(datas, 0, datas.Length);
+                }
+                catch
+                {
+
+                }
+                
             }
                 
             else if (btn_flag == 1)
             {
+                try
+                {
+                    timer.Stop();
+                    btn_flag = 0;
+                    byte[] datas = StringToByte("b\n"); // 줄바꿈 기호인 \n 은 끝에 꼭 들어가야 합니다.
+                    mySerial.Write(datas, 0, datas.Length);
+                }
+                catch
+                {
+
+                }
                 //시작 이미지로 바꾸기
-                byte[] datas = StringToByte("b\n"); // 줄바꿈 기호인 \n 은 끝에 꼭 들어가야 합니다.
-                mySerial.Write(datas, 0, datas.Length);
-                timer.Stop();
-                btn_flag = 0;
+                
                 
             }
             else if (btn_flag == 2)
             {
-                byte[] datas = StringToByte("b\n"); // 줄바꿈 기호인 \n 은 끝에 꼭 들어가야 합니다.
-                mySerial.Write(datas, 0, datas.Length);
-                //작업 순위에서 삭제 후 작업 순위 랭크 -1 후 Plan에 완료처리 하는 쿼리
-                ChangePlan();
-                //불량등록
-                InsertDefect();
-                //다음 데이터 조회
-                btn_flag = 0;
+                try
+                {
+                    //작업 순위에서 삭제 후 작업 순위 랭크 -1 후 Plan에 완료처리 하는 쿼리
+                    ChangePlan();
+                    //불량등록
+                    InsertDefect();
+                    //다음 데이터 조회
+                    btn_flag = 0;
+                    byte[] datas = StringToByte("b\n"); // 줄바꿈 기호인 \n 은 끝에 꼭 들어가야 합니다.
+                    mySerial.Write(datas, 0, datas.Length);
+                }
+                catch
+                {
+
+                }
+               
             }
         }
         private byte[] StringToByte(string _str)
@@ -162,20 +186,28 @@ namespace FinalProject_Profile
         {
             timer.Elapsed += new ElapsedEventHandler(timer_Elapsed);
             mySerial = new SerialPort();
-            if (!mySerial.IsOpen)  //시리얼포트가 닫혀있을 때만
+            try
             {
-                mySerial.PortName = "COM5";  // 선택된 combobox 의 이름으로 포트명을 지정하자
-                mySerial.BaudRate = 115200;  //아두이노에서 사용할 전송률를 지정하자
-                mySerial.DataBits = 8;
-                mySerial.StopBits = StopBits.One;
-                mySerial.Parity = Parity.None;
+                if (!mySerial.IsOpen)  //시리얼포트가 닫혀있을 때만
+                {
+                    mySerial.PortName = "COM5";  // 선택된 combobox 의 이름으로 포트명을 지정하자
+                    mySerial.BaudRate = 115200;  //아두이노에서 사용할 전송률를 지정하자
+                    mySerial.DataBits = 8;
+                    mySerial.StopBits = StopBits.One;
+                    mySerial.Parity = Parity.None;
 
-                mySerial.Open();  //시리얼포트 열기
+                    mySerial.Open();  //시리얼포트 열기
+                }
+                else
+                {
+                    MessageBox.Show("해당포트가 이미 열려 있습니다.");
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show("해당포트가 이미 열려 있습니다.");
+
             }
+            
         }
 
         protected const string connectionString = "DATA SOURCE=220.69.249.228:1521/xe;PASSWORD=1234;PERSIST SECURITY INFO=True;USER ID=MAT_MGR";
