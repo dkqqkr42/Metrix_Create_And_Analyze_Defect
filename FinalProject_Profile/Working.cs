@@ -231,6 +231,7 @@ namespace FinalProject_Profile
             total_qty = 0; total_box = 0; total_plt = 0;
             plt_seq = 1; punching = 0; bad_qty = 0;
             _good_qty = 0; _bad_qty = 0;
+            box_pcs = 0; plt_box = 0; cut_pcs = 0;
             OracleConnection connection = null;
             try
             {
