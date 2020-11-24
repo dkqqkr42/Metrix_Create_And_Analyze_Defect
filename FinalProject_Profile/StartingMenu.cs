@@ -54,8 +54,8 @@ namespace FinalProject_Profile
                     CommandText = "SELECT trim(A.PROD_CODE), nvl(sum(B.ORDER_M),0), nvl(sum(C.INSU_QTY),0) FROM tbl_productmaster A ,(select * from TBL_PRODUCTPLAN WHERE JOB_DATE BETWEEN to_date(:START_DATE,'yyyymmdd') AND to_date(:END_DATE,'yyyymmdd') AND PROC_STATUS NOT IN('D')) B, TBL_PRODRSLT C where A.PROD_CODE = B.PROD_CODE(+) AND B.JOB_NO = C.JOB_NO(+) GROUP BY A.PROD_CODE, B.PROD_CODE ORDER BY A.PROD_CODE"
                 };
 
-                cmd.Parameters.Add("START_DATE", dtp_Date1.Value.ToString("yyyyMMdd"));
-                cmd.Parameters.Add("END_DATE", dtp_Date2.Value.ToString("yyyyMMdd"));
+                cmd.Parameters.Add("START_DATE", DateTime.Now.AddDays(-7).ToString("yyyyMMdd"));
+                cmd.Parameters.Add("END_DATE", DateTime.Now.ToString("yyyyMMdd"));
 
                 OracleDataReader reader = cmd.ExecuteReader();
 
@@ -77,8 +77,8 @@ namespace FinalProject_Profile
                     CommandText = "SELECT trim(A.PROD_CODE) 제품코드, nvl(sum(C.BAD_QTY),0) 불량량, nvl(sum(C.GOOD_QTY),0) 양품량 FROM tbl_productmaster A ,(select * from TBL_PRODUCTPLAN WHERE JOB_DATE BETWEEN to_date(:START_DATE,'yyyymmdd') AND to_date(:END_DATE,'yyyymmdd')) B, TBL_PRODRSLT C where A.PROD_CODE = B.PROD_CODE(+) AND B.JOB_NO = C.JOB_NO(+) GROUP BY A.PROD_CODE ORDER BY A.PROD_CODE"
                 };
 
-                cmd.Parameters.Add("START_DATE", dtp_Date1.Value.ToString("yyyyMMdd"));
-                cmd.Parameters.Add("END_DATE", dtp_Date2.Value.ToString("yyyyMMdd"));
+                cmd.Parameters.Add("START_DATE", DateTime.Now.AddDays(-7).ToString("yyyyMMdd"));
+                cmd.Parameters.Add("END_DATE", DateTime.Now.ToString("yyyyMMdd"));
 
                 reader = cmd.ExecuteReader();
 
@@ -155,7 +155,7 @@ namespace FinalProject_Profile
             cartesianChart1.TabIndex = 1;
             cartesianChart1.Text = "cartesianChart1";
 
-            panel3.Controls.Add(cartesianChart1);
+            panel11.Controls.Add(cartesianChart1);
 
 
             cartesianChart1.Series = new SeriesCollection
@@ -166,11 +166,6 @@ namespace FinalProject_Profile
                     Values = new ChartValues<int>()
                 }
             };
-
-            foreach (var item in planList)
-            {
-                cartesianChart1.Series[0].Values.Add(item.ORDER_M);
-            }
 
             //adding series will update and animate the chart automatically
             cartesianChart1.Series.Add(new ColumnSeries
@@ -183,6 +178,7 @@ namespace FinalProject_Profile
 
             foreach (var item in planList)
             {
+                cartesianChart1.Series[0].Values.Add(item.ORDER_M);
                 cartesianChart1.Series[1].Values.Add(item.INSU_QTY);
             }
 
@@ -203,6 +199,7 @@ namespace FinalProject_Profile
             cartesianChart1.AxisY.Add(new Axis
             {
                 Title = "갯수",
+                MinValue = 0,
                 LabelFormatter = value => value.ToString("N0")
             });
 
@@ -261,7 +258,7 @@ namespace FinalProject_Profile
 
             cartesianChart2.AxisX.Add(new Axis
             {
-                Title = "제품",
+                Title = "",
                 Labels = lables.ToArray(),
                 Separator = DefaultAxes.CleanSeparator
             });
@@ -269,6 +266,7 @@ namespace FinalProject_Profile
             cartesianChart2.AxisY.Add(new Axis
             {
                 Title = "불량량",
+                MinValue = 0,
                 LabelFormatter = value => value.ToString("N0")
             });
 
@@ -318,8 +316,8 @@ namespace FinalProject_Profile
         private void StartingMenu_Load(object sender, EventArgs e)
         {
             panel2.BackgroundImage = Properties.Resources.dba_img3;
-            dtp_Date1.Value = DateTime.Now.AddDays(-7);
-            dtp_Date2.Value = DateTime.Now;
+            label2.Text = DateTime.Now.AddDays(-7).ToString("MM월 dd일") + " ~";
+            label3.Text = DateTime.Now.ToString("MM월 dd일") + "  의 자료입니다.";
         }
 
         private void StartingMenu_FormClosing(object sender, FormClosingEventArgs e)
@@ -349,54 +347,6 @@ namespace FinalProject_Profile
             DefectChart();
 
             PlanGrid();
-        }
-
-        private void dtp_Date1_ValueChanged(object sender, EventArgs e)
-        {
-            /*this.Controls.Remove(cartesianChart1);
-            this.Controls.Remove(cartesianChart2);
-            this.Controls.Remove(pieChart1);*/
-            SelectData();
-
-            ProgressChart();
-
-            ProductionStatusChart();
-
-            DefectChart();
-
-            this.Invalidate();
-        }
-
-        private void dtp_Date2_ValueChanged(object sender, EventArgs e)
-        {
-            SelectData();
-
-            ProgressChart();
-
-            ProductionStatusChart();
-
-            DefectChart();
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            panel3.Controls.Remove(cartesianChart1);
-            panel12.Controls.Remove(cartesianChart2);
-            panel10.Controls.Remove(pieChart1);
-            panel6.Controls.Remove(grd_Result);
-            cartesianChart1.Dispose();
-            cartesianChart2.Dispose();
-            pieChart1.Dispose();
-            cartesianChart1.Visible = false;
-            cartesianChart2.Visible = false;
-            pieChart1.Visible = false;
-            grd_Result.Visible = false;
-            tableLayoutPanel1.Visible = false;
-
-            tableLayoutPanel1.Visible = true;
-            
-            this.Activate();
         }
     }
     public class PlanData
