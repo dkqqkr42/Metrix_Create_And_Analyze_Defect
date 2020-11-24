@@ -293,6 +293,16 @@ namespace FinalProject_Profile.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap 로고2 {
+            get {
+                object obj = ResourceManager.GetObject("로고2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap 바코드발행 {
             get {
                 object obj = ResourceManager.GetObject("바코드발행", resourceCulture);

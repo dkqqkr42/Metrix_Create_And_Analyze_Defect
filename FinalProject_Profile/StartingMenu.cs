@@ -315,7 +315,7 @@ namespace FinalProject_Profile
 
         private void StartingMenu_Load(object sender, EventArgs e)
         {
-            panel2.BackgroundImage = Properties.Resources.dba_img3;
+            panel2.BackgroundImage = Properties.Resources.로고2;
             label2.Text = DateTime.Now.AddDays(-7).ToString("MM월 dd일") + " ~";
             label3.Text = DateTime.Now.ToString("MM월 dd일") + "  의 자료입니다.";
         }

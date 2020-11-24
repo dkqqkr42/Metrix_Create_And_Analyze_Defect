@@ -251,6 +251,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\로고23.jpg" />
+    <None Include="Resources\로고22.jpg" />
+    <None Include="Resources\로고21.jpg" />
+    <None Include="Resources\로고2.jpg" />
     <None Include="Resources\닫기클릭5.jpg" />
     <None Include="Resources\닫기5.jpg" />
     <None Include="Resources\생산현황클릭.jpg" />

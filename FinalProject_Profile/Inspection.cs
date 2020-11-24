@@ -60,6 +60,8 @@ namespace FinalProject_Profile
                 string in_Job_No = grd_Result.Rows[rowIndex].Cells[4].Value.ToString();
                 DateTime dateTime = dateTimePicker2.Value;
 
+                // string in_WC_Code = grd_Result.Rows[rowIndex].Cells[].Value.ToString();
+
                 InspectionDTL child6 = new InspectionDTL(in_Roll_No, in_Job_No, dateTime);
                 child6.Show();
             }
