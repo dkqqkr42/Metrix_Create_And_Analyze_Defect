@@ -62,6 +62,7 @@ namespace FinalProject_Profile
                        ", A.PROD_UNIT   PROD_UNIT" +
                        ", A.ORDER_M     ORDER_M" +
                        ", A.JOB_NO      JOB_NO" +
+                       ", A.WC_CODE WC_CODE" +
                        ", A.PROC_STATUS PROC_STATUS" +
                        ", A.ORDER_NO || '-' || A.ORDER_SEQ ORDER_NO" +
                        ", C.ROLL_NO     ROLL_NO" +
@@ -80,8 +81,8 @@ namespace FinalProject_Profile
                        ", E.U_SEQ       U_SEQ" +
                        ", E.DEL_FLAG    DEL_FLAG" +
                        ", E.DECISION    DECISION" +
-                       ", DECODE(LENGTH(TRIM(NVL(E.BAR_NO, ' '))), 24, 'Y', 'N') BAR_NO" +
-                       ", DECODE(LENGTH(TRIM(NVL(E.BAR_NO, ' '))), 24, NVL(E.BAR_NO, ' '), ' ') BAR_NO_STR" +
+/*                       ", DECODE(LENGTH(TRIM(NVL(E.BAR_NO, ' '))), 24, 'Y', 'N') BAR_NO" +
+                       ", DECODE(LENGTH(TRIM(NVL(E.BAR_NO, ' '))), 24, NVL(E.BAR_NO, ' '), ' ') BAR_NO_STR" +*/
                        ", E.CONFIRM_FLAG AS CONFIRM_FLAG" +
                        ", E.RAW_FLAG AS RAW_FLAG" +
                        ", E.SCAN_FLAG    AS SCAN_FLAG" +
@@ -182,10 +183,11 @@ namespace FinalProject_Profile
 
             int rowIndex = grd_Result.CurrentRow.Index;
             string in_Prod_Code = grd_Result.Rows[rowIndex].Cells[0].Value.ToString();
-            string in_U_Seq = grd_Result.Rows[rowIndex].Cells[2].Value.ToString();
-            string in_Tuip_Qty = grd_Result.Rows[rowIndex].Cells[11].Value.ToString();
-            string in_Roll_No = grd_Result.Rows[rowIndex].Cells[8].Value.ToString();
-            string in_Scan_Flag = grd_Result.Rows[rowIndex].Cells[28].Value.ToString();
+            string in_U_Seq = Int32.Parse(grd_Result.Rows[rowIndex].Cells[2].Value.ToString()).ToString("000");
+            string in_Tuip_Qty = grd_Result.Rows[rowIndex].Cells[12].Value.ToString();
+            string in_Roll_No = grd_Result.Rows[rowIndex].Cells[9].Value.ToString();
+            string in_Scan_Flag = grd_Result.Rows[rowIndex].Cells[27].Value.ToString();
+            string in_WC_CODE = grd_Result.Rows[rowIndex].Cells[6].Value.ToString();
 
             if (in_Scan_Flag == "N")
             {
@@ -199,7 +201,7 @@ namespace FinalProject_Profile
                     barcodeWriter.Options.Width = 500;
                     barcodeWriter.Options.Height = 500;
 
-                    string strQRCode = $"{dtp_DATE.Value.ToString("yyMMdd")}{in_Prod_Code}{in_U_Seq}{in_Tuip_Qty}";
+                    string strQRCode = $"{dtp_DATE.Value.ToString("yyMMdd")}-{in_WC_CODE}-{in_Prod_Code}-{in_U_Seq}-{in_Tuip_Qty}";
 
                     string deskPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
                     barcodeWriter.Write(strQRCode).Save(deskPath + @"\BARCODE\" + strQRCode + ".jpg", ImageFormat.Jpeg);
@@ -260,10 +262,11 @@ namespace FinalProject_Profile
             string in_Date = dtp_DATE.Value.ToString("yyMMdd");
             string in_Prod_Code = grd_Result.Rows[rowIndex].Cells[0].Value.ToString();
             string in_U_Seq = grd_Result.Rows[rowIndex].Cells[2].Value.ToString();
-            string in_Tuip_Qty = grd_Result.Rows[rowIndex].Cells[11].Value.ToString();
-            string in_Scan_Flag = grd_Result.Rows[rowIndex].Cells[28].Value.ToString();
+            string in_Tuip_Qty = grd_Result.Rows[rowIndex].Cells[12].Value.ToString();
+            string in_Scan_Flag = grd_Result.Rows[rowIndex].Cells[27].Value.ToString();
+            string in_WC_CODE = grd_Result.Rows[rowIndex].Cells[6].Value.ToString();
 
-            BarcodePopup_InspectionDTL barcodePopup_InspectionDTL = new BarcodePopup_InspectionDTL(in_Date, in_Prod_Code, in_U_Seq, in_Tuip_Qty);
+            BarcodePopup_InspectionDTL barcodePopup_InspectionDTL = new BarcodePopup_InspectionDTL(in_Date, in_Prod_Code, in_U_Seq, in_Tuip_Qty, in_WC_CODE);
             if(in_Scan_Flag == "Y")
             {
                 barcodePopup_InspectionDTL.ShowDialog();

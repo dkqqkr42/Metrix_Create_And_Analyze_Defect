@@ -31,12 +31,12 @@
             this.lbl_Barcode = new System.Windows.Forms.Label();
             this.lbl_BAR_NO = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.ptb_Barcode = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Close = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb_Barcode)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_Barcode
@@ -54,10 +54,10 @@
             // 
             this.lbl_BAR_NO.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_BAR_NO.AutoSize = true;
-            this.lbl_BAR_NO.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_BAR_NO.Location = new System.Drawing.Point(3, 7);
+            this.lbl_BAR_NO.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_BAR_NO.Location = new System.Drawing.Point(3, 10);
             this.lbl_BAR_NO.Name = "lbl_BAR_NO";
-            this.lbl_BAR_NO.Size = new System.Drawing.Size(116, 28);
+            this.lbl_BAR_NO.Size = new System.Drawing.Size(99, 23);
             this.lbl_BAR_NO.TabIndex = 17;
             this.lbl_BAR_NO.Text = "lbl_BAR_NO";
             this.lbl_BAR_NO.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -78,6 +78,16 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(423, 473);
             this.tableLayoutPanel1.TabIndex = 19;
             // 
+            // ptb_Barcode
+            // 
+            this.ptb_Barcode.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptb_Barcode.Location = new System.Drawing.Point(4, 4);
+            this.ptb_Barcode.Name = "ptb_Barcode";
+            this.ptb_Barcode.Size = new System.Drawing.Size(415, 415);
+            this.ptb_Barcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptb_Barcode.TabIndex = 0;
+            this.ptb_Barcode.TabStop = false;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -92,16 +102,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(415, 43);
             this.tableLayoutPanel2.TabIndex = 1;
-            // 
-            // ptb_Barcode
-            // 
-            this.ptb_Barcode.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ptb_Barcode.Location = new System.Drawing.Point(4, 4);
-            this.ptb_Barcode.Name = "ptb_Barcode";
-            this.ptb_Barcode.Size = new System.Drawing.Size(415, 415);
-            this.ptb_Barcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptb_Barcode.TabIndex = 0;
-            this.ptb_Barcode.TabStop = false;
             // 
             // btn_Close
             // 
@@ -131,9 +131,9 @@
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.BarcodePopup_InspectionDTL_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_Barcode)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_Barcode)).EndInit();
             this.ResumeLayout(false);
 
         }
