@@ -200,8 +200,8 @@
             this.cbo_ORDER_TYPE.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.cbo_ORDER_TYPE.FormattingEnabled = true;
             this.cbo_ORDER_TYPE.Items.AddRange(new object[] {
-            "P",
-            "S"});
+            "계획",
+            "주문"});
             this.cbo_ORDER_TYPE.Location = new System.Drawing.Point(436, 368);
             this.cbo_ORDER_TYPE.Name = "cbo_ORDER_TYPE";
             this.cbo_ORDER_TYPE.Size = new System.Drawing.Size(137, 23);
@@ -213,12 +213,9 @@
             this.cbo_DISTRB_CHL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.cbo_DISTRB_CHL.FormattingEnabled = true;
             this.cbo_DISTRB_CHL.Items.AddRange(new object[] {
-            "10",
-            "20",
-            "40",
-            "50",
-            "51",
-            "52"});
+            "특판",
+            "내수",
+            "수출"});
             this.cbo_DISTRB_CHL.Location = new System.Drawing.Point(292, 368);
             this.cbo_DISTRB_CHL.Name = "cbo_DISTRB_CHL";
             this.cbo_DISTRB_CHL.Size = new System.Drawing.Size(137, 23);
@@ -1054,9 +1051,9 @@
             this.cbo_COMPLETE_FLAG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.cbo_COMPLETE_FLAG.FormattingEnabled = true;
             this.cbo_COMPLETE_FLAG.Items.AddRange(new object[] {
-            "N",
-            "Y",
-            "C"});
+            "생산가능",
+            "주문취소",
+            "생산완료"});
             this.cbo_COMPLETE_FLAG.Location = new System.Drawing.Point(4, 473);
             this.cbo_COMPLETE_FLAG.Name = "cbo_COMPLETE_FLAG";
             this.cbo_COMPLETE_FLAG.Size = new System.Drawing.Size(137, 23);

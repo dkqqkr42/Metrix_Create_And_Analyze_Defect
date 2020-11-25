@@ -81,11 +81,32 @@ namespace FinalProject_Profile.PopupForm
                 cmd.Parameters.Add("IN_PROD_TYPE", txt_PROD_TYPE.Text);
                 cmd.Parameters.Add("IN_CUST_CODE", txt_CUST_CODE.Text);
                 cmd.Parameters.Add("IN_CUST_NAME", txt_CUST_NAME.Text);
-                cmd.Parameters.Add("IN_DISTRB_CHL", cbo_DISTRB_CHL.Text);
-                cmd.Parameters.Add("IN_ORDER_TYPE", cbo_ORDER_TYPE.Text);
+
+                // 유통채널
+                if(cbo_DISTRB_CHL.Text == "특판")
+                    cmd.Parameters.Add("IN_DISTRB_CHL", "10");
+                else if(cbo_DISTRB_CHL.Text == "내수")
+                    cmd.Parameters.Add("IN_DISTRB_CHL", "20");
+                else if(cbo_DISTRB_CHL.Text == "수출")
+                    cmd.Parameters.Add("IN_DISTRB_CHL", "40");
+
+                // 주문구분
+                if(cbo_ORDER_TYPE.Text == "계획")
+                    cmd.Parameters.Add("IN_ORDER_TYPE", "P");
+                else if(cbo_ORDER_TYPE.Text == "주문")
+                    cmd.Parameters.Add("IN_ORDER_TYPE", "S");
+
                 cmd.Parameters.Add("IN_CONFIRM_FLAG", txt_CONFIRM_FLAG.Text.Equals("")? "N" : txt_CONFIRM_FLAG.Text);
                 cmd.Parameters.Add("IN_REMARK", txt_REMARK.Text);
-                cmd.Parameters.Add("IN_COMPLETE_FLAG", cbo_COMPLETE_FLAG.Text);
+
+                // 완료여부
+                if(cbo_COMPLETE_FLAG.Text == "생산가능")
+                    cmd.Parameters.Add("IN_COMPLETE_FLAG", "N");
+                else if(cbo_COMPLETE_FLAG.Text == "주문취소")
+                    cmd.Parameters.Add("IN_COMPLETE_FLAG", "Y");
+                else if (cbo_COMPLETE_FLAG.Text == "생산완료")
+                    cmd.Parameters.Add("IN_COMPLETE_FLAG", "C");
+
                 cmd.Parameters.Add("IN_PLAN_QTY", txt_PLAN_QTY.Text);
                 cmd.Parameters.Add("IN_INPUT_QTY", txt_INPUT_QTY.Text);
                 cmd.Parameters.Add("IN_WORK_TIME", txt_WORK_TIME.Text);
