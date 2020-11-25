@@ -46,6 +46,7 @@ namespace FinalProject_Profile
         private void metroButton5_Click(object sender, EventArgs e)
         {
             this.Close();
+            defect.Activate();
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
@@ -162,6 +163,7 @@ namespace FinalProject_Profile
                 defect.InsertData("D01");
 
             this.Close();
+            defect.Activate();
         }
 
         private void metroButton7_Click(object sender, EventArgs e)
@@ -176,6 +178,7 @@ namespace FinalProject_Profile
                 defect.InsertData("D02");
 
             this.Close();
+            defect.Activate();
         }
 
         private void metroButton8_Click(object sender, EventArgs e)
@@ -190,6 +193,7 @@ namespace FinalProject_Profile
                 defect.InsertData("D03");
 
             this.Close();
+            defect.Activate();
         }
 
         private void metroButton9_Click(object sender, EventArgs e)
@@ -204,6 +208,7 @@ namespace FinalProject_Profile
                 defect.InsertData("D04");
 
             this.Close();
+            defect.Activate();
         }
 
         private void metroButton10_Click(object sender, EventArgs e)
@@ -218,6 +223,7 @@ namespace FinalProject_Profile
                 defect.InsertData("D05");
 
             this.Close();
+            defect.Activate();
         }
 
         private void metroButton11_Click(object sender, EventArgs e)
@@ -232,6 +238,7 @@ namespace FinalProject_Profile
                 defect.InsertData("D06");
 
             this.Close();
+            defect.Activate();
         }
 
         private void metroButton12_Click(object sender, EventArgs e)
@@ -246,6 +253,7 @@ namespace FinalProject_Profile
                 defect.InsertData("D07");
 
             this.Close();
+            defect.Activate();
         }
 
         private void metroButton13_Click(object sender, EventArgs e)
@@ -260,6 +268,7 @@ namespace FinalProject_Profile
                 return;
 
             this.Close();
+            defect.Activate();
         }
 
         private void metroButton14_Click(object sender, EventArgs e)
@@ -274,6 +283,7 @@ namespace FinalProject_Profile
                 return;
 
             this.Close();
+            defect.Activate();
         }
 
         private void metroButton15_Click(object sender, EventArgs e)
@@ -288,6 +298,7 @@ namespace FinalProject_Profile
                 return;
 
             this.Close();
+            defect.Activate();
         }
 
         private void metroButton16_Click(object sender, EventArgs e)
@@ -302,6 +313,7 @@ namespace FinalProject_Profile
                 return;
 
             this.Close();
+            defect.Activate();
         }
 
         private void metroButton17_Click(object sender, EventArgs e)
@@ -316,6 +328,7 @@ namespace FinalProject_Profile
                 return;
 
             this.Close();
+            defect.Activate();
         }
 
         private void metroButton18_Click(object sender, EventArgs e)
@@ -330,6 +343,7 @@ namespace FinalProject_Profile
                 return;
 
             this.Close();
+            defect.Activate();
         }
 
         private void metroButton19_Click(object sender, EventArgs e)
@@ -344,6 +358,7 @@ namespace FinalProject_Profile
                 return;
 
             this.Close();
+            defect.Activate();
         }
 
         private void metroButton20_Click(object sender, EventArgs e)
@@ -358,6 +373,7 @@ namespace FinalProject_Profile
                 return;
 
             this.Close();
+            defect.Activate();
         }
 
         private void metroButton21_Click(object sender, EventArgs e)
@@ -372,6 +388,7 @@ namespace FinalProject_Profile
                 return;
 
             this.Close();
+            defect.Activate();
         }
 
         private void metroButton22_Click(object sender, EventArgs e)
@@ -386,6 +403,7 @@ namespace FinalProject_Profile
                 return;
 
             this.Close();
+            defect.Activate();
         }
     }
 }

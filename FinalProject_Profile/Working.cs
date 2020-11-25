@@ -107,7 +107,7 @@ namespace FinalProject_Profile
 
         System.Timers.Timer timer = new System.Timers.Timer
         {
-            Interval = 5000,
+            Interval = 3000,
             AutoReset = false
         };
         public Working()

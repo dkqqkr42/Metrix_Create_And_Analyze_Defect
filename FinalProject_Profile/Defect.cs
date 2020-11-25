@@ -32,16 +32,25 @@ namespace FinalProject_Profile
             if (left_bad_qty != 0)
             {
                 if (MessageBox.Show("불량등록이 완료되지 않았습니다. 나가시겠습니까?", "Defect", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+                {
                     this.Close();
+                    working.Activate();
+                }
+                    
             }
             else
+            {
                 this.Close();
+                working.Activate();
+            }
+                
             
         }
 
         private void Defect_FormClosed(object sender, FormClosedEventArgs e)
         {
             working.SelectItem();
+            working.Activate();
         }
 
         private void btn_Whole_MouseUp(object sender, MouseEventArgs e)
