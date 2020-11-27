@@ -51,7 +51,7 @@ namespace FinalProject_Profile
                 {
                     CommandType = CommandType.Text,
                     Connection = connection,
-                    CommandText = "SELECT trim(A.PROD_CODE), nvl(sum(B.ORDER_M),0), nvl(sum(C.INSU_QTY),0) FROM tbl_productmaster A ,(select * from TBL_PRODUCTPLAN WHERE JOB_DATE BETWEEN to_date(:START_DATE,'yyyymmdd') AND to_date(:END_DATE,'yyyymmdd') AND PROC_STATUS NOT IN('D')) B, TBL_PRODRSLT C where A.PROD_CODE = B.PROD_CODE(+) AND B.JOB_NO = C.JOB_NO(+) GROUP BY A.PROD_CODE, B.PROD_CODE ORDER BY A.PROD_CODE"
+                    CommandText = "SELECT trim(A.PROD_CODE), nvl(sum(B.ORDER_M),0), nvl(sum(C.INSU_QTY),0) FROM tbl_productmaster A ,(select * from TBL_PRODUCTPLAN WHERE JOB_DATE BETWEEN to_date(:START_DATE,'yyyymmdd') AND to_date(:END_DATE,'yyyymmdd') AND PROC_STATUS NOT IN('D','N')) B, TBL_PRODRSLT C where A.PROD_CODE = B.PROD_CODE(+) AND B.JOB_NO = C.JOB_NO(+) GROUP BY A.PROD_CODE, B.PROD_CODE ORDER BY A.PROD_CODE"
                 };
 
                 cmd.Parameters.Add("START_DATE", DateTime.Now.AddDays(-7).ToString("yyyyMMdd"));
