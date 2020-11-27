@@ -107,7 +107,7 @@ namespace FinalProject_Profile
 
         System.Timers.Timer timer = new System.Timers.Timer
         {
-            Interval = 500,
+            Interval = 3000,
             AutoReset = false
         };
         public Working()
@@ -167,12 +167,9 @@ namespace FinalProject_Profile
                     InsertDefect();
                     //다음 데이터 조회
                     btn_flag = 0;
-                    byte[] datas = StringToByte("b\n"); // 줄바꿈 기호인 \n 은 끝에 꼭 들어가야 합니다.
-                    mySerial.Write(datas, 0, datas.Length);
                 }
                 catch
                 {
-
                 }
                
             }
@@ -525,6 +522,8 @@ namespace FinalProject_Profile
                     if (Int32.Parse(order_m) <= total_qty)
                     {
                         timer.Enabled = false;
+                        byte[] datas = StringToByte("b\n"); // 줄바꿈 기호인 \n 은 끝에 꼭 들어가야 합니다.
+                        mySerial.Write(datas, 0, datas.Length);
                         MessageBox.Show("작업이 완료되었습니다. 불량 요인을 등록해 주세요.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         btn_flag = 2;
