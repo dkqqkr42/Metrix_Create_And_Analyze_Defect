@@ -49,6 +49,7 @@
             this.lbl_ORDER_NO = new System.Windows.Forms.Label();
             this.lbl_PROD_CODE = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
+            this.btn_InspectionStart = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -104,13 +105,12 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Defect = new MetroFramework.Controls.MetroButton();
-            this.label30 = new System.Windows.Forms.Label();
-            this.btn_InspectionStart = new MetroFramework.Controls.MetroButton();
             this.btn_SAPOrder = new MetroFramework.Controls.MetroButton();
             this.btn_WorkPlan = new MetroFramework.Controls.MetroButton();
             this.btn_Working = new MetroFramework.Controls.MetroButton();
             this.btn_Inspection = new MetroFramework.Controls.MetroButton();
+            this.btn_Defect = new MetroFramework.Controls.MetroButton();
+            this.label30 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -453,6 +453,21 @@
             this.label41.TabIndex = 1;
             this.label41.Text = "제품 내역";
             this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_InspectionStart
+            // 
+            this.btn_InspectionStart.BackgroundImage = global::FinalProject_Profile.Properties.Resources.작업시작;
+            this.btn_InspectionStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_InspectionStart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_InspectionStart.Location = new System.Drawing.Point(1381, 0);
+            this.btn_InspectionStart.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_InspectionStart.Name = "btn_InspectionStart";
+            this.btn_InspectionStart.Size = new System.Drawing.Size(227, 173);
+            this.btn_InspectionStart.TabIndex = 2;
+            this.btn_InspectionStart.UseSelectable = true;
+            this.btn_InspectionStart.Click += new System.EventHandler(this.btn_InspectionStart_Click);
+            this.btn_InspectionStart.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_InspectionStart_MouseDown);
+            this.btn_InspectionStart.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_InspectionStart_MouseUp);
             // 
             // tableLayoutPanel3
             // 
@@ -1143,7 +1158,7 @@
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(211, 85);
             this.label58.TabIndex = 38;
-            this.label58.Text = "자동";
+            this.label58.Text = "수동";
             this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label57
@@ -1327,47 +1342,6 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(220, 892);
             this.tableLayoutPanel5.TabIndex = 5;
             // 
-            // btn_Defect
-            // 
-            this.btn_Defect.BackgroundImage = global::FinalProject_Profile.Properties.Resources.생산현황;
-            this.btn_Defect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Defect.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Defect.Location = new System.Drawing.Point(1, 713);
-            this.btn_Defect.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Defect.Name = "btn_Defect";
-            this.btn_Defect.Size = new System.Drawing.Size(218, 178);
-            this.btn_Defect.TabIndex = 9;
-            this.btn_Defect.UseSelectable = true;
-            this.btn_Defect.Click += new System.EventHandler(this.btn_Defect_Click);
-            this.btn_Defect.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseDown);
-            this.btn_Defect.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseUp);
-            // 
-            // label30
-            // 
-            this.label30.BackColor = System.Drawing.Color.PowderBlue;
-            this.label30.Font = new System.Drawing.Font("Segoe UI", 19F);
-            this.label30.Location = new System.Drawing.Point(848, 8);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(192, 48);
-            this.label30.TabIndex = 15;
-            this.label30.Text = "작업진행";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_InspectionStart
-            // 
-            this.btn_InspectionStart.BackgroundImage = global::FinalProject_Profile.Properties.Resources.작업시작;
-            this.btn_InspectionStart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_InspectionStart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_InspectionStart.Location = new System.Drawing.Point(1381, 0);
-            this.btn_InspectionStart.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_InspectionStart.Name = "btn_InspectionStart";
-            this.btn_InspectionStart.Size = new System.Drawing.Size(227, 173);
-            this.btn_InspectionStart.TabIndex = 2;
-            this.btn_InspectionStart.UseSelectable = true;
-            this.btn_InspectionStart.Click += new System.EventHandler(this.btn_InspectionStart_Click);
-            this.btn_InspectionStart.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_InspectionStart_MouseDown);
-            this.btn_InspectionStart.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_InspectionStart_MouseUp);
-            // 
             // btn_SAPOrder
             // 
             this.btn_SAPOrder.BackgroundImage = global::FinalProject_Profile.Properties.Resources.생산계획접수;
@@ -1426,6 +1400,32 @@
             this.btn_Inspection.Click += new System.EventHandler(this.btn_Inspection_Click);
             this.btn_Inspection.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Inspection_MouseDown);
             this.btn_Inspection.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Inspection_MouseUp);
+            // 
+            // btn_Defect
+            // 
+            this.btn_Defect.BackgroundImage = global::FinalProject_Profile.Properties.Resources.생산현황;
+            this.btn_Defect.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Defect.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Defect.Location = new System.Drawing.Point(1, 713);
+            this.btn_Defect.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Defect.Name = "btn_Defect";
+            this.btn_Defect.Size = new System.Drawing.Size(218, 178);
+            this.btn_Defect.TabIndex = 9;
+            this.btn_Defect.UseSelectable = true;
+            this.btn_Defect.Click += new System.EventHandler(this.btn_Defect_Click);
+            this.btn_Defect.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseDown);
+            this.btn_Defect.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Defect_MouseUp);
+            // 
+            // label30
+            // 
+            this.label30.BackColor = System.Drawing.Color.PowderBlue;
+            this.label30.Font = new System.Drawing.Font("Segoe UI", 19F);
+            this.label30.Location = new System.Drawing.Point(848, 8);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(192, 48);
+            this.label30.TabIndex = 15;
+            this.label30.Text = "작업진행";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Working
             // 
